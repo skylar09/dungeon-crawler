@@ -714,6 +714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d68f19f3ef64649b9bed7c43abdbf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 942819235}
 --- !u!1 &1309849935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1077,7 @@ GameObject:
   - component: {fileID: 1789509761}
   - component: {fileID: 1789509764}
   - component: {fileID: 1789509763}
+  - component: {fileID: 1789509765}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: enemy
@@ -1197,3 +1199,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1789509765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789509760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66dada5d357e4424da9bffda2a78d41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 1789509760}
+  differenceInX: 0
+  differenceInY: 0
