@@ -18,22 +18,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey("d"))
         {            
-            transform.position = new Vector2 (player.GetComponent<Transform>().position.x + .002f, player.GetComponent<Transform>().position.y);
+            transform.position = new Vector2 (player.GetComponent<Transform>().position.x + PlayerInfo.movementSpeed, player.GetComponent<Transform>().position.y);
         }
 
         if (Input.GetKey("a"))
         {
-            transform.position = new Vector2 (player.GetComponent<Transform>().position.x - .002f, player.GetComponent<Transform>().position.y);
+            transform.position = new Vector2 (player.GetComponent<Transform>().position.x - PlayerInfo.movementSpeed, player.GetComponent<Transform>().position.y);
         }
 
         if (Input.GetKey("w"))
         {
-            transform.position = new Vector2 (player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y + .002f);
+            transform.position = new Vector2 (player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y + PlayerInfo.movementSpeed);
         }
 
         if (Input.GetKey("s"))
         {
-            transform.position = new Vector2 (player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y - .002f);
+            transform.position = new Vector2 (player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y - PlayerInfo.movementSpeed);
         }
     }
 }

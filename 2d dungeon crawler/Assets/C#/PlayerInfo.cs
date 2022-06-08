@@ -8,6 +8,7 @@ public class PlayerInfo : MonoBehaviour
     public static int playerHealth = 3;
     public static int playerDamage = 5;
     public static int playerDefense = 3;
+    public static float movementSpeed = .002f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,9 @@ public class PlayerInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerHealth <= 0)
+        {
+            movementSpeed = 0;
+        }
     }
 }
