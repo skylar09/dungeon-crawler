@@ -6,6 +6,7 @@ using System;
 public class PlayerCollision : MonoBehaviour
 {
 
+
     // Update is called once per frame
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
@@ -17,5 +18,10 @@ public class PlayerCollision : MonoBehaviour
 
             Debug.Log(PlayerInfo.playerHealth);
         }
+
+        // if (collisionInfo.collider.tag == "next room up")
+        // {
+            
+        // }
     }
 }
