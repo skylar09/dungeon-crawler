@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
-  - next room
+  - doorX
+  - doorY
   layers:
   - Default
   - TransparentFX
