@@ -22,9 +22,58 @@ public class PlayerCollision : MonoBehaviour
         }
 
         
-        if (collisionInfo.collider.tag == "door")
+        if (collisionInfo.collider.tag == "doorY")
         {
-            double roomDistance = 999999999;
+            whichRoomNext();
+
+            //moves the camera
+            Camera.transform.position = RoomLocation.roomCords[currentRoom];
+
+            //moves the player to the entrance of the next room
+
+            //moves the player to the bottom of the room
+            if (PlayerInfo.playerLocation.y < RoomLocation.roomCords[currentRoom].y)
+            {
+                transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x, RoomLocation.roomCords[currentRoom].y - 3.5f);
+                Debug.Log("bla");
+            }
+
+            //moves the player to the top of the next room
+            else
+            {
+                transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x, RoomLocation.roomCords[currentRoom].y + 3.5f);
+                Debug.Log("bla");
+            }
+            
+        }
+
+        if (collisionInfo.collider.tag == "doorX")
+        {
+            whichRoomNext();
+            
+            //moves the player and the camera
+            Camera.transform.position = RoomLocation.roomCords[currentRoom];
+
+            //moves the player to the entrance of the next room
+
+            //moves the player to the left of the room
+            if (PlayerInfo.playerLocation.x < RoomLocation.roomCords[currentRoom].x)
+            {
+                transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x - 9.5f, RoomLocation.roomCords[currentRoom].y);
+                Debug.Log("bla");
+            }
+
+            //moves the player to the right of the room
+            else
+            {
+                transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x + 9.5f, RoomLocation.roomCords[currentRoom].y);
+                Debug.Log("bla");
+            }
+        }
+
+        void whichRoomNext()
+        {
+             double roomDistance = 999999999;
 
             //teleport player and change camera to new room
 
@@ -45,9 +94,6 @@ public class PlayerCollision : MonoBehaviour
             }
             
             currentRoom = closestRoom;
-            //moves the player and the camera
-            transform.position = RoomLocation.roomCords[currentRoom];
-            Camera.transform.position = RoomLocation.roomCords[currentRoom];
         }
     }
 }
