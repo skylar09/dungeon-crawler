@@ -24,14 +24,14 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.tag == "doorY")
         {
             //teleport player and change camera to new room
-            
-            for (int i = 0; i < 3; i ++)
+            //iterate through list of rooms
+            for (int i = 0; i < 3; i ++) //shouldnt this be for(int i = 0; i < RoomLocation.roomCords.Length; i ++)?
             {
                 // for (int j = 0; j < 9; j++)
                 // {
                     if (i + 1 != currentRoom)
-                    {
-                        if (Math.Abs(RoomLocation.roomCords[i].y - PlayerInfo.playerLocation.y) <= Math.Abs(RoomLocation.roomCords[closestRoom].y - PlayerInfo.playerLocation.y))
+                {//https://www.geeksforgeeks.org/closest-value-to-k-from-an-unsorted-array/ check this link out
+                    if (Math.Abs(RoomLocation.roomCords[i].y - PlayerInfo.playerLocation.y) <= Math.Abs(RoomLocation.roomCords[closestRoom].y - PlayerInfo.playerLocation.y))
                         {
 
 
