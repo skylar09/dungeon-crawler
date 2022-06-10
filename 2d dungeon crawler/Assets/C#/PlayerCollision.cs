@@ -6,6 +6,9 @@ using System;
 public class PlayerCollision : MonoBehaviour
 {
     public GameObject Camera;
+    public static int currentRoom = 1;
+    public int closestRoom;
+
     // Update is called once per frame
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
@@ -22,9 +25,40 @@ public class PlayerCollision : MonoBehaviour
         {
             //teleport player and change camera to new room
             
+            for (int i = 0; i < 3; i ++)
+            {
+                // for (int j = 0; j < 9; j++)
+                // {
+                    if (i + 1 != currentRoom)
+                    {
+                        if (Math.Abs(RoomLocation.roomCords[i].y - PlayerInfo.playerLocation.y) <= Math.Abs(RoomLocation.roomCords[closestRoom].y - PlayerInfo.playerLocation.y))
+                        {
 
-            transform.position = RoomLocation.room2;
-            Camera.transform.position = RoomLocation.room2;
+
+
+                            if (Math.Abs(RoomLocation.roomCords[i].x - PlayerInfo.playerLocation.x) < Math.Abs(RoomLocation.roomCords[closestRoom].x - PlayerInfo.playerLocation.x))
+                            {
+                                closestRoom = i;
+                                Debug.Log(closestRoom);
+                                Debug.Log("a");
+                            }
+                            
+                            else
+                            {
+                                closestRoom = i + 1;
+                                Debug.Log(closestRoom);
+                                Debug.Log("b");
+                            }
+                        }
+                    }
+                    
+                // }
+            }
+            Debug.Log(closestRoom);
+            Debug.Log(RoomLocation.roomCords[closestRoom]);
+            transform.position = RoomLocation.roomCords[closestRoom];
+            Camera.transform.position = RoomLocation.roomCords[closestRoom];
+            currentRoom = closestRoom;
             
 
         }
