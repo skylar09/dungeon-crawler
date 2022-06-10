@@ -6,8 +6,8 @@ using System;
 public class PlayerCollision : MonoBehaviour
 {
     public GameObject Camera;
-    public static int currentRoom = 1;
-    public int closestRoom;
+    int currentRoom = 0;
+    int closestRoom;
 
     // Update is called once per frame
     void OnCollisionEnter2D (Collision2D collisionInfo)
@@ -21,46 +21,33 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log(PlayerInfo.playerHealth);
         }
 
-        if (collisionInfo.collider.tag == "doorY")
+        
+        if (collisionInfo.collider.tag == "door")
         {
+            double roomDistance = 999999999;
+
             //teleport player and change camera to new room
-            //iterate through list of rooms
-            for (int i = 0; i < 3; i ++) //shouldnt this be for(int i = 0; i < RoomLocation.roomCords.Length; i ++)?
+
+            for (int i = 0; i < 4; i ++)
             {
-                // for (int j = 0; j < 9; j++)
-                // {
-                    if (i + 1 != currentRoom)
-                {//https://www.geeksforgeeks.org/closest-value-to-k-from-an-unsorted-array/ check this link out
-                    if (Math.Abs(RoomLocation.roomCords[i].y - PlayerInfo.playerLocation.y) <= Math.Abs(RoomLocation.roomCords[closestRoom].y - PlayerInfo.playerLocation.y))
-                        {
-
-
-
-                            if (Math.Abs(RoomLocation.roomCords[i].x - PlayerInfo.playerLocation.x) < Math.Abs(RoomLocation.roomCords[closestRoom].x - PlayerInfo.playerLocation.x))
-                            {
-                                closestRoom = i;
-                                Debug.Log(closestRoom);
-                                Debug.Log("a");
-                            }
-                            
-                            else
-                            {
-                                closestRoom = i + 1;
-                                Debug.Log(closestRoom);
-                                Debug.Log("b");
-                            }
-                        }
-                    }
+                if (i != currentRoom)
+                {
+                    //gets distance between player and the room at i in the room array
+                    double localDistance = Math.Sqrt(Math.Pow((RoomLocation.roomCords[i].y - PlayerInfo.playerLocation.y), 2) + Math.Pow((RoomLocation.roomCords[i].x - PlayerInfo.playerLocation.x), 2));
                     
-                // }
+                    //makes roomDistance the current distance if it is shorter than the previous one
+                    if (localDistance < roomDistance)
+                    {
+                        roomDistance = localDistance;
+                        closestRoom = i;
+                    }
+                }
             }
-            Debug.Log(closestRoom);
-            Debug.Log(RoomLocation.roomCords[closestRoom]);
+            
+            currentRoom = closestRoom;
+            //moves the player and the camera
             transform.position = RoomLocation.roomCords[closestRoom];
             Camera.transform.position = RoomLocation.roomCords[closestRoom];
-            currentRoom = closestRoom;
-            
-
         }
     }
 }
