@@ -5,7 +5,7 @@ using System;
 
 public class PlayerCollision : MonoBehaviour
 {
-
+    public GameObject Camera;
     // Update is called once per frame
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
@@ -21,11 +21,13 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.tag == "doorY")
         {
             //teleport player and change camera to new room
-            PlayerInfo.playerLocation = RoomLocation.room2;
-            Debug.Log(PlayerInfo.playerLocation);
+            
 
+            transform.position = RoomLocation.room2;
+            Camera.transform.position = PlayerInfo.playerLocation;
+            
 
-        }
+}
     }
 }
 
