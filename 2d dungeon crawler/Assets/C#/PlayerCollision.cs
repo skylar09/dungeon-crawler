@@ -46,8 +46,8 @@ public class PlayerCollision : MonoBehaviour
             
             currentRoom = closestRoom;
             //moves the player and the camera
-            transform.position = RoomLocation.roomCords[closestRoom];
-            Camera.transform.position = RoomLocation.roomCords[closestRoom];
+            transform.position = RoomLocation.roomCords[currentRoom];
+            Camera.transform.position = RoomLocation.roomCords[currentRoom];
         }
     }
 }
