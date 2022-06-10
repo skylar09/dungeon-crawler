@@ -6,8 +6,8 @@ public class RoomLocation : MonoBehaviour
 {
     public static Vector3 room1 = new Vector3(0, 0, -10);
     public static Vector3 room2 = new Vector3(0, 11, -10);
-
-    
+    public static Vector3 room3 = new Vector3(23.3f, 11, -10);
+    public static Vector3 room4 = new Vector3(23.3f, 0, -10);
 
     // Start is called before the first frame update
     void Start()
