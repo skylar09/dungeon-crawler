@@ -24,10 +24,10 @@ public class PlayerCollision : MonoBehaviour
             
 
             transform.position = RoomLocation.room2;
-            Camera.transform.position = PlayerInfo.playerLocation;
+            Camera.transform.position = RoomLocation.room2;
             
 
-}
+        }
     }
 }
 
