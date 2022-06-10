@@ -6,8 +6,7 @@ TagManager:
   tags:
   - enemy
   - next room
-  - doorX
-  - doorY
+  - door
   layers:
   - Default
   - TransparentFX

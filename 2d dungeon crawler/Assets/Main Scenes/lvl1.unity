@@ -2450,7 +2450,7 @@ GameObject:
   - component: {fileID: 258450897}
   m_Layer: 0
   m_Name: exitLeft
-  m_TagString: doorX
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2960,7 +2960,7 @@ GameObject:
   - component: {fileID: 328549845}
   m_Layer: 0
   m_Name: exitRight
-  m_TagString: doorX
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4915,7 +4915,7 @@ GameObject:
   - component: {fileID: 622646845}
   m_Layer: 0
   m_Name: exitBottom
-  m_TagString: doorY
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5159,7 +5159,7 @@ GameObject:
   - component: {fileID: 642643441}
   m_Layer: 0
   m_Name: exitTop
-  m_TagString: doorY
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5723,7 +5723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 87602145}
-  closestRoom: 0
 --- !u!114 &673790251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6839,7 +6838,7 @@ GameObject:
   - component: {fileID: 805116410}
   m_Layer: 0
   m_Name: exitTop
-  m_TagString: doorY
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7734,7 +7733,7 @@ GameObject:
   - component: {fileID: 921027119}
   m_Layer: 0
   m_Name: exitTop
-  m_TagString: doorY
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10262,7 +10261,7 @@ GameObject:
   - component: {fileID: 1285418632}
   m_Layer: 0
   m_Name: exitBottom
-  m_TagString: doorY
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14226,7 +14225,7 @@ GameObject:
   - component: {fileID: 1896886226}
   m_Layer: 0
   m_Name: exitRight
-  m_TagString: doorX
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
