@@ -77,7 +77,7 @@ public class PlayerCollision : MonoBehaviour
 
             //teleport player and change camera to new room
 
-            for (int i = 0; i < 4; i ++)
+            for (int i = 0; i < RoomLocation.roomCords.Length; i ++)
             {
                 if (i != currentRoom)
                 {

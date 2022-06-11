@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoomLocation : MonoBehaviour
 {
 
-    public static Vector3[] roomCords = new Vector3[4];
+    public static Vector3[] roomCords = new Vector3[6];
     
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,8 @@ public class RoomLocation : MonoBehaviour
         roomCords[1] = new Vector3(0f, 11f, -10f);
         roomCords[2] = new Vector3(23.3f, 11f, -10f);
         roomCords[3] = new Vector3(23.3f, 0f, -10f);
+        roomCords[4] = new Vector3(0f, 22f, -10f);
+        roomCords[5] = new Vector3(46.6f, 0f, -10f);
 
     }
 
