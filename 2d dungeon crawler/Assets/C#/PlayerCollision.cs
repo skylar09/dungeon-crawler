@@ -73,7 +73,7 @@ public class PlayerCollision : MonoBehaviour
 
         void whichRoomNext()
         {
-             double roomDistance = 999999999;
+            double roomDistance = 999999999;
 
             //teleport player and change camera to new room
 
@@ -92,7 +92,6 @@ public class PlayerCollision : MonoBehaviour
                     }
                 }
             }
-            
             currentRoom = closestRoom;
         }
     }
