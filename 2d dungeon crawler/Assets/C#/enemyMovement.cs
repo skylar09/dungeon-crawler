@@ -6,6 +6,7 @@ public class enemyMovement : MonoBehaviour
 {
 
     private Transform target;
+    public Animator bat_attack;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,16 @@ public class enemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //makes the enemy move towards the player
-        transform.position = Vector2.MoveTowards(transform.position, target.position, enemyInfo.enemyMoveSpeed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, target.position) > 1)
+        {
+            //makes the enemy move towards the player
+            transform.position = Vector2.MoveTowards(transform.position, target.position, enemyInfo.enemyMoveSpeed * Time.deltaTime);
+            bat_attack.SetBool("Attack", false);
+        }
+        
+        else
+        {
+           bat_attack.SetBool("Attack", true);
+        }
     }
 }
