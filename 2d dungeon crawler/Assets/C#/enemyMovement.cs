@@ -5,40 +5,19 @@ using UnityEngine;
 public class enemyMovement : MonoBehaviour
 {
 
-    public GameObject Enemy;
-    
+    private Transform target;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //sets target as the GameObject with the tag "Player"
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-    //makes the enemy move towards the player
-
-        //enemy moves in x direction towards player
-        if (PlayerInfo.playerLocation.x > Enemy.GetComponent<Transform>().position.x)
-        {
-            transform.position = new Vector2 (Enemy.GetComponent<Transform>().position.x + enemyInfo.enemyMoveSpeed, Enemy.GetComponent<Transform>().position.y);
-        }
-
-        else if (PlayerInfo.playerLocation.x < Enemy.GetComponent<Transform>().position.x)
-        {
-            transform.position = new Vector2 (Enemy.GetComponent<Transform>().position.x - enemyInfo.enemyMoveSpeed, Enemy.GetComponent<Transform>().position.y);
-        }
-
-        //enemy moves in y direction towards player
-         if (PlayerInfo.playerLocation.y > Enemy.GetComponent<Transform>().position.y)
-        {
-            transform.position = new Vector2 (Enemy.GetComponent<Transform>().position.x, Enemy.GetComponent<Transform>().position.y + enemyInfo.enemyMoveSpeed);
-        }
-
-        else if (PlayerInfo.playerLocation.y < Enemy.GetComponent<Transform>().position.y)
-        {
-            transform.position = new Vector2 (Enemy.GetComponent<Transform>().position.x, Enemy.GetComponent<Transform>().position.y - enemyInfo.enemyMoveSpeed);
-        }
+        //makes the enemy move towards the player
+        transform.position = Vector2.MoveTowards(transform.position, target.position, enemyInfo.enemyMoveSpeed * Time.deltaTime);
     }
 }
