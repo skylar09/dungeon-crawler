@@ -9,6 +9,8 @@ public class enemyInfo : MonoBehaviour
     public static int enemyDamage = 4;
     public static int enemyDefense = 2;
     public static float enemyMoveSpeed = (PlayerInfo.movementSpeed / 3);
+    public static Vector3 enemyLocation;
+    public GameObject enemy;
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +28,7 @@ public class enemyInfo : MonoBehaviour
         {
 
         }
+
+        enemyLocation = new Vector3(enemy.GetComponent<Transform>().position.x, enemy.GetComponent<Transform>().position.y, enemy.GetComponent<Transform>().position.z);
     }
 }

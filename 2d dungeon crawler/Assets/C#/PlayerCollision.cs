@@ -6,10 +6,10 @@ using System;
 public class PlayerCollision : MonoBehaviour
 {
     public GameObject Camera;
+
     int currentRoom = 0;
     int closestRoom;
 
-    // Update is called once per frame
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
         //checks for the tag on the object it collides with
