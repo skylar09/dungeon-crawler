@@ -24,7 +24,7 @@ public class PlayerInfo : MonoBehaviour
         
 
         playerLocation = new Vector3(player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y, player.GetComponent<Transform>().position.z);
-
+        // Debug.Log(playerLocation);
         
     }
 }
