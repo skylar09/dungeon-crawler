@@ -18,6 +18,12 @@ public class enemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enemyInfo.enemyMoveSpeed = (PlayerInfo.movementSpeed / 2);
+    }
+
+    // FixedUpdate is called once per set amount of frames
+    void FixedUpdate()
+    {
         if (Vector2.Distance(transform.position, target.position) > 1)
         {
             //makes the enemy move towards the player

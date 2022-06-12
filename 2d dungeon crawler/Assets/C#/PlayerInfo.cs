@@ -8,7 +8,7 @@ public class PlayerInfo : MonoBehaviour
     public static int playerHealth = 3;
     public static int playerDamage = 5;
     public static int playerDefense = 3;
-    public static float movementSpeed = .004f;
+    public static float movementSpeed = 3f;
     public static Vector3 playerLocation;
     public GameObject player;
 

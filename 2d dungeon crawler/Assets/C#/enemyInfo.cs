@@ -21,7 +21,6 @@ public class enemyInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyMoveSpeed = (PlayerInfo.movementSpeed / 2);
 
         //makes enemy disappear if it's dead
         if (enemyHealth <= 0)

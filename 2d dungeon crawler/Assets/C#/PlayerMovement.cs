@@ -6,34 +6,23 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public GameObject player;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Rigidbody2D rb;
+    Vector2 movement;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("d"))
-        {//moves player to the right            
-            transform.position = new Vector2 (player.GetComponent<Transform>().position.x + PlayerInfo.movementSpeed, player.GetComponent<Transform>().position.y);
-        }
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+    }
 
-        if (Input.GetKey("a"))
-        {//moves player to the left
-            transform.position = new Vector2 (player.GetComponent<Transform>().position.x - PlayerInfo.movementSpeed, player.GetComponent<Transform>().position.y);
-        }
-
-        if (Input.GetKey("w"))
-        {//moves player up
-            transform.position = new Vector2 (player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y + PlayerInfo.movementSpeed);
-        }
-
-        if (Input.GetKey("s"))
-        {//moves player down
-            transform.position = new Vector2 (player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y - PlayerInfo.movementSpeed);
+    // FixedUpdate is called once per set amount of frames
+    void FixedUpdate()
+    {
+        if (PlayerInfo.playerHealth > 0)
+        {
+            //moves player with wasd or arrow keys
+            rb.MovePosition(rb.position + movement * PlayerInfo.movementSpeed * Time.fixedDeltaTime);
         }
     }
 }
