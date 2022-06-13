@@ -6,6 +6,7 @@ public class GameOver : MonoBehaviour
 {
 
     public GameObject gameOverText;
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
@@ -15,6 +16,7 @@ public class GameOver : MonoBehaviour
             PlayerInfo.movementSpeed = 0;
             enemyInfo.enemyMoveSpeed = 0;
             gameOverText.SetActive(true);
+            animator.SetBool("PlayerDead", true);
         }
     }
 }

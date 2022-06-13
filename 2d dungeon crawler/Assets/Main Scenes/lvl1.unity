@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 12331957}
   - component: {fileID: 12331956}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2 (1)
+  m_Name: topRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +155,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &12331956
 BoxCollider2D:
@@ -170,7 +170,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3751837, y: 0}
+  m_Offset: {x: 0.3751837, y: -1.2970715}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -181,7 +181,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 1}
+  m_Size: {x: 0.24963254, y: 3.594143}
   m_EdgeRadius: 0
 --- !u!50 &12331957
 Rigidbody2D:
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 40496877}
   - component: {fileID: 40496876}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (5)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -739,7 +739,7 @@ GameObject:
   - component: {fileID: 72974952}
   - component: {fileID: 72974951}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (9)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,9 +1018,8 @@ GameObject:
   - component: {fileID: 84850621}
   - component: {fileID: 84850624}
   - component: {fileID: 84850623}
-  - component: {fileID: 84850622}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (11)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1039,34 +1038,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 19
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &84850622
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84850620}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &84850623
 Rigidbody2D:
   serializedVersion: 4
@@ -1263,7 +1236,7 @@ GameObject:
   - component: {fileID: 108426633}
   - component: {fileID: 108426632}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (12)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1412,27 +1385,27 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1797912090}
-  - {fileID: 875714036}
-  - {fileID: 1936835970}
-  - {fileID: 224993539}
-  - {fileID: 529013150}
-  - {fileID: 1725180423}
-  - {fileID: 557575086}
-  - {fileID: 624359591}
+  - {fileID: 2083968314}
+  - {fileID: 210145342}
+  - {fileID: 234015674}
+  - {fileID: 787059035}
   - {fileID: 1194836572}
   - {fileID: 1552119154}
   - {fileID: 1690048164}
-  - {fileID: 787059035}
-  - {fileID: 234015674}
-  - {fileID: 210145342}
-  - {fileID: 2083968314}
-  - {fileID: 262505391}
-  - {fileID: 1112045500}
+  - {fileID: 875714036}
+  - {fileID: 557575086}
+  - {fileID: 624359591}
+  - {fileID: 224993539}
   - {fileID: 1989200393}
+  - {fileID: 1112045500}
+  - {fileID: 262505391}
   - {fileID: 593102661}
   - {fileID: 1270926353}
   - {fileID: 487931695}
   - {fileID: 401104626}
+  - {fileID: 1936835970}
+  - {fileID: 1725180423}
+  - {fileID: 529013150}
   m_Father: {fileID: 121893894}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1828,7 +1801,7 @@ GameObject:
   - component: {fileID: 164235998}
   - component: {fileID: 164235997}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (10)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1847,7 +1820,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 18
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &164235997
 BoxCollider2D:
@@ -1862,7 +1835,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
+  m_Offset: {x: 1.8962405, y: 0.37703186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1873,7 +1846,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
+  m_Size: {x: 4.792481, y: 0.24963272}
   m_EdgeRadius: 0
 --- !u!50 &164235998
 Rigidbody2D:
@@ -1961,7 +1934,7 @@ GameObject:
   - component: {fileID: 172039353}
   - component: {fileID: 172039352}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45
+  m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1980,7 +1953,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 4
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &172039352
 BoxCollider2D:
@@ -1995,7 +1968,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.37518373, y: -0.67908496}
+  m_Offset: {x: -0.37518373, y: -1.0549619}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2006,7 +1979,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 2.3606658}
+  m_Size: {x: 0.24963254, y: 3.1124196}
   m_EdgeRadius: 0
 --- !u!50 &172039353
 Rigidbody2D:
@@ -2094,7 +2067,7 @@ GameObject:
   - component: {fileID: 180148133}
   - component: {fileID: 180148132}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2 (1)
+  m_Name: bottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2113,7 +2086,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1629705440}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
 --- !u!61 &180148132
 BoxCollider2D:
@@ -2227,7 +2200,7 @@ GameObject:
   - component: {fileID: 183721693}
   - component: {fileID: 183721692}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2
+  m_Name: topRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2555,7 +2528,7 @@ GameObject:
   - component: {fileID: 208231244}
   - component: {fileID: 208231243}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (3)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2686,9 +2659,8 @@ GameObject:
   - component: {fileID: 210145342}
   - component: {fileID: 210145343}
   - component: {fileID: 210145344}
-  - component: {fileID: 210145345}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (5)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2707,7 +2679,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 13
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &210145343
 SpriteRenderer:
@@ -2782,32 +2754,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &210145345
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210145341}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &210566375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,7 +3095,7 @@ GameObject:
   - component: {fileID: 223249174}
   - component: {fileID: 223249173}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0
+  m_Name: topLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3282,7 +3228,7 @@ GameObject:
   - component: {fileID: 223313222}
   - component: {fileID: 223313221}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2
+  m_Name: bottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3526,7 +3472,7 @@ GameObject:
   - component: {fileID: 224993541}
   - component: {fileID: 224993542}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2 (1)
+  m_Name: bottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3545,7 +3491,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 3
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
 --- !u!212 &224993540
 SpriteRenderer:
@@ -3633,7 +3579,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3751837, y: 0}
+  m_Offset: {x: -3.5191624, y: 0.37500596}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3644,7 +3590,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 1}
+  m_Size: {x: 8.038324, y: 0.25001073}
   m_EdgeRadius: 0
 --- !u!1 &230564721
 GameObject:
@@ -3659,7 +3605,7 @@ GameObject:
   - component: {fileID: 230564724}
   - component: {fileID: 230564723}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (6)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3790,9 +3736,8 @@ GameObject:
   - component: {fileID: 234015674}
   - component: {fileID: 234015675}
   - component: {fileID: 234015676}
-  - component: {fileID: 234015677}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (4)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3811,7 +3756,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 12
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &234015675
 SpriteRenderer:
@@ -3886,32 +3831,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &234015677
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234015673}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &258450895
 GameObject:
   m_ObjectHideFlags: 0
@@ -4036,7 +3955,7 @@ GameObject:
   - component: {fileID: 262253581}
   - component: {fileID: 262253580}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (9)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4055,7 +3974,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 17
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &262253580
 BoxCollider2D:
@@ -4070,7 +3989,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.38594496, y: 0.3770319}
+  m_Offset: {x: 2.6946, y: 0.37703186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4081,7 +4000,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7718899, y: 0.2496327}
+  m_Size: {x: 7.9329796, y: 0.24963272}
   m_EdgeRadius: 0
 --- !u!50 &262253581
 Rigidbody2D:
@@ -4167,9 +4086,8 @@ GameObject:
   - component: {fileID: 262505391}
   - component: {fileID: 262505392}
   - component: {fileID: 262505393}
-  - component: {fileID: 262505394}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (7)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4188,7 +4106,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &262505392
 SpriteRenderer:
@@ -4263,32 +4181,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &262505394
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262505390}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &291997208
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,7 +4316,7 @@ GameObject:
   - component: {fileID: 303043438}
   - component: {fileID: 303043437}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (3)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4752,7 +4644,7 @@ GameObject:
   - component: {fileID: 347300596}
   - component: {fileID: 347300595}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (3)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5016,9 +4908,9 @@ GameObject:
   - component: {fileID: 383893578}
   - component: {fileID: 383893581}
   - component: {fileID: 383893580}
-  - component: {fileID: 383893579}
+  - component: {fileID: 383893582}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (3)
+  m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5037,34 +4929,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &383893579
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383893577}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.37518373, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &383893580
 Rigidbody2D:
   serializedVersion: 4
@@ -5138,6 +5004,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &383893582
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383893577}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.37499523, y: -0.5119079}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25000954, y: 2.0238156}
+  m_EdgeRadius: 0
 --- !u!1 &398089384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5260,9 +5152,8 @@ GameObject:
   - component: {fileID: 401104626}
   - component: {fileID: 401104627}
   - component: {fileID: 401104628}
-  - component: {fileID: 401104629}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (13)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5281,7 +5172,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 21
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &401104627
 SpriteRenderer:
@@ -5356,32 +5247,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &401104629
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401104625}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.29278594, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5855716, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &401936193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5393,9 +5258,8 @@ GameObject:
   - component: {fileID: 401936194}
   - component: {fileID: 401936197}
   - component: {fileID: 401936196}
-  - component: {fileID: 401936195}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (9)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5414,34 +5278,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 17
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &401936195
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401936193}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.38594496, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7718899, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &401936196
 Rigidbody2D:
   serializedVersion: 4
@@ -5559,9 +5397,8 @@ GameObject:
   - component: {fileID: 413369874}
   - component: {fileID: 413369877}
   - component: {fileID: 413369876}
-  - component: {fileID: 413369875}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (6)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5580,34 +5417,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &413369875
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413369873}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.3336653, y: 0.37703186}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6673304, y: 0.24963272}
-  m_EdgeRadius: 0
 --- !u!50 &413369876
 Rigidbody2D:
   serializedVersion: 4
@@ -5803,9 +5614,8 @@ GameObject:
   - component: {fileID: 442546420}
   - component: {fileID: 442546423}
   - component: {fileID: 442546422}
-  - component: {fileID: 442546421}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (5)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5826,32 +5636,6 @@ Transform:
   m_Father: {fileID: 1555101175}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &442546421
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442546419}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &442546422
 Rigidbody2D:
   serializedVersion: 4
@@ -5936,9 +5720,8 @@ GameObject:
   - component: {fileID: 451236561}
   - component: {fileID: 451236564}
   - component: {fileID: 451236563}
-  - component: {fileID: 451236562}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (1)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5957,34 +5740,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 9
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &451236562
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451236560}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &451236563
 Rigidbody2D:
   serializedVersion: 4
@@ -6071,7 +5828,7 @@ GameObject:
   - component: {fileID: 454162718}
   - component: {fileID: 454162717}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (7)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6426,7 +6183,7 @@ GameObject:
   - component: {fileID: 471440340}
   - component: {fileID: 471440339}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (6)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6557,9 +6314,8 @@ GameObject:
   - component: {fileID: 487931695}
   - component: {fileID: 487931696}
   - component: {fileID: 487931697}
-  - component: {fileID: 487931698}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (12)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6578,7 +6334,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 20
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &487931696
 SpriteRenderer:
@@ -6653,32 +6409,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &487931698
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487931694}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &506397186
 GameObject:
   m_ObjectHideFlags: 0
@@ -6698,7 +6428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &506397187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6712,6 +6442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverText: {fileID: 950481435}
+  animator: {fileID: 1789509766}
 --- !u!114 &506397188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6807,7 +6538,7 @@ GameObject:
   - component: {fileID: 510691498}
   - component: {fileID: 510691497}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7071,9 +6802,8 @@ GameObject:
   - component: {fileID: 529013150}
   - component: {fileID: 529013151}
   - component: {fileID: 529013152}
-  - component: {fileID: 529013153}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45
+  m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7092,7 +6822,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 4
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &529013151
 SpriteRenderer:
@@ -7167,32 +6897,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &529013153
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529013149}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.37518373, y: 0.65324974}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 2.3064992}
-  m_EdgeRadius: 0
 --- !u!1 &557575085
 GameObject:
   m_ObjectHideFlags: 0
@@ -7204,9 +6908,8 @@ GameObject:
   - component: {fileID: 557575086}
   - component: {fileID: 557575087}
   - component: {fileID: 557575088}
-  - component: {fileID: 557575089}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (2)
+  m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7225,7 +6928,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &557575087
 SpriteRenderer:
@@ -7300,32 +7003,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &557575089
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557575085}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.3751837, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &568151905
 GameObject:
   m_ObjectHideFlags: 0
@@ -7339,7 +7016,7 @@ GameObject:
   - component: {fileID: 568151908}
   - component: {fileID: 568151907}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (3)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7358,7 +7035,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 11
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &568151907
 BoxCollider2D:
@@ -7373,7 +7050,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
+  m_Offset: {x: -1.9539526, y: 0.37703186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7384,7 +7061,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
+  m_Size: {x: 4.907904, y: 0.24963272}
   m_EdgeRadius: 0
 --- !u!50 &568151908
 Rigidbody2D:
@@ -7470,9 +7147,8 @@ GameObject:
   - component: {fileID: 572716276}
   - component: {fileID: 572716279}
   - component: {fileID: 572716278}
-  - component: {fileID: 572716277}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (10)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7491,34 +7167,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 18
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &572716277
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572716275}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &572716278
 Rigidbody2D:
   serializedVersion: 4
@@ -7605,7 +7255,7 @@ GameObject:
   - component: {fileID: 586262358}
   - component: {fileID: 586262357}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (2)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7736,9 +7386,8 @@ GameObject:
   - component: {fileID: 593102661}
   - component: {fileID: 593102662}
   - component: {fileID: 593102663}
-  - component: {fileID: 593102664}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (10)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7757,7 +7406,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 18
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &593102662
 SpriteRenderer:
@@ -7832,32 +7481,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &593102664
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593102660}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &613768818
 GameObject:
   m_ObjectHideFlags: 0
@@ -8224,9 +7847,8 @@ GameObject:
   - component: {fileID: 624359591}
   - component: {fileID: 624359592}
   - component: {fileID: 624359593}
-  - component: {fileID: 624359594}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (3)
+  m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8245,7 +7867,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &624359592
 SpriteRenderer:
@@ -8320,32 +7942,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &624359594
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624359590}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.37518373, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &642643438
 GameObject:
   m_ObjectHideFlags: 0
@@ -8481,9 +8077,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652669029}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: -0}
   m_LocalPosition: {x: 0, y: 0, z: 0.050240893}
-  m_LocalScale: {x: 22.3, y: 10, z: 1}
+  m_LocalScale: {x: 22.300001, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 60947748}
@@ -8554,7 +8150,7 @@ GameObject:
   - component: {fileID: 656957895}
   - component: {fileID: 656957894}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (8)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8770,9 +8366,8 @@ GameObject:
   - component: {fileID: 665617754}
   - component: {fileID: 665617757}
   - component: {fileID: 665617756}
-  - component: {fileID: 665617755}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (2)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8791,34 +8386,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &665617755
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 665617753}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.37929082, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7585812, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &665617756
 Rigidbody2D:
   serializedVersion: 4
@@ -8905,7 +8474,7 @@ GameObject:
   - component: {fileID: 668872529}
   - component: {fileID: 668872528}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (7)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9227,7 +8796,7 @@ GameObject:
   - component: {fileID: 679191103}
   - component: {fileID: 679191102}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (7)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9246,7 +8815,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 15
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &679191102
 BoxCollider2D:
@@ -9261,7 +8830,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
+  m_Offset: {x: -1.7520177, y: 0.37703186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9272,7 +8841,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
+  m_Size: {x: 4.5040355, y: 0.24963272}
   m_EdgeRadius: 0
 --- !u!50 &679191103
 Rigidbody2D:
@@ -9358,9 +8927,8 @@ GameObject:
   - component: {fileID: 700689264}
   - component: {fileID: 700689267}
   - component: {fileID: 700689266}
-  - component: {fileID: 700689265}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (12)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9379,34 +8947,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 20
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &700689265
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700689263}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &700689266
 Rigidbody2D:
   serializedVersion: 4
@@ -9626,7 +9168,7 @@ GameObject:
   - component: {fileID: 712600499}
   - component: {fileID: 712600498}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (2)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9759,7 +9301,7 @@ GameObject:
   - component: {fileID: 748567683}
   - component: {fileID: 748567682}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (1)
+  m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9778,7 +9320,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 5
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &748567682
 BoxCollider2D:
@@ -9793,7 +9335,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3751837, y: 0}
+  m_Offset: {x: -0.3751837, y: 1.0148408}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9804,7 +9346,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2496325, y: 1}
+  m_Size: {x: 0.24963248, y: 3.0296822}
   m_EdgeRadius: 0
 --- !u!50 &748567683
 Rigidbody2D:
@@ -9890,9 +9432,8 @@ GameObject:
   - component: {fileID: 756247085}
   - component: {fileID: 756247088}
   - component: {fileID: 756247087}
-  - component: {fileID: 756247086}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (7)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9911,34 +9452,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 15
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &756247086
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756247084}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &756247087
 Rigidbody2D:
   serializedVersion: 4
@@ -10134,9 +9649,8 @@ GameObject:
   - component: {fileID: 787059035}
   - component: {fileID: 787059036}
   - component: {fileID: 787059037}
-  - component: {fileID: 787059038}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (3)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10155,7 +9669,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 11
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &787059036
 SpriteRenderer:
@@ -10230,32 +9744,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &787059038
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787059034}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &791636751
 GameObject:
   m_ObjectHideFlags: 0
@@ -10417,28 +9905,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1022159793}
-  - {fileID: 1816778081}
   - {fileID: 887603138}
+  - {fileID: 1988957575}
+  - {fileID: 1389607486}
+  - {fileID: 84850621}
+  - {fileID: 164235996}
+  - {fileID: 679191101}
+  - {fileID: 1480089041}
+  - {fileID: 401936194}
   - {fileID: 1106927231}
-  - {fileID: 1493253792}
-  - {fileID: 1709683256}
-  - {fileID: 1436813698}
   - {fileID: 383893578}
-  - {fileID: 1569471199}
-  - {fileID: 451236561}
+  - {fileID: 1436813698}
+  - {fileID: 1816778081}
   - {fileID: 665617754}
+  - {fileID: 451236561}
+  - {fileID: 1569471199}
   - {fileID: 568151906}
   - {fileID: 1413643672}
   - {fileID: 1317957452}
   - {fileID: 1908336955}
-  - {fileID: 679191101}
-  - {fileID: 1480089041}
-  - {fileID: 401936194}
-  - {fileID: 164235996}
-  - {fileID: 84850621}
-  - {fileID: 1389607486}
-  - {fileID: 1988957575}
+  - {fileID: 1022159793}
+  - {fileID: 1709683256}
+  - {fileID: 1493253792}
   m_Father: {fileID: 60947748}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10685,7 +10173,7 @@ GameObject:
   - component: {fileID: 825625904}
   - component: {fileID: 825625903}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (8)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10816,9 +10304,8 @@ GameObject:
   - component: {fileID: 831845261}
   - component: {fileID: 831845264}
   - component: {fileID: 831845263}
-  - component: {fileID: 831845262}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (11)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10837,34 +10324,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 19
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &831845262
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831845260}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &831845263
 Rigidbody2D:
   serializedVersion: 4
@@ -11035,7 +10496,7 @@ GameObject:
   - component: {fileID: 875714038}
   - component: {fileID: 875714039}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2
+  m_Name: topRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11054,7 +10515,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &875714037
 SpriteRenderer:
@@ -11142,7 +10603,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3751837, y: 0}
+  m_Offset: {x: 0.3751837, y: -1.3214793}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11153,7 +10614,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24963218, y: 1}
+  m_Size: {x: 0.24963218, y: 3.6429586}
   m_EdgeRadius: 0
 --- !u!1 &887603137
 GameObject:
@@ -11168,7 +10629,7 @@ GameObject:
   - component: {fileID: 887603140}
   - component: {fileID: 887603139}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0 (1)
+  m_Name: topLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11187,7 +10648,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
 --- !u!61 &887603139
 BoxCollider2D:
@@ -11202,7 +10663,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3751837, y: 0}
+  m_Offset: {x: -0.3751837, y: -1.3197404}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11213,7 +10674,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2496325, y: 1}
+  m_Size: {x: 0.24963248, y: 3.6394808}
   m_EdgeRadius: 0
 --- !u!50 &887603140
 Rigidbody2D:
@@ -12163,9 +11624,8 @@ GameObject:
   - component: {fileID: 999155267}
   - component: {fileID: 999155270}
   - component: {fileID: 999155269}
-  - component: {fileID: 999155268}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (8)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12184,34 +11644,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 16
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &999155268
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999155266}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &999155269
 Rigidbody2D:
   serializedVersion: 4
@@ -12298,7 +11732,7 @@ GameObject:
   - component: {fileID: 1003983886}
   - component: {fileID: 1003983885}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (2)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12564,7 +11998,7 @@ GameObject:
   - component: {fileID: 1020999609}
   - component: {fileID: 1020999608}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (12)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12695,9 +12129,8 @@ GameObject:
   - component: {fileID: 1022159793}
   - component: {fileID: 1022159796}
   - component: {fileID: 1022159795}
-  - component: {fileID: 1022159794}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0
+  m_Name: bottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12716,34 +12149,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 0
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1022159794
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022159792}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3760778}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.24782318}
-  m_EdgeRadius: 0
 --- !u!50 &1022159795
 Rigidbody2D:
   serializedVersion: 4
@@ -12828,9 +12235,8 @@ GameObject:
   - component: {fileID: 1034991690}
   - component: {fileID: 1034991693}
   - component: {fileID: 1034991692}
-  - component: {fileID: 1034991691}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0
+  m_Name: bottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12849,34 +12255,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 0
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
---- !u!61 &1034991691
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034991689}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3760778}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.24782318}
-  m_EdgeRadius: 0
 --- !u!50 &1034991692
 Rigidbody2D:
   serializedVersion: 4
@@ -12961,9 +12341,8 @@ GameObject:
   - component: {fileID: 1066842018}
   - component: {fileID: 1066842021}
   - component: {fileID: 1066842020}
-  - component: {fileID: 1066842019}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2
+  m_Name: bottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12982,34 +12361,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 1
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
---- !u!61 &1066842019
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066842017}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.3751837, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963218, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &1066842020
 Rigidbody2D:
   serializedVersion: 4
@@ -13227,9 +12580,8 @@ GameObject:
   - component: {fileID: 1106927231}
   - component: {fileID: 1106927234}
   - component: {fileID: 1106927233}
-  - component: {fileID: 1106927232}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2 (1)
+  m_Name: topRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13248,34 +12600,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
---- !u!61 &1106927232
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106927230}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.3751837, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &1106927233
 Rigidbody2D:
   serializedVersion: 4
@@ -13362,7 +12688,7 @@ GameObject:
   - component: {fileID: 1110149299}
   - component: {fileID: 1110149298}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (9)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13495,7 +12821,7 @@ GameObject:
   - component: {fileID: 1111781301}
   - component: {fileID: 1111781300}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13626,9 +12952,8 @@ GameObject:
   - component: {fileID: 1112045500}
   - component: {fileID: 1112045501}
   - component: {fileID: 1112045502}
-  - component: {fileID: 1112045503}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (8)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13647,7 +12972,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 16
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &1112045501
 SpriteRenderer:
@@ -13722,32 +13047,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &1112045503
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112045499}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &1119126828
 GameObject:
   m_ObjectHideFlags: 0
@@ -14013,7 +13312,7 @@ GameObject:
   - component: {fileID: 1141928166}
   - component: {fileID: 1141928165}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (1)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14146,7 +13445,7 @@ GameObject:
   - component: {fileID: 1147334905}
   - component: {fileID: 1147334904}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (4)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14333,7 +13632,7 @@ GameObject:
   - component: {fileID: 1169998348}
   - component: {fileID: 1169998347}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (5)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14550,7 +13849,7 @@ GameObject:
   - component: {fileID: 1194836574}
   - component: {fileID: 1194836575}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14569,7 +13868,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1194836573
 SpriteRenderer:
@@ -14657,7 +13956,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
+  m_Offset: {x: 1.7147324, y: 0.37703186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14668,7 +13967,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
+  m_Size: {x: 4.4294643, y: 0.24963272}
   m_EdgeRadius: 0
 --- !u!1 &1195532185
 GameObject:
@@ -14816,7 +14115,7 @@ GameObject:
   - component: {fileID: 1206526626}
   - component: {fileID: 1206526625}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (11)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15359,9 +14658,8 @@ GameObject:
   - component: {fileID: 1241287248}
   - component: {fileID: 1241287251}
   - component: {fileID: 1241287250}
-  - component: {fileID: 1241287249}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (13)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15380,34 +14678,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 21
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &1241287249
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241287247}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.29278594, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5855716, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &1241287250
 Rigidbody2D:
   serializedVersion: 4
@@ -15494,7 +14766,7 @@ GameObject:
   - component: {fileID: 1243581326}
   - component: {fileID: 1243581325}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0 (1)
+  m_Name: topLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15625,9 +14897,8 @@ GameObject:
   - component: {fileID: 1248133464}
   - component: {fileID: 1248133467}
   - component: {fileID: 1248133466}
-  - component: {fileID: 1248133465}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (2)
+  m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15646,34 +14917,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &1248133465
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248133463}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.3751837, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &1248133466
 Rigidbody2D:
   serializedVersion: 4
@@ -15758,9 +15003,8 @@ GameObject:
   - component: {fileID: 1270926353}
   - component: {fileID: 1270926354}
   - component: {fileID: 1270926355}
-  - component: {fileID: 1270926356}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (11)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15779,7 +15023,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 19
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &1270926354
 SpriteRenderer:
@@ -15854,32 +15098,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &1270926356
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270926352}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &1279880817
 GameObject:
   m_ObjectHideFlags: 0
@@ -15893,7 +15111,7 @@ GameObject:
   - component: {fileID: 1279880820}
   - component: {fileID: 1279880819}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16305,7 +15523,7 @@ GameObject:
   - component: {fileID: 1296442556}
   - component: {fileID: 1296442555}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (1)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16438,7 +15656,7 @@ GameObject:
   - component: {fileID: 1299134948}
   - component: {fileID: 1299134947}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2 (1)
+  m_Name: topRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16569,9 +15787,8 @@ GameObject:
   - component: {fileID: 1309405708}
   - component: {fileID: 1309405711}
   - component: {fileID: 1309405710}
-  - component: {fileID: 1309405709}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (4)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16590,34 +15807,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1309405709
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309405707}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &1309405710
 Rigidbody2D:
   serializedVersion: 4
@@ -16702,9 +15893,8 @@ GameObject:
   - component: {fileID: 1317957452}
   - component: {fileID: 1317957455}
   - component: {fileID: 1317957454}
-  - component: {fileID: 1317957453}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (5)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16723,34 +15913,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 13
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1317957453
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317957451}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &1317957454
 Rigidbody2D:
   serializedVersion: 4
@@ -17063,9 +16227,8 @@ GameObject:
   - component: {fileID: 1389607486}
   - component: {fileID: 1389607489}
   - component: {fileID: 1389607488}
-  - component: {fileID: 1389607487}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (12)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17084,34 +16247,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 20
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &1389607487
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389607485}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &1389607488
 Rigidbody2D:
   serializedVersion: 4
@@ -17196,9 +16333,8 @@ GameObject:
   - component: {fileID: 1413643672}
   - component: {fileID: 1413643675}
   - component: {fileID: 1413643674}
-  - component: {fileID: 1413643673}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (4)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17217,34 +16353,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 12
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1413643673
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413643671}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &1413643674
 Rigidbody2D:
   serializedVersion: 4
@@ -17331,7 +16441,7 @@ GameObject:
   - component: {fileID: 1434088729}
   - component: {fileID: 1434088728}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17464,7 +16574,7 @@ GameObject:
   - component: {fileID: 1436813700}
   - component: {fileID: 1436813699}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (2)
+  m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17483,7 +16593,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1436813699
 BoxCollider2D:
@@ -17498,7 +16608,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3751837, y: 0}
+  m_Offset: {x: 0.3751837, y: 0.6292898}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17509,7 +16619,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 1}
+  m_Size: {x: 0.24963254, y: 2.2585793}
   m_EdgeRadius: 0
 --- !u!50 &1436813700
 Rigidbody2D:
@@ -17871,7 +16981,7 @@ GameObject:
   - component: {fileID: 1449587117}
   - component: {fileID: 1449587116}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (1)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18371,9 +17481,8 @@ GameObject:
   - component: {fileID: 1480089041}
   - component: {fileID: 1480089044}
   - component: {fileID: 1480089043}
-  - component: {fileID: 1480089042}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (8)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18392,34 +17501,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 16
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &1480089042
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480089040}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &1480089043
 Rigidbody2D:
   serializedVersion: 4
@@ -18588,9 +17671,8 @@ GameObject:
   - component: {fileID: 1493253792}
   - component: {fileID: 1493253795}
   - component: {fileID: 1493253794}
-  - component: {fileID: 1493253793}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45
+  m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18609,34 +17691,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 4
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1493253793
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493253791}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.37518373, y: 0.65324974}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 2.3064992}
-  m_EdgeRadius: 0
 --- !u!50 &1493253794
 Rigidbody2D:
   serializedVersion: 4
@@ -18856,7 +17912,7 @@ GameObject:
   - component: {fileID: 1507750537}
   - component: {fileID: 1507750536}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (10)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19182,9 +18238,8 @@ GameObject:
   - component: {fileID: 1552119154}
   - component: {fileID: 1552119155}
   - component: {fileID: 1552119156}
-  - component: {fileID: 1552119157}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (1)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19198,12 +18253,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552119153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.57, y: 3.630813, z: 0}
+  m_LocalPosition: {x: 4.569999, y: 3.630813, z: 0}
   m_LocalScale: {x: 2.7383, y: 2.7383, z: 2.7383}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1552119155
 SpriteRenderer:
@@ -19278,32 +18333,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &1552119157
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552119153}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &1554413393
 GameObject:
   m_ObjectHideFlags: 0
@@ -19465,28 +18494,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1034991690}
-  - {fileID: 1066842018}
   - {fileID: 1655831884}
-  - {fileID: 12331955}
-  - {fileID: 172039351}
-  - {fileID: 748567681}
-  - {fileID: 1248133464}
-  - {fileID: 2009053470}
-  - {fileID: 1926923370}
-  - {fileID: 1674623411}
-  - {fileID: 2087203309}
-  - {fileID: 2030019565}
-  - {fileID: 1309405708}
-  - {fileID: 442546420}
-  - {fileID: 413369874}
-  - {fileID: 756247085}
-  - {fileID: 999155267}
   - {fileID: 262253579}
+  - {fileID: 999155267}
+  - {fileID: 756247085}
   - {fileID: 572716276}
   - {fileID: 831845261}
   - {fileID: 700689264}
   - {fileID: 1241287248}
+  - {fileID: 12331955}
+  - {fileID: 2009053470}
+  - {fileID: 1248133464}
+  - {fileID: 1066842018}
+  - {fileID: 413369874}
+  - {fileID: 442546420}
+  - {fileID: 1309405708}
+  - {fileID: 2030019565}
+  - {fileID: 1926923370}
+  - {fileID: 1674623411}
+  - {fileID: 2087203309}
+  - {fileID: 1034991690}
+  - {fileID: 172039351}
+  - {fileID: 748567681}
   m_Father: {fileID: 79883498}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19569,7 +18598,7 @@ GameObject:
   - component: {fileID: 1569471201}
   - component: {fileID: 1569471200}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19588,7 +18617,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 8
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1569471200
 BoxCollider2D:
@@ -19603,7 +18632,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
+  m_Offset: {x: 1.7520182, y: 0.37703186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19614,7 +18643,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
+  m_Size: {x: 4.5040345, y: 0.24963272}
   m_EdgeRadius: 0
 --- !u!50 &1569471201
 Rigidbody2D:
@@ -19852,8 +18881,8 @@ Transform:
   m_Children:
   - {fileID: 223249172}
   - {fileID: 183721691}
-  - {fileID: 1811483055}
   - {fileID: 180148131}
+  - {fileID: 1811483055}
   - {fileID: 1279880818}
   - {fileID: 1449587115}
   - {fileID: 712600497}
@@ -20141,9 +19170,8 @@ GameObject:
   - component: {fileID: 1655831884}
   - component: {fileID: 1655831887}
   - component: {fileID: 1655831886}
-  - component: {fileID: 1655831885}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0 (1)
+  m_Name: topLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20162,34 +19190,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &1655831885
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1655831883}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.3751837, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2496325, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &1655831886
 Rigidbody2D:
   serializedVersion: 4
@@ -20313,9 +19315,8 @@ GameObject:
   - component: {fileID: 1674623411}
   - component: {fileID: 1674623414}
   - component: {fileID: 1674623413}
-  - component: {fileID: 1674623412}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (1)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20334,34 +19335,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 9
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1674623412
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674623410}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &1674623413
 Rigidbody2D:
   serializedVersion: 4
@@ -20446,9 +19421,8 @@ GameObject:
   - component: {fileID: 1690048164}
   - component: {fileID: 1690048165}
   - component: {fileID: 1690048166}
-  - component: {fileID: 1690048167}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (2)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20467,7 +19441,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1690048165
 SpriteRenderer:
@@ -20542,32 +19516,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &1690048167
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690048163}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.37929082, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7585812, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &1692458545
 GameObject:
   m_ObjectHideFlags: 0
@@ -20663,9 +19611,8 @@ GameObject:
   - component: {fileID: 1709683256}
   - component: {fileID: 1709683259}
   - component: {fileID: 1709683258}
-  - component: {fileID: 1709683257}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (1)
+  m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20684,34 +19631,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 5
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1709683257
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709683255}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.3751837, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2496325, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &1709683258
 Rigidbody2D:
   serializedVersion: 4
@@ -20798,7 +19719,7 @@ GameObject:
   - component: {fileID: 1714133285}
   - component: {fileID: 1714133284}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (4)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21124,9 +20045,8 @@ GameObject:
   - component: {fileID: 1725180423}
   - component: {fileID: 1725180424}
   - component: {fileID: 1725180425}
-  - component: {fileID: 1725180426}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (1)
+  m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21145,7 +20065,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 5
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1725180424
 SpriteRenderer:
@@ -21220,32 +20140,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &1725180426
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725180422}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.3751837, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2496325, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1733674557
 GameObject:
   m_ObjectHideFlags: 0
@@ -21376,7 +20270,7 @@ GameObject:
   - component: {fileID: 1769856585}
   - component: {fileID: 1769856584}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (10)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21728,7 +20622,7 @@ GameObject:
   - component: {fileID: 1789509766}
   - component: {fileID: 1789509765}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: BatEnemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22064,7 +20958,7 @@ GameObject:
   - component: {fileID: 1797912092}
   - component: {fileID: 1797912093}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0
+  m_Name: topLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22171,7 +21065,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3760778}
+  m_Offset: {x: 1.3406261, y: 0.3760778}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -22182,7 +21076,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.24782318}
+  m_Size: {x: 3.6812522, y: 0.24782318}
   m_EdgeRadius: 0
 --- !u!1 &1811483054
 GameObject:
@@ -22197,7 +21091,7 @@ GameObject:
   - component: {fileID: 1811483057}
   - component: {fileID: 1811483056}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0 (1)
+  m_Name: bottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22216,7 +21110,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1629705440}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
 --- !u!61 &1811483056
 BoxCollider2D:
@@ -22328,9 +21222,8 @@ GameObject:
   - component: {fileID: 1816778081}
   - component: {fileID: 1816778084}
   - component: {fileID: 1816778083}
-  - component: {fileID: 1816778082}
   m_Layer: 0
-  m_Name: TX Tileset Wall_2
+  m_Name: bottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22349,34 +21242,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 1
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1816778082
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816778080}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.3751837, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963218, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &1816778083
 Rigidbody2D:
   serializedVersion: 4
@@ -22463,7 +21330,7 @@ GameObject:
   - component: {fileID: 1821878954}
   - component: {fileID: 1821878953}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0
+  m_Name: bottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22707,7 +21574,7 @@ GameObject:
   - component: {fileID: 1850286070}
   - component: {fileID: 1850286069}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (2)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22924,7 +21791,7 @@ GameObject:
   - component: {fileID: 1864500060}
   - component: {fileID: 1864500059}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (1)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23649,9 +22516,8 @@ GameObject:
   - component: {fileID: 1908336955}
   - component: {fileID: 1908336958}
   - component: {fileID: 1908336957}
-  - component: {fileID: 1908336956}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (6)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23670,34 +22536,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 14
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1908336956
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908336954}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &1908336957
 Rigidbody2D:
   serializedVersion: 4
@@ -23917,7 +22757,7 @@ GameObject:
   - component: {fileID: 1919319520}
   - component: {fileID: 1919319519}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (3)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24167,7 +23007,7 @@ GameObject:
   - component: {fileID: 1926923372}
   - component: {fileID: 1926923371}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24186,7 +23026,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 8
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1926923371
 BoxCollider2D:
@@ -24201,7 +23041,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
+  m_Offset: {x: 1.7183915, y: 0.37703186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24212,7 +23052,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
+  m_Size: {x: 4.436783, y: 0.24963272}
   m_EdgeRadius: 0
 --- !u!50 &1926923372
 Rigidbody2D:
@@ -24384,7 +23224,7 @@ GameObject:
   - component: {fileID: 1936835972}
   - component: {fileID: 1936835973}
   m_Layer: 0
-  m_Name: TX Tileset Wall_0 (1)
+  m_Name: bottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24403,7 +23243,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 2
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
 --- !u!212 &1936835971
 SpriteRenderer:
@@ -24491,7 +23331,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3751837, y: 0}
+  m_Offset: {x: -0.3751837, y: -1.3085324}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24502,7 +23342,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2496325, y: 1}
+  m_Size: {x: 0.24963248, y: 3.6170647}
   m_EdgeRadius: 0
 --- !u!1 &1981118953
 GameObject:
@@ -24517,7 +23357,7 @@ GameObject:
   - component: {fileID: 1981118956}
   - component: {fileID: 1981118955}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (13)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24648,9 +23488,8 @@ GameObject:
   - component: {fileID: 1988957575}
   - component: {fileID: 1988957578}
   - component: {fileID: 1988957577}
-  - component: {fileID: 1988957576}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (13)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24669,34 +23508,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796281854}
-  m_RootOrder: 21
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &1988957576
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988957574}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.29278594, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5855716, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &1988957577
 Rigidbody2D:
   serializedVersion: 4
@@ -24781,9 +23594,8 @@ GameObject:
   - component: {fileID: 1989200393}
   - component: {fileID: 1989200394}
   - component: {fileID: 1989200395}
-  - component: {fileID: 1989200396}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (9)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24802,7 +23614,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 17
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &1989200394
 SpriteRenderer:
@@ -24877,32 +23689,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &1989200396
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989200392}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.38594496, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7718899, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &2007397944
 GameObject:
   m_ObjectHideFlags: 0
@@ -24962,9 +23748,8 @@ GameObject:
   - component: {fileID: 2009053470}
   - component: {fileID: 2009053473}
   - component: {fileID: 2009053472}
-  - component: {fileID: 2009053471}
   m_Layer: 0
-  m_Name: TX Tileset Wall_45 (3)
+  m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24983,34 +23768,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &2009053471
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2009053469}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.37518373, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24963254, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &2009053472
 Rigidbody2D:
   serializedVersion: 4
@@ -25097,7 +23856,7 @@ GameObject:
   - component: {fileID: 2013823398}
   - component: {fileID: 2013823397}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (11)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25263,7 +24022,7 @@ GameObject:
   - component: {fileID: 2030019567}
   - component: {fileID: 2030019566}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (3)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25282,7 +24041,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 11
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2030019566
 BoxCollider2D:
@@ -25297,7 +24056,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
+  m_Offset: {x: -1.9767828, y: 0.37703186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -25308,7 +24067,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
+  m_Size: {x: 4.9535646, y: 0.24963272}
   m_EdgeRadius: 0
 --- !u!50 &2030019567
 Rigidbody2D:
@@ -25822,9 +24581,8 @@ GameObject:
   - component: {fileID: 2083968314}
   - component: {fileID: 2083968315}
   - component: {fileID: 2083968316}
-  - component: {fileID: 2083968317}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (6)
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25843,7 +24601,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 111752123}
-  m_RootOrder: 14
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2083968315
 SpriteRenderer:
@@ -25918,32 +24676,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &2083968317
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083968313}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!1 &2085830988
 GameObject:
   m_ObjectHideFlags: 0
@@ -26039,9 +24771,8 @@ GameObject:
   - component: {fileID: 2087203309}
   - component: {fileID: 2087203312}
   - component: {fileID: 2087203311}
-  - component: {fileID: 2087203310}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (2)
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26060,34 +24791,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555101175}
-  m_RootOrder: 10
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2087203310
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087203308}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.37929082, y: 0.3770319}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7585812, y: 0.2496327}
-  m_EdgeRadius: 0
 --- !u!50 &2087203311
 Rigidbody2D:
   serializedVersion: 4
@@ -26391,7 +25096,7 @@ GameObject:
   - component: {fileID: 2106253058}
   - component: {fileID: 2106253057}
   m_Layer: 0
-  m_Name: TX Tileset Wall_50 (13)
+  m_Name: wal;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
