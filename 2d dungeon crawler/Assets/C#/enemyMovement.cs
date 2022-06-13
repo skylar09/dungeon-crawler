@@ -6,7 +6,7 @@ public class enemyMovement : MonoBehaviour
 {
 
     private Transform target;
-    public Animator bat_attack;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class enemyMovement : MonoBehaviour
     void Update()
     {
         enemyInfo.enemyMoveSpeed = (PlayerInfo.movementSpeed / 2);
+        rb.velocity = new Vector2(0, 0);
     }
 
     // FixedUpdate is called once per set amount of frames
@@ -28,12 +29,11 @@ public class enemyMovement : MonoBehaviour
         {
             //makes the enemy move towards the player
             transform.position = Vector2.MoveTowards(transform.position, target.position, enemyInfo.enemyMoveSpeed * Time.deltaTime);
-            bat_attack.SetBool("Attack", false);
         }
         
         else
         {
-           bat_attack.SetBool("Attack", true);
+
         }
     }
 }

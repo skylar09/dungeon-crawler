@@ -24,5 +24,10 @@ public class PlayerMovement : MonoBehaviour
             //moves player with wasd or arrow keys
             rb.MovePosition(rb.position + movement * PlayerInfo.movementSpeed * Time.fixedDeltaTime);
         }
+
+        else
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 }
