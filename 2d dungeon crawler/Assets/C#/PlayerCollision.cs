@@ -19,6 +19,8 @@ public class PlayerCollision : MonoBehaviour
             PlayerInfo.playerHealth = PlayerInfo.playerHealth - (Math.Abs(PlayerInfo.playerDefense - 4));
 
             Debug.Log(PlayerInfo.playerHealth);
+
+            enemyInfo.enemyHealth --;
         }
 
         
