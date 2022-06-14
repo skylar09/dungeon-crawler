@@ -9,13 +9,14 @@ public class PlayerInfo : MonoBehaviour
     public static int playerDamage = 5;
     public static int playerDefense = 3;
     public static float movementSpeed = 3f;
+    public static float swordSwingSpeed;
     public static Vector3 playerLocation;
     public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        swordSwingSpeed = 150f * Time.deltaTime;
     }
 
     // Update is called once per frame

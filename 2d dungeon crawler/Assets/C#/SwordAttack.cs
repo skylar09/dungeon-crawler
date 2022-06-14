@@ -7,6 +7,7 @@ public class SwordAttack : MonoBehaviour
 
     public GameObject weapon;
     bool swordSwung = false;
+    bool rotateToPosition = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,29 +18,39 @@ public class SwordAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (swordSwung == false)
-        {
            weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
-        }
 
+        //if left click
         if (Input.GetMouseButtonDown(0))
         {
-            swingSword();
+            // swingSword();
+            swordSwung = true;
+        }
+
+        float playerLocationX = PlayerInfo.playerLocation.x + .6f;
+        float playerLocationY = PlayerInfo.playerLocation.y + .1f;
+
+        //rotates sword as if it were swung
+        if (swordSwung == true)
+        {
+            this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
+            StartCoroutine(Wait());
+        }
+
+        //rotates sword back to orignial position
+        if (rotateToPosition == true)
+        {
+            this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -45), PlayerInfo.swordSwingSpeed);
+            rotateToPosition = false;
         }
     }
 
-    void swingSword()
-    {
-        weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(2, 2, 0);
-        weapon.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        weapon.GetComponent<Rigidbody2D>().angularVelocity = 0;
-        swordSwung = true;
-        StartCoroutine(PauseWait());
-    }
-
-    IEnumerator PauseWait()
+    IEnumerator Wait()
     {
         yield return new WaitForSecondsRealtime(1);
+        rotateToPosition = true;
         swordSwung = false;
     }
+
+    
 }

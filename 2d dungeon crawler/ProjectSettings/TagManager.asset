@@ -8,7 +8,6 @@ TagManager:
   - next room
   - doorX
   - doorY
-  - Weapon
   layers:
   - Default
   - TransparentFX
