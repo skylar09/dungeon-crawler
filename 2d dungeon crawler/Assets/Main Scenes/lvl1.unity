@@ -8159,7 +8159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 673790249}
   rb: {fileID: 673790255}
-  weapon: {fileID: 805740351}
 --- !u!212 &673790253
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8220,7 +8219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673790249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64, y: -0.16299999, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8273,12 +8272,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.125, y: 0.17}
-      - {x: -0.155, y: 0.14999999}
-      - {x: -0.155, y: -0.17}
-      - {x: 0.145, y: -0.17}
-      - {x: 0.155, y: -0.11}
-      - {x: 0.155, y: 0.17}
+    - - {x: -0.100887775, y: 0.15794384}
+      - {x: -0.15198599, y: 0.101775505}
+      - {x: -0.13518682, y: 0.07272116}
+      - {x: -0.13842279, y: -0.16095789}
+      - {x: 0.12390178, y: -0.16397198}
+      - {x: 0.12636669, y: -0.12205611}
+      - {x: 0.12416808, y: 0.06533659}
+      - {x: 0.14618461, y: 0.08712511}
+      - {x: 0.14143685, y: 0.15794384}
 --- !u!1 &679191100
 GameObject:
   m_ObjectHideFlags: 0
@@ -9528,8 +9530,9 @@ GameObject:
   m_Component:
   - component: {fileID: 805740352}
   - component: {fileID: 805740353}
-  - component: {fileID: 805740355}
+  - component: {fileID: 805740357}
   - component: {fileID: 805740354}
+  - component: {fileID: 805740356}
   m_Layer: 0
   m_Name: sword
   m_TagString: Weapon
@@ -9544,8 +9547,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805740351}
-  m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 0.6, y: 0.1, z: 0}
   m_LocalScale: {x: 1.4533, y: 1.4533, z: 1.4533}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9625,8 +9628,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &805740355
-BoxCollider2D:
+--- !u!114 &805740356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805740351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a313b1af6caa6b541b697d0f5a09aa94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 805740351}
+--- !u!60 &805740357
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9648,9 +9664,17 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.22916667, y: 0.7291667}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.02012329, y: 0.37778172}
+      - {x: -0.0569121, y: 0.33194226}
+      - {x: -0.09698554, y: 0.21409424}
+      - {x: -0.088186614, y: -0.109415054}
+      - {x: 0.051198088, y: -0.25634962}
+      - {x: 0.055781253, y: -0.20080385}
+      - {x: 0.125582, y: -0.18200603}
+      - {x: 0.10242055, y: 0.25105295}
+      - {x: 0.0617899, y: 0.33818665}
 --- !u!1 &822476942
 GameObject:
   m_ObjectHideFlags: 0
