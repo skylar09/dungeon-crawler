@@ -12,8 +12,8 @@ public class weaponCollision : MonoBehaviour
         {
             Debug.Log("ouch");
 
-            enemyInfo.enemyHealth --;
-            SpawnEnemy.slimeHealth --;
+            enemyInfo.batHealth --;
+            enemyInfo.slimeHealth --;
         }
     }
 }

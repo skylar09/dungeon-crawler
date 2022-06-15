@@ -18,7 +18,7 @@ public class GameStart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyInfo.enemyHealth <= 0)
+        if (enemyInfo.batHealth <= 0)
         {
             Destroy(createdEnemy);
         }

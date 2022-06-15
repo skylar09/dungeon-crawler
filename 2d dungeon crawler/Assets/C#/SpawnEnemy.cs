@@ -6,7 +6,6 @@ public class SpawnEnemy : MonoBehaviour
 {
     public GameObject Enemy;
     private GameObject createdEnemy;
-    public static int slimeHealth = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +16,7 @@ public class SpawnEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (slimeHealth <= 0)
+        if (enemyInfo.slimeHealth <= 0)
         {
             Destroy(createdEnemy);
         }

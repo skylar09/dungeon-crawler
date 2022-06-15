@@ -18,7 +18,6 @@ public class enemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyInfo.enemyMoveSpeed = (PlayerInfo.movementSpeed / 2);
         rb.velocity = new Vector2(0, 0);
     }
 
@@ -28,7 +27,7 @@ public class enemyMovement : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) > 1)
         {
             //makes the enemy move towards the player
-            transform.position = Vector2.MoveTowards(transform.position, target.position, enemyInfo.enemyMoveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, enemyInfo.batMoveSpeed * Time.deltaTime);
         }
         
         else

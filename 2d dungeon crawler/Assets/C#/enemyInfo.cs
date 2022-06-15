@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class enemyInfo : MonoBehaviour
 {
-
-    public static int enemyHealth = 1;
-    public static int enemyDamage = 4;
-    public static int enemyDefense = 2;
-    public static float enemyMoveSpeed = 1;
-    public static int enemyResistKnockback = 0;
     public static Vector3 enemyLocation;
     public GameObject enemy;
+
+    public static int batHealth = 1;
+    public static int batDamage = 1;
+    public static int batDefense = 1;
+    public static float batMoveSpeed = PlayerInfo.movementSpeed / 2;
+    public static int batResistKnockback = 0;
+
+    public static int slimeHealth = 4;
+    public static int slimeDamage = 2;
+    public static int slimeDefense = 2;
+    public static float slimeMoveSpeed = 1;
+    public static int slimeResistKnockback = 0;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +32,7 @@ public class enemyInfo : MonoBehaviour
     {
 
         //makes enemy disappear if it's dead
-        if (enemyHealth <= 0)
+        if (batHealth <= 0)
         {
 
         }
