@@ -13,6 +13,7 @@ public class weaponCollision : MonoBehaviour
             Debug.Log("ouch");
 
             enemyInfo.enemyHealth --;
+            SpawnEnemy.slimeHealth --;
         }
     }
 }
