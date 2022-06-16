@@ -21,6 +21,7 @@ public class GameStart : MonoBehaviour
         if (enemyInfo.batHealth <= 0)
         {
             Destroy(createdEnemy);
+            enemyInfo.batHealth = 1;
         }
     }
 }

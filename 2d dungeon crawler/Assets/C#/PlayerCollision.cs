@@ -7,8 +7,8 @@ public class PlayerCollision : MonoBehaviour
 {
     public GameObject Camera;
 
-    int currentRoom = 0;
-    int closestRoom;
+    public static int currentRoom = 0;
+    public static int closestRoom;
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
@@ -16,9 +16,16 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.tag == "enemy")
         {
             //changes the player health
-            PlayerInfo.playerHealth = PlayerInfo.playerHealth - (Math.Abs(PlayerInfo.playerDefense - 4));
+            if (PlayerInfo.playerDefense - enemyInfo.batDamage <= 0)
+            {
+                PlayerInfo.playerHealth -= 1;
+            }
+            else
+            {
+                PlayerInfo.playerHealth -= PlayerInfo.playerDefense - enemyInfo.batDamage;
+            }
 
-            Debug.Log(PlayerInfo.playerHealth);
+            Debug.Log("ouch");
         }
 
         

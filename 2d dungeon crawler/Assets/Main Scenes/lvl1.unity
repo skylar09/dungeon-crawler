@@ -3561,7 +3561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232989240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.64, y: -1.837, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9562,7 +9562,6 @@ GameObject:
   - component: {fileID: 805740352}
   - component: {fileID: 805740353}
   - component: {fileID: 805740357}
-  - component: {fileID: 805740354}
   - component: {fileID: 805740358}
   m_Layer: 0
   m_Name: sword
@@ -9580,7 +9579,7 @@ Transform:
   m_GameObject: {fileID: 805740351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.6, y: 0.1, z: 0}
-  m_LocalScale: {x: 1.4533, y: 1.4533, z: 1.4533}
+  m_LocalScale: {x: 1.7590743, y: 1.7590743, z: 1.7590743}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 232989243}
@@ -9638,27 +9637,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &805740354
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805740351}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!60 &805740357
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9686,20 +9664,10 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -0.010359826, y: 0.3663911}
       - {x: -0.0520304, y: 0.32380608}
-      - {x: -0.05549092, y: 0.23280744}
-      - {x: -0.07482119, y: 0.24092324}
+      - {x: -0.05549092, y: 0.24208912}
       - {x: -0.07393864, y: 0.15887606}
-      - {x: -0.09386775, y: 0.1597136}
-      - {x: -0.09614825, y: 0.034864977}
-      - {x: -0.11730322, y: 0.03468256}
-      - {x: -0.115180135, y: -0.051556967}
       - {x: -0.09195016, y: -0.054152075}
-      - {x: -0.09632284, y: -0.109415054}
-      - {x: -0.070317894, y: -0.111764126}
-      - {x: -0.07003124, y: -0.13512029}
-      - {x: 0.07124001, y: -0.13164619}
-      - {x: 0.07432403, y: -0.11284843}
-      - {x: 0.09370605, y: -0.108373344}
+      - {x: 0.09044798, y: -0.113266185}
       - {x: 0.09067228, y: -0.048427843}
       - {x: 0.11182011, y: -0.051442184}
       - {x: 0.113235414, y: 0.036370873}
