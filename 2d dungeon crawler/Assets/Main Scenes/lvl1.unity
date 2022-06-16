@@ -8126,6 +8126,7 @@ GameObject:
   - component: {fileID: 673790250}
   - component: {fileID: 673790256}
   - component: {fileID: 673790255}
+  - component: {fileID: 673790257}
   m_Layer: 0
   m_Name: smileMan
   m_TagString: Player
@@ -8295,6 +8296,22 @@ PolygonCollider2D:
       - {x: 0.12416808, y: 0.06533659}
       - {x: 0.14618461, y: 0.08712511}
       - {x: 0.14143685, y: 0.15794384}
+--- !u!114 &673790257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673790249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a313b1af6caa6b541b697d0f5a09aa94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 805740351}
+  swordSwung: 0
+  canAttack: 1
+  startingRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &679191100
 GameObject:
   m_ObjectHideFlags: 0
@@ -9546,7 +9563,6 @@ GameObject:
   - component: {fileID: 805740353}
   - component: {fileID: 805740357}
   - component: {fileID: 805740354}
-  - component: {fileID: 805740356}
   - component: {fileID: 805740358}
   m_Layer: 0
   m_Name: sword
@@ -9562,14 +9578,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805740351}
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.6, y: 0.1, z: 0}
   m_LocalScale: {x: 1.4533, y: 1.4533, z: 1.4533}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 232989243}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &805740353
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9610,7 +9626,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: b30bbbb2dc3db2d4393b3c9bfc134da4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9643,19 +9659,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &805740356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805740351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a313b1af6caa6b541b697d0f5a09aa94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 805740351}
 --- !u!60 &805740357
 PolygonCollider2D:
   m_ObjectHideFlags: 0
