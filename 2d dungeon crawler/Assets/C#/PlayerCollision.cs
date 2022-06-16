@@ -44,7 +44,8 @@ public class PlayerCollision : MonoBehaviour
                 transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x, RoomLocation.roomCords[currentRoom].y + 3.5f);
                 Debug.Log("bla");
             }
-            
+
+            SpawnEnemy.enterRoom = true;
         }
 
         if (collisionInfo.collider.tag == "doorX")
@@ -69,6 +70,8 @@ public class PlayerCollision : MonoBehaviour
                 transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x + 9.5f, RoomLocation.roomCords[currentRoom].y);
                 Debug.Log("bla");
             }
+
+            SpawnEnemy.enterRoom = true;
         }
 
         void whichRoomNext()

@@ -16,7 +16,7 @@ public class PlayerInfo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        swordSwingSpeed = 25f * Time.deltaTime;
+        swordSwingSpeed = 0.08f * Screen.height * Time.deltaTime;
     }
 
     // Update is called once per frame
