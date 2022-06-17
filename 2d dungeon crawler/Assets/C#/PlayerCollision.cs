@@ -16,16 +16,19 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.tag == "enemy")
         {
             //changes the player health
+
+            //makes sure the player loses at least 1 health
             if (PlayerInfo.playerDefense - enemyInfo.batDamage <= 0)
             {
                 PlayerInfo.playerHealth -= 1;
             }
             else
             {
+                //player loses health equal to the difference in player defence and enemy dmg
                 PlayerInfo.playerHealth -= PlayerInfo.playerDefense - enemyInfo.batDamage;
             }
 
-            Debug.Log("ouch");
+            // Debug.Log("ouch");
         }
 
         
