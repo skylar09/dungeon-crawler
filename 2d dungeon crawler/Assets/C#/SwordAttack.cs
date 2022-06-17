@@ -21,6 +21,7 @@ public class SwordAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //sets the weapon position to near the player
         weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
 
         float playerLocationX = PlayerInfo.playerLocation.x + .6f;
@@ -38,11 +39,11 @@ public class SwordAttack : MonoBehaviour
 
         if (swordSwung == true)
         {
-            //rotates the sword
+            //rotates the sword towards -90 degrees
             weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
         }
     
-        
+        //checks the z component of the rotation of the weapon to see if it is 270 (-90)
         if (weapon.transform.localRotation.eulerAngles.z == 270)
         {
             // Debug.Log("a");

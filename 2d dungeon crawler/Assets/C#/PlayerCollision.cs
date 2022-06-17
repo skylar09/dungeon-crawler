@@ -88,8 +88,7 @@ public class PlayerCollision : MonoBehaviour
         {
             double roomDistance = 999999999;
 
-            //teleport player and change camera to new room
-
+            //goes through all the rooms and finds the closest one
             for (int i = 0; i < RoomLocation.roomCords.Length; i ++)
             {
                 if (i != currentRoom)
@@ -105,6 +104,8 @@ public class PlayerCollision : MonoBehaviour
                     }
                 }
             }
+            
+            //the current room is set to the closest room
             currentRoom = closestRoom;
         }
     }

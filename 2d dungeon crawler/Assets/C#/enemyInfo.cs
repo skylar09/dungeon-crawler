@@ -20,6 +20,7 @@ public class enemyInfo : MonoBehaviour
     public static int slimeResistKnockback = 0;
 
     //makes array   note: to call a 2D array it goes vertical value then horizontal value --> [y, x]
+    //**need to work on this array more**
     public int[,] enemyStats = {
         {1, 1, 1, 0},
         {4, 2, 2, 0}
@@ -39,7 +40,7 @@ public class enemyInfo : MonoBehaviour
         {
 
         }
-
+        //sets enemyLocation to the current enemy location
         enemyLocation = new Vector3(enemy.GetComponent<Transform>().position.x, enemy.GetComponent<Transform>().position.y, enemy.GetComponent<Transform>().position.z);
     }
 }

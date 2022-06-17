@@ -13,10 +13,11 @@ public class GameOver : MonoBehaviour
     {
         if (PlayerInfo.playerHealth <= 0)
         {
+            //sets movement speed to 0 and turns on game over text
             PlayerInfo.movementSpeed = 0;
             enemyInfo.batMoveSpeed = 0;
             gameOverText.SetActive(true);
-            animator.SetBool("PlayerDead", true);
+            // animator.SetBool("PlayerDead", true);
         }
     }
 }
