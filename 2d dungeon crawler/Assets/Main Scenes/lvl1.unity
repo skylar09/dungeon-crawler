@@ -8135,11 +8135,11 @@ GameObject:
   m_Component:
   - component: {fileID: 673790254}
   - component: {fileID: 673790253}
+  - component: {fileID: 673790258}
+  - component: {fileID: 673790255}
+  - component: {fileID: 673790250}
   - component: {fileID: 673790252}
   - component: {fileID: 673790251}
-  - component: {fileID: 673790250}
-  - component: {fileID: 673790256}
-  - component: {fileID: 673790255}
   - component: {fileID: 673790257}
   m_Layer: 0
   m_Name: smileMan
@@ -8248,7 +8248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673790249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0.000000007450581, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8276,40 +8276,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &673790256
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673790249}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.34}
-    newSize: {x: 0.31, y: 0.34}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.100887775, y: 0.15794384}
-      - {x: -0.15198599, y: 0.101775505}
-      - {x: -0.13518682, y: 0.07272116}
-      - {x: -0.13842279, y: -0.16095789}
-      - {x: 0.12390178, y: -0.16397198}
-      - {x: 0.12636669, y: -0.12205611}
-      - {x: 0.12416808, y: 0.06533659}
-      - {x: 0.14618461, y: 0.08712511}
-      - {x: 0.14143685, y: 0.15794384}
 --- !u!114 &673790257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8326,6 +8292,32 @@ MonoBehaviour:
   swordSwung: 0
   canAttack: 1
   startingRotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!61 &673790258
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673790249}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.001364693}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.31, y: 0.34}
+    newSize: {x: 0.31, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.3209633}
+  m_EdgeRadius: 0
 --- !u!1 &679191100
 GameObject:
   m_ObjectHideFlags: 0

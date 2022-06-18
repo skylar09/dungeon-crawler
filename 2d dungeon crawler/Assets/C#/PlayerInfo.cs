@@ -12,6 +12,7 @@ public class PlayerInfo : MonoBehaviour
     public static float swordSwingSpeed;
     public static Vector3 playerLocation;
     public GameObject player;
+    public static string directionFacing = "right";
 
     // Start is called before the first frame update
     void Start()
