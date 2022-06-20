@@ -19,6 +19,7 @@ public class SpawnEnemy : MonoBehaviour
             //creates a version of an enemy prefab
             //**need to make it so more than one type of enemy spawns in certain rooms**
             Instantiate(Enemy, new Vector2(LocationX + 2, LocationY + 2), Quaternion.identity);
+            Instantiate(Enemy, new Vector2(LocationX + 2, LocationY + 2), Quaternion.identity);
             enterRoom = false;
             Debug.Log("spawned");
         }        
