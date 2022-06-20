@@ -10,9 +10,13 @@ public class weaponCollision : MonoBehaviour
         //checks for the tag on the object it collides with
         //**add new if statements for each enemy**
         //**add new tag for each enemy**
-        if (collisionInfo.collider.tag == "enemy")
+        if (collisionInfo.collider.tag == "batEnemy")
         {
             enemyInfo.batHealth --;
+        }
+
+        if (collisionInfo.collider.tag == "slimeEnemy")
+        {
             enemyInfo.slimeHealth --;
         }
     }

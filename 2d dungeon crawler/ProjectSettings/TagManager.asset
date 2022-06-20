@@ -4,10 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemy
   - next room
   - doorX
   - doorY
+  - slimeEnemy
+  - batEnemy
   layers:
   - Default
   - TransparentFX

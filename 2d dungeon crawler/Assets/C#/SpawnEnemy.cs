@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject Enemy;
-    private GameObject CreatedEnemy;
     public static bool enterRoom = true;
 
     // Update is called once per frame
@@ -19,19 +18,9 @@ public class SpawnEnemy : MonoBehaviour
         {
             //creates a version of an enemy prefab
             //**need to make it so more than one type of enemy spawns in certain rooms**
-            CreatedEnemy = Instantiate(Enemy, new Vector2(LocationX + 2, LocationY + 2), Quaternion.identity);
+            Instantiate(Enemy, new Vector2(LocationX + 2, LocationY + 2), Quaternion.identity);
             enterRoom = false;
             Debug.Log("spawned");
-        }
-
-        if (enemyInfo.slimeHealth <= 0)
-        {
-            //destroys (kills) the enemy
-            Destroy(CreatedEnemy);
-
-             //resets slime health so when a new slime is created it has health of 1
-            //**should find a way to make it so this doesnt need to happen bc it might kill all slimes alive at once**
-            enemyInfo.slimeHealth = 4;
-        }
+        }        
     }
 }

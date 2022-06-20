@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2954133143285187624}
   - component: {fileID: 7446110572538603555}
   - component: {fileID: -8328018396126838222}
+  - component: {fileID: 826330313779698992}
   m_Layer: 0
   m_Name: slime
-  m_TagString: enemy
+  m_TagString: slimeEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,3 +169,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2954133143285187624}
+--- !u!114 &826330313779698992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7446110572538603554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a970a48ad82274c812ad73bfee7dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
