@@ -19,7 +19,7 @@ public class destroyEnemy : MonoBehaviour
             Destroy(gameObject);
 
             //resets bat health so when a new bat is created it has health of 1
-            //**should find a way to make it so this doesnt need to happen bc it might kill all bats alive at once**
+            //**should find a way to make it so this doesnt need to happen bc it resets all current bat healths to 1**
             enemyInfo.batHealth = 1;
         }
         
@@ -28,8 +28,8 @@ public class destroyEnemy : MonoBehaviour
             //destroys (kills) the enemy
             Destroy(gameObject);
 
-             //resets slime health so when a new slime is created it has health of 1
-            //**should find a way to make it so this doesnt need to happen bc it might kill all slimes alive at once**
+             //resets slime health so when a new slime is created it has health of 4
+            //**should find a way to make it so this doesnt need to happen bc it resets all current slime healths to 4**
             enemyInfo.slimeHealth = 4;
         }
     }
