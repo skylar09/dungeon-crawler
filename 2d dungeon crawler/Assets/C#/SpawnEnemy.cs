@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public GameObject Enemy;
+    public GameObject slime;
+    public GameObject bat;
     public static bool enterRoom = true;
 
     // Update is called once per frame
@@ -18,8 +19,10 @@ public class SpawnEnemy : MonoBehaviour
         {
             //creates a version of an enemy prefab
             //**need to make it so more than one type of enemy spawns in certain rooms**
-            Instantiate(Enemy, new Vector2(LocationX + 2, LocationY + 2), Quaternion.identity);
-            Instantiate(Enemy, new Vector2(LocationX + 2, LocationY + 2), Quaternion.identity);
+            Instantiate(slime, new Vector2(LocationX + 2, LocationY + 2), Quaternion.identity);
+            Instantiate(slime, new Vector2(LocationX + 2, LocationY + 2), Quaternion.identity);
+            Instantiate(bat, new Vector2(LocationX + 3, LocationY + 2), Quaternion.identity);
+            Instantiate(bat, new Vector2(LocationX + 3, LocationY + 2), Quaternion.identity);
             enterRoom = false;
             Debug.Log("spawned");
         }        
