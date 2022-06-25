@@ -10,6 +10,7 @@ public class SwordAttack : MonoBehaviour
     public bool canAttack = true;
     public Quaternion startingRotation;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,12 @@ public class SwordAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //gets the mouse position in pixels
+        Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        //gets the real world position of the mouse by converting the pixels to acutal units
+        //*use this to check swing left or right*
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);  
+
         //sets the weapon position to near the player
         weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
 
