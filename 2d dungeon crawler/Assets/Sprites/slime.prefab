@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2954133143285187624}
   - component: {fileID: 7446110572538603555}
   - component: {fileID: -8328018396126838222}
-  - component: {fileID: 826330313779698992}
+  - component: {fileID: -6988042190880210675}
   m_Layer: 0
   m_Name: slime
   m_TagString: slimeEnemy
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2954133143285187624}
---- !u!114 &826330313779698992
+--- !u!114 &-6988042190880210675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,6 +178,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7446110572538603554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a970a48ad82274c812ad73bfee7dcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 8350a66eed0e1f64ebfcdfa7082f8fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

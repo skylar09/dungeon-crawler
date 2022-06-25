@@ -9,6 +9,7 @@ TagManager:
   - doorY
   - slimeEnemy
   - batEnemy
+  - weapon
   layers:
   - Default
   - TransparentFX
