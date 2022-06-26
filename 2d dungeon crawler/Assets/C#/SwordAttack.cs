@@ -8,7 +8,8 @@ public class SwordAttack : MonoBehaviour
     public GameObject weapon;
     public bool swordSwung = false;
     public bool canAttack = true;
-    public Quaternion startingRotation;
+    public bool mouseIsLeft;
+    public Quaternion startrotateright;
 
 
     // Start is called before the first frame update
@@ -16,7 +17,7 @@ public class SwordAttack : MonoBehaviour
     {
         //turns the weapon off
         weapon.SetActive(false);
-        startingRotation = weapon.transform.rotation;
+        startrotateright = new Quaternion(0, 0, 0, 0);
     }
 
     // Update is called once per frame
@@ -28,12 +29,17 @@ public class SwordAttack : MonoBehaviour
         //*use this to check swing left or right*
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);  
 
-        //sets the weapon position to near the player
-        weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
+        //checks if the mouse is to the right or left of the player
+        if (PlayerInfo.playerLocation.x >= worldPosition.x)
+        {
+            mouseIsLeft = true;
+        }
 
-        float playerLocationX = PlayerInfo.playerLocation.x + .6f;
-        float playerLocationY = PlayerInfo.playerLocation.y + .1f;
-
+        else
+        {
+            mouseIsLeft = false;
+        }
+        
         //if left click
         if (Input.GetMouseButtonDown(0) && canAttack == true)
         {
@@ -44,23 +50,59 @@ public class SwordAttack : MonoBehaviour
             canAttack = false;
         }
 
-        if (swordSwung == true)
-        {
-            //rotates the sword towards -90 degrees
-            weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
-        }
-    
-        //checks the z component of the rotation of the weapon to see if it is 270 (-90)
-        if (weapon.transform.localRotation.eulerAngles.z == 270)
-        {
-            // Debug.Log("a");
-            // StartCoroutine(Wait());
-            weapon.transform.rotation = startingRotation;
-            weapon.SetActive(false);
-            canAttack = true;
-            swordSwung = false;
+        float playerLocationX = PlayerInfo.playerLocation.x + .6f;
+        float playerLocationY = PlayerInfo.playerLocation.y + .1f;
 
+        if (mouseIsLeft == true)
+        {
+            //sets the weapon position to near the player
+            weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.6f, .1f, 0); 
+
+            if (swordSwung == true)
+            {
+                //rotates the sword towards -90 degrees
+                weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(-1 * playerLocationX, playerLocationY, 90), PlayerInfo.swordSwingSpeed);
+            
+        
+                //checks the z component of the rotation of the weapon to see if it is 90
+                if (weapon.transform.localRotation.eulerAngles.z == 90)
+                {
+                    //resets everything
+                    restartVariables();
+
+                }
+            }
         }
+
+        else
+        {
+            //sets the weapon position to near the player
+            weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
+
+            if (swordSwung == true)
+            {
+                //rotates the sword towards -90 degrees
+                weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
+            
+        
+                //checks the z component of the rotation of the weapon to see if it is 270 (-90)
+                if (weapon.transform.localRotation.eulerAngles.z == 270)
+                {
+                    //resets everything
+                    restartVariables();
+
+                }
+            }
+        }
+    }
+
+    //resets rotation, swordswung, canAttack, and turns weapon off
+    void restartVariables()
+    {
+        weapon.transform.rotation = startrotateright;
+        weapon.SetActive(false);
+        canAttack = true;
+        swordSwung = false;
     }
 
     //this is used to wait a certain amount of time before doing something
