@@ -7,7 +7,7 @@ public class RoomLocation : MonoBehaviour
 
     public static Vector3[] roomCords = new Vector3[6];
     public static bool[] roomCleared = {false, false, false, false, false, false};
-    public static bool[] newRoom = {true, true, true, true, true, true};
+    public static bool[] newRoom = {false, true, true, true, false, true};
     
     // Start is called before the first frame update
     void Start()
