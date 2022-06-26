@@ -29,15 +29,18 @@ public class SwordAttack : MonoBehaviour
         //*use this to check swing left or right*
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);  
 
-        //checks if the mouse is to the right or left of the player
-        if (PlayerInfo.playerLocation.x >= worldPosition.x)
+        if (swordSwung != true)
         {
-            mouseIsLeft = true;
-        }
+            //checks if the mouse is to the right or left of the player
+            if (PlayerInfo.playerLocation.x >= worldPosition.x)
+            {
+                mouseIsLeft = true;
+            }
 
-        else
-        {
-            mouseIsLeft = false;
+            else
+            {
+                mouseIsLeft = false;
+            }
         }
         
         //if left click
@@ -53,47 +56,46 @@ public class SwordAttack : MonoBehaviour
         float playerLocationX = PlayerInfo.playerLocation.x + .6f;
         float playerLocationY = PlayerInfo.playerLocation.y + .1f;
 
-        if (mouseIsLeft == true)
-        {
-            //sets the weapon position to near the player
-            weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.6f, .1f, 0); 
-
+        
             if (swordSwung == true)
             {
-                //rotates the sword towards -90 degrees
-                weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(-1 * playerLocationX, playerLocationY, 90), PlayerInfo.swordSwingSpeed);
-            
-        
-                //checks the z component of the rotation of the weapon to see if it is 90
-                if (weapon.transform.localRotation.eulerAngles.z == 90)
+                if (mouseIsLeft == true)
                 {
-                    //resets everything
-                    restartVariables();
+                    //sets the weapon position to near the player
+                    weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.6f, .1f, 0); 
 
+                    //rotates the sword towards -90 degrees
+                    weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(-1 * playerLocationX, playerLocationY, 90), PlayerInfo.swordSwingSpeed);
+                
+            
+                    //checks the z component of the rotation of the weapon to see if it is 90
+                    if (weapon.transform.localRotation.eulerAngles.z == 90)
+                    {
+                        //resets everything
+                        restartVariables();
+
+                    }
+                }
+
+                else
+                {
+                    //sets the weapon position to near the player
+                    weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
+                    //rotates the sword towards -90 degrees
+                    weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
+                
+            
+                    //checks the z component of the rotation of the weapon to see if it is 270 (-90)
+                    if (weapon.transform.localRotation.eulerAngles.z == 270)
+                    {
+                        //resets everything
+                        restartVariables();
+
+                    }
                 }
             }
-        }
 
-        else
-        {
-            //sets the weapon position to near the player
-            weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
-
-            if (swordSwung == true)
-            {
-                //rotates the sword towards -90 degrees
-                weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
-            
         
-                //checks the z component of the rotation of the weapon to see if it is 270 (-90)
-                if (weapon.transform.localRotation.eulerAngles.z == 270)
-                {
-                    //resets everything
-                    restartVariables();
-
-                }
-            }
-        }
     }
 
     //resets rotation, swordswung, canAttack, and turns weapon off
