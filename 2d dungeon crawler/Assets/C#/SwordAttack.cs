@@ -62,7 +62,7 @@ public class SwordAttack : MonoBehaviour
                 if (mouseIsLeft == true)
                 {
                     //sets the weapon position to near the player
-                    weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.6f, .1f, 0); 
+                    weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.65f, .1f, 0); 
 
                     //rotates the sword towards -90 degrees
                     weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(-1 * playerLocationX, playerLocationY, 90), PlayerInfo.swordSwingSpeed);

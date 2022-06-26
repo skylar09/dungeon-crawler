@@ -8263,7 +8263,8 @@ MonoBehaviour:
   weapon: {fileID: 805740351}
   swordSwung: 0
   canAttack: 1
-  startingRotation: {x: 0, y: 0, z: 0, w: 0}
+  mouseIsLeft: 0
+  startrotateright: {x: 0, y: 0, z: 0, w: 0}
 --- !u!61 &673790258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8277,7 +8278,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.001364693}
+  m_Offset: {x: -0.0010970607, y: -0.0002809018}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8288,7 +8289,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.3209633}
+  m_Size: {x: 0.24341764, y: 0.31108972}
   m_EdgeRadius: 0
 --- !u!1 &679191100
 GameObject:
@@ -9644,7 +9645,7 @@ PolygonCollider2D:
       - {x: -0.05549092, y: 0.24208912}
       - {x: -0.07393864, y: 0.15887606}
       - {x: -0.09195016, y: -0.054152075}
-      - {x: 0.09044798, y: -0.113266185}
+      - {x: 0.079238646, y: -0.09084756}
       - {x: 0.09067228, y: -0.048427843}
       - {x: 0.11182011, y: -0.051442184}
       - {x: 0.113235414, y: 0.036370873}

@@ -6,6 +6,7 @@ public class RoomLocation : MonoBehaviour
 {
 
     public static Vector3[] roomCords = new Vector3[6];
+    public static bool[] roomCleared = new bool[6];
     
     // Start is called before the first frame update
     void Start()
