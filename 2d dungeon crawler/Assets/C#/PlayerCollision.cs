@@ -18,7 +18,7 @@ public class PlayerCollision : MonoBehaviour
             //changes the player health
 
             //makes sure the player loses at least 1 health
-            if (PlayerInfo.playerDefense - enemyInfo.batDamage <= 0)
+            if (PlayerInfo.playerDefense - enemyInfo.batDamage <= 0 || PlayerInfo.playerDefense - enemyInfo.batDamage >= 4)
             {
                 PlayerInfo.playerHealth -= 1;
             }
@@ -58,7 +58,7 @@ public class PlayerCollision : MonoBehaviour
             SpawnEnemy.enterRoom = true;
         }
 
-        if (collisionInfo.collider.tag == "doorX")
+        else if (collisionInfo.collider.tag == "doorX")
         {
             whichRoomNext();
             
