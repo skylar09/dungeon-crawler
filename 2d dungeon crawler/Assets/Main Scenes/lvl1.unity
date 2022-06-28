@@ -17185,6 +17185,7 @@ GameObject:
   - component: {fileID: 1517334848}
   - component: {fileID: 1517334846}
   - component: {fileID: 1517334847}
+  - component: {fileID: 1517334850}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -17291,11 +17292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf784ddb59afe241b3e949f6d2f215b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossLocation: {x: 0, y: 0}
   animator: {fileID: 1517334843}
   changeCollider: 0
   num: 0
-  fireballs: 0
 --- !u!114 &1517334847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17392,6 +17391,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1517334850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517334842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a5c1147c9d8954686e01be9b222df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fireball: {fileID: 4620893858027162018, guid: d68e2984c65b84047bf8be3df26b40d7, type: 3}
+  fireballs: 0
 --- !u!1 &1527858000
 GameObject:
   m_ObjectHideFlags: 0
