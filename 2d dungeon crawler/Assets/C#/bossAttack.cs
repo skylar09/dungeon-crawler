@@ -7,6 +7,9 @@ public class bossAttack : MonoBehaviour
     Animator animator;
 
     public GameObject Fireball;
+    public GameObject player;
+
+    public Vector3 playerLastLocation;
 
     public int fireballs = 0;
 
@@ -19,13 +22,15 @@ public class bossAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //shoots fireballs
     void fireball()
     {
-        Instantiate(Fireball, bossBehavior.bossLocation , Quaternion.identity);
+        //get it so that it moves towards the players previous location at constant speed and is facing the player
+        var fireballClone = Instantiate(Fireball, bossBehavior.bossLocation , Quaternion.identity);
+      
         fireballs ++; 
         
         if (fireballs == 3)

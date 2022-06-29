@@ -34,9 +34,6 @@ public class bossBehavior : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
-        double distance = Math.Sqrt(Math.Pow((bossLocation.y - PlayerInfo.playerLocation.y), 6) + Math.Pow((bossLocation.x - PlayerInfo.playerLocation.x), 6));
-        Debug.Log(distance);
-
         if (PlayerCollision.currentRoom == 5 && Vector2.Distance(transform.position, target.position) - ((target.position.x + transform.position.x) / 2) < 6)
         {
             animator.SetBool("nearby", true);

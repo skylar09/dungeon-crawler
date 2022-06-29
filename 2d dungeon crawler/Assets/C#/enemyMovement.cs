@@ -25,7 +25,7 @@ public class enemyMovement : MonoBehaviour
     void FixedUpdate()
     {
         //checks if enemy is within a certain distance of the player
-        if (Vector2.Distance(transform.position, target.position) - ((target.position.x + transform.position.x) / 2) < 6)
+        if (Vector2.Distance(transform.position, target.position) < 6)
         {
             //makes the enemy move towards the player
             transform.position = Vector2.MoveTowards(transform.position, target.position, enemyInfo.batMoveSpeed * Time.deltaTime);
