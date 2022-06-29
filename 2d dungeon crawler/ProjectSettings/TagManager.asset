@@ -10,6 +10,7 @@ TagManager:
   - slimeEnemy
   - batEnemy
   - weapon
+  - boss
   layers:
   - Default
   - TransparentFX

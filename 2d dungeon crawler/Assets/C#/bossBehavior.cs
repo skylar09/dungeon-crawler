@@ -8,13 +8,15 @@ public class bossBehavior : MonoBehaviour
     public static Vector2 bossLocation;
     public Animator animator;
 
+    private Transform target;
+
     public bool changeCollider = false;
     public int num = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -22,9 +24,20 @@ public class bossBehavior : MonoBehaviour
     {
         bossLocation = new Vector2(this.GetComponent<Transform>().position.x, this.GetComponent<Transform>().position.y);
 
-        double distance = Math.Sqrt(Math.Pow((bossLocation.y - PlayerInfo.playerLocation.y), 6) + Math.Pow((bossLocation.x - PlayerInfo.playerLocation.x), 6));
+        if (bossLocation.x > PlayerInfo.playerLocation.x)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
 
-        if (PlayerCollision.currentRoom == 5)
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+
+        double distance = Math.Sqrt(Math.Pow((bossLocation.y - PlayerInfo.playerLocation.y), 6) + Math.Pow((bossLocation.x - PlayerInfo.playerLocation.x), 6));
+        Debug.Log(distance);
+
+        if (PlayerCollision.currentRoom == 5 && Vector2.Distance(transform.position, target.position) - ((target.position.x + transform.position.x) / 2) < 6)
         {
             animator.SetBool("nearby", true);
             changeCollider = true;
