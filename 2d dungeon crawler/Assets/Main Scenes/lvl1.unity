@@ -17465,8 +17465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fireball: {fileID: 4620893858027162018, guid: d68e2984c65b84047bf8be3df26b40d7, type: 3}
-  player: {fileID: 0}
-  playerLastLocation: {x: 0, y: 0, z: 0}
+  rb: {fileID: 4735315863302508860, guid: d68e2984c65b84047bf8be3df26b40d7, type: 3}
   fireballs: 0
 --- !u!1 &1527858000
 GameObject:

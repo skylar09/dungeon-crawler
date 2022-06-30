@@ -7,9 +7,8 @@ public class bossAttack : MonoBehaviour
     Animator animator;
 
     public GameObject Fireball;
-    public GameObject player;
 
-    public Vector3 playerLastLocation;
+    public Rigidbody2D rb;
 
     public int fireballs = 0;
 
@@ -29,8 +28,18 @@ public class bossAttack : MonoBehaviour
     void fireball()
     {
         //get it so that it moves towards the players previous location at constant speed and is facing the player
-        var fireballClone = Instantiate(Fireball, bossBehavior.bossLocation , Quaternion.identity);
+        var fireballCopy = Instantiate(Fireball, bossBehavior.bossLocation , Quaternion.identity);
       
+        //this makes the fireballs face where the player was when they were spawned
+        // Get Angle in Radians
+        float AngleRad = Mathf.Atan2(PlayerInfo.playerLocation.y - transform.position.y, PlayerInfo.playerLocation.x - transform.position.x);
+        // Get Angle in Degrees
+        float AngleDeg = (180 / Mathf.PI) * AngleRad;
+        // Rotate Object
+        fireballCopy.transform.rotation = Quaternion.Euler(0, 0, AngleDeg);
+
+        //*make it so the fireball has starting velocity*
+
         fireballs ++; 
         
         if (fireballs == 3)
