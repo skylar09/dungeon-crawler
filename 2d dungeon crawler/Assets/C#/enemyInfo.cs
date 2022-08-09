@@ -25,22 +25,4 @@ public class enemyInfo : MonoBehaviour
         {1, 1, 1, 0},
         {4, 2, 2, 0}
     };
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //makes enemy disappear if it's dead
-        if (batHealth <= 0)
-        {
-
-        }
-        //sets enemyLocation to the current enemy location
-        enemyLocation = new Vector3(enemy.GetComponent<Transform>().position.x, enemy.GetComponent<Transform>().position.y, enemy.GetComponent<Transform>().position.z);
-    }
 }

@@ -12,26 +12,7 @@ public class PlayerCollision : MonoBehaviour
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
-        //checks for the tag on the object it collides with
-        if (collisionInfo.collider.tag == "enemy")
-        {
-            //changes the player health
-
-            //makes sure the player loses at least 1 health
-            if (PlayerInfo.playerDefense - enemyInfo.batDamage <= 0 || PlayerInfo.playerDefense - enemyInfo.batDamage >= 4)
-            {
-                PlayerInfo.playerHealth -= 1;
-            }
-            else
-            {
-                //player loses health equal to the difference in player defence and enemy dmg
-                PlayerInfo.playerHealth -= PlayerInfo.playerDefense - enemyInfo.batDamage;
-            }
-
-            // Debug.Log("ouch");
-        }
-
-        
+        //checks for the tag on the object it collides with        
         if (collisionInfo.collider.tag == "doorY")
         {
             whichRoomNext();
