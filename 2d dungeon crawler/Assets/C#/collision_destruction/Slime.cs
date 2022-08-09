@@ -27,16 +27,11 @@ public class Slime : MonoBehaviour
         //makes player take damage for hitting an enemy
         if (collisionInfo.collider.tag == "Player")
         {
-            //makes sure the player loses at least 1 health
-            if (damage - PlayerInfo.playerDefense <= 0 || PlayerInfo.playerDefense - damage >= 4)
-            {
-                PlayerInfo.playerHealth -= 1;
-            }
-            else
-            {
-                //player loses health equal to the difference in player defense and enemy dmg
-                PlayerInfo.playerHealth -= damage - PlayerInfo.playerDefense;
-            }
+            damagePlayer();
+
+            GameObject player = collisionInfo.gameObject;
+
+            // StartCoroutine(Wait);
         }
     }
 
@@ -51,5 +46,32 @@ public class Slime : MonoBehaviour
             //**should find a way to make it so this doesnt need to happen bc it resets all current slime healths to 4**
             // health = 4;
         }
+    }
+
+    public void damagePlayer()
+    {
+         //makes sure the player loses at least 1 health
+            if (damage - PlayerInfo.playerDefense <= 0 || PlayerInfo.playerDefense - damage >= 4)
+            {
+                PlayerInfo.playerHealth -= 1;
+            }
+            else
+            {
+                //player loses health equal to the difference in player defense and enemy dmg
+                PlayerInfo.playerHealth -= damage - PlayerInfo.playerDefense;
+            }
+    }
+
+    // this is used to wait a certain amount of time before doing something
+    IEnumerator Wait()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        
+        //make it so player takes damage if the enemy is still touching
+        // if ()
+        // {
+        //     damagePlayer();
+        //     StartCoroutine(Wait);
+        // }
     }
 }
