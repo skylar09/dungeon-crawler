@@ -6,13 +6,22 @@ public class Slime : MonoBehaviour
 {
     public int health = 4;
     public int damage = 2;
+    public int defense = 0;
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
         //checks for the tag on the object it collides with
         if (collisionInfo.collider.tag == "weapon")
         {
-           health --;
+            if (Weapons.currentDamage - defense <= 0)
+            {
+                health -= 1;
+            }
+
+            else 
+            {
+                health -= defense - Weapons.currentDamage;
+            }
         }
 
         //makes player take damage for hitting an enemy
