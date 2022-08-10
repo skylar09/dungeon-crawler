@@ -8,17 +8,23 @@ public class Weapons : MonoBehaviour
     List<int> weaponDamages = new List<int>();
 
     public static int currentDamage;
-    public int currentWeapon = 0;
+    public static int currentWeapon = 0;
+
+    public GameObject weaponCurrent;
 
     // Start is called before the first frame update
     void Start()
     {
-        weaponDamages.Add(1);        
+        weaponDamages.Add(1);
+        weaponDamages.Add(2);        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (changeWeapon.changed == true)
+        {
+            weaponCurrent = weapons[currentWeapon];
+        }
     }
 }

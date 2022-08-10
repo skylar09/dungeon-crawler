@@ -10,13 +10,20 @@ public class SwordAttack : MonoBehaviour
     public bool canAttack = true;
     public bool mouseIsLeft;
     public Quaternion startrotateright;
-
+    
+    GameObject refrence;
+    Weapons WeaponsScript;
 
     // Start is called before the first frame update
     void Start()
     {
+        refrence = GameObject.Find("weaponsReference");
+        WeaponsScript = refrence.GetComponent<Weapons>();
+
+        // Debug.Log(Weapons);
+
         //turns the weapon off
-        weapon.SetActive(false);
+        WeaponsScript.weaponCurrent.SetActive(false);
         startrotateright = new Quaternion(0, 0, 0, 0);
     }
 
@@ -47,7 +54,7 @@ public class SwordAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canAttack == true)
         {
             //turns the weapon on
-            weapon.SetActive(true);
+            WeaponsScript.weaponCurrent.SetActive(true);
 
             swordSwung = true;
             canAttack = false;
@@ -62,14 +69,14 @@ public class SwordAttack : MonoBehaviour
                 if (mouseIsLeft == true)
                 {
                     //sets the weapon position to near the player
-                    weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.65f, .1f, 0); 
+                    WeaponsScript.weaponCurrent.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.65f, .1f, 0); 
 
                     //rotates the sword towards -90 degrees
-                    weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(-1 * playerLocationX, playerLocationY, 90), PlayerInfo.swordSwingSpeed);
+                    WeaponsScript.weaponCurrent.transform.rotation = Quaternion.RotateTowards(WeaponsScript.weaponCurrent.transform.rotation, Quaternion.Euler(-1 * playerLocationX, playerLocationY, 90), PlayerInfo.swordSwingSpeed);
                 
             
                     //checks the z component of the rotation of the weapon to see if it is 90
-                    if (weapon.transform.localRotation.eulerAngles.z == 90)
+                    if (WeaponsScript.weaponCurrent.transform.localRotation.eulerAngles.z == 90)
                     {
                         //resets everything
                         restartVariables();
@@ -80,13 +87,13 @@ public class SwordAttack : MonoBehaviour
                 else
                 {
                     //sets the weapon position to near the player
-                    weapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
+                    WeaponsScript.weaponCurrent.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
                     //rotates the sword towards -90 degrees
-                    weapon.transform.rotation = Quaternion.RotateTowards(weapon.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
+                    WeaponsScript.weaponCurrent.transform.rotation = Quaternion.RotateTowards(WeaponsScript.weaponCurrent.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
                 
             
                     //checks the z component of the rotation of the weapon to see if it is 270 (-90)
-                    if (weapon.transform.localRotation.eulerAngles.z == 270)
+                    if (WeaponsScript.weaponCurrent.transform.localRotation.eulerAngles.z == 270)
                     {
                         //resets everything
                         restartVariables();
@@ -101,8 +108,8 @@ public class SwordAttack : MonoBehaviour
     //resets rotation, swordswung, canAttack, and turns weapon off
     void restartVariables()
     {
-        weapon.transform.rotation = startrotateright;
-        weapon.SetActive(false);
+        WeaponsScript.weaponCurrent.transform.rotation = startrotateright;
+        WeaponsScript.weaponCurrent.SetActive(false);
         canAttack = true;
         swordSwung = false;
     }
