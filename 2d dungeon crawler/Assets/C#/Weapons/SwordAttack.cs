@@ -11,13 +11,13 @@ public class SwordAttack : MonoBehaviour
     public bool mouseIsLeft;
     public Quaternion startrotateright;
     
-    GameObject refrence;
+    public GameObject refrence;
     Weapons WeaponsScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        refrence = GameObject.Find("weaponsReference");
+        // refrence = GameObject.Find("weaponsReference");
         WeaponsScript = refrence.GetComponent<Weapons>();
 
         // Debug.Log(Weapons);

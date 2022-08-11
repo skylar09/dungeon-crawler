@@ -7,6 +7,7 @@ public class bat : MonoBehaviour
     public int health = 1;
     public int damage = 1;
     public int defense = 0;
+    public int deathGold = 3;
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
@@ -46,6 +47,8 @@ public class bat : MonoBehaviour
         {
             //destroys (kills) the enemy
             Destroy(gameObject);
+
+            PlayerInfo.gold += deathGold;
         }
     }
 }

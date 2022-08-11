@@ -7,6 +7,7 @@ public class Slime : MonoBehaviour
     public int health = 4;
     public int damage = 2;
     public int defense = 0;
+    public int deathGold = 5;
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
@@ -42,9 +43,7 @@ public class Slime : MonoBehaviour
             //destroys (kills) the enemy
             Destroy(gameObject);
 
-                //resets slime health so when a new slime is created it has health of 4
-            //**should find a way to make it so this doesnt need to happen bc it resets all current slime healths to 4**
-            // health = 4;
+            PlayerInfo.gold += deathGold;
         }
     }
 

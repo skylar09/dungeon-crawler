@@ -18,6 +18,6 @@ public class ShowPlayerHealth : MonoBehaviour
     void Update()
     {
         health = PlayerInfo.playerHealth;
-        GameObject.Find("Player Health").GetComponent<TextMeshProUGUI>().SetText("health " + health.ToString());
+        GameObject.Find("Player Health").GetComponent<TextMeshProUGUI>().SetText("health " + health.ToString() + "   Gold " + PlayerInfo.gold.ToString());
     }
 }
