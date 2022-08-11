@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class Weapons : MonoBehaviour
 {
-    public List<GameObject> weapons = new List<GameObject>();
+    public List<GameObject> prefabs = new List<GameObject>();
     List<int> weaponDamages = new List<int>();
 
     public static int currentDamage;
     public static int currentWeapon = 0;
 
-    public GameObject weaponCurrent;
+    public GameObject yourWeapon;
 
     // Start is called before the first frame update
     void Start()
     {
+        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
+
+        // Remove(list item)
+
         weaponDamages.Add(1);
         weaponDamages.Add(2);        
         weaponDamages.Add(1);
@@ -25,13 +29,13 @@ public class Weapons : MonoBehaviour
     {
         if (changeWeapon.changed == true)
         {
-            weapons[currentWeapon].SetActive(false);
+            Destroy(yourWeapon);
+            
+            yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
 
-            weaponCurrent = weapons[currentWeapon];
-            weapons[currentWeapon].GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0);
+            // weapons[currentWeapon].GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0);
 
             currentDamage = weaponDamages[currentWeapon];
-            Debug.Log(currentDamage);
 
             changeWeapon.changed = false;
         }
