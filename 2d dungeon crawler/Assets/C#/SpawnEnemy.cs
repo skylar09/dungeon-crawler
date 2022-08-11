@@ -33,6 +33,8 @@ public class SpawnEnemy : MonoBehaviour
 
             for (int i = 0; i < numOfEnemies; i++)
             {
+                //for int min inclusive max exclusive 
+                //for float both inclusive
                 int enemyNum = Random.Range(0, 2);
                 
                 //gives either 1 or -1

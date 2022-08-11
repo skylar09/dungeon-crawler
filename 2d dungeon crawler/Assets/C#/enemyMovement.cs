@@ -28,7 +28,7 @@ public class enemyMovement : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) < 6)
         {
             //makes the enemy move towards the player
-            transform.position = Vector2.MoveTowards(transform.position, target.position, enemyInfo.batMoveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, PlayerInfo.movementSpeed / 2 * Time.deltaTime);
         }
         
         else
