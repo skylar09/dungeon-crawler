@@ -15,6 +15,13 @@ public class changeWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //changes the weapon to the next weapon in the list
+
+         if (Input.GetKeyDown("v"))
+        {
+            Debug.Log("changed");
+            Weapons.currentWeapon ++;
+            changed = true;
+        }
     }
 }

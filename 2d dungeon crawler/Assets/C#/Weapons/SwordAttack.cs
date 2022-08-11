@@ -60,7 +60,7 @@ public class SwordAttack : MonoBehaviour
             canAttack = false;
         }
 
-        float playerLocationX = PlayerInfo.playerLocation.x + .6f;
+        float playerLocationX = PlayerInfo.playerLocation.x + .65f;
         float playerLocationY = PlayerInfo.playerLocation.y + .1f;
 
         
@@ -87,7 +87,8 @@ public class SwordAttack : MonoBehaviour
                 else
                 {
                     //sets the weapon position to near the player
-                    WeaponsScript.weaponCurrent.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.6f, .1f, 0); 
+                    WeaponsScript.weaponCurrent.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0); 
+
                     //rotates the sword towards -90 degrees
                     WeaponsScript.weaponCurrent.transform.rotation = Quaternion.RotateTowards(WeaponsScript.weaponCurrent.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
                 

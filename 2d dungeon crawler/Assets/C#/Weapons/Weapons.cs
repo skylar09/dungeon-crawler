@@ -17,6 +17,7 @@ public class Weapons : MonoBehaviour
     {
         weaponDamages.Add(1);
         weaponDamages.Add(2);        
+        weaponDamages.Add(1);
     }
 
     // Update is called once per frame
@@ -24,7 +25,15 @@ public class Weapons : MonoBehaviour
     {
         if (changeWeapon.changed == true)
         {
+            weapons[currentWeapon].SetActive(false);
+
             weaponCurrent = weapons[currentWeapon];
+            weapons[currentWeapon].GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0);
+
+            currentDamage = weaponDamages[currentWeapon];
+            Debug.Log(currentDamage);
+
+            changeWeapon.changed = false;
         }
     }
 }

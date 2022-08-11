@@ -20,7 +20,7 @@ public class Slime : MonoBehaviour
 
             else 
             {
-                health -= defense - Weapons.currentDamage;
+                health -= Weapons.currentDamage - defense;
             }
         }
 
