@@ -38,12 +38,24 @@ public class Slime : MonoBehaviour
 
     void Update()
     {
+        //when the enemy is dead
         if (health <= 0)
         {
+            //gives the player gold
+            PlayerInfo.gold += deathGold;
+
+            //picks random number and decides if it should drop an item
+
+            int shouldDrop = Random.Range(0, 101);
+
+            if (shouldDrop >= 0)
+            {
+                dropItem.drop = true;
+                dropItem.enemyLocation = this.GetComponent<Transform>().position;
+            }
+
             //destroys (kills) the enemy
             Destroy(gameObject);
-
-            PlayerInfo.gold += deathGold;
         }
     }
 
