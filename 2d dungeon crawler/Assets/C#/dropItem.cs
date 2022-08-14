@@ -7,9 +7,11 @@ public class dropItem : MonoBehaviour
     public static Vector2 enemyLocation;
 
     public static bool drop = false;
-    public static int weaponNum = 0;
+    public static int weaponNum;
 
     public List<GameObject> Items = new List<GameObject>();
+
+    public static List<GameObject> createdItems = new List<GameObject>();
 
     // Update is called once per frame
     void Update()
@@ -17,22 +19,23 @@ public class dropItem : MonoBehaviour
         //create a random item
         if (drop == true)
         {
-            while (weaponNum == Weapons.currentWeapon)
+            do 
             {
-                weaponNum = Random.Range(0, Items.Count);                
-            }
+                weaponNum = Random.Range(0, Items.Count);  
+                              
+            } while (weaponNum == Weapons.currentWeapon);
 
-            pickUpItem.switchingTo = weaponNum;
+            pickUpItem.groundItem = weaponNum;
 
-            Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity);
+            createdItems.Add(Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity));
             
             drop = false;
         }
 
-        //makes a uninteractable version of the current weapon
+        //makes an uninteractable version of the current weapon
         if (pickUpItem.weaponSwitched == true)
         {
-            Instantiate(Items[pickUpItem.previousWeapon], pickUpItem.location, Quaternion.identity);
+            createdItems.Add(Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity));
 
             pickUpItem.weaponSwitched = false;
         }

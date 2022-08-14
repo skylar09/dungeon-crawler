@@ -6,8 +6,12 @@ public class pickUpItem : MonoBehaviour
 {
     public static Vector2 location;
 
+    public static Vector2 newLocation;
+
     public static bool weaponSwitched = false;
-    public static int previousWeapon;
+    public static int groundItem;
+
+    public static int closestItem;
 
     public static int switchingTo;
 
@@ -22,16 +26,46 @@ public class pickUpItem : MonoBehaviour
         {
             if (Input.GetKeyDown("f"))
             {
-                previousWeapon = Weapons.currentWeapon;
+                if (dropItem.createdItems.Count > 1)
+                {
+                    for (int i = 0; i < dropItem.createdItems.Count - 1; i++)
+                    {
+                        float distance1 = Vector2.Distance(dropItem.createdItems[i].GetComponent<Transform>().position, PlayerInfo.playerLocation);
+                        float distance2 = Vector2.Distance(dropItem.createdItems[i + 1].GetComponent<Transform>().position, PlayerInfo.playerLocation);
 
-                Weapons.currentWeapon = switchingTo;
+                        if (distance1 < distance2)
+                        {
+                            closestItem = i;
+                        }
+
+                        else 
+                        {
+                            closestItem = i + 1;
+                        }
+                    }
+                }
+
+                else
+                {
+                    closestItem = 0;
+                }
+
+                int pickedUp = groundItem;
+
+                groundItem = Weapons.currentWeapon;
+
+                Weapons.currentWeapon = pickedUp;
                 changeWeapon.changed = true;
 
                 weaponSwitched = true;
 
-                Destroy(gameObject);
+                newLocation = dropItem.createdItems[closestItem].GetComponent<Transform>().position;
 
-                switchingTo = previousWeapon;
+                Destroy(dropItem.createdItems[closestItem]);
+                // Debug.Log("in list " + dropItem.createdItems.Count);
+                Debug.Log("closest " + closestItem);
+
+                dropItem.createdItems.RemoveAt(closestItem);
             }
         }
     }
