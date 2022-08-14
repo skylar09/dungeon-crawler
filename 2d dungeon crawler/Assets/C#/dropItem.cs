@@ -5,23 +5,24 @@ using UnityEngine;
 public class dropItem : MonoBehaviour
 {
     public static Vector2 enemyLocation;
-    public Vector2 itemLocation;
 
     public static bool drop = false;
-    public static int weaponNum;
+    public static int weaponNum = 0;
 
     public List<GameObject> Items = new List<GameObject>();
 
     // Update is called once per frame
     void Update()
     {
-        //gets the location of the item
-        itemLocation = pickUpItem.location;
-
         //create a random item
         if (drop == true)
         {
-            weaponNum = Random.Range(0, Items.Count);
+            while (weaponNum == Weapons.currentWeapon)
+            {
+                weaponNum = Random.Range(0, Items.Count);                
+            }
+
+            pickUpItem.switchingTo = weaponNum;
 
             Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity);
             
@@ -31,7 +32,7 @@ public class dropItem : MonoBehaviour
         //makes a uninteractable version of the current weapon
         if (pickUpItem.weaponSwitched == true)
         {
-            Instantiate(Items[pickUpItem.previousWeapon], itemLocation, Quaternion.identity);
+            Instantiate(Items[pickUpItem.previousWeapon], pickUpItem.location, Quaternion.identity);
 
             pickUpItem.weaponSwitched = false;
         }

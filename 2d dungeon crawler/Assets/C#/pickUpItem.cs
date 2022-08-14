@@ -9,6 +9,8 @@ public class pickUpItem : MonoBehaviour
     public static bool weaponSwitched = false;
     public static int previousWeapon;
 
+    public static int switchingTo;
+
     // Update is called once per frame
     void Update()
     {
@@ -22,12 +24,14 @@ public class pickUpItem : MonoBehaviour
             {
                 previousWeapon = Weapons.currentWeapon;
 
-                Weapons.currentWeapon = dropItem.weaponNum;
+                Weapons.currentWeapon = switchingTo;
                 changeWeapon.changed = true;
 
                 weaponSwitched = true;
 
                 Destroy(gameObject);
+
+                switchingTo = previousWeapon;
             }
         }
     }

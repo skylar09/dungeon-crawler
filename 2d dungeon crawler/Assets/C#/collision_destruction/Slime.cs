@@ -48,7 +48,7 @@ public class Slime : MonoBehaviour
 
             int shouldDrop = Random.Range(0, 101);
 
-            if (shouldDrop >= 0)
+            if (shouldDrop <= 10)
             {
                 dropItem.drop = true;
                 dropItem.enemyLocation = this.GetComponent<Transform>().position;
