@@ -13,6 +13,8 @@ public class dropItem : MonoBehaviour
 
     public static List<GameObject> createdItems = new List<GameObject>();
 
+    public static List<int> createdItemsNumber = new List<int>();
+
     // Update is called once per frame
     void Update()
     {
@@ -25,9 +27,9 @@ public class dropItem : MonoBehaviour
                               
             } while (weaponNum == Weapons.currentWeapon);
 
-            pickUpItem.groundItem = weaponNum;
-
             createdItems.Add(Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity));
+
+            createdItemsNumber.Add(weaponNum);
             
             drop = false;
         }

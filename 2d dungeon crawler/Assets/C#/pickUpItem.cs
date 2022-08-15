@@ -28,19 +28,14 @@ public class pickUpItem : MonoBehaviour
             {
                 if (dropItem.createdItems.Count > 1)
                 {
-                    for (int i = 0; i < dropItem.createdItems.Count - 1; i++)
+                    for (int i = 1, closestItem = 0; i < dropItem.createdItems.Count; i++)
                     {
-                        float distance1 = Vector2.Distance(dropItem.createdItems[i].GetComponent<Transform>().position, PlayerInfo.playerLocation);
-                        float distance2 = Vector2.Distance(dropItem.createdItems[i + 1].GetComponent<Transform>().position, PlayerInfo.playerLocation);
+                        float distance1 = Vector2.Distance(dropItem.createdItems[closestItem].GetComponent<Transform>().position, PlayerInfo.playerLocation);
+                        float distance2 = Vector2.Distance(dropItem.createdItems[i].GetComponent<Transform>().position, PlayerInfo.playerLocation);
 
-                        if (distance1 < distance2)
+                        if (distance1 > distance2)
                         {
                             closestItem = i;
-                        }
-
-                        else 
-                        {
-                            closestItem = i + 1;
                         }
                     }
                 }
@@ -50,11 +45,11 @@ public class pickUpItem : MonoBehaviour
                     closestItem = 0;
                 }
 
-                int pickedUp = groundItem;
+                // int pickedUp = closestItem;
 
                 groundItem = Weapons.currentWeapon;
 
-                Weapons.currentWeapon = pickedUp;
+                Weapons.currentWeapon = dropItem.createdItemsNumber[closestItem];
                 changeWeapon.changed = true;
 
                 weaponSwitched = true;
@@ -62,8 +57,9 @@ public class pickUpItem : MonoBehaviour
                 newLocation = dropItem.createdItems[closestItem].GetComponent<Transform>().position;
 
                 Destroy(dropItem.createdItems[closestItem]);
-                // Debug.Log("in list " + dropItem.createdItems.Count);
+                Debug.Log("in list " + dropItem.createdItems.Count);
                 Debug.Log("closest " + closestItem);
+                Debug.Log("closest location" + newLocation);
 
                 dropItem.createdItems.RemoveAt(closestItem);
             }
