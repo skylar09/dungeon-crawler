@@ -37,7 +37,9 @@ public class dropItem : MonoBehaviour
         //makes an uninteractable version of the current weapon
         if (pickUpItem.weaponSwitched == true)
         {
-            createdItems.Add(Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity));
+            createdItems.Insert(pickUpItem.closestItem, Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity));
+            
+            // createdItemsNumber.Add(pickUpItem.groundItem);
 
             pickUpItem.weaponSwitched = false;
         }

@@ -28,10 +28,13 @@ public class pickUpItem : MonoBehaviour
             {
                 if (dropItem.createdItems.Count > 1)
                 {
-                    for (int i = 1, closestItem = 0; i < dropItem.createdItems.Count; i++)
+                    closestItem = 0;
+                    
+                    for (int i = 1; i < dropItem.createdItems.Count; i++)
                     {
                         float distance1 = Vector2.Distance(dropItem.createdItems[closestItem].GetComponent<Transform>().position, PlayerInfo.playerLocation);
                         float distance2 = Vector2.Distance(dropItem.createdItems[i].GetComponent<Transform>().position, PlayerInfo.playerLocation);
+                        Debug.Log("1 " + distance1 + " 2 " + distance2);
 
                         if (distance1 > distance2)
                         {
@@ -45,13 +48,12 @@ public class pickUpItem : MonoBehaviour
                     closestItem = 0;
                 }
 
-                // int pickedUp = closestItem;
-
                 groundItem = Weapons.currentWeapon;
 
                 Weapons.currentWeapon = dropItem.createdItemsNumber[closestItem];
-                changeWeapon.changed = true;
+                dropItem.createdItemsNumber[closestItem] = groundItem;
 
+                changeWeapon.changed = true;
                 weaponSwitched = true;
 
                 newLocation = dropItem.createdItems[closestItem].GetComponent<Transform>().position;
@@ -60,8 +62,10 @@ public class pickUpItem : MonoBehaviour
                 Debug.Log("in list " + dropItem.createdItems.Count);
                 Debug.Log("closest " + closestItem);
                 Debug.Log("closest location" + newLocation);
+                Debug.Log("weapon numbers " + dropItem.createdItemsNumber[closestItem]);
 
                 dropItem.createdItems.RemoveAt(closestItem);
+                // dropItem.createdItemsNumber.RemoveAt(closestItem);
             }
         }
     }
