@@ -29,15 +29,20 @@ public class Weapons : MonoBehaviour
     {
         if (pickUpItem.changed == true)
         {
-            Destroy(yourWeapon);
-            
-            yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
-
-            // weapons[currentWeapon].GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0);
-
-            currentDamage = weaponDamages[currentWeapon];
-
-            pickUpItem.changed = false;
+            changeWeapon();
         }
+    }
+
+    public void changeWeapon()
+    {
+        Destroy(yourWeapon);
+        
+        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
+
+        // weapons[currentWeapon].GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0);
+
+        currentDamage = weaponDamages[currentWeapon];
+
+        pickUpItem.changed = false;
     }
 }

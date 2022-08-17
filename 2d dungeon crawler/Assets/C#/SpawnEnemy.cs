@@ -24,7 +24,13 @@ public class SpawnEnemy : MonoBehaviour
         //should spawn enemy when you enter a new room
         if (enterRoom == true && RoomLocation.newRoom[PlayerCollision.currentRoom] == true)
         {
-            RoomLocation.newRoom[PlayerCollision.currentRoom] = false;
+            spawn();
+        }        
+    }
+
+    public void spawn()
+    {
+        RoomLocation.newRoom[PlayerCollision.currentRoom] = false;
 
             float LocationX = RoomLocation.roomCords[PlayerCollision.currentRoom].x;
             float LocationY = RoomLocation.roomCords[PlayerCollision.currentRoom].y;
@@ -56,6 +62,5 @@ public class SpawnEnemy : MonoBehaviour
             
             enterRoom = false;
             Debug.Log("spawned");
-        }        
     }
 }

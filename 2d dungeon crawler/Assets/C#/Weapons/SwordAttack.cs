@@ -9,6 +9,9 @@ public class SwordAttack : MonoBehaviour
     public bool canAttack = true;
     public bool mouseIsLeft;
     public Quaternion startrotateright;
+
+    public float playerLocationX;
+    public float playerLocationY;
     
     public GameObject refrence;
     Weapons WeaponsScript;
@@ -17,9 +20,7 @@ public class SwordAttack : MonoBehaviour
     void Start()
     {
         WeaponsScript = refrence.GetComponent<Weapons>();
-
-        // Debug.Log(Weapons);
-
+        
         //turns the weapon off
         WeaponsScript.yourWeapon.SetActive(false);
         startrotateright = new Quaternion(0, 0, 0, 0);
@@ -30,8 +31,8 @@ public class SwordAttack : MonoBehaviour
     {
         //gets the mouse position in pixels
         Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
         //gets the real world position of the mouse by converting the pixels to acutal units
-        //*use this to check swing left or right*
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);  
 
         if (swordSwung != true)
@@ -51,57 +52,70 @@ public class SwordAttack : MonoBehaviour
         //if left click
         if (Input.GetMouseButtonDown(0) && canAttack == true)
         {
-            //turns the weapon on
-            WeaponsScript.yourWeapon.SetActive(true);
-
-            swordSwung = true;
-            canAttack = false;
+            activateWeapon();
         }
 
-        float playerLocationX = PlayerInfo.playerLocation.x + .65f;
-        float playerLocationY = PlayerInfo.playerLocation.y + .1f;
+        playerLocationX = PlayerInfo.playerLocation.x + .65f;
+        playerLocationY = PlayerInfo.playerLocation.y + .1f;
 
         
             if (swordSwung == true)
             {
                 if (mouseIsLeft == true)
                 {
-                    //sets the weapon position to near the player
-                    WeaponsScript.yourWeapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.65f, .1f, 0); 
-
-                    //rotates the sword towards -90 degrees
-                    WeaponsScript.yourWeapon.transform.rotation = Quaternion.RotateTowards(WeaponsScript.yourWeapon.transform.rotation, Quaternion.Euler(-1 * playerLocationX, playerLocationY, 90), PlayerInfo.swordSwingSpeed);
-                
-            
-                    //checks the z component of the rotation of the weapon to see if it is 90
-                    if (WeaponsScript.yourWeapon.transform.localRotation.eulerAngles.z == 90)
-                    {
-                        //resets everything
-                        restartVariables();
-
-                    }
+                    attackLeft();
                 }
 
                 else
                 {
-                    //sets the weapon position to near the player
-                    WeaponsScript.yourWeapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0); 
-
-                    //rotates the sword towards -90 degrees
-                    WeaponsScript.yourWeapon.transform.rotation = Quaternion.RotateTowards(WeaponsScript.yourWeapon.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
-                
-            
-                    //checks the z component of the rotation of the weapon to see if it is 270 (-90)
-                    if (WeaponsScript.yourWeapon.transform.localRotation.eulerAngles.z == 270)
-                    {
-                        //resets everything
-                        restartVariables();
-
-                    }
+                    attackRight();
                 }
             }
+    }
 
-        
+    public void activateWeapon()
+    {
+        //turns the weapon on
+        WeaponsScript.yourWeapon.SetActive(true);
+
+        swordSwung = true;
+        canAttack = false;
+    }
+
+    public void attackLeft()
+    {
+        //sets the weapon position to near the player
+        WeaponsScript.yourWeapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.65f, .1f, 0); 
+
+        //rotates the sword towards -90 degrees
+        WeaponsScript.yourWeapon.transform.rotation = Quaternion.RotateTowards(WeaponsScript.yourWeapon.transform.rotation, Quaternion.Euler(-1 * playerLocationX, playerLocationY, 90), PlayerInfo.swordSwingSpeed);
+    
+
+        //checks the z component of the rotation of the weapon to see if it is 90
+        if (WeaponsScript.yourWeapon.transform.localRotation.eulerAngles.z == 90)
+        {
+            //resets everything
+            restartVariables();
+
+        }
+    }
+
+    public void attackRight()
+    {
+        //sets the weapon position to near the player
+        WeaponsScript.yourWeapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0); 
+
+        //rotates the sword towards -90 degrees
+        WeaponsScript.yourWeapon.transform.rotation = Quaternion.RotateTowards(WeaponsScript.yourWeapon.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
+    
+
+        //checks the z component of the rotation of the weapon to see if it is 270 (-90)
+        if (WeaponsScript.yourWeapon.transform.localRotation.eulerAngles.z == 270)
+        {
+            //resets everything
+            restartVariables();
+
+        }
     }
 
     //resets rotation, swordswung, canAttack, and turns weapon off

@@ -21,10 +21,4 @@ public class RoomLocation : MonoBehaviour
         roomCords[5] = new Vector3(46.6f, 0f, -10f);
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

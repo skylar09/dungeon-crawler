@@ -14,15 +14,7 @@ public class Slime : MonoBehaviour
         //checks for the tag on the object it collides with
         if (collisionInfo.collider.tag == "weapon")
         {
-            if (Weapons.currentDamage - defense <= 0)
-            {
-                health -= 1;
-            }
-
-            else 
-            {
-                health -= Weapons.currentDamage - defense;
-            }
+            loseHealth();
         }
 
         //makes player take damage for hitting an enemy
@@ -30,7 +22,7 @@ public class Slime : MonoBehaviour
         {
             damagePlayer();
 
-            GameObject player = collisionInfo.gameObject;
+            // GameObject player = collisionInfo.gameObject;
 
             // StartCoroutine(Wait);
         }
@@ -44,15 +36,7 @@ public class Slime : MonoBehaviour
             //gives the player gold
             PlayerInfo.gold += deathGold;
 
-            //picks random number and decides if it should drop an item
-
-            int shouldDrop = Random.Range(0, 101);
-
-            if (shouldDrop <= 10)
-            {
-                dropItem.drop = true;
-                dropItem.enemyLocation = this.GetComponent<Transform>().position;
-            }
+            itemDrop();
 
             //destroys (kills) the enemy
             Destroy(gameObject);
@@ -73,16 +57,29 @@ public class Slime : MonoBehaviour
             }
     }
 
-    // this is used to wait a certain amount of time before doing something
-    IEnumerator Wait()
+    public void itemDrop()
     {
-        yield return new WaitForSecondsRealtime(1);
-        
-        //make it so player takes damage if the enemy is still touching
-        // if ()
-        // {
-        //     damagePlayer();
-        //     StartCoroutine(Wait);
-        // }
+        //picks random number and decides if it should drop an item
+
+        int shouldDrop = Random.Range(0, 101);
+
+        if (shouldDrop <= 10)
+        {
+            dropItem.drop = true;
+            dropItem.enemyLocation = this.GetComponent<Transform>().position;
+        }
+    }
+
+    public void loseHealth()
+    {
+        if (Weapons.currentDamage - defense <= 0)
+        {
+            health -= 1;
+        }
+
+        else 
+        {
+            health -= Weapons.currentDamage - defense;
+        }
     }
 }

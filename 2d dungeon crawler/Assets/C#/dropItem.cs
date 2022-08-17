@@ -21,27 +21,35 @@ public class dropItem : MonoBehaviour
         //create a random item
         if (drop == true)
         {
-            do 
-            {
-                weaponNum = Random.Range(0, Items.Count);  
-                              
-            } while (weaponNum == Weapons.currentWeapon);
-
-            createdItems.Add(Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity));
-
-            createdItemsNumber.Add(weaponNum);
-            
-            drop = false;
+            makeWeapon();
         }
 
         //makes an uninteractable version of the current weapon
         if (pickUpItem.weaponSwitched == true)
         {
-            createdItems.Insert(pickUpItem.closestItem, Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity));
-            
-            // createdItemsNumber.Add(pickUpItem.groundItem);
-
-            pickUpItem.weaponSwitched = false;
+            switchWeapon();
         }
+    }
+
+    public void makeWeapon()
+    {
+        do 
+            {
+                weaponNum = Random.Range(0, Items.Count);  
+                              
+            } while (weaponNum == Weapons.currentWeapon);
+
+        createdItems.Add(Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity));
+
+        createdItemsNumber.Add(weaponNum);
+        
+        drop = false;
+    }
+
+    public void switchWeapon()
+    {
+        createdItems.Insert(pickUpItem.closestItem, Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity));
+
+        pickUpItem.weaponSwitched = false;
     }
 }

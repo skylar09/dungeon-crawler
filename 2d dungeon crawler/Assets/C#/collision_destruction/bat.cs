@@ -14,30 +14,13 @@ public class bat : MonoBehaviour
         //checks for the tag on the object it collides with
         if (collisionInfo.collider.tag == "weapon")
         {
-           if (Weapons.currentDamage - defense <= 0)
-            {
-                health -= 1;
-            }
-
-            else 
-            {
-                health -= Weapons.currentDamage - defense;
-            }
+            loseHealth();
         }
 
         //makes player take damage for hitting an enemy
         if (collisionInfo.collider.tag == "Player")
         {
-            //makes sure the player loses at least 1 health
-            if (damage - PlayerInfo.playerDefense <= 0 || PlayerInfo.playerDefense - damage >= 4)
-            {
-                PlayerInfo.playerHealth -= 1;
-            }
-            else
-            {
-                //player loses health equal to the difference in player defense and enemy dmg
-                PlayerInfo.playerHealth -= damage - PlayerInfo.playerDefense;
-            }
+            damagePlayer();
         }
     }
 
@@ -48,18 +31,49 @@ public class bat : MonoBehaviour
             //gives the player gold
             PlayerInfo.gold += deathGold;
 
-            //picks random number and decides if it should drop an item
-
-            int shouldDrop = Random.Range(0, 101);
-
-            if (shouldDrop <= 10)
-            {
-                dropItem.drop = true;
-                dropItem.enemyLocation = this.GetComponent<Transform>().position;
-            }
+            itemDrop();
 
             //destroys (kills) the enemy
             Destroy(gameObject);
+        }
+    }
+
+    public void itemDrop()
+    {
+        //picks random number and decides if it should drop an item
+        int shouldDrop = Random.Range(0, 101);
+
+        if (shouldDrop <= 10)
+        {
+            dropItem.drop = true;
+            dropItem.enemyLocation = this.GetComponent<Transform>().position;
+        }
+    }
+
+    public void damagePlayer()
+    {
+        //makes sure the player loses at least 1 health
+        if (damage - PlayerInfo.playerDefense <= 0 || PlayerInfo.playerDefense - damage >= 4)
+        {
+            PlayerInfo.playerHealth -= 1;
+        }
+        else
+        {
+            //player loses health equal to the difference in player defense and enemy dmg
+            PlayerInfo.playerHealth -= damage - PlayerInfo.playerDefense;
+        }
+    }
+
+    public void loseHealth()
+    {
+        if (Weapons.currentDamage - defense <= 0)
+        {
+            health -= 1;
+        }
+
+        else 
+        {
+            health -= Weapons.currentDamage - defense;
         }
     }
 }
