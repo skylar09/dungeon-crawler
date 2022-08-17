@@ -37,7 +37,7 @@ public class pickUpItem : MonoBehaviour
             {
                 float distance1 = Vector2.Distance(dropItem.createdItems[closestItem].GetComponent<Transform>().position, PlayerInfo.playerLocation);
                 float distance2 = Vector2.Distance(dropItem.createdItems[i].GetComponent<Transform>().position, PlayerInfo.playerLocation);
-                Debug.Log("1 " + distance1 + " 2 " + distance2);
+                // Debug.Log("1 " + distance1 + " 2 " + distance2);
 
                 if (distance1 > distance2)
                 {
@@ -62,10 +62,10 @@ public class pickUpItem : MonoBehaviour
         newLocation = dropItem.createdItems[closestItem].GetComponent<Transform>().position;
 
         Destroy(dropItem.createdItems[closestItem]);
-        Debug.Log("in list " + dropItem.createdItems.Count);
-        Debug.Log("closest " + closestItem);
-        Debug.Log("closest location" + newLocation);
-        Debug.Log("weapon numbers " + dropItem.createdItemsNumber[closestItem]);
+        // Debug.Log("in list " + dropItem.createdItems.Count);
+        // Debug.Log("closest " + closestItem);
+        // Debug.Log("closest location" + newLocation);
+        // Debug.Log("weapon numbers " + dropItem.createdItemsNumber[closestItem]);
 
         dropItem.createdItems.RemoveAt(closestItem);
     }

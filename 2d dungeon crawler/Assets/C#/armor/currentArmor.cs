@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class leather : MonoBehaviour
+public class currentArmor : MonoBehaviour
 {
-    public static int defense = 1;
+    GameObject helmet;
+    GameObject chestplate;
+    GameObject leggings;
+    GameObject boots;
+    GameObject gloves;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +18,11 @@ public class leather : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    public void addDefense()
     {
         
     }

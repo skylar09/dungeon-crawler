@@ -34,10 +34,10 @@ public class dropItem : MonoBehaviour
     public void makeWeapon()
     {
         do 
-            {
-                weaponNum = Random.Range(0, Items.Count);  
-                              
-            } while (weaponNum == Weapons.currentWeapon);
+        {
+            weaponNum = Random.Range(0, Items.Count);  
+                            
+        } while (weaponNum == Weapons.currentWeapon);
 
         createdItems.Add(Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity));
 
