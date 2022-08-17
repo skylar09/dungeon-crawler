@@ -27,7 +27,7 @@ public class Weapons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (changeWeapon.changed == true)
+        if (pickUpItem.changed == true)
         {
             Destroy(yourWeapon);
             
@@ -37,7 +37,7 @@ public class Weapons : MonoBehaviour
 
             currentDamage = weaponDamages[currentWeapon];
 
-            changeWeapon.changed = false;
+            pickUpItem.changed = false;
         }
     }
 }

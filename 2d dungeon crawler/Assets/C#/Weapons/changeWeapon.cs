@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class changeWeapon : MonoBehaviour
 {
-    public static bool changed = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +17,11 @@ public class changeWeapon : MonoBehaviour
     {
         //changes the weapon to the next weapon in the list
 
-         if (Input.GetKeyDown("v"))
-        {
-            Debug.Log("changed");
-            Weapons.currentWeapon ++;
-            changed = true;
-        }
+        //  if (Input.GetKeyDown("v"))
+        // {
+        //     Debug.Log("changed");
+        //     Weapons.currentWeapon ++;
+        //     changed = true;
+        // }
     }
 }

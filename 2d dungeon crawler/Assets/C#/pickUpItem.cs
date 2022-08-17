@@ -8,12 +8,11 @@ public class pickUpItem : MonoBehaviour
 
     public static Vector2 newLocation;
 
-    public static bool weaponSwitched = false;
     public static int groundItem;
-
     public static int closestItem;
 
-    public static int switchingTo;
+    public static bool weaponSwitched = false;
+    public static bool changed = false;
 
     // Update is called once per frame
     void Update()
@@ -53,7 +52,7 @@ public class pickUpItem : MonoBehaviour
                 Weapons.currentWeapon = dropItem.createdItemsNumber[closestItem];
                 dropItem.createdItemsNumber[closestItem] = groundItem;
 
-                changeWeapon.changed = true;
+                changed = true;
                 weaponSwitched = true;
 
                 newLocation = dropItem.createdItems[closestItem].GetComponent<Transform>().position;
