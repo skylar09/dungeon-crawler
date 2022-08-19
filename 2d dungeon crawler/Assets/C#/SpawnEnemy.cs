@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public GameObject slime;
-    public GameObject bat;
+    public List<GameObject> Enemies = new List<GameObject>();
+
     public static bool enterRoom = false;
     public static int enemyCount = 0;
 
@@ -14,7 +14,7 @@ public class SpawnEnemy : MonoBehaviour
         //spawns 1 bat in the first room
         if (PlayerCollision.currentRoom == 0)
         {
-            Instantiate(bat, new Vector2(3, 2), Quaternion.identity);
+            Instantiate(Enemies[0], new Vector2(3, 2), Quaternion.identity);
         }
     }
 
@@ -41,26 +41,16 @@ public class SpawnEnemy : MonoBehaviour
             {
                 //for int min inclusive max exclusive 
                 //for float both inclusive
-                int enemyNum = Random.Range(0, 2);
+                int enemyNum = Random.Range(0, Enemies.Count);
                 
                 //gives either 1 or -1
                 int leftOrRight = Random.Range(0, 2) * 2 - 1;
                 int upOrDown = Random.Range(0, 2) * 2 - 1;
 
-                if (enemyNum == 0)
-                {
-                    //creates a version of an enemy prefab
-                    Instantiate(bat, new Vector2(LocationX + (Random.Range(3f, 7f) * leftOrRight), LocationY + (Random.Range(1.5f, 3f)) * upOrDown), Quaternion.identity);
-                }
-
-                else if (enemyNum == 1)
-                {
-                    //creates a version of an enemy prefab
-                    Instantiate(slime, new Vector2(LocationX + (Random.Range(3f, 7f) * leftOrRight), LocationY + (Random.Range(1.5f, 3f)) * upOrDown), Quaternion.identity);
-                }
+                //creates a version of an enemy prefab
+                Instantiate(Enemies[enemyNum], new Vector2(LocationX + (Random.Range(3f, 7f) * leftOrRight), LocationY + (Random.Range(1.5f, 3f)) * upOrDown), Quaternion.identity);
             }
-            
-            enterRoom = false;
-            Debug.Log("spawned");
+
+        enterRoom = false;
     }
 }

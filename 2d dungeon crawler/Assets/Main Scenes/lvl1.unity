@@ -10784,8 +10784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade218c104c3b534c95fbe0246b154f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slime: {fileID: 8482112927485376484, guid: a325fba6713053b4da6fa37d580883ca, type: 3}
-  bat: {fileID: 2495400042940355020, guid: e5d28c91dc932a546b159a637b183209, type: 3}
+  Enemies:
+  - {fileID: 2495400042940355020, guid: e5d28c91dc932a546b159a637b183209, type: 3}
+  - {fileID: 8482112927485376484, guid: a325fba6713053b4da6fa37d580883ca, type: 3}
 --- !u!4 &928958614
 Transform:
   m_ObjectHideFlags: 0
