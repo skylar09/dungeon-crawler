@@ -8,7 +8,7 @@ public class Weapons : MonoBehaviour
     public List<int> weaponDamages = new List<int>();
 
     public static int currentDamage;
-    public static int currentWeapon = 0;
+    public static int currentWeapon = 3;
 
     public GameObject yourWeapon;
 

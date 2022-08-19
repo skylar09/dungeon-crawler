@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 3078647314369245691}
   m_Layer: 0
   m_Name: broadsword
-  m_TagString: Untagged
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5788918749784270361
 Transform:
   m_ObjectHideFlags: 0
