@@ -7,8 +7,17 @@ public class PlayerCollision : MonoBehaviour
 {
     public GameObject Camera;
 
+    // public LayerMask player;
+    // public LayerMask weaponLayer;
+    bool ignore = true;
+
     public static int currentRoom = 0;
     public static int closestRoom;
+
+    void Start()
+    {
+        Physics2D.IgnoreLayerCollision(6, 8, ignore);
+    }
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
