@@ -7,8 +7,6 @@ public class PlayerCollision : MonoBehaviour
 {
     public GameObject Camera;
 
-    // public LayerMask player;
-    // public LayerMask weaponLayer;
     bool ignore = true;
 
     public static int currentRoom = 0;
@@ -16,6 +14,7 @@ public class PlayerCollision : MonoBehaviour
 
     void Start()
     {
+        //makes it so all collisions on layers 6 (player) and 8 (weapon) are ignored
         Physics2D.IgnoreLayerCollision(6, 8, ignore);
     }
 
