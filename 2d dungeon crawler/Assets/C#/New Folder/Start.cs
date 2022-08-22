@@ -3,19 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class nextLvl : MonoBehaviour
+public class Start : MonoBehaviour
 {
     public Animator animator;
     public GameObject FadeOut;
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown("p"))
-        {
-            nextLevel();
-        }
-    }
 
     public void nextLevel()
     {
