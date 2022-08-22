@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class nextLvl : MonoBehaviour
 {
+    public Animator animator;
+    public GameObject FadeOut;
+
     // Update is called once per frame
     void Update()
     {
@@ -16,6 +19,15 @@ public class nextLvl : MonoBehaviour
 
     public void nextLevel()
     {
+        StartCoroutine(fading());
+    }
+
+    public IEnumerator fading()
+    {
+        FadeOut.SetActive(true);
+        animator.SetBool("fadeOut", true);
+
+        yield return new WaitForSecondsRealtime(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
