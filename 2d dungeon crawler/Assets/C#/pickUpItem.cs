@@ -23,11 +23,16 @@ public class pickUpItem : MonoBehaviour
         //changes the current item with the item just dropped
         if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2 && Input.GetKeyDown("f"))
         {
-            pickUp();            
+            pickUpCurrent();            
+        }
+
+        if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2 && Input.GetKeyDown("g"))
+        {
+            pickUpInventory();            
         }
     }
 
-    public void pickUp()
+    public void pickUpCurrent()
     {
         if (dropItem.createdItems.Count > 1)
         {
@@ -67,6 +72,39 @@ public class pickUpItem : MonoBehaviour
         // Debug.Log("closest location" + newLocation);
         // Debug.Log("weapon numbers " + dropItem.createdItemsNumber[closestItem]);
 
+        dropItem.createdItems.RemoveAt(closestItem);
+    }
+
+    public void pickUpInventory()
+    {
+        closestItem = 0;
+
+        if (dropItem.createdItems.Count > 1)
+        {
+            closestItem = 0;
+            
+            for (int i = 1; i < dropItem.createdItems.Count; i++)
+            {
+                float distance1 = Vector2.Distance(dropItem.createdItems[closestItem].GetComponent<Transform>().position, PlayerInfo.playerLocation);
+                float distance2 = Vector2.Distance(dropItem.createdItems[i].GetComponent<Transform>().position, PlayerInfo.playerLocation);
+                // Debug.Log("1 " + distance1 + " 2 " + distance2);
+
+                if (distance1 > distance2)
+                {
+                    closestItem = i;
+                }
+            }
+        }
+
+        else
+        {
+            closestItem = 0;
+        }
+        
+        InventoryItems.items.Add(dropItem.createdItems[dropItem.createdItemsNumber[closestItem]]);
+        Debug.Log(InventoryItems.items.Count);
+
+        Destroy(dropItem.createdItems[closestItem]);
         dropItem.createdItems.RemoveAt(closestItem);
     }
 }
