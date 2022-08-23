@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInfo : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class PlayerInfo : MonoBehaviour
     public GameObject player;
     public static string directionFacing = "right";
 
-    // Start is called before the first frame update
     void Start()
     {
         swordSwingSpeed = 0.1f * Screen.height * Time.deltaTime;
@@ -28,7 +28,6 @@ public class PlayerInfo : MonoBehaviour
         
         //sets playerLocation equal to the current location
         playerLocation = new Vector3(player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y, player.GetComponent<Transform>().position.z);
-        // Debug.Log(playerLocation);
-        
+        // Debug.Log(playerLocation);     
     }
 }

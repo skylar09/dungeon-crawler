@@ -14,7 +14,7 @@ public class SpawnEnemy : MonoBehaviour
         //spawns 1 bat in the first room
         if (PlayerCollision.currentRoom == 0)
         {
-            Instantiate(Enemies[0], new Vector2(3, 2), Quaternion.identity);
+            Instantiate(Enemies[0], new Vector2(4, 3), Quaternion.identity);
         }
     }
 
