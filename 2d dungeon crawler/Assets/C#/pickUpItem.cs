@@ -79,9 +79,6 @@ public class pickUpItem : MonoBehaviour
     public void addInventory()
     {
         closest();
-        
-        InventoryItems.items.Add(dropItem.createdItems[closestItem]);
-        // Debug.Log(InventoryItems.items.Count);
 
         Destroy(dropItem.createdItems[closestItem]);
         dropItem.createdItems.RemoveAt(closestItem);

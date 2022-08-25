@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class InventoryItems : MonoBehaviour
 {
-    public static List<GameObject> items = new List<GameObject>();
-    public List<GameObject> itemPositions = new List<GameObject>();
+    public List<GameObject> items = new List<GameObject>();
+    public List<Image> InventorySlots = new List<Image>();
 
     public GameObject ui_Window;
 
     public static bool newItem = false;
+    public int totalItems = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,10 @@ public class InventoryItems : MonoBehaviour
 
     public void display()
     {
-        itemPositions[items.Count - 1].GetComponent<SpriteRenderer>().sprite = items[items.Count - 1].GetComponent<SpriteRenderer>().sprite;
+        InventorySlots[totalItems].sprite = items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().sprite;
+        // InventorySlots[InventorySlots.Count].GetComponent<Image>().SetActive(true);
+
+        totalItems ++;
+        newItem = false;
     }
 }
