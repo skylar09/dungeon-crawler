@@ -45,7 +45,8 @@ public class InventoryItems : MonoBehaviour
     public void display()
     {
         InventorySlots[totalItems].sprite = items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().sprite;
-        // InventorySlots[InventorySlots.Count].GetComponent<Image>().SetActive(true);
+
+        dropItem.createdItemsNumber.RemoveAt(pickUpItem.closestItem);
 
         totalItems ++;
         newItem = false;

@@ -34,26 +34,21 @@ public class pickUpItem : MonoBehaviour
 
     public void closest()
     {
+        closestItem = 0;
+
         if (dropItem.createdItems.Count > 1)
-        {
-            closestItem = 0;
-            
+        {            
             for (int i = 1; i < dropItem.createdItems.Count; i++)
             {
                 float distance1 = Vector2.Distance(dropItem.createdItems[closestItem].GetComponent<Transform>().position, PlayerInfo.playerLocation);
                 float distance2 = Vector2.Distance(dropItem.createdItems[i].GetComponent<Transform>().position, PlayerInfo.playerLocation);
                 // Debug.Log("1 " + distance1 + " 2 " + distance2);
-
+                
                 if (distance1 > distance2)
                 {
                     closestItem = i;
                 }
             }
-        }
-
-        else
-        {
-            closestItem = 0;
         }
     }
 
