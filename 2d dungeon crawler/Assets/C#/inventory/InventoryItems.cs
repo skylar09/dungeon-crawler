@@ -50,5 +50,6 @@ public class InventoryItems : MonoBehaviour
 
         totalItems ++;
         newItem = false;
+        pickUpItem.buttonPressed = false;
     }
 }

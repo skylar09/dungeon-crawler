@@ -51,5 +51,6 @@ public class dropItem : MonoBehaviour
         createdItems.Insert(pickUpItem.closestItem, Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity));
 
         pickUpItem.weaponSwitched = false;
+        pickUpItem.buttonPressed = false;
     }
 }

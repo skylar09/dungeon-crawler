@@ -13,6 +13,7 @@ public class pickUpItem : MonoBehaviour
 
     public static bool weaponSwitched = false;
     public static bool changed = false;
+    public static bool buttonPressed = false;
 
     // Update is called once per frame
     void Update()
@@ -21,13 +22,17 @@ public class pickUpItem : MonoBehaviour
         location = this.GetComponent<Transform>().position;
 
         //changes the current item with the item just dropped
-        if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2 && Input.GetKeyDown("f"))
+        if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2 && Input.GetKeyDown("f") && buttonPressed == false)
         {
-            pickUpCurrent();            
+            buttonPressed = true;
+            pickUpCurrent();
+                        
         }
 
-        if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2 && Input.GetKeyDown("g"))
+        if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2 && Input.GetKeyDown("g") && buttonPressed == false)
         {
+            Debug.Log("a");
+            buttonPressed = true;
             addInventory();            
         }
     }
