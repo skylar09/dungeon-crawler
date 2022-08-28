@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class changeWeapon : MonoBehaviour
+public class InventoryButtons : MonoBehaviour
 {
-    
+    public int locationNum;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +20,9 @@ public class changeWeapon : MonoBehaviour
 
     public void ChangeWeapon()
     {
-        // int weapon = Weapons.currentWeapon;
-        // Weapons.currentWeapon = InventoryItems.itemNums[];
-        // InventoryItems.itemNums[] = weapon;
+        int weapon = Weapons.currentWeapon;
+        Weapons.currentWeapon = InventoryItems.itemNums[locationNum];
+
+        // InventoryItems.changeCurrent(locationNum, weapon);
     }
 }

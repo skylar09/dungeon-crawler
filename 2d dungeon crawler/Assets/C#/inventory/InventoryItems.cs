@@ -17,7 +17,10 @@ public class InventoryItems : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        for (int i = 0; i < InventorySlots.Count; i ++)
+        {
+            InventorySlots[i].GetComponent<InventoryButtons>().locationNum = i;
+        }
     }
 
     // Update is called once per frame
@@ -39,20 +42,25 @@ public class InventoryItems : MonoBehaviour
 
         if (newItem == true)
         {
-            display();
+            addItem();
         }
     }
 
-    public void display()
+    public void addItem()
     {
         InventorySlots[totalItems].sprite = items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().sprite;
         itemNums.Add(dropItem.createdItemsNumber[pickUpItem.closestItem]);
-
 
         dropItem.createdItemsNumber.RemoveAt(pickUpItem.closestItem);
 
         totalItems ++;
         newItem = false;
         pickUpItem.buttonPressed = false;
+    }
+
+    public void changeCurrent(int inventoryLocation, int replaceItem)
+    {
+        InventorySlots[inventoryLocation].sprite = items[replaceItem].GetComponent<SpriteRenderer>().sprite;
+        itemNums[inventoryLocation] = replaceItem;
     }
 }
