@@ -7,6 +7,7 @@ public class InventoryItems : MonoBehaviour
 {
     public List<GameObject> items = new List<GameObject>();
     public List<Image> InventorySlots = new List<Image>();
+    public static List<int> itemNums = new List<int>();
 
     public GameObject ui_Window;
 
@@ -45,6 +46,8 @@ public class InventoryItems : MonoBehaviour
     public void display()
     {
         InventorySlots[totalItems].sprite = items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().sprite;
+        itemNums.Add(dropItem.createdItemsNumber[pickUpItem.closestItem]);
+
 
         dropItem.createdItemsNumber.RemoveAt(pickUpItem.closestItem);
 
