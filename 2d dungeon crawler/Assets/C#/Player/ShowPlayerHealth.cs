@@ -29,7 +29,6 @@ public class ShowPlayerHealth : MonoBehaviour
             heartOn();
             health = PlayerInfo.playerHealth;
         }
-        //GameObject.Find("Player Health").GetComponent<TextMeshProUGUI>().SetText("health " + health.ToString() + "   Gold " + PlayerInfo.gold.ToString());
     }
 
     public void heartOn()
