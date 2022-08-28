@@ -43,7 +43,7 @@ public class bat : MonoBehaviour
         //picks random number and decides if it should drop an item
         int shouldDrop = Random.Range(0, 101);
 
-        if (shouldDrop <= 100)
+        if (shouldDrop <= 10)
         {
             dropItem.drop = true;
             dropItem.enemyLocation = this.GetComponent<Transform>().position;
