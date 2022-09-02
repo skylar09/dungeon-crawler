@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class knockback : MonoBehaviour
 {
-    public float thrust = 5;
+    float thrust = 1;
 
     Rigidbody2D enemy;
 
