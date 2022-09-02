@@ -252,7 +252,7 @@ MonoBehaviour:
   - {fileID: 3593761439296400745, guid: e9df5f5816300c34c8569f35f6544109, type: 3}
   - {fileID: 176378256186577800, guid: 8f2a8df31bcc91546b7ab3af9eeae362, type: 3}
   - {fileID: 6217652708947698187, guid: 2e38cd99b0fcf054cb73435ed5679855, type: 3}
-  - {fileID: 8856541099923823005, guid: b753e354df4cc91478f3f9c96316b0a6, type: 3}
+  - {fileID: 192055224195661241, guid: c6ac929b4c56e7649959950c7c174cd8, type: 3}
 --- !u!114 &3585629486178702235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
   - {fileID: 3593761439296400745, guid: e9df5f5816300c34c8569f35f6544109, type: 3}
   - {fileID: 5986279292362446826, guid: 4c514b3cb1138884f873647e4f824748, type: 3}
   - {fileID: 2298485384463886783, guid: 1b69d2dac1095ab44bda1e76ba711c1c, type: 3}
-  - {fileID: 192055224195661241, guid: c6ac929b4c56e7649959950c7c174cd8, type: 3}
+  - {fileID: 8856541099923823005, guid: b753e354df4cc91478f3f9c96316b0a6, type: 3}
   InventorySlots:
   - {fileID: 0}
   - {fileID: 0}
