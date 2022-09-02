@@ -14,6 +14,9 @@ public class InventoryItems : MonoBehaviour
     public static bool newItem = false;
     public int totalItems = 0;
 
+    public static int inventoryLocation, replaceItem;
+    public static bool changeUIWeapon = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +47,11 @@ public class InventoryItems : MonoBehaviour
         {
             addItem();
         }
+
+        if (changeUIWeapon == true)
+        {
+            changeCurrent();
+        }
     }
 
     public void addItem()
@@ -58,7 +66,7 @@ public class InventoryItems : MonoBehaviour
         pickUpItem.buttonPressed = false;
     }
 
-    public void changeCurrent(int inventoryLocation, int replaceItem)
+    public void changeCurrent()
     {
         InventorySlots[inventoryLocation].sprite = items[replaceItem].GetComponent<SpriteRenderer>().sprite;
         itemNums[inventoryLocation] = replaceItem;
