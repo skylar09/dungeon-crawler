@@ -20,5 +20,7 @@ public class Start : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // PlayerInfo.swordSwingSpeed = (float).00127 *  Screen.height * Time.deltaTime;
+        Debug.Log(Screen.height);
     }
 }

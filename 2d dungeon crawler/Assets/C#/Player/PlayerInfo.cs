@@ -12,14 +12,14 @@ public class PlayerInfo : MonoBehaviour
     public static float movementSpeed = 3f;
     public static int gold = 0;
 
-    public static float swordSwingSpeed;
+    public static float swordSwingSpeed = 1;
     public static Vector3 playerLocation;
     public GameObject player;
     public static string directionFacing = "right";
 
     void Start()
     {
-        swordSwingSpeed = 0.1f * Screen.height * Time.deltaTime;
+        
     }
 
     // Update is called once per frame
