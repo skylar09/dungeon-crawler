@@ -7,18 +7,13 @@ public class enemyMovement : MonoBehaviour
 
     private Transform target;
     public Rigidbody2D rb;
+    public bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
     {
         //sets target as the GameObject with the tag "Player"
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        rb.velocity = new Vector2(0, 0);
     }
 
     // FixedUpdate is called once per set amount of frames
@@ -28,7 +23,11 @@ public class enemyMovement : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) < 6)
         {
             //makes the enemy move towards the player
-            transform.position = Vector2.MoveTowards(transform.position, target.position, PlayerInfo.movementSpeed / 2 * Time.deltaTime);
+            if (canMove == true)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.position, PlayerInfo.movementSpeed / 2 * Time.deltaTime);
+            }
+                    
         }
     }
 }

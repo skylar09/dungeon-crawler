@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3459993857220968952}
   - component: {fileID: 6991407744494144899}
   - component: {fileID: -6768917409864708169}
+  - component: {fileID: -6026902784412190468}
   m_Layer: 8
   m_Name: small bludgeon
   m_TagString: weapon
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &-6026902784412190468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298485384463886783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650f7452e3c71ce4aa6f3e9a70e6146c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 5
