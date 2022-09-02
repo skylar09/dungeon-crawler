@@ -22,28 +22,26 @@ public class knockback : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.CompareTag("slimeEnemy"))
+        if (collider.gameObject.CompareTag("weapon"))
         {
-            enemy = collider.rigidbody;
-            if (enemy != null)
-            {
-                collider.gameObject.GetComponent<enemyMovement>().canMove = false;
+            enemy = this.GetComponent<Rigidbody2D>();
 
-                Vector2 difference = enemy.transform.position - transform.position;
-                difference = difference.normalized * thrust;
-                enemy.AddForce(difference, ForceMode2D.Impulse);
+            this.GetComponent<enemyMovement>().canMove = false;
 
-                StartCoroutine(knockbackOccur());
-            }
+            Vector2 difference = transform.position - collider.transform.position;
+            difference = difference.normalized * thrust;
+            this.GetComponent<Rigidbody2D>().AddForce(difference, ForceMode2D.Impulse);
+
+            StartCoroutine(knockbackOccur());
         }
     }
 
     IEnumerator knockbackOccur()
     {
         Debug.Log("herea"); 
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSecondsRealtime(1);
         Debug.Log("here");  
         enemy.velocity = new Vector2(0,0);
-        enemy.gameObject.GetComponent<enemyMovement>().canMove = true;
+        this.GetComponent<enemyMovement>().canMove = true;
     }
 }

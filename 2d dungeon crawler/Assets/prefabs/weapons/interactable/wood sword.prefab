@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8103026422850841721}
   - component: {fileID: 8103026422850841726}
   - component: {fileID: 2198327023524202874}
-  - component: {fileID: 8548725816323318327}
   m_Layer: 8
   m_Name: wood sword
   m_TagString: weapon
@@ -112,16 +111,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.08911091, y: 0.1939591}
   m_EdgeRadius: 0
---- !u!114 &8548725816323318327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8103026422850841727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650f7452e3c71ce4aa6f3e9a70e6146c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrust: 5
