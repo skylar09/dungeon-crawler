@@ -6,9 +6,11 @@ public class Weapons : MonoBehaviour
 {
     public List<GameObject> prefabs = new List<GameObject>();
     public List<int> weaponDamages = new List<int>();
+    public List<int> weaponKnockbacks = new List<int>();
 
     public static int currentDamage;
     public static int currentWeapon = 0;
+    public static int currentKnockback;
 
     public GameObject yourWeapon;
 
@@ -36,6 +38,7 @@ public class Weapons : MonoBehaviour
         // weapons[currentWeapon].GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0);
 
         currentDamage = weaponDamages[currentWeapon];
+        currentKnockback = weaponKnockbacks[currentWeapon];
 
         pickUpItem.changed = false;
     }

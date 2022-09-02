@@ -17,12 +17,12 @@ public class knockback : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        thrust = Weapons.currentKnockback;
     }
 
     void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.CompareTag("weapon"))
+        if (collider.gameObject.CompareTag("weapon") && thrust > 0)
         {
             enemy = this.GetComponent<Rigidbody2D>();
 
