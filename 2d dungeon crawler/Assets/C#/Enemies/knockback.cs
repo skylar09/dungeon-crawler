@@ -20,27 +20,29 @@ public class knockback : MonoBehaviour
         thrust = Weapons.currentKnockback;
     }
 
+    //adds force to an enemy so as to do knockback
     void OnCollisionEnter2D(Collision2D collider)
     {
+        //need the && bc otherwise enemies stop moving when a weapon has no knockback
         if (collider.gameObject.CompareTag("weapon") && thrust > 0)
         {
             enemy = this.GetComponent<Rigidbody2D>();
-
+            //makes it so the enemy can't move while taking knockback
             this.GetComponent<enemyMovement>().canMove = false;
 
             Vector2 difference = transform.position - collider.transform.position;
             difference = difference.normalized * thrust;
+            //the impulse is a force applied in one frame
             this.GetComponent<Rigidbody2D>().AddForce(difference, ForceMode2D.Impulse);
 
             StartCoroutine(knockbackOccur());
         }
     }
 
+    //after the knockback is over the enemy velocity resets and it can move again
     IEnumerator knockbackOccur()
     {
-        Debug.Log("herea"); 
         yield return new WaitForSecondsRealtime(1);
-        Debug.Log("here");  
         enemy.velocity = new Vector2(0,0);
         this.GetComponent<enemyMovement>().canMove = true;
     }

@@ -13,6 +13,7 @@ public class Start : MonoBehaviour
         StartCoroutine(fading());
     }
 
+    //makes the screen fade black
     public IEnumerator fading()
     {
         FadeOut.SetActive(true);

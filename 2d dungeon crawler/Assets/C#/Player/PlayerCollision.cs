@@ -32,6 +32,7 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
+    //teleports the player to the next room above or below the current one
     public void doorY()
     {
         whichRoomNext();
@@ -45,19 +46,18 @@ public class PlayerCollision : MonoBehaviour
         if (PlayerInfo.playerLocation.y < RoomLocation.roomCords[currentRoom].y)
         {
             transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x, RoomLocation.roomCords[currentRoom].y - 3.5f);
-            Debug.Log("bla");
         }
 
         //moves the player to the top of the next room
         else
         {
             transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x, RoomLocation.roomCords[currentRoom].y + 3.5f);
-            Debug.Log("bla");
         }
 
         SpawnEnemy.enterRoom = true;
     }
 
+    //teleports the player to the next room to the right or left of the current one
     public void doorX()
     {
         whichRoomNext();
@@ -84,6 +84,7 @@ public class PlayerCollision : MonoBehaviour
         SpawnEnemy.enterRoom = true;
     }
 
+    //figrues out which room is closest to the current one
     public void whichRoomNext()
     {
         double roomDistance = 999999999;

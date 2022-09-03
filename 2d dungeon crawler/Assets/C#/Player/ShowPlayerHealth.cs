@@ -31,6 +31,7 @@ public class ShowPlayerHealth : MonoBehaviour
         }
     }
 
+    //turns hearts on if you gained health
     public void heartOn()
     {
         for (int i = 0; i < PlayerInfo.playerHealth; i ++)
@@ -39,6 +40,7 @@ public class ShowPlayerHealth : MonoBehaviour
         }
     }
 
+    //turns hearts off in you lost health
     public void heartOff()
     {
         for (int i = 0; i < hearts.Count; i ++)

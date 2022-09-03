@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Weapons : MonoBehaviour
 {
+    //all interactable weapons 
     public List<GameObject> prefabs = new List<GameObject>();
+    //all weapon damages that correspond to the weapon in the same location in other lists
     public List<int> weaponDamages = new List<int>();
+    //all weapon knockbacks that correspond to the weapon in the same location in other lists
     public List<int> weaponKnockbacks = new List<int>();
 
     public static int currentDamage;

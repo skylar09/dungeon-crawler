@@ -23,6 +23,7 @@ public class nextLvl : MonoBehaviour
     //     StartCoroutine(fading());
     // }
 
+    //fades the level out
     public IEnumerator fading()
     {
         FadeOut.SetActive(true);

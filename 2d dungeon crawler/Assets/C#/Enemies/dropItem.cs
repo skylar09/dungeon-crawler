@@ -9,10 +9,11 @@ public class dropItem : MonoBehaviour
     public static bool drop = false;
     public static int weaponNum;
 
+    //all possible items that can be created
     public List<GameObject> Items = new List<GameObject>();
-
+    //items that are created when an enemy drops an item
     public static List<GameObject> createdItems = new List<GameObject>();
-
+    //numbers that correspond to the location in the Items list of dropped items
     public static List<int> createdItemsNumber = new List<int>();
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class dropItem : MonoBehaviour
         }
     }
 
+    //makes a weapon
     public void makeWeapon()
     {
         do 
@@ -46,6 +48,7 @@ public class dropItem : MonoBehaviour
         drop = false;
     }
 
+    //creates a weapon when you switch weapons from a weapon on the ground
     public void switchWeapon()
     {
         createdItems.Insert(pickUpItem.closestItem, Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity));

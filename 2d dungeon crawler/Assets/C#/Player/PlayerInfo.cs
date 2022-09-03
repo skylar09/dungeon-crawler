@@ -14,7 +14,6 @@ public class PlayerInfo : MonoBehaviour
 
     public static float swordSwingSpeed = 1;
     public static Vector3 playerLocation;
-    public GameObject player;
     public static string directionFacing = "right";
 
     void Start()
@@ -27,7 +26,7 @@ public class PlayerInfo : MonoBehaviour
     {
         
         //sets playerLocation equal to the current location
-        playerLocation = new Vector3(player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y, player.GetComponent<Transform>().position.z);
+        playerLocation = new Vector3(this.GetComponent<Transform>().position.x, this.GetComponent<Transform>().position.y, this.GetComponent<Transform>().position.z);
         // Debug.Log(playerLocation);     
     }
 }

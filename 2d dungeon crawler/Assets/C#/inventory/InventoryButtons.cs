@@ -18,15 +18,21 @@ public class InventoryButtons : MonoBehaviour
 
     }
 
+    //changes the item in the item slot with the one you are currently using
     public void ChangeWeapon()
     {
-        int weapon = Weapons.currentWeapon;
+        //makes sure this doesn't happen unless an item is in the slot
+        if(locationNum < InventoryItems.itemNums.Count)
+        {
+            int weapon = Weapons.currentWeapon;
 
-        Weapons.currentWeapon = InventoryItems.itemNums[locationNum];
-        pickUpItem.changed = true;
+            Weapons.currentWeapon = InventoryItems.itemNums[locationNum];
+            pickUpItem.changed = true;
 
-        InventoryItems.inventoryLocation = locationNum;
-        InventoryItems.replaceItem = weapon;
-        InventoryItems.changeUIWeapon = true;
+            InventoryItems.inventoryLocation = locationNum;
+            InventoryItems.replaceItem = weapon;
+            InventoryItems.changeUIWeapon = true;
+        }
+        
     }
 }

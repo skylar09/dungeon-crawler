@@ -28,6 +28,7 @@ public class SpawnEnemy : MonoBehaviour
         }        
     }
 
+    //spawns enemies in certain spots around the room
     public void spawn()
     {
         RoomLocation.newRoom[PlayerCollision.currentRoom] = false;

@@ -28,15 +28,15 @@ public class pickUpItem : MonoBehaviour
             pickUpCurrent();
                         
         }
-
+        //adds the closest item to your inventory
         if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2 && Input.GetKeyDown("g") && buttonPressed == false)
         {
-            Debug.Log("a");
             buttonPressed = true;
             addInventory();            
         }
     }
 
+    //gets the closest item on the ground
     public void closest()
     {
         closestItem = 0;
@@ -57,6 +57,7 @@ public class pickUpItem : MonoBehaviour
         }
     }
 
+    //changes the current item with the item just dropped
     public void pickUpCurrent()
     {
         closest();
@@ -76,6 +77,7 @@ public class pickUpItem : MonoBehaviour
         dropItem.createdItems.RemoveAt(closestItem);
     }
 
+    //adds the closest item to your inventory
     public void addInventory()
     {
         closest();
