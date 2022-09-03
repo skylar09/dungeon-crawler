@@ -8,6 +8,7 @@ public class enemyMovement : MonoBehaviour
     private Transform target;
     public Rigidbody2D rb;
     public bool canMove = true;
+    public float moveSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class enemyMovement : MonoBehaviour
             //makes the enemy move towards the player
             if (canMove == true)
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.position, PlayerInfo.movementSpeed / 2 * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
             }
                     
         }

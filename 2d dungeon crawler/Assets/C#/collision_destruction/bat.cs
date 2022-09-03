@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class bat : MonoBehaviour
 {
-    public int health = 1;
+    public int health = 2;
     public int damage = 1;
     public int defense = 0;
     public int deathGold = 3;
+    public float moveSpeed = 2.5f;
+
+    void Start()
+    {
+        this.GetComponent<enemyMovement>().moveSpeed = moveSpeed;
+    }
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
@@ -43,7 +49,7 @@ public class bat : MonoBehaviour
         //picks random number and decides if it should drop an item
         int shouldDrop = Random.Range(0, 101);
 
-        if (shouldDrop <= 10)
+        if (shouldDrop <= 100)
         {
             dropItem.drop = true;
             dropItem.enemyLocation = this.GetComponent<Transform>().position;

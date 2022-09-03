@@ -8,6 +8,12 @@ public class Slime : MonoBehaviour
     public int damage = 2;
     public int defense = 0;
     public int deathGold = 5;
+    public float moveSpeed = 1.5f;
+
+    void Start()
+    {
+        this.GetComponent<enemyMovement>().moveSpeed = moveSpeed;
+    }
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
