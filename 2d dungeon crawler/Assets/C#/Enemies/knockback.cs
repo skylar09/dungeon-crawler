@@ -42,7 +42,7 @@ public class knockback : MonoBehaviour
     //after the knockback is over the enemy velocity resets and it can move again
     IEnumerator knockbackOccur()
     {
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(.5f);
         enemy.velocity = new Vector2(0,0);
         this.GetComponent<enemyMovement>().canMove = true;
     }
