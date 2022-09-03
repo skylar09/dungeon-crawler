@@ -8,7 +8,7 @@ public class SwordAttack : MonoBehaviour
     public bool swordSwung = false;
     public bool canAttack = true;
     public bool mouseIsLeft;
-    public Quaternion startrotateright;
+    public Quaternion startRotateRight;
 
     public float playerLocationX;
     public float playerLocationY;
@@ -23,7 +23,7 @@ public class SwordAttack : MonoBehaviour
         
         //turns the weapon off
         WeaponsScript.yourWeapon.SetActive(false);
-        startrotateright = new Quaternion(0, 0, 0, 0);
+        startRotateRight = new Quaternion(0, 0, 0, 0);
     }
 
     // Update is called once per frame
@@ -87,9 +87,8 @@ public class SwordAttack : MonoBehaviour
         //sets the weapon position to near the player
         WeaponsScript.yourWeapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.65f, .1f, 0); 
 
-        //rotates the sword towards -90 degrees
+        //rotates the sword towards 90 degrees
         WeaponsScript.yourWeapon.transform.rotation = Quaternion.RotateTowards(WeaponsScript.yourWeapon.transform.rotation, Quaternion.Euler(-1 * playerLocationX, playerLocationY, 90), PlayerInfo.swordSwingSpeed);
-    
 
         //checks the z component of the rotation of the weapon to see if it is 90
         if (WeaponsScript.yourWeapon.transform.localRotation.eulerAngles.z == 90)
@@ -121,7 +120,7 @@ public class SwordAttack : MonoBehaviour
     //resets rotation, swordswung, canAttack, and turns weapon off
     void restartVariables()
     {
-        WeaponsScript.yourWeapon.transform.rotation = startrotateright;
+        WeaponsScript.yourWeapon.transform.rotation = startRotateRight;
         WeaponsScript.yourWeapon.SetActive(false);
         canAttack = true;
         swordSwung = false;
