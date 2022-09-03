@@ -64,6 +64,7 @@ public class InventoryItems : MonoBehaviour
     //adds an item to the next free inventory slot
     public void addItem()
     {
+        InventorySlots[totalItems].GetComponent<Image>().enabled = true;
         //changes the sprite of an inventory slot to an item at a certain spot in the items list
         InventorySlots[totalItems].sprite = items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().sprite;
         //adds the number of that item in the items list to the itemNums list

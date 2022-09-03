@@ -1,32 +1,17 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-// public class GameStart : MonoBehaviour
-// {
+public class GameStart : MonoBehaviour
+{
+    bool ignore = true;
 
-//     public GameObject BatEnemy;
-
-
-//     // Start is called before the first frame update
-//     void Start()
-//     {
-//         //creates a version of an enemy prefab
-//         Instantiate(BatEnemy, new Vector2(0, 2), Quaternion.identity);
-//     }
-
-//     // Update is called once per frame
-//     void Update()
-//     {
-//         //checks to see if the enemy health is 0 or less
-//         if (enemyInfo.batHealth <= 0)
-//         {
-//             //destroys (kills) the enemy
-//             Destroy(gameObject);
-
-//             //resets bat health so when a new bat is created it has health of 1
-//             //**should find a way to make it so this doesnt need to happen bc it might kill all bats alive at once**
-//             enemyInfo.batHealth = 1;
-//         }
-//     }
-// }
+    // Start is called before the first frame update
+    void Start()
+    {
+        //makes it so all collisions on layers 6 (player) and 8 (weapon) are ignored
+        Physics2D.IgnoreLayerCollision(6, 8, ignore);
+        //makes it so enemies don't run into each other layer 7 is (enemies)
+        Physics2D.IgnoreLayerCollision(7, 7, ignore);
+    }
+}

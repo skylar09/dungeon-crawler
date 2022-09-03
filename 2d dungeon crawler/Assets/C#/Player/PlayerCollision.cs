@@ -7,16 +7,8 @@ public class PlayerCollision : MonoBehaviour
 {
     public GameObject Camera;
 
-    bool ignore = true;
-
     public static int currentRoom = 0;
     public static int closestRoom;
-
-    void Start()
-    {
-        //makes it so all collisions on layers 6 (player) and 8 (weapon) are ignored
-        Physics2D.IgnoreLayerCollision(6, 8, ignore);
-    }
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2495400042940355017}
   - component: {fileID: -2951418049151706296}
   - component: {fileID: 2721038975294622466}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BatEnemy
   m_TagString: batEnemy
   m_Icon: {fileID: 0}
@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2495400042940355023}
   canMove: 1
+  moveSpeed: 0
 --- !u!114 &-2951418049151706296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +188,7 @@ MonoBehaviour:
   damage: 1
   defense: 0
   deathGold: 3
+  moveSpeed: 2.5
 --- !u!114 &2721038975294622466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,4 +201,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650f7452e3c71ce4aa6f3e9a70e6146c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 5
