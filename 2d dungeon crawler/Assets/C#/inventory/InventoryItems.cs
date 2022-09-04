@@ -67,6 +67,10 @@ public class InventoryItems : MonoBehaviour
         InventorySlots[totalItems].GetComponent<Image>().enabled = true;
         //changes the sprite of an inventory slot to an item at a certain spot in the items list
         InventorySlots[totalItems].sprite = items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().sprite;
+        
+        //changes the color of the inventory slot bc there are some items that are just color changed
+        InventorySlots[totalItems].color = items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().color;
+
         //adds the number of that item in the items list to the itemNums list
         itemNums.Add(dropItem.createdItemsNumber[pickUpItem.closestItem]);
 
@@ -83,5 +87,8 @@ public class InventoryItems : MonoBehaviour
     {
         InventorySlots[inventoryLocation].sprite = items[replaceItem].GetComponent<SpriteRenderer>().sprite;
         itemNums[inventoryLocation] = replaceItem;
+
+        //changes the color of the inventory slot bc there are some items that are just color changed
+        InventorySlots[inventoryLocation].color = items[replaceItem].GetComponent<SpriteRenderer>().color;
     }
 }
