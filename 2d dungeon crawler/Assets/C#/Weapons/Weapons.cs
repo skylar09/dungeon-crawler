@@ -22,6 +22,12 @@ public class Weapons : MonoBehaviour
     void Start()
     {
         yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
+<<<<<<< Updated upstream
+=======
+        //SwordAttack.animator = prefabs[currentWeapon].GetComponent<Animator>();
+        yourWeapon.GetComponent<animationSwitcher>().player = player;
+        player.GetComponent<SwordAttack>().animator = yourWeapon.GetComponent<Animator>();
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
