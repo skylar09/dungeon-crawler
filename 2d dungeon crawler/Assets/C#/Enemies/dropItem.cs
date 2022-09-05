@@ -38,7 +38,11 @@ public class dropItem : MonoBehaviour
         do 
         {
             weaponNum = Random.Range(0, Items.Count);  
+<<<<<<< Updated upstream
                             
+=======
+
+>>>>>>> Stashed changes
         } while (weaponNum == Weapons.currentWeapon);
 
         createdItems.Add(Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity));
