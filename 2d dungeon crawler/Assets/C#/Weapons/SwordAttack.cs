@@ -108,7 +108,6 @@ public class SwordAttack : MonoBehaviour
         WeaponsScript.yourWeapon.transform.rotation = Quaternion.RotateTowards(WeaponsScript.yourWeapon.transform.rotation, Quaternion.Euler(playerLocationX, playerLocationY, -90), PlayerInfo.swordSwingSpeed);
     
 
-<<<<<<< Updated upstream
         //checks the z component of the rotation of the weapon to see if it is 270 (-90)
         if (WeaponsScript.yourWeapon.transform.localRotation.eulerAngles.z == 270)
         {
@@ -122,10 +121,6 @@ public class SwordAttack : MonoBehaviour
     void restartVariables()
     {
         WeaponsScript.yourWeapon.transform.rotation = startRotateRight;
-=======
-    public void resetWeapon()
-    {
->>>>>>> Stashed changes
         WeaponsScript.yourWeapon.SetActive(false);
         canAttack = true;
         swordSwung = false;
