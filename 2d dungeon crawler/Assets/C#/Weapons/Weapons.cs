@@ -16,7 +16,6 @@ public class Weapons : MonoBehaviour
     public static int currentKnockback;
 
     public GameObject yourWeapon;
-    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +29,6 @@ public class Weapons : MonoBehaviour
         if (pickUpItem.changed == true)
         {
             changeWeapon();
-
-            yourWeapon.GetComponent<animationSwitcher>().player = player;
-            player.GetComponent<SwordAttack>().animator = yourWeapon.GetComponent<Animator>();
         }
     }
 
@@ -41,6 +37,8 @@ public class Weapons : MonoBehaviour
         Destroy(yourWeapon);
         
         yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
+
+        // weapons[currentWeapon].GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0);
 
         currentDamage = weaponDamages[currentWeapon];
         currentKnockback = weaponKnockbacks[currentWeapon];
