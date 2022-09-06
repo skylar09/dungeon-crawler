@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5788918749784270361}
   - component: {fileID: 5788918749784270366}
   - component: {fileID: 8843088172855429448}
-  - component: {fileID: -764999290418509304}
   - component: {fileID: 5184159189220867998}
+  - component: {fileID: -764999290418509304}
   m_Layer: 8
   m_Name: broadsword
   m_TagString: weapon
@@ -113,19 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.11132098, y: 0.28230414}
   m_EdgeRadius: 0
---- !u!114 &-764999290418509304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5788918749784270367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: babb26dbadd1290478d020c312cc37f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!95 &5184159189220867998
 Animator:
   serializedVersion: 4
@@ -146,3 +133,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-764999290418509304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5788918749784270367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babb26dbadd1290478d020c312cc37f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
