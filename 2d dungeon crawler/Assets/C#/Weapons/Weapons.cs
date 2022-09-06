@@ -22,7 +22,7 @@ public class Weapons : MonoBehaviour
     void Start()
     {
         yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
-        player.GetComponent<SwordAttack>().animator = prefabs[currentWeapon].GetComponent<Animator>();
+        player.GetComponent<SwordAttack>().animator = yourWeapon.GetComponent<Animator>();
         yourWeapon.GetComponent<animationSwitcher>().player = player;
     }
 
@@ -33,6 +33,12 @@ public class Weapons : MonoBehaviour
         {
             changeWeapon();
 
+            player.GetComponent<SwordAttack>().animator = yourWeapon.GetComponent<Animator>();
+            yourWeapon.GetComponent<animationSwitcher>().player = player;
+        }
+
+        if (!yourWeapon.GetComponent<Animator>())
+        {
             player.GetComponent<SwordAttack>().animator = yourWeapon.GetComponent<Animator>();
         }
     }

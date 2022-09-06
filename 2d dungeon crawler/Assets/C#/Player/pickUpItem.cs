@@ -88,5 +88,7 @@ public class pickUpItem : MonoBehaviour
         dropItem.createdItems.RemoveAt(closestItem);
 
         InventoryItems.newItem = true;
+
+        pickUpItem.changed = true;
     }
 }
