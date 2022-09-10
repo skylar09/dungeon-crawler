@@ -27,6 +27,8 @@ public class Slime : MonoBehaviour
 
             //destroys (kills) the enemy
             Destroy(gameObject);
+
+            SpawnEnemy.enemyCount--;
         }
     }
 

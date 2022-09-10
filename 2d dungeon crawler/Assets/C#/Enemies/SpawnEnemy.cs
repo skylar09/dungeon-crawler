@@ -15,6 +15,7 @@ public class SpawnEnemy : MonoBehaviour
         if (PlayerCollision.currentRoom == 0)
         {
             Instantiate(Enemies[0], new Vector2(4, 3), Quaternion.identity);
+            enemyCount++;
         }
     }
 
@@ -50,8 +51,11 @@ public class SpawnEnemy : MonoBehaviour
 
                 //creates a version of an enemy prefab
                 Instantiate(Enemies[enemyNum], new Vector2(LocationX + (Random.Range(3f, 7f) * leftOrRight), LocationY + (Random.Range(1.5f, 3f)) * upOrDown), Quaternion.identity);
+
+                enemyCount++;
             }
 
         enterRoom = false;
+        doors.cleared ++;
     }
 }
