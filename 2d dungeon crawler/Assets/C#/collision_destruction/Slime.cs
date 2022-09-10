@@ -15,6 +15,21 @@ public class Slime : MonoBehaviour
         this.GetComponent<enemyMovement>().moveSpeed = moveSpeed;
     }
 
+     void Update()
+    {
+        //when the enemy is dead
+        if (health <= 0)
+        {
+            //gives the player gold
+            PlayerInfo.gold += deathGold;
+
+            itemDrop();
+
+            //destroys (kills) the enemy
+            Destroy(gameObject);
+        }
+    }
+
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
         //checks for the tag on the object it collides with
@@ -34,20 +49,13 @@ public class Slime : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        //when the enemy is dead
-        if (health <= 0)
-        {
-            //gives the player gold
-            PlayerInfo.gold += deathGold;
+    // void OnCollisionStay2D(Collision2D collisionInfo)
+    // {
+    //     if (collisionInfo.collider.tag == "Player")
+    //     {
 
-            itemDrop();
-
-            //destroys (kills) the enemy
-            Destroy(gameObject);
-        }
-    }
+    //     }
+    // }
 
     public void damagePlayer()
     {
