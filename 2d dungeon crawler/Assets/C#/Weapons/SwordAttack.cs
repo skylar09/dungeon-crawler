@@ -9,9 +9,6 @@ public class SwordAttack : MonoBehaviour
     public bool swordSwung = false;
     public bool canAttack = true;
     public bool mouseIsLeft;
-
-    public float playerLocationX;
-    public float playerLocationY;
     
     public GameObject refrence;
     public Weapons WeaponsScript;
@@ -55,23 +52,19 @@ public class SwordAttack : MonoBehaviour
         {
             activateWeapon();
         }
-
-        playerLocationX = PlayerInfo.playerLocation.x + .65f;
-        playerLocationY = PlayerInfo.playerLocation.y + .1f;
-
         
-            if (swordSwung == true)
+        if (swordSwung == true)
+        {
+            if (mouseIsLeft == true)
             {
-                if (mouseIsLeft == true)
-                {
-                    attackLeft();
-                }
-
-                else
-                {
-                    attackRight();
-                }
+                attackLeft();
             }
+
+            else
+            {
+                attackRight();
+            }
+        }
     }
 
     public void activateWeapon()
