@@ -41,11 +41,13 @@ public class InventoryItems : MonoBehaviour
             if (ui_Window.activeInHierarchy == true)
             {
                 ui_Window.SetActive(false);
+                this.GetComponent<pauseGame>().unpause();
             }
 
             else
             {
                 ui_Window.SetActive(true);
+                this.GetComponent<pauseGame>().pause();
             }
             
         }

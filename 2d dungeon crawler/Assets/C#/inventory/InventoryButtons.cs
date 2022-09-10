@@ -33,6 +33,5 @@ public class InventoryButtons : MonoBehaviour
             InventoryItems.replaceItem = weapon;
             InventoryItems.changeUIWeapon = true;
         }
-        
     }
 }
