@@ -75,8 +75,6 @@ public class pickUpItem : MonoBehaviour
         Destroy(dropItem.createdItems[closestItem]);
 
         dropItem.createdItems.RemoveAt(closestItem);
-
-        pickUpItem.changed = true;
     }
 
     //adds the closest item to your inventory
@@ -89,6 +87,6 @@ public class pickUpItem : MonoBehaviour
 
         InventoryItems.newItem = true;
 
-        pickUpItem.changed = true;
+        changed = true;
     }
 }

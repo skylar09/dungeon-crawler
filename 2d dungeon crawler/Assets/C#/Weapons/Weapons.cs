@@ -40,6 +40,7 @@ public class Weapons : MonoBehaviour
         if (!yourWeapon.GetComponent<Animator>())
         {
             player.GetComponent<SwordAttack>().animator = yourWeapon.GetComponent<Animator>();
+            player.GetComponent<SwordAttack>().restartVariables();
         }
     }
 
@@ -55,5 +56,6 @@ public class Weapons : MonoBehaviour
         currentKnockback = weaponKnockbacks[currentWeapon];
 
         pickUpItem.changed = false;
+        player.GetComponent<SwordAttack>().restartVariables();
     }
 }
