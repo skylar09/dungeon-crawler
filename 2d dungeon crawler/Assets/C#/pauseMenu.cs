@@ -44,6 +44,7 @@ public class pauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        DontDestroyOnLoad(Player);
         whichScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(0);
     }
