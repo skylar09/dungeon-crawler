@@ -11,7 +11,7 @@ public class nextLvl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("p"))
+        if (Input.GetKeyDown("z"))
         {
             // nextLevel();
             StartCoroutine(fading());

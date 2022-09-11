@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.EventSystems;
 
 public class SwordAttack : MonoBehaviour
 {
@@ -47,10 +48,13 @@ public class SwordAttack : MonoBehaviour
             }
         }
         
-        //if left click
-        if (Input.GetMouseButtonDown(0) && canAttack == true)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            activateWeapon();
+            //if left click
+            if (Input.GetMouseButtonDown(0) && canAttack == true)
+            {
+                activateWeapon();
+            }
         }
         
         if (swordSwung == true)
