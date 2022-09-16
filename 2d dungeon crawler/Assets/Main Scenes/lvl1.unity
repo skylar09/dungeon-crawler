@@ -31105,7 +31105,7 @@ PrefabInstance:
       objectReference: {fileID: 6647180093436673087, guid: 04f0a3bba9fe198408b3621c69da46a0, type: 3}
     - target: {fileID: 3585629487452073337, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
       propertyPath: weaponDamages.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3585629487452073337, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
       propertyPath: weaponDamages.Array.data[7]
@@ -31117,11 +31117,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3585629487452073337, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
       propertyPath: weaponDamages.Array.data[9]
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3585629487452073337, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
       propertyPath: weaponKnockbacks.Array.size
-      value: 10
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3585629487452073337, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
+      propertyPath: weaponDamages.Array.data[10]
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3585629487452073337, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
       propertyPath: weaponKnockbacks.Array.data[7]
@@ -31129,11 +31133,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3585629487452073337, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
       propertyPath: weaponKnockbacks.Array.data[8]
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3585629487452073337, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
       propertyPath: weaponKnockbacks.Array.data[9]
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3585629487452073337, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
+      propertyPath: weaponKnockbacks.Array.data[10]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
