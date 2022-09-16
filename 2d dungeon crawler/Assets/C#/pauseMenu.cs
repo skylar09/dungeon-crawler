@@ -9,7 +9,7 @@ public class pauseMenu : MonoBehaviour
     public GameObject Player;
     public GameObject OptionsMenu;
 
-    public static int whichScene = 0;
+    public static int whichScene = 1;
 
     // Update is called once per frame
     void Update()
