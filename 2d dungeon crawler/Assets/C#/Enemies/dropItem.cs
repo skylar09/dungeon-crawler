@@ -16,6 +16,20 @@ public class dropItem : MonoBehaviour
     //numbers that correspond to the location in the Items list of dropped items
     public static List<int> createdItemsNumber = new List<int>();
 
+    //resets createdItems and createdItemsNumber lists when goes to new level
+    void Awake()
+    {
+        for (int i = 0; i < dropItem.createdItems.Count; i++)
+        {
+            dropItem.createdItems.RemoveAt(i);
+        }
+        
+        for (int i = 0; i < dropItem.createdItemsNumber.Count; i++)
+        {
+            dropItem.createdItemsNumber.RemoveAt(i);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -6,18 +6,6 @@ public class InventoryButtons : MonoBehaviour
 {
     public int locationNum;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     //changes the item in the item slot with the one you are currently using
     public void ChangeWeapon()
     {

@@ -17,10 +17,21 @@ public class InventoryItems : MonoBehaviour
     public GameObject player;
 
     public static bool newItem = false;
-    public int totalItems = 0;
+    public static int totalItems = 0;
 
     public static int inventoryLocation, replaceItem;
     public static bool changeUIWeapon = false;
+
+    //adds the inventory icons to the inventory when goes to new level
+    void Awake()
+    {
+        for (int i = 0; i < itemNums.Count; i++)
+        {
+            InventorySlots[i].GetComponent<Image>().enabled = true;
+            InventorySlots[i].sprite = player.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().sprite;
+            InventorySlots[i].color = player.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().color;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
