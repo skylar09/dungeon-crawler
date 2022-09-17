@@ -5,15 +5,14 @@ using TMPro;
 
 public class ShowPlayerHealth : MonoBehaviour
 {
-    int health;
+    public static int health = 3;
 
     public List<GameObject> hearts = new List<GameObject>();
 
-    void Start()
+    void Awake()
     {
-        health = PlayerInfo.playerHealth;
+        heartOff();
     }
-
 
     // Update is called once per frame
     void Update()

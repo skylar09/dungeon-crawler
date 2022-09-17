@@ -26,7 +26,7 @@ public class Weapons : MonoBehaviour
     {
         yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
         player.GetComponent<SwordAttack>().animator = yourWeapon.GetComponent<Animator>();
-        yourWeapon.GetComponent<animationSwitcher>().player = player;
+        yourWeapon.GetComponent<attackAnimEnd>().player = player;
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class Weapons : MonoBehaviour
             changeWeapon();
 
             player.GetComponent<SwordAttack>().animator = yourWeapon.GetComponent<Animator>();
-            yourWeapon.GetComponent<animationSwitcher>().player = player;
+            yourWeapon.GetComponent<attackAnimEnd>().player = player;
         }
 
         if (!yourWeapon.GetComponent<Animator>())

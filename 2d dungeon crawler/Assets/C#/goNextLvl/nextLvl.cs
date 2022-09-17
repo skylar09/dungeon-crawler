@@ -30,6 +30,8 @@ public class nextLvl : MonoBehaviour
         animator.SetBool("fadeOut", true);
 
         yield return new WaitForSecondsRealtime(1f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log(PlayerInfo.playerHealth);
+        Debug.Log(ShowPlayerHealth.health);       
     }
 }

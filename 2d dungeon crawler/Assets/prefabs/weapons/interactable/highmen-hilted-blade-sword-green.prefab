@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1501820904835941378}
   - component: {fileID: -3210418968474239594}
   m_Layer: 8
-  m_Name: treeaxe
+  m_Name: highmen-hilted-blade-sword-green
   m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 558baff9940f31c4b97d1c58648f44ec, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: cb63923edc5ae524bb6880121fcd4b50, type: 3}
+  m_Color: {r: 0.56078434, g: 0.85882354, b: 0.40784314, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
