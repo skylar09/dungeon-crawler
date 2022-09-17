@@ -15,6 +15,9 @@ public class Weapons : MonoBehaviour
     public static int currentWeapon = 0;
     public static int currentKnockback;
 
+    public static bool swordSwung = false;
+    public static bool canAttack = true;
+
     public GameObject yourWeapon;
     public GameObject player;
 

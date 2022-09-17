@@ -6,11 +6,8 @@ using UnityEngine.EventSystems;
 
 public class SwordAttack : MonoBehaviour
 {
-
-    public bool swordSwung = false;
-    public bool canAttack = true;
     public bool mouseIsLeft;
-    
+
     public GameObject refrence;
     public Weapons WeaponsScript;
 
@@ -34,7 +31,7 @@ public class SwordAttack : MonoBehaviour
         //gets the real world position of the mouse by converting the pixels to acutal units
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);  
 
-        if (swordSwung != true)
+        if (Weapons.swordSwung != true)
         {
             //checks if the mouse is to the right or left of the player
             if (PlayerInfo.playerLocation.x >= worldPosition.x)
@@ -51,13 +48,13 @@ public class SwordAttack : MonoBehaviour
         if (!EventSystem.current.IsPointerOverGameObject())
         {
             //if left click
-            if (Input.GetMouseButtonDown(0) && canAttack == true)
+            if (Input.GetMouseButtonDown(0) && Weapons.canAttack == true)
             {
                 activateWeapon();
             }
         }
         
-        if (swordSwung == true)
+        if (Weapons.swordSwung == true)
         {
             if (mouseIsLeft == true)
             {
@@ -76,8 +73,8 @@ public class SwordAttack : MonoBehaviour
         //turns the weapon on
         WeaponsScript.yourWeapon.SetActive(true);
 
-        swordSwung = true;
-        canAttack = false;
+        Weapons.swordSwung = true;
+        Weapons.canAttack = false;
     }
 
     public void attackLeft()
@@ -96,12 +93,12 @@ public class SwordAttack : MonoBehaviour
         animator.SetBool("attackRight", true);
     }
 
-    //resets rotation, swordswung, canAttack, and turns weapon off
+    //resets rotation, swordSwung, canAttack, and turns weapon off
     public void restartVariables()
     {
         WeaponsScript.yourWeapon.SetActive(false);
-        canAttack = true;
-        swordSwung = false;
+        Weapons.canAttack = true;
+        Weapons.swordSwung = false;
     }
 
     //this is used to wait a certain amount of time before doing something

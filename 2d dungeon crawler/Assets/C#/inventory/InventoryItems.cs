@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class InventoryItems : MonoBehaviour
 {
-    //all the possible items that you can have in the inventory
-    public List<GameObject> items = new List<GameObject>();
     //each inventory slot in order of left to right then top down
     public List<Image> InventorySlots = new List<Image>();
     //numbers that correspond to a specific weapon based on where they are in the items list
@@ -15,6 +13,8 @@ public class InventoryItems : MonoBehaviour
 
     //the inventory
     public GameObject ui_Window;
+
+    public GameObject player;
 
     public static bool newItem = false;
     public int totalItems = 0;
@@ -68,10 +68,10 @@ public class InventoryItems : MonoBehaviour
     {
         InventorySlots[totalItems].GetComponent<Image>().enabled = true;
         //changes the sprite of an inventory slot to an item at a certain spot in the items list
-        InventorySlots[totalItems].sprite = items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().sprite;
+        InventorySlots[totalItems].sprite = player.GetComponent<dropItem>().Items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().sprite;
         
         //changes the color of the inventory slot bc there are some items that are just color changed
-        InventorySlots[totalItems].color = items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().color;
+        InventorySlots[totalItems].color = player.GetComponent<dropItem>().Items[dropItem.createdItemsNumber[pickUpItem.closestItem]].GetComponent<SpriteRenderer>().color;
 
         //adds the number of that item in the items list to the itemNums list
         itemNums.Add(dropItem.createdItemsNumber[pickUpItem.closestItem]);
@@ -87,10 +87,10 @@ public class InventoryItems : MonoBehaviour
     //changes the sprite at a certain slot to the sprite of the current weapon
     public void changeCurrent()
     {
-        InventorySlots[inventoryLocation].sprite = items[replaceItem].GetComponent<SpriteRenderer>().sprite;
+        InventorySlots[inventoryLocation].sprite = player.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
         itemNums[inventoryLocation] = replaceItem;
 
         //changes the color of the inventory slot bc there are some items that are just color changed
-        InventorySlots[inventoryLocation].color = items[replaceItem].GetComponent<SpriteRenderer>().color;
+        InventorySlots[inventoryLocation].color = player.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
     }
 }
