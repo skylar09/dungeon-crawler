@@ -6,6 +6,8 @@ public class SpawnEnemy : MonoBehaviour
 {
     public List<GameObject> Enemies = new List<GameObject>();
 
+    public GameObject Camera;
+
     public static bool enterRoom = false;
     public static int enemyCount = 0;
 
@@ -34,8 +36,8 @@ public class SpawnEnemy : MonoBehaviour
     {
         RoomLocation.newRoom[PlayerCollision.currentRoom] = false;
 
-            float LocationX = RoomLocation.roomCords[PlayerCollision.currentRoom].x;
-            float LocationY = RoomLocation.roomCords[PlayerCollision.currentRoom].y;
+            float LocationX = Camera.GetComponent<RoomLocation>().roomCords[PlayerCollision.currentRoom].x;
+            float LocationY = Camera.GetComponent<RoomLocation>().roomCords[PlayerCollision.currentRoom].y;
 
             int numOfEnemies = Random.Range(2, 5);
 
