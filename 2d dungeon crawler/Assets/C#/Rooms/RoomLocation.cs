@@ -6,6 +6,6 @@ public class RoomLocation : MonoBehaviour
 {
 
     public List<Vector3> roomCords = new List<Vector3>();
-    public static bool[] roomCleared = {false, false, false, false, false, false};
-    public static bool[] newRoom = {false, true, true, true, false, true};
+    public List<bool> roomCleared = new List<bool>();
+    public List<bool> newRoom = new List<bool>();
 }
