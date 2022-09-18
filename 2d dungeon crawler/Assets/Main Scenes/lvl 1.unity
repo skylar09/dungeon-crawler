@@ -31606,5 +31606,13 @@ PrefabInstance:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 87602145}
+    - target: {fileID: 4802835384544766835, guid: a7a3d10382b254f4fae54ac6fa6238d7, type: 3}
+      propertyPath: Enemies.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802835384544766835, guid: a7a3d10382b254f4fae54ac6fa6238d7, type: 3}
+      propertyPath: Enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 8750080588001225030, guid: 2c2901194bde5d34fbff01e792122cd8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a3d10382b254f4fae54ac6fa6238d7, type: 3}
