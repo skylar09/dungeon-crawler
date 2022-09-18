@@ -10,6 +10,11 @@ public class Slime : MonoBehaviour
     public int deathGold = 5;
     public float moveSpeed = 1.5f;
 
+    void Awake()
+    {
+        health *= pauseMenu.whichScene;
+    }
+
     void Start()
     {
         this.GetComponent<enemyMovement>().moveSpeed = moveSpeed;

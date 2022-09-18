@@ -10,6 +10,11 @@ public class bat : MonoBehaviour
     public int deathGold = 3;
     public float moveSpeed = 2.5f;
 
+    void Awake()
+    {
+        health *= pauseMenu.whichScene;
+    }
+
     void Start()
     {
         this.GetComponent<enemyMovement>().moveSpeed = moveSpeed;
