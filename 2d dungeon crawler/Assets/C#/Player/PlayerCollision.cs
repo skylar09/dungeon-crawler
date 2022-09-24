@@ -30,20 +30,20 @@ public class PlayerCollision : MonoBehaviour
         whichRoomNext();
 
         //moves the camera
-        Camera.transform.position = Camera.GetComponent<RoomLocation>().roomCords[currentRoom] + new Vector3(0,0,-10);
+        Camera.transform.position = RoomLocation.roomCords[currentRoom] + new Vector3(0,0,-10);
 
         //moves the player to the entrance of the next room
 
         //moves the player to the bottom of the room
-        if (PlayerInfo.playerLocation.y < Camera.GetComponent<RoomLocation>().roomCords[currentRoom].y)
+        if (PlayerInfo.playerLocation.y < RoomLocation.roomCords[currentRoom].y)
         {
-            transform.position = new Vector2(Camera.GetComponent<RoomLocation>().roomCords[currentRoom].x, Camera.GetComponent<RoomLocation>().roomCords[currentRoom].y - 3.5f);
+            transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x, RoomLocation.roomCords[currentRoom].y - 3.5f);
         }
 
         //moves the player to the top of the next room
         else
         {
-            transform.position = new Vector2(Camera.GetComponent<RoomLocation>().roomCords[currentRoom].x, Camera.GetComponent<RoomLocation>().roomCords[currentRoom].y + 3.5f);
+            transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x, RoomLocation.roomCords[currentRoom].y + 3.5f);
         }
 
         SpawnEnemy.enterRoom = true;
@@ -55,20 +55,20 @@ public class PlayerCollision : MonoBehaviour
         whichRoomNext();
         
         //moves the player and the camera
-        Camera.transform.position = Camera.GetComponent<RoomLocation>().roomCords[currentRoom] + new Vector3(0,0,-10);
+        Camera.transform.position = RoomLocation.roomCords[currentRoom] + new Vector3(0,0,-10);
 
         //moves the player to the entrance of the next room
 
         //moves the player to the left of the room
-        if (PlayerInfo.playerLocation.x < Camera.GetComponent<RoomLocation>().roomCords[currentRoom].x)
+        if (PlayerInfo.playerLocation.x < RoomLocation.roomCords[currentRoom].x)
         {
-            transform.position = new Vector2(Camera.GetComponent<RoomLocation>().roomCords[currentRoom].x - 9.5f, Camera.GetComponent<RoomLocation>().roomCords[currentRoom].y);
+            transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x - 9.5f, RoomLocation.roomCords[currentRoom].y);
         }
 
         //moves the player to the right of the room
         else
         {
-            transform.position = new Vector2(Camera.GetComponent<RoomLocation>().roomCords[currentRoom].x + 9.5f, Camera.GetComponent<RoomLocation>().roomCords[currentRoom].y);
+            transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x + 9.5f, RoomLocation.roomCords[currentRoom].y);
         }
 
         SpawnEnemy.enterRoom = true;
@@ -80,12 +80,12 @@ public class PlayerCollision : MonoBehaviour
         double roomDistance = 999999999;
 
         //goes through all the rooms and finds the closest one
-        for (int i = 0; i < Camera.GetComponent<RoomLocation>().roomCords.Count; i ++)
+        for (int i = 0; i < RoomLocation.roomCords.Count; i ++)
         {
             if (i != currentRoom)
             {
                 //gets distance between player and the room at i in the room array
-                double localDistance = Math.Sqrt(Math.Pow((Camera.GetComponent<RoomLocation>().roomCords[i].y - PlayerInfo.playerLocation.y), 2) + Math.Pow((Camera.GetComponent<RoomLocation>().roomCords[i].x - PlayerInfo.playerLocation.x), 2));
+                double localDistance = Math.Sqrt(Math.Pow((RoomLocation.roomCords[i].y - PlayerInfo.playerLocation.y), 2) + Math.Pow((RoomLocation.roomCords[i].x - PlayerInfo.playerLocation.x), 2));
                 
                 //makes roomDistance the current distance if it is shorter than the previous one
                 if (localDistance < roomDistance)

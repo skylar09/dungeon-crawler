@@ -36,8 +36,8 @@ public class SpawnEnemy : MonoBehaviour
     {
         Camera.GetComponent<RoomLocation>().newRoom[PlayerCollision.currentRoom] = false;
 
-            float LocationX = Camera.GetComponent<RoomLocation>().roomCords[PlayerCollision.currentRoom].x;
-            float LocationY = Camera.GetComponent<RoomLocation>().roomCords[PlayerCollision.currentRoom].y;
+            float LocationX = RoomLocation.roomCords[PlayerCollision.currentRoom].x;
+            float LocationY = RoomLocation.roomCords[PlayerCollision.currentRoom].y;
 
             int numOfEnemies = Random.Range(2, 5);
 

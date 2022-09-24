@@ -1357,13 +1357,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4af053ceaf024498631887c52eaede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomCords:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 11, z: 0}
-  - {x: 23.3, y: 11, z: 0}
-  - {x: 23.3, y: 0, z: 0}
-  - {x: 0, y: 22, z: 0}
-  - {x: 46.6, y: 0, z: 0}
+  Rooms:
+  - {fileID: 121893893}
+  - {fileID: 60947747}
+  - {fileID: 79883497}
+  - {fileID: 1287275030}
+  - {fileID: 802805711}
+  - {fileID: 1887483100}
   roomCleared: 000000000000
   newRoom: 000101010001
 --- !u!1 &108426630
@@ -31616,6 +31616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3585629486178702235, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
+    - {fileID: 3585629487026525532, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 229b10c90d297de4caa8aa12ab7b4265, type: 3}
 --- !u!1001 &4802835383784661990
 PrefabInstance:
