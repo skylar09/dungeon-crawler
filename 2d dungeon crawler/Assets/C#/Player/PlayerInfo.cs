@@ -10,6 +10,7 @@ public class PlayerInfo : MonoBehaviour
     public static int playerDamage = 1;
     public static int playerDefense = 0;
     public static float movementSpeed = 3f;
+    public static int critChance = 0;
     public static int gold = 0;
 
     public static float swordSwingSpeed = 1;
