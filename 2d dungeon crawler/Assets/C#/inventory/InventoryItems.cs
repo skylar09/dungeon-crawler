@@ -57,6 +57,7 @@ public class InventoryItems : MonoBehaviour
 
             else
             {
+                this.GetComponent<Stats>().changeText();
                 ui_Window.SetActive(true);
                 this.GetComponent<pauseGame>().pause();
             }
