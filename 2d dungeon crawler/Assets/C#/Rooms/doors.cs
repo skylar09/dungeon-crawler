@@ -25,6 +25,7 @@ public class doors : MonoBehaviour
     {
         if (SpawnEnemy.enemyCount == 0 && number == cleared && opened == false)
         {
+            Debug.Log(SpawnEnemy.enemyCount + "aa");
             openDoors();
             Camera.GetComponent<RoomLocation>().roomCleared[PlayerCollision.currentRoom] = true;
         }

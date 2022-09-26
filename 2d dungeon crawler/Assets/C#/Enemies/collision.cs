@@ -63,9 +63,9 @@ public class collision : MonoBehaviour
     public void damagePlayer()
     {
          //makes sure the player loses at least 1 health
-            if (damage - PlayerInfo.playerDefense <= 0 || PlayerInfo.playerDefense - damage >= 4)
+            if (damage - PlayerInfo.playerDefense <= 0 || PlayerInfo.playerDefense - damage >= 3)
             {
-                PlayerInfo.playerHealth -= 1;
+                PlayerInfo.playerHealth -= 2;
             }
             else
             {
