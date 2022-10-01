@@ -8,6 +8,7 @@ public class enemyMovement : MonoBehaviour
     public Rigidbody2D rb;
     public bool canMove = true;
     public bool closeTo = false;
+    public bool meleeAttack = false;
     public float moveSpeed;
 
     // Start is called before the first frame update
@@ -24,6 +25,13 @@ public class enemyMovement : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) < 6)
         {
             closeTo = true;
+            if (Vector2.Distance(transform.position, target.position) < 2)
+            {
+                meleeAttack = true;
+            }
+            else{
+                meleeAttack = false;
+            }
             //makes the enemy move towards the player
             if (canMove == true)
             {
