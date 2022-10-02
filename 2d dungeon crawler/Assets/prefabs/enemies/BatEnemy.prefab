@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2495400042940355017}
   - component: {fileID: 2721038975294622466}
   - component: {fileID: -7743876608158470567}
+  - component: {fileID: -1103946260914984766}
   m_Layer: 7
   m_Name: BatEnemy
   m_TagString: batEnemy
@@ -171,6 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2495400042940355023}
   canMove: 1
+  closeTo: 0
+  meleeAttack: 0
   moveSpeed: 0
 --- !u!114 &2721038975294622466
 MonoBehaviour:
@@ -201,3 +204,16 @@ MonoBehaviour:
   defense: 0
   deathGold: 3
   moveSpeed: 2.5
+--- !u!114 &-1103946260914984766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495400042940355020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e3acc17f1816e49911f238b2813f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2495400042940355018}
