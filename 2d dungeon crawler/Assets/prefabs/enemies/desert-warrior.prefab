@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4390950416938202849}
   - component: {fileID: 3614467240496308392}
   - component: {fileID: 5947481916400710591}
+  - component: {fileID: 3198220234028492503}
   m_Layer: 7
   m_Name: desert-warrior
   m_TagString: Untagged
@@ -153,6 +154,7 @@ MonoBehaviour:
   rb: {fileID: 7241206327443773107}
   canMove: 1
   closeTo: 0
+  meleeAttack: 0
   moveSpeed: 0
 --- !u!114 &2488361689921030249
 MonoBehaviour:
@@ -213,6 +215,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61c67885cfe7b684c90649c8949e2b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3614467240496308392}
+--- !u!114 &3198220234028492503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369315196864754501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e3acc17f1816e49911f238b2813f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3614467240496308392}
