@@ -150,6 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7202560498383428463}
   canMove: 1
+  closeTo: 0
+  meleeAttack: 0
   moveSpeed: 0
 --- !u!114 &-8664790030351538993
 MonoBehaviour:

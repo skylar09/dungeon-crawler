@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 85294996877338140}
   - component: {fileID: 2454087604215401237}
   - component: {fileID: 1151550777317216868}
+  - component: {fileID: -349870060138633454}
   m_Layer: 7
   m_Name: golgoblin
   m_TagString: Untagged
@@ -173,6 +174,7 @@ MonoBehaviour:
   rb: {fileID: 589789437604171607}
   canMove: 1
   closeTo: 0
+  meleeAttack: 0
   moveSpeed: 0
 --- !u!114 &85294996877338140
 MonoBehaviour:
@@ -213,6 +215,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61c67885cfe7b684c90649c8949e2b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 380317591775147557}
+--- !u!114 &-349870060138633454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750080588001225030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e3acc17f1816e49911f238b2813f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 380317591775147557}

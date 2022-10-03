@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -8267458472641583351}
   - component: {fileID: -1134376671626746965}
   - component: {fileID: 4727234371878665438}
+  - component: {fileID: -4755074140962298674}
   m_Layer: 7
   m_Name: slime 1
   m_TagString: slimeEnemy
@@ -171,6 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7202560498383428463}
   canMove: 1
+  closeTo: 0
+  meleeAttack: 0
   moveSpeed: 0
 --- !u!114 &-1134376671626746965
 MonoBehaviour:
@@ -201,3 +204,16 @@ MonoBehaviour:
   defense: 0
   deathGold: 5
   moveSpeed: 1.5
+--- !u!114 &-4755074140962298674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8482112927485376484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e3acc17f1816e49911f238b2813f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8482112927485376491}
