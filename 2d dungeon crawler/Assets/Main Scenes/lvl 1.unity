@@ -33575,7 +33575,7 @@ PrefabInstance:
       objectReference: {fileID: 87602145}
     - target: {fileID: 4802835384544766835, guid: a7a3d10382b254f4fae54ac6fa6238d7, type: 3}
       propertyPath: Enemies.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4802835384544766835, guid: a7a3d10382b254f4fae54ac6fa6238d7, type: 3}
       propertyPath: Enemies.Array.data[3]
@@ -33585,6 +33585,10 @@ PrefabInstance:
       propertyPath: Enemies.Array.data[4]
       value: 
       objectReference: {fileID: 7369315196864754501, guid: 84d4f2093da99b442b72a540dadc0f7e, type: 3}
+    - target: {fileID: 4802835384544766835, guid: a7a3d10382b254f4fae54ac6fa6238d7, type: 3}
+      propertyPath: Enemies.Array.data[5]
+      value: 
+      objectReference: {fileID: 98258297894698602, guid: 41862258e0c6bf44489ee94ca300172b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a3d10382b254f4fae54ac6fa6238d7, type: 3}
 --- !u!1001 &8460477232296605795
