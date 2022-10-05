@@ -13,16 +13,10 @@ public class turning : MonoBehaviour
     {
         if (PlayerInfo.playerLocation.x > transform.position.x && turnedRight != true)
         {
-            Debug.Log("right");
-            Debug.Log("player " + PlayerInfo.playerLocation.x);
-            Debug.Log("enemy " + transform.position.x);
             turnRight();
         }
         else if (PlayerInfo.playerLocation.x < transform.position.x && turnedLeft != true)
         {
-            Debug.Log("left");
-            Debug.Log("player " + PlayerInfo.playerLocation.x);
-            Debug.Log("enemy " + transform.position.x);
             turnLeft();
         }
     }
