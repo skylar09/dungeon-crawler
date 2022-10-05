@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6021029701588964148}
   - component: {fileID: 6282088962354065343}
   - component: {fileID: 6902060134307986735}
+  - component: {fileID: 7722124055699335248}
   m_Layer: 7
   m_Name: snowflakethingy
   m_TagString: Untagged
@@ -172,7 +173,6 @@ MonoBehaviour:
   rb: {fileID: -4745799662462777416}
   canMove: 1
   closeTo: 0
-  meleeAttack: 0
   moveSpeed: 0
 --- !u!114 &6282088962354065343
 MonoBehaviour:
@@ -203,3 +203,18 @@ MonoBehaviour:
   defense: 0
   deathGold: 5
   moveSpeed: 2.5
+--- !u!114 &7722124055699335248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98258297894698602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c67885cfe7b684c90649c8949e2b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5087006682972914585}
+  meleeAttack: 0
+  distance: 6

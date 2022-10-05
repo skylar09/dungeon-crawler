@@ -5,10 +5,12 @@ using UnityEngine;
 public class nearbyAttackAnim : MonoBehaviour
 {
     public Animator animator;
+    public bool meleeAttack = false;
+    public double distance;
 
     void Update()
     {
-        if (this.GetComponent<enemyMovement>().meleeAttack == true)
+        if (meleeAttack == true)
         {
             //this.GetComponent<enemyMovement>().canMove = false;
             animator.SetBool("playerNearby", true);
@@ -17,6 +19,18 @@ public class nearbyAttackAnim : MonoBehaviour
         {
             //this.GetComponent<enemyMovement>().canMove = true;
             animator.SetBool("playerNearby", false);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (Vector2.Distance(transform.position, PlayerInfo.playerLocation) < distance)
+        {
+            meleeAttack = true;
+        }
+        else
+        {
+            meleeAttack = false;
         }
     }
     

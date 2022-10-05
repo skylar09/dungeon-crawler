@@ -174,7 +174,6 @@ MonoBehaviour:
   rb: {fileID: 589789437604171607}
   canMove: 1
   closeTo: 0
-  meleeAttack: 0
   moveSpeed: 0
 --- !u!114 &85294996877338140
 MonoBehaviour:
@@ -218,6 +217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 380317591775147557}
+  meleeAttack: 0
+  distance: 3
 --- !u!114 &-349870060138633454
 MonoBehaviour:
   m_ObjectHideFlags: 0
