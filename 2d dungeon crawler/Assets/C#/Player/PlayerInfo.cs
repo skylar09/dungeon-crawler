@@ -15,7 +15,7 @@ public class PlayerInfo : MonoBehaviour
 
     public static float swordSwingSpeed = 1;
     public static Vector3 playerLocation;
-    public static string directionFacing = "right";
+    public static string directionFacing = "left";
 
     void Start()
     {

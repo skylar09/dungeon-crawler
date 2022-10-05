@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject player;
     public Rigidbody2D rb;
     Vector2 movement;
-    
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
@@ -19,13 +19,21 @@ public class PlayerMovement : MonoBehaviour
         //checks for key press of d or right arrow key
         if (Input.GetKey ("d") || Input.GetKey(KeyCode.RightArrow))
         {
-            PlayerInfo.directionFacing = "right";
+            if (PlayerInfo.directionFacing != "right")
+            {
+                PlayerInfo.directionFacing = "right";
+                turn();
+            }
         }
 
         //checks for key press of a or left arrow key
         if (Input.GetKey ("a") || Input.GetKey(KeyCode.LeftArrow))
         {
-            PlayerInfo.directionFacing = "left";
+            if (PlayerInfo.directionFacing != "left")
+            {
+                PlayerInfo.directionFacing = "left";
+                turn();
+            }
         }
     }
 
@@ -44,5 +52,30 @@ public class PlayerMovement : MonoBehaviour
             //changes player velocity to 0 if the player is dead (health 0 or less)
             rb.velocity = new Vector2(0, 0);
         }
+    }
+
+    public void turn()
+    {
+        if (PlayerInfo.directionFacing == "right")
+        {
+            animator.SetBool("facingRight", true);
+        }
+        else
+        {
+            animator.SetBool("facingRight", false);
+            
+        }
+    }
+
+    public void turnedRight()
+    {
+        animator.SetBool("facingRight", true);
+       // player.GetComponent<Transform>().rotation = new Quaternion(0, 180, 0, 0);
+    }
+
+    public void turnedLeft()
+    {
+        animator.SetBool("facingRight", false);
+        //player.GetComponent<Transform>().rotation = new Quaternion(0, 0, 0, 0);
     }
 }
