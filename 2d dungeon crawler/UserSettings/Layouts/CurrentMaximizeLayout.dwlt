@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1555
+  controlID: 7775
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1556
+  controlID: 7776
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1557
+  controlID: 7777
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1558
+  controlID: 7778
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,9 +248,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2afbffff
-      m_LastClickedID: 0
-      m_ExpandedIDs: 80f9ffff82f9ffff96f9ffff98f9ffff08faffff0afaffff1efaffff20faffff5cfaffff5efaffff72faffff74faffff2cfbfffff062000000660000
+      m_SelectedIDs: 38d00000
+      m_LastClickedID: 53304
+      m_ExpandedIDs: 98deffff80f9ffff82f9ffff96f9ffff98f9ffff08faffff0afaffff1efaffff20faffff5cfaffff5efaffff72faffff74faffff2afbffff2cfbfffff062000000660000d8790000207a00008ecd000072cf0000cad60000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -549,9 +549,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.146967, y: -0.20763567, z: -1.847814}
+    m_Target: {x: 247, y: 884.88, z: 0}
     speed: 2
-    m_Value: {x: 1.146967, y: -0.20763567, z: -1.847814}
+    m_Value: {x: 247, y: 884.88, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -602,9 +602,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.7168293
+    m_Target: 75.690155
     speed: 2
-    m_Value: 4.7168293
+    m_Value: 75.690155
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -814,9 +814,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 7cfc022f4beb4024383ba1bf28766b37, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: d01f82aa9411860418ac8a611e55e39d, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 4606270240470060377, guid: 7cfc022f4beb4024383ba1bf28766b37, type: 2}
+  - m_Target: {fileID: 214375676041866640, guid: d01f82aa9411860418ac8a611e55e39d, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -856,7 +856,7 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -898,22 +898,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/enemy art
+    - Assets/C#/Player
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 68
   m_LastFolders:
-  - Assets/enemy art
+  - Assets/C#/Player
   m_LastFoldersGridSize: 68
   m_LastProjectPath: C:\Users\owner\Documents\GitHub\dungeon-crawler\2d dungeon crawler
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e86e0000
-    m_LastClickedID: 28392
-    m_ExpandedIDs: 00000000da6e0000dc6e0000de6e000000ca9a3b
+    scrollPos: {x: 0, y: 45.00003}
+    m_SelectedIDs: 96860000
+    m_LastClickedID: 34454
+    m_ExpandedIDs: 00000000da6e0000dc6e0000de6e0000e26e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -966,8 +966,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2afbffff
-    m_LastClickedInstanceID: -1238
+    m_SelectedInstanceIDs: 38d00000
+    m_LastClickedInstanceID: 53304
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300003a5f0000186d0000ea6e00000e6f0000c2d60000c8cd0000aace0000906f000044d50000cc6c0000ca6c0000c86c0000d26c0000266b0000
     m_RenameOverlay:
@@ -993,7 +993,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 39.333344}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 68
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 149
@@ -1018,9 +1018,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 425.33334
+    y: 456
     width: 975.6667
-    height: 213.66666
+    height: 182.99997
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1046,16 +1046,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 425.33334
+    y: 456
     width: 975.6667
-    height: 213.66666
+    height: 182.99997
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 25734
+  m_LastSelectedObjectID: 53304
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52

@@ -62,13 +62,13 @@ public class PlayerCollision : MonoBehaviour
         //moves the player to the left of the room
         if (PlayerInfo.playerLocation.x < RoomLocation.roomCords[currentRoom].x)
         {
-            transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x - 9.5f, RoomLocation.roomCords[currentRoom].y);
+            transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x - 8f, RoomLocation.roomCords[currentRoom].y);
         }
 
         //moves the player to the right of the room
         else
         {
-            transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x + 9.5f, RoomLocation.roomCords[currentRoom].y);
+            transform.position = new Vector2(RoomLocation.roomCords[currentRoom].x + 8f, RoomLocation.roomCords[currentRoom].y);
         }
 
         SpawnEnemy.enterRoom = true;
