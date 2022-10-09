@@ -11,6 +11,7 @@ public class RoomLocation : MonoBehaviour
 
     void Awake()
     {
+        roomCords.Clear();
         for (int i = 0; i < Rooms.Count; i++)
         {
             roomCords.Add(Rooms[i].transform.position);

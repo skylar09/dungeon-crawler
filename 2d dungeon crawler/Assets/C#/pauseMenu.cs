@@ -48,6 +48,7 @@ public class pauseMenu : MonoBehaviour
         whichScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
+        PlayerCollision.currentRoom = 0;
     }
 
     public void CloseOptions()
