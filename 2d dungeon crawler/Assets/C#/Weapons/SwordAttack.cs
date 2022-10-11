@@ -19,7 +19,7 @@ public class SwordAttack : MonoBehaviour
         WeaponsScript = refrence.GetComponent<Weapons>();
         
         //turns the weapon off
-        WeaponsScript.yourWeapon.SetActive(false);
+        //WeaponsScript.yourWeapon.SetActive(false);
     }
 
     // Update is called once per frame
@@ -70,9 +70,6 @@ public class SwordAttack : MonoBehaviour
 
     public void activateWeapon()
     {
-        //turns the weapon on
-        WeaponsScript.yourWeapon.SetActive(true);
-
         Weapons.swordSwung = true;
         Weapons.canAttack = false;
     }
@@ -80,7 +77,7 @@ public class SwordAttack : MonoBehaviour
     public void attackLeft()
     {
         //sets the weapon position to near the player
-        WeaponsScript.yourWeapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.65f, .1f, 0); 
+        //WeaponsScript.yourWeapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(-.65f, .1f, 0); 
 
         animator.SetBool("attackRight", false);
     }
@@ -88,7 +85,7 @@ public class SwordAttack : MonoBehaviour
     public void attackRight()
     {
         //sets the weapon position to near the player
-        WeaponsScript.yourWeapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0); 
+        //WeaponsScript.yourWeapon.GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0); 
 
         animator.SetBool("attackRight", true);
     }
@@ -96,7 +93,7 @@ public class SwordAttack : MonoBehaviour
     //resets rotation, swordSwung, canAttack, and turns weapon off
     public void restartVariables()
     {
-        WeaponsScript.yourWeapon.SetActive(false);
+        //WeaponsScript.yourWeapon.SetActive(false);
         Weapons.canAttack = true;
         Weapons.swordSwung = false;
     }
