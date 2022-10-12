@@ -5,24 +5,26 @@ using UnityEngine;
 public class weaponParent : MonoBehaviour
 {
     public GameObject currentWeapon;
+    public GameObject player;
 
     public void Update()
     {
-        Vector3 mouse_pos = Input.mousePosition;
-        mouse_pos.z = -20;
-        Vector3 object_pos = Camera.main.WorldToScreenPoint(transform.position);
-        mouse_pos.x = mouse_pos.x - object_pos.x;
-        mouse_pos.y = mouse_pos.y - object_pos.y;
-        float angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        difference.Normalize();
+        float angle = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
         if (angle > 0 && angle < 180)
         {
             currentWeapon.GetComponent<SpriteRenderer>().sortingOrder = 4;
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
         }
         else
         {
             currentWeapon.GetComponent<SpriteRenderer>().sortingOrder = 5;
+            player.GetComponent<Transform>().rotation = new Quaternion(0, 0, 0, 0);
+            //transform.position = PlayerInfo.playerLocation + new Vector3(.15f, 0, 0);
         }
     }
 }

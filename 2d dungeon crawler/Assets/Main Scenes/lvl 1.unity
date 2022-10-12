@@ -10206,11 +10206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8103026422850841721, guid: f738326cfa5adc342a423a70173be7b2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.42
+      value: 1.16298
       objectReference: {fileID: 0}
     - target: {fileID: 8103026422850841721, guid: f738326cfa5adc342a423a70173be7b2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.42
+      value: 1.3104
       objectReference: {fileID: 0}
     - target: {fileID: 8103026422850841721, guid: f738326cfa5adc342a423a70173be7b2, type: 3}
       propertyPath: m_LocalScale.z
@@ -23680,7 +23680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491492770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15, y: 0.03333334, z: 0}
+  m_LocalPosition: {x: 0.15, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23701,6 +23701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 1309223038}
+  player: {fileID: 1448772119}
 --- !u!1 &1493253791
 GameObject:
   m_ObjectHideFlags: 0
