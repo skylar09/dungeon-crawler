@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class weaponParent : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class weaponParent : MonoBehaviour
         difference.Normalize();
         float angle = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        float x = Mathf.Cos(angle) * .1529705854f;
+        float y = Mathf.Sin(angle) * .1529705854f;
+        currentWeapon.GetComponent<Transform>().position = new Vector2(x, y);
+        //Debug.Log(angle);
 
         if (angle > 0 && angle < 180)
         {
@@ -36,6 +42,6 @@ public class weaponParent : MonoBehaviour
         {
             scale.y = 1;
         }
-        transform.localScale = scale;
+        //transform.localScale = scale;
     }
 }
