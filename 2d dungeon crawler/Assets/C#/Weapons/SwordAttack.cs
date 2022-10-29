@@ -13,6 +13,8 @@ public class SwordAttack : MonoBehaviour
 
     public Animator animator;
 
+    public static Vector2 worldPosition = new Vector2(0,0);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class SwordAttack : MonoBehaviour
         Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
         //gets the real world position of the mouse by converting the pixels to acutal units
-        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);  
+        worldPosition = Camera.main.ScreenToWorldPoint(mousePos); 
 
         if (Weapons.swordSwung != true)
         {
