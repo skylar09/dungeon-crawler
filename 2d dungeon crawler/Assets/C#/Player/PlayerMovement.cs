@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject player;
     public Rigidbody2D rb;
     Vector2 movement;
-    public Animator animator;
 
     // Update is called once per frame
     void Update()
@@ -17,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         //checks for key press of d or right arrow key
-        if (Input.GetKey ("d") || Input.GetKey(KeyCode.RightArrow))
+       /* if (Input.GetKey ("d") || Input.GetKey(KeyCode.RightArrow))
         {
             if (PlayerInfo.directionFacing != "right")
             {
@@ -34,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
                 PlayerInfo.directionFacing = "left";
                 turn();
             }
-        }
+        }*/
     }
 
     // FixedUpdate is called once per set amount of frames
@@ -56,26 +55,5 @@ public class PlayerMovement : MonoBehaviour
 
     public void turn()
     {
-        if (PlayerInfo.directionFacing == "right")
-        {
-            animator.SetBool("facingRight", true);
-        }
-        else
-        {
-            animator.SetBool("facingRight", false);
-            
-        }
-    }
-
-    public void turnedRight()
-    {
-        animator.SetBool("facingRight", true);
-       // player.GetComponent<Transform>().rotation = new Quaternion(0, 180, 0, 0);
-    }
-
-    public void turnedLeft()
-    {
-        animator.SetBool("facingRight", false);
-        //player.GetComponent<Transform>().rotation = new Quaternion(0, 0, 0, 0);
     }
 }

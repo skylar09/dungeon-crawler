@@ -17,7 +17,7 @@ public class collision : MonoBehaviour
 
     void Start()
     {
-        this.GetComponent<enemyMovement>().moveSpeed = moveSpeed;
+        this.transform.parent.gameObject.GetComponent<enemyMovement>().moveSpeed = moveSpeed;
     }
 
      void Update()
