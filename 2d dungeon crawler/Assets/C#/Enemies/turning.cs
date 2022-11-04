@@ -23,26 +23,25 @@ public class turning : MonoBehaviour
 
     public void turnRight()
     {
-        animator.SetBool("playerRight", true);
+        animator.SetTrigger("playerRight");
         turnedRight = true;
     }
 
     public void endRight()
-    {
-        animator.SetBool("playerRight", false);
+    {        
+        this.transform.parent.gameObject.GetComponent<Transform>().rotation = new Quaternion(0, 180, 0, 0);
         turnedLeft = false;
     }
 
     public void turnLeft()
     {
-        
-        animator.SetBool("playerLeft", true);
+        animator.SetTrigger("playerLeft");
         turnedLeft = true;
     }
 
     public void endLeft()
     {
-        animator.SetBool("playerLeft", false);
+        this.transform.parent.gameObject.GetComponent<Transform>().rotation = new Quaternion(0, 0, 0, 0);
         turnedRight = false;
     }
 }
