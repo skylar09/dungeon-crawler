@@ -248,3 +248,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6147514854410207736}
+  turnedRight: 0
+  turnedLeft: 1

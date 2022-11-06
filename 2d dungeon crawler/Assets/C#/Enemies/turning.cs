@@ -13,35 +13,41 @@ public class turning : MonoBehaviour
     {
         if (PlayerInfo.playerLocation.x >  this.transform.parent.gameObject.transform.position.x && turnedRight != true)
         {
-            turnRight();
+            turn();
         }
         else if (PlayerInfo.playerLocation.x <  this.transform.parent.gameObject.transform.position.x && turnedLeft != true)
         {
-            turnLeft();
+            turn();
         }
     }
 
-    public void turnRight()
+    public void turn()
     {
-        animator.SetTrigger("playerRight");
-        turnedRight = true;
+        animator.SetTrigger("turn");
+
+        if (turnedRight == true)
+            {
+                turnedRight = false;
+                turnedLeft = true;
+            }
+        else
+            { 
+                turnedRight = true;
+                turnedLeft = false;
+            }
     }
 
-    public void endRight()
+    public void endTurn()
     {        
-        this.transform.parent.gameObject.GetComponent<Transform>().rotation = new Quaternion(0, 180, 0, 0);
-        turnedLeft = false;
-    }
-
-    public void turnLeft()
-    {
-        animator.SetTrigger("playerLeft");
-        turnedLeft = true;
-    }
-
-    public void endLeft()
-    {
-        this.transform.parent.gameObject.GetComponent<Transform>().rotation = new Quaternion(0, 0, 0, 0);
-        turnedRight = false;
+        if (this.transform.parent.gameObject.GetComponent<Transform>().rotation.y == 0)
+        {
+            this.transform.parent.gameObject.GetComponent<Transform>().rotation = new Quaternion(0, 180, 0, 0);
+        }
+        else
+        {
+            this.transform.parent.gameObject.GetComponent<Transform>().rotation = new Quaternion(0, 0, 0, 0);
+        }
+        
+        
     }
 }
