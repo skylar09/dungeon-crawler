@@ -5,17 +5,17 @@ using UnityEngine;
 public class turning : MonoBehaviour
 {
     public Animator animator;
-    private bool turnedRight = false;
-    private bool turnedLeft = true;
+    public bool turnedRight = false;
+    public bool turnedLeft = true;
     
     // Update is called once per frame
     void Update()
     {
-        if (PlayerInfo.playerLocation.x > transform.position.x && turnedRight != true)
+        if (PlayerInfo.playerLocation.x >  this.transform.parent.gameObject.transform.position.x && turnedRight != true)
         {
             turnRight();
         }
-        else if (PlayerInfo.playerLocation.x < transform.position.x && turnedLeft != true)
+        else if (PlayerInfo.playerLocation.x <  this.transform.parent.gameObject.transform.position.x && turnedLeft != true)
         {
             turnLeft();
         }

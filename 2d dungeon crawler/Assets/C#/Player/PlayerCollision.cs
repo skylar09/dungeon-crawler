@@ -92,7 +92,6 @@ public class PlayerCollision : MonoBehaviour
                 {
                     roomDistance = localDistance;
                     closestRoom = i;
-                    Debug.Log(i);
                 }
             }
         }

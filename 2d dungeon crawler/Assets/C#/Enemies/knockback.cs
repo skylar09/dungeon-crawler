@@ -26,14 +26,14 @@ public class knockback : MonoBehaviour
         //need the && bc otherwise enemies stop moving when a weapon has no knockback
         if (collider.gameObject.CompareTag("weapon") && thrust > 0)
         {
-            enemy = this.GetComponent<Rigidbody2D>();
+            enemy = this.transform.parent.gameObject.GetComponent<Rigidbody2D>();
             //makes it so the enemy can't move while taking knockback
-            this.GetComponent<enemyMovement>().canMove = false;
+            this.transform.parent.gameObject.GetComponent<enemyMovement>().canMove = false;
 
             Vector2 difference = transform.position - collider.transform.position;
             difference = difference.normalized * thrust;
             //the impulse is a force applied in one frame
-            this.GetComponent<Rigidbody2D>().AddForce(difference, ForceMode2D.Impulse);
+            this.transform.parent.gameObject.GetComponent<Rigidbody2D>().AddForce(difference, ForceMode2D.Impulse);
 
             StartCoroutine(knockbackOccur());
         }
