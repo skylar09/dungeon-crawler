@@ -24,13 +24,23 @@ public class stabAttack : MonoBehaviour
             //if left click
             if (Input.GetMouseButtonDown(0) && Weapons.canAttack == true)
             {
-                activateWeapon();
+                Attack();
             }
         }
     }
 
-    public void activateWeapon()
+    public void Attack()
     {
-        refrence.GetComponent<Weapons>().yourWeapon = gameObject;
+        //this.transform.parent.gameObject.GetComponent<Rigidbody2D>();
+        Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);  
+        float x = worldPosition.x - this.transform.parent.gameObject.transform.position.x;
+        float y = worldPosition.y - this.transform.parent.gameObject.transform.position.y;
+        this.transform.parent.gameObject.GetComponent<Transform>().rotation = new Quaternion (0, 0, Mathf.Atan(y/x), 0);
+
+        WeaponsScript.yourWeapon.SetActive(true);
+
+        Weapons.swordSwung = true;
+        Weapons.canAttack = false;
     }
 }
