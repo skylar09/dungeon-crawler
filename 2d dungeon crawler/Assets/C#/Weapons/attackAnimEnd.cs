@@ -8,6 +8,6 @@ public class attackAnimEnd : MonoBehaviour
 
     public void endAnimation()
     {
-        player.GetComponent<SwordAttack>().restartVariables();
+       // player.GetComponent<SwordAttack>().restartVariables();
     }
 }
