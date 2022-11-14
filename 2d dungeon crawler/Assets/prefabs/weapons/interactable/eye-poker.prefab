@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5418913640358492421
+--- !u!1 &7460335439189170662
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8209393521017288697}
+  - component: {fileID: 7460335439189170663}
   m_Layer: 0
   m_Name: eye-poker
   m_TagString: Untagged
@@ -16,23 +16,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8209393521017288697
+--- !u!4 &7460335439189170663
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5418913640358492421}
+  m_GameObject: {fileID: 7460335439189170662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.7434452, y: -0.9053679, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6020816787623231125}
+  - {fileID: 7460335439989539499}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8531707338425303385
+--- !u!1 &7460335439989539498
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,11 +40,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6020816787623231125}
-  - component: {fileID: 2514683361239789938}
-  - component: {fileID: 6990230704083458114}
-  - component: {fileID: 6846450105827907399}
-  - component: {fileID: 1351144920933927534}
+  - component: {fileID: 7460335439989539499}
+  - component: {fileID: 7460335439989539495}
+  - component: {fileID: 7460335439989539494}
+  - component: {fileID: 7460335439989539493}
+  - component: {fileID: 7460335439989539492}
   m_Layer: 8
   m_Name: weapon
   m_TagString: weapon
@@ -52,28 +52,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6020816787623231125
+--- !u!4 &7460335439989539499
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8531707338425303385}
+  m_GameObject: {fileID: 7460335439989539498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8209393521017288697}
+  m_Father: {fileID: 7460335439189170663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2514683361239789938
+--- !u!212 &7460335439989539495
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8531707338425303385}
+  m_GameObject: {fileID: 7460335439989539498}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -119,13 +119,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6990230704083458114
+--- !u!61 &7460335439989539494
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8531707338425303385}
+  m_GameObject: {fileID: 7460335439989539498}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -145,13 +145,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!114 &6846450105827907399
+--- !u!114 &7460335439989539493
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8531707338425303385}
+  m_GameObject: {fileID: 7460335439989539498}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d27d626d7ac6c14b9638535c63117d8, type: 3}
@@ -159,14 +159,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponsScript: {fileID: 0}
   refrence: {fileID: 0}
---- !u!95 &1351144920933927534
+--- !u!95 &7460335439989539492
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8531707338425303385}
+  m_GameObject: {fileID: 7460335439989539498}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7a9151a1737891c4aaec4fdc81d2a11c, type: 2}
