@@ -12,7 +12,7 @@ public class Weapons : MonoBehaviour
     public List<int> weaponKnockbacks = new List<int>();
 
     public static int currentDamage;
-    public static int currentWeapon = 11;
+    public static int currentWeapon = 0;
     public static int currentKnockback;
 
     public static bool swordSwung = false;

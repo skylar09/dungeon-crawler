@@ -26,14 +26,6 @@ public class SwordAttack : MonoBehaviour
         Weapons.swordSwung = true;
         Weapons.canAttack = false;
         animator.SetTrigger("attack");
-        resetVariables();
-    }
-
-    //resets rotation, swordSwung, canAttack, and turns weapon off
-    public void resetVariables()
-    {
-        Weapons.canAttack = true;
-        Weapons.swordSwung = false;
     }
 
     //this is used to wait a certain amount of time before doing something

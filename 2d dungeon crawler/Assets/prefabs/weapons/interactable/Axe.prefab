@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 45787264577454095}
   - component: {fileID: 7949722059616937227}
   - component: {fileID: 7207618644514187379}
+  - component: {fileID: 6215138360392114795}
+  - component: {fileID: 4916884857384138583}
   m_Layer: 8
   m_Name: weapon
   m_TagString: weapon
@@ -132,6 +134,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6215138360392114795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45787264577454094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba55ac761be41841a8af13e92330302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4916884857384138583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45787264577454094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba55ac761be41841a8af13e92330302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8502021798138963807
 GameObject:
   m_ObjectHideFlags: 0
