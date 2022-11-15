@@ -26,10 +26,14 @@ public class weaponRotate : MonoBehaviour
         angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
 
-        if (mouse_pos.x > 0)
+        if (mouse_pos.x > 0){
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 90 - angle));
-        else
+            this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = 5; 
+        }
+        else{
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+            this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = 3; 
+        }
     }
 
     public void setPosition(){
