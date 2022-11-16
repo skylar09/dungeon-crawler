@@ -13,6 +13,7 @@ public class Weapons : MonoBehaviour
 
     public static int currentDamage;
     public static int currentWeapon = 0;
+    public int bla;
     public static int currentKnockback;
 
     public static bool swordSwung = false;
@@ -24,6 +25,7 @@ public class Weapons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentWeapon = bla;
         yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
     }
 

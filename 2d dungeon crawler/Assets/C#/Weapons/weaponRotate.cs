@@ -7,6 +7,7 @@ public class weaponRotate : MonoBehaviour
     Vector3 mouse_pos;
     public static Vector3 object_pos;
     float angle;
+    public float radius;
  
     public void Update(){
         if (Weapons.swordSwung != true){
@@ -37,8 +38,8 @@ public class weaponRotate : MonoBehaviour
     }
 
     public void setPosition(){
-        float posX = PlayerInfo.playerLocation.x + (Mathf.Cos(angle * Mathf.PI / 180) * .3f);
-        float posY = PlayerInfo.playerLocation.y + (Mathf.Sin(angle * Mathf.PI / 180) * .3f);
+        float posX = PlayerInfo.playerLocation.x + (Mathf.Cos(angle * Mathf.PI / 180) * radius);
+        float posY = PlayerInfo.playerLocation.y + (Mathf.Sin(angle * Mathf.PI / 180) * radius);
         transform.position = new Vector3(posX, posY, 0);
     }
 }

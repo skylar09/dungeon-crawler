@@ -44,6 +44,6 @@ public class knockback : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(.5f);
         enemy.velocity = new Vector2(0,0);
-        this.GetComponent<enemyMovement>().canMove = true;
+        this.transform.parent.gameObject.GetComponent<enemyMovement>().canMove = true;
     }
 }
