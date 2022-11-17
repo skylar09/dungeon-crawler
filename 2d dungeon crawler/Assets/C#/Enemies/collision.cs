@@ -88,14 +88,14 @@ public class collision : MonoBehaviour
 
     public void loseHealth()
     {
-        if (Weapons.currentDamage - defense <= 0)
+        if (PlayerInfo.playerDamage - defense <= 0)
         {
             health -= 1;
         }
 
         else 
         {
-            health -= Weapons.currentDamage - defense;
+            health -= PlayerInfo.playerDamage - defense;
         }
     }
 }

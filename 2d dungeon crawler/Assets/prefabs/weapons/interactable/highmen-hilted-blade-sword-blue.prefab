@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 1571784340714794243}
   - component: {fileID: 2271385859101974651}
   - component: {fileID: 3727262177619005596}
+  - component: {fileID: 7994339618985941483}
   m_Layer: 8
   m_Name: weapon
   m_TagString: weapon
@@ -205,3 +206,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba55ac761be41841a8af13e92330302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7994339618985941483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8872553996858820614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86407c8754901dd4c98512d17fd07d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  knockback: 2

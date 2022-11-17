@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 3198220234028492503}
   m_Layer: 7
   m_Name: desert-warrior
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,3 +232,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3614467240496308392}
+  turnedRight: 0
+  turnedLeft: 1

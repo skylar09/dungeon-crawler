@@ -7,10 +7,11 @@ TagManager:
   - next room
   - doorX
   - doorY
-  - slimeEnemy
-  - batEnemy
   - weapon
   - boss
+  - enemy
+  - batEnemy
+  - slimeEnemy
   layers:
   - Default
   - TransparentFX

@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4677257412478878341}
+  turnedRight: 0
+  turnedLeft: 1
 --- !u!1 &6830646883091421364
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +192,7 @@ GameObject:
   - component: {fileID: 3982870780968510451}
   m_Layer: 0
   m_Name: slime-Green
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

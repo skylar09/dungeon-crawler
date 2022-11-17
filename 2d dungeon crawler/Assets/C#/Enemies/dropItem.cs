@@ -10,7 +10,7 @@ public class dropItem : MonoBehaviour
     public static int weaponNum;
 
     //all possible items that can be created
-    public List<GameObject> Items = new List<GameObject>();
+    public GameObject[] Items;
     //items that are created when an enemy drops an item
     public static List<GameObject> createdItems = new List<GameObject>();
     //numbers that correspond to the location in the Items list of dropped items
@@ -51,7 +51,7 @@ public class dropItem : MonoBehaviour
     {
         do 
         {
-            weaponNum = Random.Range(0, Items.Count);  
+            weaponNum = Random.Range(0, Items.Length);  
                             
         } while (weaponNum == Weapons.currentWeapon);
 

@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class Weapons : MonoBehaviour
 {
-    //all interactable weapons 
-    public List<GameObject> prefabs = new List<GameObject>();
-    //all weapon damages that correspond to the weapon in the same location in other lists
-    public List<int> weaponDamages = new List<int>();
-    //all weapon knockbacks that correspond to the weapon in the same location in other lists
-    public List<int> weaponKnockbacks = new List<int>();
+    public GameObject[] prefabs;
 
-    public static int currentDamage;
     public static int currentWeapon = 0;
     public int bla;
-    public static int currentKnockback;
 
     public static bool swordSwung = false;
     public static bool canAttack = true;
@@ -41,15 +34,8 @@ public class Weapons : MonoBehaviour
     public void changeWeapon()
     {
         Destroy(yourWeapon);
-        
         yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
-
-        // weapons[currentWeapon].GetComponent<Transform>().position = PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0);
-
-        currentDamage = weaponDamages[currentWeapon];
-        currentKnockback = weaponKnockbacks[currentWeapon];
-
         pickUpItem.changed = false;
-        //player.GetComponent<SwordAttack>().restartVariables();
+        PlayerInfo.playerDamage = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
     }
 }
