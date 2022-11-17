@@ -15,7 +15,7 @@ public class Stats : MonoBehaviour
 
      public void changeText()
      {
-        //health.text = PlayerInfo.playerHealth.ToString();
+        health.text = PlayerInfo.playerHealth.ToString();
         armor.text = PlayerInfo.playerDefense.ToString();
         damage.text = PlayerInfo.playerDamage.ToString();
         critChance.text = PlayerInfo.critChance.ToString() + "%";

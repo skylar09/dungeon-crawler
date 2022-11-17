@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class weaponRotate : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class weaponRotate : MonoBehaviour
     public float radius;
  
     public void Update(){
-        if (Weapons.swordSwung != true){
-            rotate();
+        if (!EventSystem.current.IsPointerOverGameObject()){
+                if (Weapons.swordSwung != true){
+                    rotate();
+            }
         }
-
+        
         setPosition();        
     } 
 
