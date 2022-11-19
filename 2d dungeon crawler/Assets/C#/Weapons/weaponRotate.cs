@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class weaponRotate : MonoBehaviour
 {
-    Vector3 mouse_pos;
+    public static Vector3 mouse_pos;
     public static Vector3 object_pos;
     float angle;
     public float radius;
