@@ -65,7 +65,7 @@ public class dropItem : MonoBehaviour
     //creates a weapon when you switch weapons from a weapon on the ground
     public void switchWeapon()
     {
-        createdItems.Insert(pickUpItem.closestItem, Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity));
+        createdItems.Insert(pickUpItem.closestItem, Instantiate(Items[pickUpItem.groundItem], new Vector3(0,0,0), Quaternion.identity));
 
         pickUpItem.weaponSwitched = false;
         pickUpItem.buttonPressed = false;
