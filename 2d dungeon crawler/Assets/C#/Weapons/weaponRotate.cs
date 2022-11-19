@@ -44,5 +44,6 @@ public class weaponRotate : MonoBehaviour
         float posX = PlayerInfo.playerLocation.x + (Mathf.Cos(angle * Mathf.PI / 180) * radius);
         float posY = PlayerInfo.playerLocation.y + (Mathf.Sin(angle * Mathf.PI / 180) * radius);
         transform.position = new Vector3(posX, posY, 0);
+        //transform.position = PlayerInfo.playerLocation;
     }
 }
