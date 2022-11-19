@@ -7,7 +7,7 @@ public class weaponRotate : MonoBehaviour
 {
     public static Vector3 mouse_pos;
     public static Vector3 object_pos;
-    public static float angle;
+    public static float angle, cos, sin;
     public float radius;
  
     public void Update(){
@@ -41,8 +41,11 @@ public class weaponRotate : MonoBehaviour
     }
 
     public void setPosition(){
-        float posX = PlayerInfo.playerLocation.x + (Mathf.Cos(angle * Mathf.PI / 180) * radius);
-        float posY = PlayerInfo.playerLocation.y + (Mathf.Sin(angle * Mathf.PI / 180) * radius);
+        cos = Mathf.Cos(angle * Mathf.PI / 180);
+        sin = Mathf.Sin(angle * Mathf.PI / 180);
+
+        float posX = PlayerInfo.playerLocation.x + (cos * radius);
+        float posY = PlayerInfo.playerLocation.y + (sin * radius);
         transform.position = new Vector3(posX, posY, 0);
         //transform.position = PlayerInfo.playerLocation;
     }
