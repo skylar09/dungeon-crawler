@@ -5,35 +5,16 @@ using UnityEngine;
 public class shootProjectile : MonoBehaviour
 {
     public float dist;
-    float posX, posY, rotate;
-    Vector3 angle;
-    int num;
+    public static float cos, sin;
+    float posX, posY;
     public GameObject projectile;
     
     public void spawnProjectile(){
-        angle = this.transform.parent.gameObject.transform.rotation.eulerAngles;
+        cos = Mathf.Cos(weaponRotate.angle * Mathf.PI / 180);
+        sin = Mathf.Sin(weaponRotate.angle * Mathf.PI / 180);
 
-        if (angle.y == 180){
-            angle.z = 90 - angle.z;
-        }
-        else if (angle.x == 180){
-            angle.z = 360 + angle.z;
-        }
-        else
-            angle.z += 90;
-
-        if (weaponRotate.mouse_pos.x > 0){
-            rotate = 0;
-            //Debug.Log(weaponRotate.mouse_pos.x);
-        }
-        else{
-            rotate = 180;
-            //Debug.Log(weaponRotate.mouse_pos.x);
-        }
-
-        posX = this.transform.parent.gameObject.transform.position.x + (Mathf.Cos(angle.z * Mathf.PI / 180) * dist);
-        posY = this.transform.parent.gameObject.transform.position.y + (Mathf.Sin(angle.z * Mathf.PI / 180) * dist);
-        Instantiate(projectile, new Vector3(posX, posY, 0), new Quaternion(0, rotate, 0, 0));
-        Debug.Log(new Vector3(posX, posY, 0));
+        posX = this.transform.parent.gameObject.transform.position.x + (cos * dist);
+        posY = this.transform.parent.gameObject.transform.position.y + (sin * dist);
+        GameObject bla = Instantiate(projectile, new Vector3(posX, posY, 0), Quaternion.AngleAxis(weaponRotate.angle, Vector3.forward));
     }
 }

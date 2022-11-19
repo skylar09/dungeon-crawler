@@ -7,7 +7,7 @@ public class weaponRotate : MonoBehaviour
 {
     public static Vector3 mouse_pos;
     public static Vector3 object_pos;
-    float angle;
+    public static float angle;
     public float radius;
  
     public void Update(){
