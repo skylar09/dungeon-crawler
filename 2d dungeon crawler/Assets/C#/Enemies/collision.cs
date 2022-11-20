@@ -50,11 +50,6 @@ public class collision : MonoBehaviour
         {
             damagePlayer();
         }
-
-        else if (collisionInfo.collider.tag == "ammo")
-        {
-            ammoHit(collisionInfo.gameObject);
-        }
     }
 
     // void OnCollisionStay2D(Collision2D collisionInfo)
@@ -102,11 +97,5 @@ public class collision : MonoBehaviour
         {
             health -= PlayerInfo.playerDamage - defense;
         }
-    }
-
-    public void ammoHit(GameObject ammo){
-        loseHealth();
-        Destroy(ammo.transform.parent.gameObject);
-        Destroy(ammo);
     }
 }

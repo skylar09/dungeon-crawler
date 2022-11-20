@@ -10,9 +10,9 @@ TagManager:
   - weapon
   - boss
   - enemy
-  - batEnemy
-  - slimeEnemy
   - ammo
+  - wall
+  - slimeEnemy
   layers:
   - Default
   - TransparentFX

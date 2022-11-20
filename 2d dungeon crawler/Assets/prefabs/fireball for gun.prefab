@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7119571664343762528}
   - component: {fileID: 986911254868896557}
   - component: {fileID: 6761161395911922267}
+  - component: {fileID: 7178978441318863745}
   m_Layer: 8
   m_Name: projectile
   m_TagString: ammo
@@ -194,3 +195,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   knockback: 1
+--- !u!114 &7178978441318863745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7159107667752967934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7c4a89926bc2146bdcaf2ee11d9acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

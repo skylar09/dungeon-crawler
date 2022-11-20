@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 818781375595647392}
   m_Layer: 7
   m_Name: slime 1
-  m_TagString: slimeEnemy
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 7311249576847660176}
   - component: {fileID: 6979681483893404995}
   - component: {fileID: 3982870780968510451}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: slime-Green
   m_TagString: enemy
   m_Icon: {fileID: 0}

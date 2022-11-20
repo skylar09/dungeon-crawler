@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 1705333826103672900}
   - component: {fileID: 3965480999955392940}
   - component: {fileID: 6777882481627731857}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snowflakethingy
   m_TagString: enemy
   m_Icon: {fileID: 0}
