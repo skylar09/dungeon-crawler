@@ -6439,7 +6439,7 @@ GameObject:
   - component: {fileID: 418775920}
   m_Layer: 0
   m_Name: top (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10935,7 +10935,7 @@ GameObject:
   - component: {fileID: 697425443}
   m_Layer: 0
   m_Name: right (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12709,7 +12709,7 @@ GameObject:
   - component: {fileID: 823211722}
   m_Layer: 0
   m_Name: top
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14791,7 +14791,7 @@ GameObject:
   - component: {fileID: 936431819}
   m_Layer: 0
   m_Name: top (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15170,7 +15170,7 @@ GameObject:
   - component: {fileID: 944893456}
   m_Layer: 0
   m_Name: left (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17184,7 +17184,7 @@ GameObject:
   - component: {fileID: 1079495110}
   m_Layer: 0
   m_Name: bottom (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22712,21 +22712,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 8103026422850841727, guid: 66d9ce5124d6a254d812174905cae526, type: 3}
-  - {fileID: 3593761439296400745, guid: e9df5f5816300c34c8569f35f6544109, type: 3}
-  - {fileID: 176378256186577800, guid: 8f2a8df31bcc91546b7ab3af9eeae362, type: 3}
-  - {fileID: 6217652708947698187, guid: 2e38cd99b0fcf054cb73435ed5679855, type: 3}
-  - {fileID: 192055224195661241, guid: c6ac929b4c56e7649959950c7c174cd8, type: 3}
-  - {fileID: 4425779756924448056, guid: 38ea69982b9c0234281c2d45f0437bea, type: 3}
-  - {fileID: 475868198297371527, guid: d73a9d6bb2896454d8cd8e119d024c14, type: 3}
-  - {fileID: 3425550657675448674, guid: f55271715d8292f43926ee6f32da41a7, type: 3}
-  - {fileID: 1374074800892765269, guid: 7005d38e18cfbfc45a71dd59623e5b0c, type: 3}
-  - {fileID: 2705176615347989843, guid: b93989e95dc401c43af1204a2ad9fb21, type: 3}
-  - {fileID: 8507070171164364275, guid: d4dcc9de01597ed49877ae876b897c16, type: 3}
-  - {fileID: 8931668441009308666, guid: 0a2c6c1d916792546af03836177e66b1, type: 3}
-  - {fileID: 8468582252771222836, guid: 9bd8b91e6c3892c40b42cb0fd31c9b5b, type: 3}
-  - {fileID: 3892023309081711814, guid: 469b2f5d924cd9b4aad958c05664921f, type: 3}
-  - {fileID: 6833974768570681345, guid: d3624b798e20d2441946edf5cbd3d05a, type: 3}
+  - {fileID: 1098219255336795604, guid: f738326cfa5adc342a423a70173be7b2, type: 3}
+  - {fileID: 2119579652027611245, guid: f677941bb98382342b4abb73dce1ce04, type: 3}
+  - {fileID: 7012344336906593558, guid: 8b004410b8dc3cc41a117a475e3c2b38, type: 3}
+  - {fileID: 8177676076298084114, guid: 11ab8a249ba30c846acfea624013c344, type: 3}
+  - {fileID: 1421893174804387797, guid: 08a3bac8cf7127b4cb67ee2091f68c5c, type: 3}
+  - {fileID: 355365340748803648, guid: 557b5cc0a47e4af47acd7575460346a2, type: 3}
+  - {fileID: 4077771049729768968, guid: 1717794b7b77f3b41ae930de0004e341, type: 3}
+  - {fileID: 6635439259585209387, guid: cbbf7ffa0436d124aac931498579a558, type: 3}
+  - {fileID: 8502021798138963807, guid: 253bd9d73114040469c981b336f457eb, type: 3}
+  - {fileID: 2302946341363109557, guid: 58d508c9fe712044cbf73332f6bb2b98, type: 3}
+  - {fileID: 8124151112182377886, guid: 7b6a7c56b2fa0264b827ef51f034ae42, type: 3}
+  - {fileID: 7066590330642062043, guid: f4b777e6609531848a69a68d919fe47f, type: 3}
+  - {fileID: 8099898730031331449, guid: 6edc69fc392cfde40825f91e478ec90d, type: 3}
+  - {fileID: 8314760976881929118, guid: 465905f13293c3143afd2a85dcf40b4c, type: 3}
+  - {fileID: 754178765935426374, guid: d035df4055fbc3149bc4b4413e949f5f, type: 3}
+  - {fileID: 1098219255336795604, guid: a591a0e5775dea04e964eaeb8aef3571, type: 3}
+  - {fileID: 1098219255336795604, guid: 9633519a6569f554e8951905d80d845f, type: 3}
 --- !u!114 &1448772136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23767,7 +23769,7 @@ GameObject:
   - component: {fileID: 1498832820}
   m_Layer: 0
   m_Name: left (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32030,7 +32032,7 @@ GameObject:
   - component: {fileID: 2027370178}
   m_Layer: 0
   m_Name: right (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

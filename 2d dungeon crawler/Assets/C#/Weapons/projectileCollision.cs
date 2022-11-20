@@ -8,7 +8,7 @@ public class projectileCollision : MonoBehaviour
         if (collisionInfo.collider.tag == "enemy"){
             ammoHit(collisionInfo);
         }
-        else if (collisionInfo.collider.tag == "wall"){
+        else if (collisionInfo.collider.tag == "wall" ||collisionInfo.collider.tag.Contains("door")){
             destroy();
         }
     }
