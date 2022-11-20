@@ -46,9 +46,14 @@ public class collision : MonoBehaviour
         }
 
         //makes player take damage for hitting an enemy
-        if (collisionInfo.collider.tag == "Player")
+        else if (collisionInfo.collider.tag == "Player")
         {
             damagePlayer();
+        }
+
+        else if (collisionInfo.collider.tag == "ammo")
+        {
+            ammoHit(collisionInfo.gameObject);
         }
     }
 
@@ -97,5 +102,11 @@ public class collision : MonoBehaviour
         {
             health -= PlayerInfo.playerDamage - defense;
         }
+    }
+
+    public void ammoHit(GameObject ammo){
+        loseHealth();
+        Destroy(ammo.transform.parent.gameObject);
+        Destroy(ammo);
     }
 }
