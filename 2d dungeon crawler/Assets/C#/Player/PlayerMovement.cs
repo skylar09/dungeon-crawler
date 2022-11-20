@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    //player gameObject
     public GameObject player;
+    //the rigid body component of the player
     public Rigidbody2D rb;
+    //used in player movement
     Vector2 movement;
 
     // Update is called once per frame
     void Update()
     {
+        //used in player movement
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -39,21 +42,7 @@ public class PlayerMovement : MonoBehaviour
     // FixedUpdate is called once per set amount of frames
     void FixedUpdate()
     {
-        //checks if the player is alive (health above 0)
-        if (PlayerInfo.playerHealth > 0)
-        {
-            //moves player with wasd or arrow keys
-            rb.MovePosition(rb.position + movement * PlayerInfo.movementSpeed * Time.fixedDeltaTime);
-        }
-
-        else
-        {
-            //changes player velocity to 0 if the player is dead (health 0 or less)
-            rb.velocity = new Vector2(0, 0);
-        }
-    }
-
-    public void turn()
-    {
+        //moves player with wasd or arrow keys
+        rb.MovePosition(rb.position + movement * PlayerInfo.movementSpeed * Time.fixedDeltaTime);
     }
 }

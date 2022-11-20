@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject gameOverText;
+    //see pauseMenu script
     public GameObject darkScreen;
 
     // Update is called once per frame
     void Update()
     {
+        //if player is dead
         if (PlayerInfo.playerHealth <= 0)
         {
             Time.timeScale = 0;
@@ -19,7 +21,8 @@ public class GameOver : MonoBehaviour
         }
     }
 
-     public void Restart()
+    //resets all the neccesary variables when the player dies
+    public void Restart()
     {
         gameOverText.SetActive(false);
         darkScreen.SetActive(false);
@@ -32,6 +35,7 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene(1); 
     }
 
+    //goes to main menu (see pauseMenu script for more comments)
     public void MainMenu()
     {
         //DontDestroyOnLoad(Player);

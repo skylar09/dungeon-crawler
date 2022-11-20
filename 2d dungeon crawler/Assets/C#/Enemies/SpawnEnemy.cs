@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
+    //list of all enemy prefabs
     public List<GameObject> Enemies = new List<GameObject>();
 
     public GameObject Camera;
 
     public static bool enterRoom = false;
+    //tracks how many alive enemies in a room
     public static int enemyCount = 0;
 
     void Start()
@@ -31,7 +33,7 @@ public class SpawnEnemy : MonoBehaviour
         }        
     }
 
-    //spawns enemies in certain spots around the room
+    //spawns enemies in certain random spots around the room
     public void spawn()
     {
         Camera.GetComponent<RoomLocation>().newRoom[PlayerCollision.currentRoom] = false;

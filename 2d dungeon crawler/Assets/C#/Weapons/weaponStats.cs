@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class weaponStats : MonoBehaviour
 {
+    //damage and knockback of weapon
     public int damage;
     public int knockback;
-    
 }

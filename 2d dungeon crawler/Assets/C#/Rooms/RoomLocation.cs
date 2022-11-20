@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class RoomLocation : MonoBehaviour
 {
+    //the rooms themselves
     public List<GameObject> Rooms = new List<GameObject>();
+    //positions of all rooms
     public static List<Vector3> roomCords = new List<Vector3>();
+    //if player has defeated all enemies in room
     public List<bool> roomCleared = new List<bool>();
+    //if player has entered the room before
     public List<bool> newRoom = new List<bool>();
 
+    //when level is loaded gets the positions for all the rooms and adds them to roomCords
     void Awake()
     {
         roomCords.Clear();
         for (int i = 0; i < Rooms.Count; i++)
         {
             roomCords.Add(Rooms[i].transform.position);
+            Rooms[i].GetComponent<doors>().number = i;
         }
     }
 }

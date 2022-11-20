@@ -9,7 +9,6 @@ public class knockback : MonoBehaviour
     //adds force to an enemy so as to do knockback
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        //need the && bc otherwise enemies stop moving when a weapon has no knockback
         if (collisionInfo.collider.tag == "weapon")
         {
             int thrust = collisionInfo.gameObject.GetComponent<weaponStats>().knockback;

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class collision : MonoBehaviour
 {
+    //enemy stats
     public int health;
     public int damage;
     public int defense;
     public int deathGold;
     public float moveSpeed;
 
+    //updates the health of the enemy when first spawned based on current level
     void Awake()
     {
         health *= pauseMenu.whichScene;
@@ -17,6 +19,7 @@ public class collision : MonoBehaviour
 
     void Start()
     {
+        //sets the move speed in enemyMovement of the parent of this gameObject
         this.transform.parent.gameObject.GetComponent<enemyMovement>().moveSpeed = moveSpeed;
     }
 
@@ -32,7 +35,7 @@ public class collision : MonoBehaviour
 
             //destroys (kills) the enemy
             Destroy(gameObject);
-
+            //updates the counter for enemies alive in the room
             SpawnEnemy.enemyCount--;
         }
     }
@@ -88,6 +91,7 @@ public class collision : MonoBehaviour
 
     public void loseHealth()
     {
+        //checks if enemy has more defense than player damage then only takes 1 dmg otherwise takes more dmg
         if (PlayerInfo.playerDamage - defense <= 0)
         {
             health -= 1;

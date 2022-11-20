@@ -5,12 +5,13 @@ using UnityEngine;
 public class turning : MonoBehaviour
 {
     public Animator animator;
-    public bool turnedRight = false;
-    public bool turnedLeft = true;
+    bool turnedRight = false;
+    bool turnedLeft = true;
     
     // Update is called once per frame
     void Update()
     {
+        //if the player is to one side of the enemy and it is not already turned that way then it turnes
         if (PlayerInfo.playerLocation.x >  this.transform.parent.gameObject.transform.position.x && turnedRight != true)
         {
             turn();
@@ -21,6 +22,7 @@ public class turning : MonoBehaviour
         }
     }
 
+    //does turn animation then updates which way enemy is turned
     public void turn()
     {
         animator.SetTrigger("turn");
@@ -37,6 +39,7 @@ public class turning : MonoBehaviour
             }
     }
 
+    //when turn animation ends updates rotation of enemy so they facing correct direction
     public void endTurn()
     {        
         if (this.transform.parent.gameObject.GetComponent<Transform>().rotation.y == 0)

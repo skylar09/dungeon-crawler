@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class pickUpItem : MonoBehaviour
 {
-    public static Vector2 location;
-
+    //these 3 used for switching weapons on the ground
     public static Vector2 newLocation;
-
     public static int groundItem;
     public static int closestItem;
 
@@ -18,21 +16,29 @@ public class pickUpItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //gets the location of this item
-        location = this.GetComponent<Transform>().position;
+        if (Input.GetKeyDown("f") && buttonPressed == false)
+        {
+            Vector2 location = this.transform.position;
 
-        //changes the current item with the item just dropped
-        if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2 && Input.GetKeyDown("f") && buttonPressed == false)
-        {
-            buttonPressed = true;
-            pickUpCurrent();
-                        
+            //changes the current item with the item just dropped
+            if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2)
+            {
+                buttonPressed = true;
+                pickUpCurrent();
+                            
+            }
         }
-        //adds the closest item to your inventory
-        if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2 && Input.GetKeyDown("g") && buttonPressed == false)
+
+        if (Input.GetKeyDown("g") && buttonPressed == false)
         {
-            buttonPressed = true;
-            addInventory();            
+            Vector2 location = this.transform.position;
+
+            //adds the closest item to your inventory
+            if (Vector2.Distance(location, PlayerInfo.playerLocation) <= 2)
+            {
+                buttonPressed = true;
+                addInventory();            
+            }
         }
     }
 

@@ -7,6 +7,7 @@ public class ShowPlayerHealth : MonoBehaviour
 {
     public static int health = 3;
 
+    //the heart gameObjects in top left corner of screen
     public List<GameObject> hearts = new List<GameObject>();
 
     void Awake()
@@ -17,6 +18,7 @@ public class ShowPlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if player has lost or gained health turns on or off more hearts
         if (health > PlayerInfo.playerHealth)
         {
             heartOff();

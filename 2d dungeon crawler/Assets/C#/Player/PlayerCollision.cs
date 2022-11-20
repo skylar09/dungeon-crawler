@@ -5,14 +5,16 @@ using System;
 
 public class PlayerCollision : MonoBehaviour
 {
+    //camera gameObject
     public GameObject Camera;
-
+    //what is the curent room number
     public static int currentRoom = 0;
+    //what is the closest room number
     public static int closestRoom;
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
-        //checks for the tag on the object it collides with        
+        //if player hit a door with correct tag then call method     
         if (collisionInfo.collider.tag == "doorY")
         {
             doorY();

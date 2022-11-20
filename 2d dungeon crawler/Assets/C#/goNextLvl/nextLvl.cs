@@ -14,12 +14,15 @@ public class nextLvl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if final room is cleared
         if (Camera.GetComponent<RoomLocation>().roomCleared[Camera.GetComponent<RoomLocation>().roomCleared.Count - 1] == true)
         {
+            //makes pillar glow
             glow.SetActive(true);
-
+            //if player is within 3 units of the pillar
             if (Vector2.Distance(PlayerInfo.playerLocation, this.transform.position) < 3)
             {
+                //turns on text
                 text.SetActive(true);
                 
                 if (Input.GetKeyDown("z"))

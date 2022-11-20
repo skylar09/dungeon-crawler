@@ -19,15 +19,8 @@ public class dropItem : MonoBehaviour
     //resets createdItems and createdItemsNumber lists when goes to new level
     void Awake()
     {
-        for (int i = 0; i < dropItem.createdItems.Count; i++)
-        {
-            dropItem.createdItems.RemoveAt(i);
-        }
-        
-        for (int i = 0; i < dropItem.createdItemsNumber.Count; i++)
-        {
-            dropItem.createdItemsNumber.RemoveAt(i);
-        }
+        dropItem.createdItems.Clear();
+        dropItem.createdItemsNumber.Clear();
     }
 
     // Update is called once per frame

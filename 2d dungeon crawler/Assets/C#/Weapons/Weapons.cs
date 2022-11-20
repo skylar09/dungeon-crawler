@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class Weapons : MonoBehaviour
 {
+    //all prefabs of weapons
     public GameObject[] prefabs;
 
+    //the location in prefabs array of current weapon
     public static int currentWeapon = 0;
+    //allows changing starting weapon in client DELETE WHEN GAME DONE
     public int bla;
 
+    //if sword is in mid swing or not
     public static bool swordSwung = false;
+    //allows player to attack if true
     public static bool canAttack = true;
 
+    //the current weapon being used
     public GameObject yourWeapon;
     public GameObject player;
 
-    // Start is called before the first frame update
+    // creates the starting weapon
     void Start()
     {
         currentWeapon = bla;
-        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
+        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, Quaternion.identity);
     }
 
-    // Update is called once per frame
+    // checks if player has switched their weapon
     void Update()
     {
         if (pickUpItem.changed == true)
@@ -31,10 +37,12 @@ public class Weapons : MonoBehaviour
         }
     }
 
+    //changes current weapon by destroying current weapon and then makinga new weapon
+    //updates the player damage based on new weapon
     public void changeWeapon()
     {
         Destroy(yourWeapon);
-        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation + new Vector3(.65f, .1f, 0), Quaternion.identity);
+        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, Quaternion.identity);
         pickUpItem.changed = false;
         PlayerInfo.playerDamage = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
     }

@@ -6,11 +6,13 @@ using UnityEngine.EventSystems;
 
 public class Attack : MonoBehaviour
 {
+    //animator of weapon
     public Animator animator;
 
     // Update is called once per frame
     void Update()
     {
+        //stops player from being able to attack when inventory is open (or other thing is open in future)
         if (!EventSystem.current.IsPointerOverGameObject())
         {
             //if left click
@@ -21,6 +23,7 @@ public class Attack : MonoBehaviour
         }
     }
 
+    //causes weapon attack animation to run and updates variables
     public void attack()
     {
         Weapons.swordSwung = true;

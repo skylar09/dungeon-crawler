@@ -682,7 +682,6 @@ MonoBehaviour:
   - {fileID: 1079495108}
   - {fileID: 697425441}
   - {fileID: 418775918}
-  Rooms: []
   Camera: {fileID: 87602145}
   number: 0
   opened: 0
@@ -1137,7 +1136,6 @@ MonoBehaviour:
   Doors:
   - {fileID: 1498832818}
   - {fileID: 1858141690}
-  Rooms: []
   Camera: {fileID: 87602145}
   number: 0
   opened: 0
@@ -1259,7 +1257,6 @@ GameObject:
   - component: {fileID: 87602147}
   - component: {fileID: 87602151}
   - component: {fileID: 87602146}
-  - component: {fileID: 87602149}
   - component: {fileID: 87602150}
   m_Layer: 0
   m_Name: Main Camera
@@ -1334,18 +1331,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &87602149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87602145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 516685978096b464da25eafd2904378c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &87602150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1679,12 +1664,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Doors:
   - {fileID: 823211720}
-  Rooms:
-  - {fileID: 121893893}
-  - {fileID: 60947747}
-  - {fileID: 79883497}
-  - {fileID: 1287275030}
-  - {fileID: 1887483100}
   Camera: {fileID: 87602145}
   number: 0
   opened: 0
@@ -8365,7 +8344,7 @@ GameObject:
   - component: {fileID: 539206384}
   - component: {fileID: 539206385}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: next level pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8380,7 +8359,7 @@ Transform:
   m_GameObject: {fileID: 539206383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1567173970}
@@ -20853,7 +20832,6 @@ MonoBehaviour:
   Doors:
   - {fileID: 936431817}
   - {fileID: 2027370176}
-  Rooms: []
   Camera: {fileID: 87602145}
   number: 0
   opened: 0
@@ -29673,7 +29651,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Doors:
   - {fileID: 944893454}
-  Rooms: []
   Camera: {fileID: 87602145}
   number: 0
   opened: 0

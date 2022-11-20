@@ -10,28 +10,14 @@ public class nearbyAttackAnim : MonoBehaviour
 
     void Update()
     {
-        if (meleeAttack == true)
+        //if within range of player changes animation otherwise change to dif animation
+        if (Vector2.Distance(transform.position, PlayerInfo.playerLocation) <= distance)
         {
-            //this.GetComponent<enemyMovement>().canMove = false;
             animator.SetBool("playerNearby", true);
-        }
-        else 
-        {
-            //this.GetComponent<enemyMovement>().canMove = true;
-            animator.SetBool("playerNearby", false);
-        }
-    }
-
-    void FixedUpdate()
-    {
-        if (Vector2.Distance(transform.position, PlayerInfo.playerLocation) < distance)
-        {
-            meleeAttack = true;
         }
         else
         {
-            meleeAttack = false;
+            animator.SetBool("playerNearby", false);
         }
     }
-    
 }

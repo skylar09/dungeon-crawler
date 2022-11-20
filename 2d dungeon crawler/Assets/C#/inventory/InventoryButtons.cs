@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryButtons : MonoBehaviour
 {
+    //the number that this inventory slot is
     public int locationNum;
 
     //changes the item in the item slot with the one you are currently using

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class enemyMovement : MonoBehaviour
 {
+    //enemy rigid body
     public Rigidbody2D rb;
     public bool canMove = true;
     public bool closeTo = false;
