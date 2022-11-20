@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1580646216795614125}
-  - component: {fileID: 8216112856789098790}
   - component: {fileID: 8995780999973387485}
   m_Layer: 0
   m_Name: gun
@@ -34,19 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8216112856789098790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098219255336795604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a313b1af6caa6b541b697d0f5a09aa94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 4723982582500163479}
 --- !u!114 &8995780999973387485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,10 +56,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2776106222896019397}
   - component: {fileID: 2776106222896019394}
-  - component: {fileID: 4723982582500163479}
   - component: {fileID: 5461792988280039976}
   - component: {fileID: 8298714917292200138}
-  - component: {fileID: 3779364162696865007}
   m_Layer: 8
   m_Name: weapon
   m_TagString: weapon
@@ -148,26 +132,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4723982582500163479
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2776106222896019395}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 026a8236d14724d46b490bb920df7569, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5461792988280039976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,15 +160,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dist: 1
   projectile: {fileID: 2504668979719699597, guid: 7c4a8e47def4c2a468ab7236c75a96b6, type: 3}
---- !u!114 &3779364162696865007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2776106222896019395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba55ac761be41841a8af13e92330302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
