@@ -159,4 +159,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dist: 1
+  fireSpeed: 1
   projectile: {fileID: 2504668979719699597, guid: 7c4a8e47def4c2a468ab7236c75a96b6, type: 3}

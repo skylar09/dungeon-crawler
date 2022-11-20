@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class shootProjectile : MonoBehaviour
 {
-    public float dist;
+    public float dist, fireSpeed;
     float posX, posY;
     public GameObject projectile;
     
@@ -21,11 +21,17 @@ public class shootProjectile : MonoBehaviour
     }
 
     public void spawnProjectile(){
+        Weapons.canAttack = false; 
         posX = this.transform.parent.gameObject.transform.position.x + (weaponRotate.cos * dist);
         posY = this.transform.parent.gameObject.transform.position.y + (weaponRotate.sin * dist);
         GameObject bla = Instantiate(projectile, new Vector3(posX, posY, 0), Quaternion.AngleAxis(weaponRotate.angle, Vector3.forward));
 
-        Weapons.canAttack = true;
-        Weapons.swordSwung = false;
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSecondsRealtime(fireSpeed);
+        Weapons.canAttack = true;        
     }
 }
