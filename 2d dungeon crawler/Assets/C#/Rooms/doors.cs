@@ -28,7 +28,6 @@ public class doors : MonoBehaviour
     //opens all the doors
     void openDoors()
     {
-        Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         for (int i = 0; i < Doors.Count; i++)
         {
             Doors[i].SetActive(false);

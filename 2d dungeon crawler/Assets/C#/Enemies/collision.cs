@@ -82,7 +82,7 @@ public class collision : MonoBehaviour
     {
         int shouldDrop = Random.Range(0, 101);
 
-        if (shouldDrop <= 10)
+        if (shouldDrop <= 100)
         {
             dropItem.drop = true;
             dropItem.enemyLocation = this.GetComponent<Transform>().position;

@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,14 +13,17 @@ public class dropItem : MonoBehaviour
     public GameObject[] Items;
     //items that are created when an enemy drops an item
     public static List<GameObject> createdItems = new List<GameObject>();
-    //numbers that correspond to the location in the Items list of dropped items
-    // public static List<int> createdItemsNumber = new List<int>();
 
-    //resets createdItems and createdItemsNumber lists when goes to new level
+    void Start(){
+        for(int i = 0; i < Items.Length; i ++){
+            Items[i].GetComponent<pickUpItem>().num = i;
+        }
+    }
+
+    //resets createdItems list when goes to new level
     void Awake()
     {
         dropItem.createdItems.Clear();
-        //dropItem.createdItemsNumber.Clear();
     }
 
     // Update is called once per frame
@@ -49,8 +52,6 @@ public class dropItem : MonoBehaviour
         } while (weaponNum == Weapons.currentWeapon);
 
         createdItems.Add(Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity));
-
-        //createdItemsNumber.Add(weaponNum);
         
         drop = false;
     }

@@ -27,7 +27,7 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
         //should spawn enemy when you enter a new room
-        if (enterRoom == true && Camera.GetComponent<RoomLocation>().roomCleared[PlayerCollision.currentRoom] == true)
+        if (enterRoom == true && Camera.GetComponent<RoomLocation>().roomCleared[PlayerCollision.currentRoom] != true)
         {
             spawn();
         }        
@@ -38,26 +38,26 @@ public class SpawnEnemy : MonoBehaviour
     {
         Camera.GetComponent<RoomLocation>().roomCleared[PlayerCollision.currentRoom] = false;
 
-            float LocationX = RoomLocation.roomCords[PlayerCollision.currentRoom].x;
-            float LocationY = RoomLocation.roomCords[PlayerCollision.currentRoom].y;
+        float LocationX = Camera.GetComponent<RoomLocation>().Rooms[PlayerCollision.currentRoom].transform.position.x;
+        float LocationY = Camera.GetComponent<RoomLocation>().Rooms[PlayerCollision.currentRoom].transform.position.y;
 
-            int numOfEnemies = Random.Range(2, 5);
+        int numOfEnemies = Random.Range(2, 5);
 
-            for (int i = 0; i < numOfEnemies; i++)
-            {
-                //for int min inclusive max exclusive 
-                //for float both inclusive
-                int enemyNum = Random.Range(0, Enemies.Count);
-                
-                //gives either 1 or -1
-                int leftOrRight = Random.Range(0, 2) * 2 - 1;
-                int upOrDown = Random.Range(0, 2) * 2 - 1;
+        for (int i = 0; i < numOfEnemies; i++)
+        {
+            //for int min inclusive max exclusive 
+            //for float both inclusive
+            int enemyNum = Random.Range(0, Enemies.Count);
+            
+            //gives either 1 or -1
+            int leftOrRight = Random.Range(0, 2) * 2 - 1;
+            int upOrDown = Random.Range(0, 2) * 2 - 1;
 
-                //creates a version of an enemy prefab
-                Instantiate(Enemies[enemyNum], new Vector2(LocationX + (Random.Range(3f, 7f) * leftOrRight), LocationY + (Random.Range(1.5f, 3f)) * upOrDown), Quaternion.identity);
+            //creates a version of an enemy prefab
+            Instantiate(Enemies[enemyNum], new Vector2(LocationX + (Random.Range(3f, 7f) * leftOrRight), LocationY + (Random.Range(1.5f, 3f)) * upOrDown), Quaternion.identity);
 
-                enemyCount++;
-            }
+            enemyCount++;
+        }
         doors.cleared ++;
         enterRoom = false;
     }

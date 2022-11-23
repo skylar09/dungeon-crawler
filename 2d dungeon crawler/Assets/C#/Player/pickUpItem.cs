@@ -8,6 +8,8 @@ public class pickUpItem : MonoBehaviour
     public static Vector2 newLocation;
     public static int groundItem;
     public static int closestItem;
+    public static int closestsNum;
+    public int num;
 
     public static bool weaponSwitched = false;
     public static bool changed = false;
@@ -53,7 +55,6 @@ public class pickUpItem : MonoBehaviour
             {
                 float distance1 = Vector2.Distance(dropItem.createdItems[closestItem].GetComponent<Transform>().position, PlayerInfo.playerLocation);
                 float distance2 = Vector2.Distance(dropItem.createdItems[i].GetComponent<Transform>().position, PlayerInfo.playerLocation);
-                // Debug.Log("1 " + distance1 + " 2 " + distance2);
                 
                 if (distance1 > distance2)
                 {
@@ -61,6 +62,7 @@ public class pickUpItem : MonoBehaviour
                 }
             }
         }
+        closestsNum = dropItem.createdItems[closestItem].GetComponent<pickUpItem>().num;
     }
 
     //changes the current item with the item just dropped
@@ -70,8 +72,7 @@ public class pickUpItem : MonoBehaviour
 
         groundItem = Weapons.currentWeapon;
 
-        Weapons.currentWeapon = dropItem.createdItemsNumber[closestItem];
-        dropItem.createdItemsNumber[closestItem] = groundItem;
+        Weapons.currentWeapon = closestsNum;
 
         changed = true;
         weaponSwitched = true;
@@ -81,6 +82,9 @@ public class pickUpItem : MonoBehaviour
         Destroy(dropItem.createdItems[closestItem]);
 
         dropItem.createdItems.RemoveAt(closestItem);
+
+        Weapons.canAttack = true;
+        Weapons.swordSwung = false;
     }
 
     //adds the closest item to your inventory
@@ -88,6 +92,7 @@ public class pickUpItem : MonoBehaviour
     {
         closest();
 
+        InventoryItems.replaceItem = dropItem.createdItems[closestItem].GetComponent<pickUpItem>().num;
         Destroy(dropItem.createdItems[closestItem]);
         dropItem.createdItems.RemoveAt(closestItem);
 
