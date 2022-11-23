@@ -16,6 +16,8 @@ public class Weapons : MonoBehaviour
     public static bool swordSwung = false;
     //allows player to attack if true
     public static bool canAttack = true;
+    //current weapons damage
+    public static int currentDmg;
 
     //the current weapon being used
     public GameObject yourWeapon;
@@ -26,6 +28,7 @@ public class Weapons : MonoBehaviour
     {
         currentWeapon = bla;
         yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, Quaternion.identity);
+        currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
     }
 
     // checks if player has switched their weapon
@@ -44,6 +47,6 @@ public class Weapons : MonoBehaviour
         Destroy(yourWeapon);
         yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, Quaternion.identity);
         pickUpItem.changed = false;
-        PlayerInfo.playerDamage = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
+        currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
     }
 }

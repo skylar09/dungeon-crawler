@@ -82,7 +82,7 @@ public class collision : MonoBehaviour
     {
         int shouldDrop = Random.Range(0, 101);
 
-        if (shouldDrop <= 100)
+        if (shouldDrop <= 10)
         {
             dropItem.drop = true;
             dropItem.enemyLocation = this.GetComponent<Transform>().position;
@@ -92,14 +92,14 @@ public class collision : MonoBehaviour
     public void loseHealth()
     {
         //checks if enemy has more defense than player damage then only takes 1 dmg otherwise takes more dmg
-        if (PlayerInfo.playerDamage - defense <= 0)
+        if (PlayerInfo.playerDamage + Weapons.currentDmg - defense <= 0)
         {
             health -= 1;
         }
 
         else 
         {
-            health -= PlayerInfo.playerDamage - defense;
+            health -= PlayerInfo.playerDamage + Weapons.currentDmg - defense;
         }
     }
 }
