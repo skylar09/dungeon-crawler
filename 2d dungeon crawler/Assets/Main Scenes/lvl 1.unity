@@ -1351,7 +1351,6 @@ MonoBehaviour:
   - {fileID: 802805711}
   - {fileID: 1887483100}
   roomCleared: 000000000000
-  newRoom: 000101010001
 --- !u!114 &87602151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1529,7 +1528,7 @@ Transform:
   - {fileID: 1725180423}
   - {fileID: 529013150}
   m_Father: {fileID: 121893894}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &114042579
 GameObject:
@@ -1644,9 +1643,9 @@ Transform:
   m_LocalScale: {x: 0.87, y: 1.08, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 642643440}
   - {fileID: 1692458547}
   - {fileID: 111752123}
-  - {fileID: 642643440}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10240,7 +10239,7 @@ Transform:
   m_Children:
   - {fileID: 823211721}
   m_Father: {fileID: 121893894}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &642643441
 BoxCollider2D:
@@ -12355,6 +12354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 802805712}
+  - component: {fileID: 802805713}
   m_Layer: 0
   m_Name: room4
   m_TagString: Untagged
@@ -12381,6 +12381,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &802805713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802805711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Doors: []
+  Camera: {fileID: 87602145}
+  number: 0
+  opened: 1
 --- !u!1 &805116408
 GameObject:
   m_ObjectHideFlags: 0
@@ -12990,7 +13006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1975221858591985018, guid: baad8c3a926bffc479308fa792465c48, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 56.0907
+      value: 56.09082
       objectReference: {fileID: 0}
     - target: {fileID: 1975221858591985018, guid: baad8c3a926bffc479308fa792465c48, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -26388,7 +26404,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 121893894}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709683255
 GameObject:
@@ -33838,7 +33854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1975221858591985018, guid: baad8c3a926bffc479308fa792465c48, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 56.0907
+      value: 56.09082
       objectReference: {fileID: 0}
     - target: {fileID: 1975221858591985018, guid: baad8c3a926bffc479308fa792465c48, type: 3}
       propertyPath: m_AnchoredPosition.y

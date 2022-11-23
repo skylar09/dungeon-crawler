@@ -30,7 +30,6 @@ public class GameOver : MonoBehaviour
         PlayerInfo.gold = 0;
         PlayerInfo.playerHealth = 3;
         PlayerCollision.currentRoom = 0;
-        doors.cleared = 0;
         SpawnEnemy.enemyCount = 0;
         SceneManager.LoadScene(1); 
     }

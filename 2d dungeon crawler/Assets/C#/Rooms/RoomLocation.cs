@@ -11,7 +11,7 @@ public class RoomLocation : MonoBehaviour
     //if player has defeated all enemies in room
     public List<bool> roomCleared = new List<bool>();
     //if player has entered the room before
-    public List<bool> newRoom = new List<bool>();
+    //public List<bool> newRoom = new List<bool>();
 
     //when level is loaded gets the positions for all the rooms and adds them to roomCords
     void Awake()

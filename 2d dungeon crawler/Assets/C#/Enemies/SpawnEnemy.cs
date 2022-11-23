@@ -27,7 +27,7 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
         //should spawn enemy when you enter a new room
-        if (enterRoom == true && Camera.GetComponent<RoomLocation>().newRoom[PlayerCollision.currentRoom] == true)
+        if (enterRoom == true && Camera.GetComponent<RoomLocation>().roomCleared[PlayerCollision.currentRoom] == true)
         {
             spawn();
         }        
@@ -36,7 +36,7 @@ public class SpawnEnemy : MonoBehaviour
     //spawns enemies in certain random spots around the room
     public void spawn()
     {
-        Camera.GetComponent<RoomLocation>().newRoom[PlayerCollision.currentRoom] = false;
+        Camera.GetComponent<RoomLocation>().roomCleared[PlayerCollision.currentRoom] = false;
 
             float LocationX = RoomLocation.roomCords[PlayerCollision.currentRoom].x;
             float LocationY = RoomLocation.roomCords[PlayerCollision.currentRoom].y;
@@ -58,8 +58,7 @@ public class SpawnEnemy : MonoBehaviour
 
                 enemyCount++;
             }
-
-        enterRoom = false;
         doors.cleared ++;
+        enterRoom = false;
     }
 }
