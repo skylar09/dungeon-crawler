@@ -44,8 +44,9 @@ public class Weapons : MonoBehaviour
     //updates the player damage based on new weapon
     public void changeWeapon()
     {
+        Quaternion rotation = yourWeapon.transform.rotation;
         Destroy(yourWeapon);
-        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, Quaternion.identity);
+        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, rotation);
         pickUpItem.changed = false;
         currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
     }

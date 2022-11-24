@@ -11,19 +11,11 @@ public class dropItem : MonoBehaviour
 
     //all possible items that can be created
     public GameObject[] Items;
-    //items that are created when an enemy drops an item
-    public static List<GameObject> createdItems = new List<GameObject>();
 
     void Start(){
         for(int i = 0; i < Items.Length; i ++){
             Items[i].GetComponent<pickUpItem>().num = i;
         }
-    }
-
-    //resets createdItems list when goes to new level
-    void Awake()
-    {
-        dropItem.createdItems.Clear();
     }
 
     // Update is called once per frame
@@ -51,7 +43,7 @@ public class dropItem : MonoBehaviour
                             
         } while (weaponNum == Weapons.currentWeapon);
 
-        createdItems.Add(Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity));
+        Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity);
         
         drop = false;
     }
@@ -59,7 +51,7 @@ public class dropItem : MonoBehaviour
     //creates a weapon when you switch weapons from a weapon on the ground
     public void switchWeapon()
     {
-        createdItems.Insert(pickUpItem.closestItem, Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity));
+       Instantiate(Items[pickUpItem.groundItem], pickUpItem.newLocation, Quaternion.identity);
 
         pickUpItem.weaponSwitched = false;
         pickUpItem.buttonPressed = false;
