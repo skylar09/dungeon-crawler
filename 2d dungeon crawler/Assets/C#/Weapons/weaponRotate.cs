@@ -35,9 +35,7 @@ public class weaponRotate : MonoBehaviour
         mouse_pos.y = mouse_pos.y - object_pos.y;
         //using arctan to get the angle from new mouse posiiton
         angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
-        //sets weapon rotation
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
-        
+
         //canges weapon rotation and sorting order based on if mouse is left or right of player
         if (mouse_pos.x > 0){
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 90 - angle));
