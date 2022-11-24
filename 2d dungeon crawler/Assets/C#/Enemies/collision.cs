@@ -33,6 +33,8 @@ public class collision : MonoBehaviour
 
             itemDrop();
 
+            Destroy(this.transform.parent.gameObject);
+
             //destroys (kills) the enemy
             Destroy(gameObject);
             //updates the counter for enemies alive in the room

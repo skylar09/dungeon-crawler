@@ -1348,8 +1348,8 @@ MonoBehaviour:
   - {fileID: 60947747}
   - {fileID: 79883497}
   - {fileID: 1287275030}
-  - {fileID: 802805711}
   - {fileID: 1887483100}
+  - {fileID: 802805711}
   roomCleared: 000000000000
 --- !u!114 &87602151
 MonoBehaviour:
@@ -18173,7 +18173,7 @@ MonoBehaviour:
   - {fileID: 754178765935426374, guid: d035df4055fbc3149bc4b4413e949f5f, type: 3}
   - {fileID: 1098219255336795604, guid: a591a0e5775dea04e964eaeb8aef3571, type: 3}
   - {fileID: 1098219255336795604, guid: 9633519a6569f554e8951905d80d845f, type: 3}
-  bla: 16
+  bla: 13
   yourWeapon: {fileID: 1941303432449093612, guid: 8c4cca2ec1b141641882aa7fd813a822, type: 3}
   player: {fileID: 1448772119}
 --- !u!4 &1117315847
@@ -24896,7 +24896,7 @@ GameObject:
   - component: {fileID: 1567173971}
   m_Layer: 0
   m_Name: pillar
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

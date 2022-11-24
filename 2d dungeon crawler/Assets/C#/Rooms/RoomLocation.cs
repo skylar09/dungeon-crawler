@@ -17,6 +17,9 @@ public class RoomLocation : MonoBehaviour
         for (int i = 0; i < Rooms.Count; i++)
         {
             Rooms[i].GetComponent<doors>().number = i;
+            if (Rooms[i].GetComponent<doors>().opened == true){
+                roomCleared[i] = true;
+            }
         }
     }
 }
