@@ -16,7 +16,7 @@ public class projectileCollision : MonoBehaviour
 
     //causes the enemy to lose health and then calls destroy()
     public void ammoHit(Collision2D enemy){
-        enemy.gameObject.transform.GetChild(0).GetComponent<collision>().loseHealth();
+        enemy.gameObject.transform.GetChild(0).GetComponent<collision>().loseHealth(PlayerInfo.playerDamage + Weapons.currentDmg);
         destroy();
     }
 

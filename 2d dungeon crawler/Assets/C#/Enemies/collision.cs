@@ -47,7 +47,7 @@ public class collision : MonoBehaviour
         //checks for the tag on the object it collides with
         if (collisionInfo.collider.tag == "weapon")
         {
-            loseHealth();
+            loseHealth(PlayerInfo.playerDamage + Weapons.currentDmg);
         }
 
         //makes player take damage for hitting an enemy
@@ -91,17 +91,17 @@ public class collision : MonoBehaviour
         }
     }
 
-    public void loseHealth()
+    public void loseHealth(int dmg)
     {
         //checks if enemy has more defense than player damage then only takes 1 dmg otherwise takes more dmg
-        if (PlayerInfo.playerDamage + Weapons.currentDmg - defense <= 0)
+        if (dmg - defense <= 0)
         {
             health -= 1;
         }
 
         else 
         {
-            health -= PlayerInfo.playerDamage + Weapons.currentDmg - defense;
+            health -= dmg - defense;
         }
     }
 }

@@ -19,6 +19,8 @@ public class triggersphere : MonoBehaviour
             h = collider.gameObject.AddComponent<Hit>();
             //makes a sphereTrigger with .5 second timer until it is destoryed
             Destroy(Instantiate(this.gameObject, collider.transform.position, Quaternion.identity), .5f);
+            //damages the enemy
+            collider.gameObject.GetComponent<collision>().loseHealth(4);
             //destroys this triggersphere
             Destroy(this.gameObject);
             }
