@@ -177,8 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4677257412478878341}
-  turnedRight: 0
-  turnedLeft: 1
 --- !u!1 &6830646883091421364
 GameObject:
   m_ObjectHideFlags: 0

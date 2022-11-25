@@ -10,7 +10,7 @@ public class abilitycontrol : MonoBehaviour
     {
         if (Input.GetKeyDown("e")){
             triggersphere.pos = PlayerInfo.playerLocation;
-            Instantiate(sphereTrigger, PlayerInfo.playerLocation, Quaternion.identity);
+            Destroy(Instantiate(sphereTrigger, PlayerInfo.playerLocation, Quaternion.identity),.5f);
         }
     }
 }
