@@ -9,6 +9,7 @@ public class abilitycontrol : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("e")){
+            triggersphere.pos = PlayerInfo.playerLocation;
             Instantiate(sphereTrigger, PlayerInfo.playerLocation, Quaternion.identity);
         }
     }

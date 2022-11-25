@@ -136,3 +136,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightningBolt: {fileID: 8931874386649124956, guid: f912f1abfab9ad4418d665a3c13c4c78, type: 3}
+  sphereTrigger: {fileID: 7191593560530355022}

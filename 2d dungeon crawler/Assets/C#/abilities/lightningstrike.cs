@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class lightningstrike : MonoBehaviour
 {
-    public void makeLightning(Vector2 pos){
-        GameObject bolt = Instantiate(this.gameObject, PlayerInfo.playerLocation, Quaternion.identity);
+    public void makeLightning(Vector2 pos1, Vector2 pos2){
+        GameObject bolt = Instantiate(this.gameObject, new Vector3(pos1.x, pos1.y, 0), Quaternion.identity);
+        Destroy(bolt, 1.5f);
        
-        float posX = PlayerInfo.playerLocation.x - pos.x;
-        float posY = PlayerInfo.playerLocation.y - pos.y;
+        float posX = pos1.x - pos2.x;
+        float posY = pos1.y - pos2.y;
         float angle = Mathf.Atan2(posY, posX) * Mathf.Rad2Deg;
 
         if (posX > 0)
@@ -16,5 +17,6 @@ public class lightningstrike : MonoBehaviour
         else
             bolt.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
 
+        triggersphere.pos = pos2;
     }
 }
