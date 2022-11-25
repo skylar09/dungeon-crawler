@@ -10,7 +10,8 @@ public class abilitycontrol : MonoBehaviour
     {
         if (Input.GetKeyDown("e")){
             triggersphere.pos = PlayerInfo.playerLocation;
-            Destroy(Instantiate(sphereTrigger, PlayerInfo.playerLocation, Quaternion.identity),.5f);
+            //makes and sets a destroy timer for .5 seconds on a sphereTrigger
+            Destroy(Instantiate(sphereTrigger, PlayerInfo.playerLocation, Quaternion.identity), .5f);
         }
     }
 }
