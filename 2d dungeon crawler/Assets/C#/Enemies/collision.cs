@@ -45,7 +45,7 @@ public class collision : MonoBehaviour
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
         //checks for the tag on the object it collides with
-        if (collisionInfo.collider.tag == "weapon")
+        if (collisionInfo.collider.tag == "weapon"  && Weapons.canAttack == false)
         {
             loseHealth(PlayerInfo.playerDamage + Weapons.currentDmg);
         }
@@ -82,7 +82,7 @@ public class collision : MonoBehaviour
     //picks random number and decides if it should drop an item
     public void itemDrop()
     {
-        int shouldDrop = Random.Range(0, 101);
+        int shouldDrop = Random.Range(0, 10);
 
         if (shouldDrop <= 100)
         {
