@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 4867952783651318495}
   - component: {fileID: 5322126264690337703}
   - component: {fileID: 1262989875860294078}
-  - component: {fileID: 5989562140023634227}
   - component: {fileID: 479845690297237719}
   m_Layer: 8
   m_Name: weapon
@@ -196,18 +195,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1262989875860294078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3278563481594662874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba55ac761be41841a8af13e92330302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5989562140023634227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

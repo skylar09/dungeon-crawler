@@ -30,6 +30,7 @@ public class collision : MonoBehaviour
         {
             //gives the player gold
             PlayerInfo.gold += deathGold;
+            PlayerInfo.ammo += 2;
 
             itemDrop();
 
@@ -55,6 +56,10 @@ public class collision : MonoBehaviour
         {
             damagePlayer();
         }
+    }
+
+    void OnCollisionExit2D (Collision2D collisionInfo){
+        this.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
     }
 
     // void OnCollisionStay2D(Collision2D collisionInfo)

@@ -17,9 +17,12 @@ public class shootProjectile : MonoBehaviour
         //stops player from being able to attack when inventory is open (or other thing is open in future)
         if (!EventSystem.current.IsPointerOverGameObject()){
             //if left click
-            if (Input.GetMouseButtonDown(0) && Weapons.canAttack == true)
+            if (Input.GetMouseButtonDown(0) && Weapons.canAttack == true && PlayerInfo.ammo > 0)
             {
                 spawnProjectile();
+                PlayerInfo.ammo --;
+                this.GetComponent<ammoTracker>().updateAmmo();
+                
             }
         }
     }
