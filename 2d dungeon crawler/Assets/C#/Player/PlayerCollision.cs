@@ -47,8 +47,6 @@ public class PlayerCollision : MonoBehaviour
         {
             transform.position = new Vector2(Camera.transform.position.x, Camera.transform.position.y + 3.5f);
         }
-
-        SpawnEnemy.enterRoom = true;
     }
 
     //teleports the player to the next room to the right or left of the current one
@@ -72,8 +70,6 @@ public class PlayerCollision : MonoBehaviour
         {
             transform.position = new Vector2(Camera.transform.position.x + 8f, Camera.transform.position.y);
         }
-
-        SpawnEnemy.enterRoom = true;
     }
 
     //figrues out which room is closest to the current one
