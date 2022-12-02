@@ -26,10 +26,13 @@ public class SpawnEnemy : MonoBehaviour
     }
 
     public void makeDoor(){
+        Debug.Log(transform.rotation.z);
         if (this.transform.rotation.z == 0)
         Instantiate(this.transform.GetChild(0).gameObject, this.transform.position - new Vector3(0, 1, 0), this.transform.rotation);
-        else if (this.transform.rotation.z == 90)
+        else if (this.transform.rotation.z == 90){
         Instantiate(this.transform.GetChild(0).gameObject, this.transform.position - new Vector3(1, 0, 0), this.transform.rotation);
+        Debug.Log("a");
+        }
         else if (this.transform.rotation.z == 180)
         Instantiate(this.transform.GetChild(0).gameObject, this.transform.position - new Vector3(0, -1, 0), this.transform.rotation);
         else if (this.transform.rotation.z == 270)
