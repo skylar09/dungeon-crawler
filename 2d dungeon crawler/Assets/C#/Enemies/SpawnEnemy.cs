@@ -10,33 +10,19 @@ public class SpawnEnemy : MonoBehaviour
     //tracks how many alive enemies in a room
     public static int enemyCount = 0;
 
-    void Start()
+    /*void Start()
     {
         //spawns 1 bat in the first room
             Instantiate(Enemies[0], new Vector2(4, 3), Quaternion.identity);
             enemyCount++;
-    }
+    }*/
 
     public void OnCollisionEnter2D(Collision2D collision){
         if (collision.collider.tag == "Player"){
-            makeDoor();
+            transform.parent.GetComponent<doors>().closeDoors();
             spawn();
             Destroy(this.gameObject);
         }
-    }
-
-    public void makeDoor(){
-        Debug.Log(transform.rotation.z);
-        if (this.transform.rotation.z == 0)
-        Instantiate(this.transform.GetChild(0).gameObject, this.transform.position - new Vector3(0, 1, 0), this.transform.rotation);
-        else if (this.transform.rotation.z == 90){
-        Instantiate(this.transform.GetChild(0).gameObject, this.transform.position - new Vector3(1, 0, 0), this.transform.rotation);
-        Debug.Log("a");
-        }
-        else if (this.transform.rotation.z == 180)
-        Instantiate(this.transform.GetChild(0).gameObject, this.transform.position - new Vector3(0, -1, 0), this.transform.rotation);
-        else if (this.transform.rotation.z == 270)
-        Instantiate(this.transform.GetChild(0).gameObject, this.transform.position - new Vector3(-1, 0, 0), this.transform.rotation);
     }
 
     //spawns enemies in certain random spots around the room
@@ -54,8 +40,14 @@ public class SpawnEnemy : MonoBehaviour
             int leftOrRight = Random.Range(0, 2) * 2 - 1;
             int upOrDown = Random.Range(0, 2) * 2 - 1;
 
+            Vector2 location = new Vector2((Random.Range(1f, 2f) * leftOrRight), (Random.Range(1.5f, 3f)) * upOrDown);
+
+            Vector2 room = transform.parent.transform.position;
+
+            location += room;
+
             //creates a version of an enemy prefab
-            Instantiate(Enemies[enemyNum], new Vector2((Random.Range(3f, 7f) * leftOrRight), 5 + (Random.Range(1.5f, 3f)) * upOrDown), Quaternion.identity);
+            Instantiate(Enemies[enemyNum], location, Quaternion.identity);
 
             enemyCount++;
         }

@@ -2,36 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class doors : MonoBehaviour
-{
+public class doors : MonoBehaviour{
     //the list of doors for this room
     public List<GameObject> Doors = new List<GameObject>();
-    //camera gameObject
-    public GameObject Camera;
-    //used to make sure if doors should be open or closed (if new room or not)
-    public int number;
-    //tracks if doors are closed or open
-    public bool opened = false;
-    //which rooms are cleared
-    public static int cleared = 0;
+    public GameObject nextRoom;
 
-    void Update()
-    {
-        //if all enemies are dead, this room is cleared, and doors arn't already open then open the doors
-        if (opened == false && SpawnEnemy.enemyCount == 0 && cleared == number)
-        {
+    void Update(){
+        if (SpawnEnemy.enemyCount == 0){
             openDoors();
-            Camera.GetComponent<RoomLocation>().roomCleared[PlayerCollision.currentRoom] = true;
+            NextRoom();
         }
     }
 
     //opens all the doors
-    void openDoors()
-    {
-        for (int i = 0; i < Doors.Count; i++)
-        {
-            Doors[i].SetActive(false);
+    private void openDoors(){
+        foreach(GameObject door in Doors){
+            door.GetComponent<Animator>().SetTrigger("open");
         }
-        opened = true;
+    }
+
+    public void closeDoors(){
+        foreach(GameObject door in Doors){
+            door.GetComponent<Animator>().SetTrigger("close");
+        }
+    }
+
+    private void NextRoom(){
+        if (nextRoom != null)
+            nextRoom.GetComponent<doors>().enabled = true;
+            this.GetComponent<doors>().enabled = false;
     }
 }
