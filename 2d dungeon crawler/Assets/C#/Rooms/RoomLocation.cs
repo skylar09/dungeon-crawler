@@ -14,12 +14,6 @@ public class RoomLocation : MonoBehaviour
     //when level is loaded gets the positions for all the rooms and adds them to roomCords
     void Awake()
     {
-        for (int i = 0; i < Rooms.Count; i++)
-        {
-            Rooms[i].GetComponent<doors>().number = i;
-            if (Rooms[i].GetComponent<doors>().opened == true){
-                roomCleared[i] = true;
-            }
-        }
+
     }
 }
