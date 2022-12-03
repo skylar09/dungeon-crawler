@@ -10,7 +10,7 @@ public class Stats : MonoBehaviour
    public TextMeshProUGUI health, armor, damage, critChance, moveSpeed, attackSpeed;
 
    //updates the text to the most recent player info 
-   public void changeText()
+   public void Awake()
    {
       health.text = PlayerInfo.playerHealth.ToString();
       armor.text = PlayerInfo.playerDefense.ToString();
