@@ -20,9 +20,8 @@ public class weaponRotate : MonoBehaviour
                 if (Weapons.swordSwung != true){
                     rotate();
             }
-        }
-        
-        setPosition();        
+        }    
+        transform.position = PlayerInfo.playerLocation;
     } 
 
     //rotates weapon so it faces the mouse position (the tip of the weapon or where projectile comes from on gun)
@@ -45,16 +44,5 @@ public class weaponRotate : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
             this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = 3; 
         }
-    }
-
-    //sets weapon position on the perimiter of a circle centered on the player based on radius given for weapon
-    public void setPosition(){
-        cos = Mathf.Cos(angle * Mathf.PI / 180);
-        sin = Mathf.Sin(angle * Mathf.PI / 180);
-
-        float posX = PlayerInfo.playerLocation.x + (cos * radius);
-        float posY = PlayerInfo.playerLocation.y + (sin * radius);
-        transform.position = new Vector3(posX, posY, 0);
-        //transform.position = PlayerInfo.playerLocation;
     }
 }

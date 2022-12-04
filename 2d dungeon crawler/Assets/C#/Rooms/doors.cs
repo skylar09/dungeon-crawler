@@ -30,6 +30,6 @@ public class doors : MonoBehaviour{
     private void NextRoom(){
         if (nextRoom != null)
             nextRoom.GetComponent<doors>().enabled = true;
-            this.GetComponent<doors>().enabled = false;
+        this.GetComponent<doors>().enabled = false;
     }
 }

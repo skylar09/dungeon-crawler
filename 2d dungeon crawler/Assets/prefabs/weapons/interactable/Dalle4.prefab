@@ -220,3 +220,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 7
   knockback: 2
+  dropChance: 2

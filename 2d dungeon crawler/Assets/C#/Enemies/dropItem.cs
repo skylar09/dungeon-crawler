@@ -8,6 +8,7 @@ public class dropItem : MonoBehaviour
 
     public static bool drop = false;
     public static int weaponNum;
+    public int total = 0;
 
     //all possible items that can be created
     public GameObject[] Items;
@@ -16,6 +17,10 @@ public class dropItem : MonoBehaviour
         for(int i = 0; i < Items.Length; i ++){
             Items[i].GetComponent<pickUpItem>().num = i;
         }
+
+        for (int i = 0; i < Items.Length - 1; i ++){
+            total += Items[i].GetComponent<weaponStats>().dropChance;
+        } 
     }
 
     // Update is called once per frame
@@ -37,10 +42,16 @@ public class dropItem : MonoBehaviour
     //makes a weapon
     public void makeWeapon()
     {
-        do 
-        {
-            weaponNum = Random.Range(0, Items.Length);  
-                            
+        int chance = Random.Range(0, total + 1);
+        do {    
+            for (int i = 0; i < Items.Length - 1; i ++){
+                if (chance <= Items[i].GetComponent<weaponStats>().dropChance){
+                    weaponNum = i;
+                    break;
+                }
+                else
+                    chance -= Items[i].GetComponent<weaponStats>().dropChance;
+            }     
         } while (weaponNum == Weapons.currentWeapon);
 
         Instantiate(Items[weaponNum], enemyLocation, Quaternion.identity);

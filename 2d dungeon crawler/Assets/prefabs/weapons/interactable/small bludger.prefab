@@ -160,6 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   knockback: 1
+  dropChance: 6
 --- !u!1 &8177676076298084114
 GameObject:
   m_ObjectHideFlags: 0
