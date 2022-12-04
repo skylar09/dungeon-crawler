@@ -271,14 +271,14 @@ MonoBehaviour:
     y: 0
     width: 343.19995
     height: 722.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
   m_Selected: 1
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -406,7 +406,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 86c6ffff24caffffbad3ffff82e7fffffaf9ffff64faffff2cfbffff066100003c630000e86a0000dade0000e8e00000
+      m_ExpandedIDs: 2cfbffff8861000012620000ce630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -529,7 +529,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -677,9 +677,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 34.085052, y: 10.11892, z: -0.20425594}
+    m_Target: {x: 31.765314, y: 16.962175, z: -0.2623204}
     speed: 2
-    m_Value: {x: 34.085052, y: 10.11892, z: -0.20425594}
+    m_Value: {x: -6.0734763, y: -0.9399999, z: 0.0005210998}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 25.981173
     speed: 2
-    m_Value: 25.981173
+    m_Value: 1.1058911
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -993,9 +993,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: f89a7edb19d0318498efbd2d8e8f7f2b, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: dcd85dd3effa6914cac1201027c9300a, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -1630270344028145469, guid: f89a7edb19d0318498efbd2d8e8f7f2b, type: 2}
+  - m_Target: {fileID: -6161579282035453210, guid: dcd85dd3effa6914cac1201027c9300a, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1049,22 +1049,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/C#
+    - Assets/prefabs/weapons/interactable
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 68
   m_LastFolders:
-  - Assets/C#
+  - Assets/prefabs/weapons/interactable
   m_LastFoldersGridSize: 68
   m_LastProjectPath: C:\Users\Sevie\Documents\GitHub\dungeon-crawler\2d dungeon crawler
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 3a7c0000
-    m_LastClickedID: 31802
-    m_ExpandedIDs: 00000000ac7100003a7c0000487c000094a3000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 340.6}
+    m_SelectedIDs: 8c6b0000
+    m_LastClickedID: 27532
+    m_ExpandedIDs: 00000000466a0000026b0000106b0000786b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1092,7 +1092,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ac710000
+    m_ExpandedIDs: 00000000466a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1117,8 +1117,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 5eceffff
-    m_LastClickedInstanceID: -12706
+    m_SelectedInstanceIDs: e2c40000
+    m_LastClickedInstanceID: 50402
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300003a5f0000186d0000ea6e00000e6f0000c2d60000c8cd0000aace0000906f000044d50000c86c0000266b0000146f00004e6f00004a6f0000526f0000566f00007a6d0000386f0000346f0000e86d0000e66d0000ea6d00005c9200007e6e0000d8700000be6e0000ec6e0000
     m_RenameOverlay:
@@ -1144,7 +1144,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 54.600006}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 68
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 149
@@ -1206,7 +1206,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -12706
+  m_LastSelectedObjectID: 50402
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52

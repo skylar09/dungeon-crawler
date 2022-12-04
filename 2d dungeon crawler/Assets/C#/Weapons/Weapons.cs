@@ -29,6 +29,11 @@ public class Weapons : MonoBehaviour
         currentWeapon = bla;
         yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, Quaternion.identity);
         currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
+
+        for (int i = 0; i < prefabs.Length - 1; i ++){
+            
+            dropItem.total += prefabs[i].gameObject.transform.GetChild(0).GetComponent<weaponStats>().dropChance;
+        }
     }
 
     // checks if player has switched their weapon

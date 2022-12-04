@@ -8,19 +8,19 @@ public class dropItem : MonoBehaviour
 
     public static bool drop = false;
     public static int weaponNum;
-    public int total = 0;
+    public static int total = 72;
+
+    public Weapons Weapons;
 
     //all possible items that can be created
     public GameObject[] Items;
 
     void Start(){
+        Weapons = Weapons.GetComponent<Weapons>();
+
         for(int i = 0; i < Items.Length; i ++){
             Items[i].GetComponent<pickUpItem>().num = i;
         }
-
-        for (int i = 0; i < Items.Length - 1; i ++){
-            total += Items[i].GetComponent<weaponStats>().dropChance;
-        } 
     }
 
     // Update is called once per frame
@@ -44,13 +44,13 @@ public class dropItem : MonoBehaviour
     {
         int chance = Random.Range(0, total + 1);
         do {    
-            for (int i = 0; i < Items.Length - 1; i ++){
-                if (chance <= Items[i].GetComponent<weaponStats>().dropChance){
+            for (int i = 0; i < Weapons.prefabs.Length - 1; i ++){
+                if (chance <= Weapons.prefabs[i].gameObject.transform.GetChild(0).GetComponent<weaponStats>().dropChance){
                     weaponNum = i;
                     break;
                 }
                 else
-                    chance -= Items[i].GetComponent<weaponStats>().dropChance;
+                    chance -= Weapons.prefabs[i].gameObject.transform.GetChild(0).GetComponent<weaponStats>().dropChance;
             }     
         } while (weaponNum == Weapons.currentWeapon);
 
