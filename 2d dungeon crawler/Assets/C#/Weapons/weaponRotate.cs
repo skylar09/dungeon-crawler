@@ -44,5 +44,7 @@ public class weaponRotate : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
             this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = 3; 
         }
+        cos = Mathf.Cos(angle / 360 * 2 * Mathf.PI);
+        sin = Mathf.Sin(angle / 360 * 2 * Mathf.PI);
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class nearbyAttackAnim : MonoBehaviour
 {
     public Animator animator;
-    public bool meleeAttack = false;
     public double distance;
 
     void Update()

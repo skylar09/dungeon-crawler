@@ -12,7 +12,7 @@ public class PlayerInfo : MonoBehaviour
     public static float movementSpeed = 3f;
     public static int critChance = 0;
     public static int gold = 0;
-    public static int ammo = 0;
+    public static int ammo = 10;
     public static float swordSwingSpeed = 1;
     public static Vector3 playerLocation;
     public static string directionFacing = "left";

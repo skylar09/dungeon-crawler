@@ -9,7 +9,11 @@ public class projectileCollision : MonoBehaviour
         if (collisionInfo.collider.tag == "enemy"){
             ammoHit(collisionInfo);
         }
-        else if (collisionInfo.collider.tag == "wall" ||collisionInfo.collider.tag.Contains("door")){
+        else if (collisionInfo.collider.tag == "wall" || collisionInfo.collider.tag.Contains("door")){
+            destroy();
+        }
+        else if (collisionInfo.collider.tag == "player"){
+            this.GetComponent<collision>().damagePlayer();
             destroy();
         }
     }
