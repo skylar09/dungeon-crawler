@@ -23442,14 +23442,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2065373785653968751, guid: 916972b9c1694f849b44846e1c4c021f, type: 3}
-      propertyPath: fireSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2092869385506542133, guid: 916972b9c1694f849b44846e1c4c021f, type: 3}
-      propertyPath: moveSpeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9139275342524300324, guid: 916972b9c1694f849b44846e1c4c021f, type: 3}
       propertyPath: m_Name
       value: dude in cloak
@@ -23612,7 +23604,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9030470173036852030, guid: 34018e247512a684bb586a0e80a94859, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 34018e247512a684bb586a0e80a94859, type: 3}
 --- !u!1001 &6763950375061441214
 PrefabInstance:

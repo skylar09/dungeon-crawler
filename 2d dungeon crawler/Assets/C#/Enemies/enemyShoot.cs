@@ -22,8 +22,8 @@ public class enemyShoot : MonoBehaviour{
     public void spawnProjectile(){
         //posX = this.transform.parent.gameObject.transform.position.x + (weaponRotate.cos * centerDist);
         //posY = this.transform.parent.gameObject.transform.position.y + (weaponRotate.sin * centerDist);
-        Vector2 dist = this.transform.position - PlayerInfo.playerLocation;
-        angle = Mathf.Atan2(dist.x, dist.y) * Mathf.Rad2Deg;
+        Vector2 dist = PlayerInfo.playerLocation - transform.parent.position;
+        angle = Mathf.Atan2(dist.y, dist.x) * Mathf.Rad2Deg;
         GameObject bla = Instantiate(projectile, transform.parent.position, Quaternion.AngleAxis(angle, Vector3.forward));
         canAttack = false; 
         StartCoroutine(Wait());
