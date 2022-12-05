@@ -12,8 +12,8 @@ public class projectileCollision : MonoBehaviour
         else if (collisionInfo.collider.tag == "wall" || collisionInfo.collider.tag.Contains("door")){
             destroy();
         }
-        else if (collisionInfo.collider.tag == "player"){
-            this.GetComponent<collision>().damagePlayer();
+        else if (collisionInfo.collider.tag == "Player"){
+            this.GetComponent<projectileDamage>().damagePlayer();
             destroy();
         }
     }

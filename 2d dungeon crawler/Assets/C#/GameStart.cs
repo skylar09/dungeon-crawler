@@ -12,5 +12,9 @@ public class GameStart : MonoBehaviour
         //makes it so enemies don't run into each other layer 7 is (enemies)
         Physics2D.IgnoreLayerCollision(7, 7, true);
         Physics2D.IgnoreLayerCollision(8, 9, true);
+        Physics2D.IgnoreLayerCollision(7, 10, true);
+        Physics2D.IgnoreLayerCollision(8, 10, true);
+        Physics2D.IgnoreLayerCollision(9, 10, true);
+        Physics2D.IgnoreLayerCollision(10, 10, true);
     }
 }
