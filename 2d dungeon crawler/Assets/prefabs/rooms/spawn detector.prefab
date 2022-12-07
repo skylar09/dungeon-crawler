@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7064556156597641178}
   - component: {fileID: 4084156760812003420}
-  - component: {fileID: 991451250}
+  - component: {fileID: 5126623126340703935}
   m_Layer: 9
   m_Name: spawn detector
   m_TagString: Untagged
@@ -57,7 +57,7 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &991451250
+--- !u!114 &5126623126340703935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,12 +66,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7086820894281246336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ade218c104c3b534c95fbe0246b154f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4641d8dd5e63fca49ad85ed9ad3624e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemies:
-  - {fileID: 4352572160407509126, guid: 0e73de4f2389ce748b8af25b06477b31, type: 3}
-  - {fileID: 6830646883091421364, guid: d47ff60f17a2e454fafc7e849b6ee6c9, type: 3}
-  - {fileID: 1670583579992324617, guid: 2c2901194bde5d34fbff01e792122cd8, type: 3}
-  - {fileID: 9139275342524300324, guid: 41862258e0c6bf44489ee94ca300172b, type: 3}
-  - {fileID: 9139275342524300324, guid: 916972b9c1694f849b44846e1c4c021f, type: 3}

@@ -13,6 +13,7 @@ public class InventoryItems : MonoBehaviour
 
     //the inventory
     public GameObject ui_Window;
+    public GameObject InventorySlotParent;
 
     public GameObject player;
 
@@ -36,6 +37,8 @@ public class InventoryItems : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        InventorySlotParent.GetComponent<makeInventorySlots>().makeSlots(player);
+
         //assigns a number to each inventory slot in order of left to right the top down
         for (int i = 0; i < InventorySlots.Count; i ++)
         {

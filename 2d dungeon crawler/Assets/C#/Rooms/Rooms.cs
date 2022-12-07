@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rooms : MonoBehaviour{
     public List<GameObject> rooms = new List<GameObject>();
+    public GameObject spawnManager;
 
     void Start(){
         for (int i = 0; i < rooms.Count - 1; i ++){

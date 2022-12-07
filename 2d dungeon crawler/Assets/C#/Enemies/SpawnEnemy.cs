@@ -17,16 +17,10 @@ public class SpawnEnemy : MonoBehaviour
             enemyCount++;
     }*/
 
-    public void OnCollisionEnter2D(Collision2D collision){
-        if (collision.collider.tag == "Player"){
-            transform.parent.GetComponent<doors>().closeDoors();
-            spawn();
-            Destroy(this.gameObject);
-        }
-    }
+    
 
     //spawns enemies in certain random spots around the room
-    public void spawn()
+    public void spawn(Vector2 roomLoc)
     {
         int numOfEnemies = Random.Range(2, 5);
 
@@ -42,9 +36,7 @@ public class SpawnEnemy : MonoBehaviour
 
             Vector2 location = new Vector2((Random.Range(1f, 2f) * leftOrRight), (Random.Range(1.5f, 3f)) * upOrDown);
 
-            Vector2 room = transform.parent.transform.position;
-
-            location += room;
+            location += roomLoc;
 
             //creates a version of an enemy prefab
             Instantiate(Enemies[enemyNum], location, Quaternion.identity);

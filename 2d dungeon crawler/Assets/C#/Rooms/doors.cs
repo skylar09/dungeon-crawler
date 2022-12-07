@@ -17,13 +17,13 @@ public class doors : MonoBehaviour{
     //opens all the doors
     private void openDoors(){
         foreach(GameObject door in Doors){
-            door.GetComponent<Animator>().SetTrigger("open");
+            //door.GetComponent<Animator>().SetTrigger("open");
         }
     }
 
     public void closeDoors(){
         foreach(GameObject door in Doors){
-            door.GetComponent<Animator>().SetTrigger("close");
+            //door.GetComponent<Animator>().SetTrigger("close");
         }
     }
 
