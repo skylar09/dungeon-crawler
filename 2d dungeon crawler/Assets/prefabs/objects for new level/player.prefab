@@ -334,8 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventorySlots: []
-  ui_Window: {fileID: 788015035247118676, guid: 1a7b93d8af689694e90a5c1a6bea2ead, type: 3}
-  InventorySlotParent: {fileID: 3180682637534562835, guid: 35d1e5b1c3fb26c41a1f7b5fb21907bc, type: 3}
+  inventory: {fileID: 2875981331640237159, guid: 0ea1ce38c316dc8449797f9bbb45068e, type: 3}
   player: {fileID: 4120729455078223210}
 --- !u!114 &4120729455078223198
 MonoBehaviour:

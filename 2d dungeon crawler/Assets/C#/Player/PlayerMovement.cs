@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //player gameObject
-    public GameObject player;
     //the rigid body component of the player
     public Rigidbody2D rb;
     //used in player movement

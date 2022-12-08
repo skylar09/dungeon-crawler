@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameStart : MonoBehaviour
 {
+    public GameObject Player, EventSystem, SpawnManager, Canvas;
+    public Camera Camera;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +19,10 @@ public class GameStart : MonoBehaviour
         Physics2D.IgnoreLayerCollision(8, 10, true);
         Physics2D.IgnoreLayerCollision(9, 10, true);
         Physics2D.IgnoreLayerCollision(10, 10, true);
+        DontDestroyOnLoad(Player);
+        DontDestroyOnLoad(EventSystem);
+        DontDestroyOnLoad(SpawnManager);
+        DontDestroyOnLoad(Canvas);
+        DontDestroyOnLoad(Camera);
     }
 }

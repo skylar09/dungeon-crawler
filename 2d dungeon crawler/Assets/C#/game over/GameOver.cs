@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject gameOverText;
+    public GameObject gameOver;
     //see pauseMenu script
     public GameObject darkScreen;
 
@@ -16,7 +16,7 @@ public class GameOver : MonoBehaviour
         if (PlayerInfo.playerHealth <= 0)
         {
             Time.timeScale = 0;
-            gameOverText.SetActive(true);
+            gameOver.SetActive(true);
             darkScreen.SetActive(true);
         }
     }
@@ -24,7 +24,7 @@ public class GameOver : MonoBehaviour
     //resets all the neccesary variables when the player dies
     public void Restart()
     {
-        gameOverText.SetActive(false);
+        gameOver.SetActive(false);
         darkScreen.SetActive(false);
         Time.timeScale = 1;
         PlayerInfo.gold = 0;

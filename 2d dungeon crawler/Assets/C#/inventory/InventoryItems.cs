@@ -12,10 +12,7 @@ public class InventoryItems : MonoBehaviour
     public static List<int> itemNums = new List<int>();
 
     //the inventory
-    public GameObject ui_Window;
-    public GameObject InventorySlotParent;
-
-    public GameObject player;
+    public GameObject inventory;
 
     public static bool newItem = false;
     public static int totalItems = 0;
@@ -29,15 +26,16 @@ public class InventoryItems : MonoBehaviour
         for (int i = 0; i < itemNums.Count; i++)
         {
             InventorySlots[i].GetComponent<Image>().enabled = true;
-            InventorySlots[i].sprite = player.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().sprite;
-            InventorySlots[i].color = player.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().color;
+            InventorySlots[i].sprite = this.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().sprite;
+            InventorySlots[i].color = this.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().color;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        InventorySlotParent.GetComponent<makeInventorySlots>().makeSlots(player);
+        //just make sure inventoryParent is first gameObject
+        //inventory.transform.GetChild(0).gameObject.GetComponent<makeInventorySlots>().makeSlots(player);
 
         //assigns a number to each inventory slot in order of left to right the top down
         for (int i = 0; i < InventorySlots.Count; i ++)
@@ -52,15 +50,15 @@ public class InventoryItems : MonoBehaviour
         //turns on and off the inventory
         if (Input.GetKeyDown("t"))
         {
-            if (ui_Window.activeInHierarchy == true)
+            if (inventory.activeInHierarchy == true)
             {
-                ui_Window.SetActive(false);
+                inventory.SetActive(false);
                 this.GetComponent<pauseGame>().unpause();
             }
 
             else
             {
-                ui_Window.SetActive(true);
+                inventory.SetActive(true);
                 this.GetComponent<pauseGame>().pause();
             }
             
@@ -82,10 +80,10 @@ public class InventoryItems : MonoBehaviour
     {
         InventorySlots[totalItems].GetComponent<Image>().enabled = true;
         //changes the sprite of an inventory slot to an item at a certain spot in the items list
-        InventorySlots[totalItems].sprite = player.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
+        InventorySlots[totalItems].sprite = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
         
         //changes the color of the inventory slot bc there are some items that are just color changed
-        InventorySlots[totalItems].color = player.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
+        InventorySlots[totalItems].color = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
 
         //adds the number of that item in the items list to the itemNums list
         itemNums.Add(replaceItem);
@@ -98,11 +96,11 @@ public class InventoryItems : MonoBehaviour
     //changes the sprite at a certain slot to the sprite of the current weapon
     public void changeCurrent()
     {
-        InventorySlots[inventoryLocation].sprite = player.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
+        InventorySlots[inventoryLocation].sprite = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
         itemNums[inventoryLocation] = replaceItem;
 
         //changes the color of the inventory slot bc there are some items that are just color changed
-        InventorySlots[inventoryLocation].color = player.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
+        InventorySlots[inventoryLocation].color = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
         
         Weapons.canAttack = true;
         Weapons.swordSwung = false;
