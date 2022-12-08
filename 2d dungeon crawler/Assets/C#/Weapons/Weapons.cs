@@ -21,7 +21,6 @@ public class Weapons : MonoBehaviour
 
     //the current weapon being used
     public GameObject yourWeapon;
-    public GameObject player;
 
     // creates the starting weapon
     void Start()
@@ -34,6 +33,7 @@ public class Weapons : MonoBehaviour
             
             dropItem.total += prefabs[i].gameObject.transform.GetChild(0).GetComponent<weaponStats>().dropChance;
         }
+        DontDestroyOnLoad(yourWeapon);
     }
 
     // checks if player has switched their weapon
