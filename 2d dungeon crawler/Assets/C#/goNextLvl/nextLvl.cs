@@ -5,35 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class nextLvl : MonoBehaviour
 {
-    public Animator animator;
+    //public Animator animator;
     public GameObject FadeOut;
     public GameObject glow;
-    public GameObject text;
-    public GameObject Camera;
+    //public GameObject text;
+    //public GameObject Camera;
 
     // Update is called once per frame
     void Update()
     {
-        //if final room is cleared
-        if (Camera.GetComponent<RoomLocation>().roomCleared[Camera.GetComponent<RoomLocation>().roomCleared.Count - 1] == true)
+        //makes pillar glow
+        glow.SetActive(true);
+        //if player is within 3 units of the pillar
+        if (Vector2.Distance(PlayerInfo.playerLocation, this.transform.position) < 3)
         {
-            //makes pillar glow
-            glow.SetActive(true);
-            //if player is within 3 units of the pillar
-            if (Vector2.Distance(PlayerInfo.playerLocation, this.transform.position) < 3)
+            //turns on text
+            //text.SetActive(true);
+            
+            if (Input.GetKeyDown("z"))
             {
-                //turns on text
-                text.SetActive(true);
-                
-                if (Input.GetKeyDown("z"))
-                {
-                    StartCoroutine(fading());
-                }
+                StartCoroutine(fading());
             }
-            else
-            {
-                text.SetActive(false);
-            }
+        }
+        else
+        {
+            //text.SetActive(false);
         }
     }
 
