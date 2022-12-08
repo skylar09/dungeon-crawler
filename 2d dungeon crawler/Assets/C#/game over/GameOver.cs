@@ -24,8 +24,9 @@ public class GameOver : MonoBehaviour
     //resets all the neccesary variables when the player dies
     public void Restart()
     {
-        gameOver.SetActive(false);
-        darkScreen.SetActive(false);
+        foreach (GameObject obj in Resources.FindObjectsOfTypeAll(typeof(GameObject))){
+            Destroy(obj);
+        }
         Time.timeScale = 1;
         PlayerInfo.gold = 0;
         PlayerInfo.playerHealth = 3;
