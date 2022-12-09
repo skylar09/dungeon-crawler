@@ -21,12 +21,13 @@ public class Weapons : MonoBehaviour
 
     //the current weapon being used
     public GameObject yourWeapon;
+    public Transform player;
 
     // creates the starting weapon
     void Start()
     {
         currentWeapon = bla;
-        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, Quaternion.identity);
+        yourWeapon = Instantiate(prefabs[currentWeapon], player);
         currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
 
         for (int i = 0; i < prefabs.Length - 1; i ++){
@@ -51,7 +52,7 @@ public class Weapons : MonoBehaviour
     {
         Quaternion rotation = yourWeapon.transform.rotation;
         Destroy(yourWeapon);
-        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, rotation);
+        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, rotation, player);
         pickUpItem.changed = false;
         currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
     }
