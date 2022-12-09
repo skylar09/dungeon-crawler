@@ -13,7 +13,7 @@ public class weaponRotate : MonoBehaviour
     public static float angle, cos, sin;
     public float radius;
  
-    public void Update(){
+    public void FixedUpdate(){
         //stops weapon from rotation when inventory is open (or other thing is open in future)
         if (!EventSystem.current.IsPointerOverGameObject()){
                 //if weapon is not currently attacking
