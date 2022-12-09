@@ -8,7 +8,7 @@ public class nextLvl : MonoBehaviour
     //public Animator animator;
     public GameObject FadeOut;
     public GameObject glow;
-    //public GameObject text;
+    public GameObject text;
     //public GameObject Camera;
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class nextLvl : MonoBehaviour
         }
         else
         {
-            //text.SetActive(false);
+            text.SetActive(false);
         }
     }
 
