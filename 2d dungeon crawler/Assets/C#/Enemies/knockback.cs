@@ -11,7 +11,9 @@ public class knockback : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "weapon" && Weapons.canAttack == false)
         {
+            Debug.Log(collisionInfo.gameObject);
             int thrust = collisionInfo.gameObject.GetComponent<weaponStats>().knockback;
+            Debug.Log(thrust);
             if (thrust > 0){
                 enemy = this.transform.parent.gameObject.GetComponent<Rigidbody2D>();
                 //makes it so the enemy can't move while taking knockback

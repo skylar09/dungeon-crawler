@@ -21,7 +21,7 @@ public class weaponRotate : MonoBehaviour
                     rotate();
             }
         }    
-        transform.position = PlayerInfo.playerLocation;
+        //transform.position = PlayerInfo.playerLocation;
     } 
 
     //rotates weapon so it faces the mouse position (the tip of the weapon or where projectile comes from on gun)

@@ -45,16 +45,17 @@ public class collision : MonoBehaviour
 
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
-        //checks for the tag on the object it collides with
-        if (collisionInfo.collider.tag == "weapon"  && Weapons.canAttack == false)
-        {
-            loseHealth(PlayerInfo.playerDamage + Weapons.currentDmg);
-        }
-
         //makes player take damage for hitting an enemy
-        else if (collisionInfo.collider.tag == "Player")
+        if (collisionInfo.collider.tag == "Player")
         {
             damagePlayer();
+        }
+    }
+    void OnTriggerEnter2D (Collider2D collisionInfo){
+        //checks for the tag on the object it collides with
+        if (collisionInfo.tag == "weapon"  && Weapons.canAttack == false)
+        {
+            loseHealth(PlayerInfo.playerDamage + Weapons.currentDmg);
         }
     }
 

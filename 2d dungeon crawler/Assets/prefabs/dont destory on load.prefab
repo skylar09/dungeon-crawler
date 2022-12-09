@@ -8298,7 +8298,6 @@ Transform:
   - {fileID: 9122507884894002712}
   - {fileID: 2703100953670345212}
   - {fileID: 1604131502846549549}
-  - {fileID: 7345848505731604964}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8874,56 +8873,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothFactor: 5
---- !u!1 &7345848505731604966
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7345848505731604964}
-  - component: {fileID: 7345848505731604967}
-  m_Layer: 0
-  m_Name: spawnManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7345848505731604964
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7345848505731604966}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8202584169480980729}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7345848505731604967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7345848505731604966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ade218c104c3b534c95fbe0246b154f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemies:
-  - {fileID: 4352572160407509126, guid: 0e73de4f2389ce748b8af25b06477b31, type: 3}
-  - {fileID: 6830646883091421364, guid: d47ff60f17a2e454fafc7e849b6ee6c9, type: 3}
-  - {fileID: 1670583579992324617, guid: 2c2901194bde5d34fbff01e792122cd8, type: 3}
-  - {fileID: 9139275342524300324, guid: 41862258e0c6bf44489ee94ca300172b, type: 3}
-  - {fileID: 9139275342524300324, guid: 916972b9c1694f849b44846e1c4c021f, type: 3}
 --- !u!1 &8699439604133478674
 GameObject:
   m_ObjectHideFlags: 0

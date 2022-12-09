@@ -34,7 +34,6 @@ public class Weapons : MonoBehaviour
             
             dropItem.total += prefabs[i].gameObject.transform.GetChild(0).GetComponent<weaponStats>().dropChance;
         }
-        DontDestroyOnLoad(yourWeapon);
     }
 
     // checks if player has switched their weapon
