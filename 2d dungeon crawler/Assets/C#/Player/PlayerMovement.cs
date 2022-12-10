@@ -9,6 +9,10 @@ public class PlayerMovement : MonoBehaviour
     //used in player movement
     Vector2 movement;
 
+    void Awake(){
+        this.transform.position = new Vector2(0, 0);
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -34,7 +34,7 @@ public class bossBehavior : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
-        if (PlayerCollision.currentRoom == 5 && Vector2.Distance(transform.position, target.position) - ((target.position.x + transform.position.x) / 2) < 6)
+        if (Vector2.Distance(transform.position, target.position) - ((target.position.x + transform.position.x) / 2) < 6)
         {
             animator.SetBool("nearby", true);
             changeCollider = true;

@@ -25,11 +25,7 @@ public class GameOver : MonoBehaviour
     public void Restart()
     {
         Destroy(GameStart.dontDestroyonLoad);
-        Time.timeScale = 1;
-        PlayerInfo.gold = 0;
-        PlayerInfo.playerHealth = 3;
-        PlayerCollision.currentRoom = 0;
-        SpawnEnemy.enemyCount = 0;
+        resetStatics();
         SceneManager.LoadScene(1); 
     }
 
@@ -39,9 +35,16 @@ public class GameOver : MonoBehaviour
         //DontDestroyOnLoad(Player);
         
         pauseMenu.whichScene = SceneManager.GetActiveScene().buildIndex;
+        Destroy(GameStart.dontDestroyonLoad.gameObject);
         SceneManager.LoadScene(0);
-        Destroy(GameStart.dontDestroyonLoad);
+        
+        resetStatics();
+    }
+
+    private void resetStatics(){
         Time.timeScale = 1;
-        PlayerCollision.currentRoom = 0;
+        PlayerInfo.gold = 0;
+        PlayerInfo.playerHealth = 3;
+        SpawnEnemy.enemyCount = 0;
     }
 }

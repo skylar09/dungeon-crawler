@@ -59,8 +59,6 @@ public class pauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
         //sets time scale to 1 which sets game speed to normal speed
         Time.timeScale = 1;
-        //puts the player in the first room when level is loaded again
-        PlayerCollision.currentRoom = 0;
     }
 
     //tuns option menu off and pause menu on
