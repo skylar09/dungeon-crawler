@@ -122,8 +122,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,6 +133,69 @@ TextureImporter:
       bones: []
       spriteID: 05750acefcd6f5a419f98a9dd0f8d066
       internalID: 358896983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test2_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 28
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b99f43cf3f6441498dc63a62c16def6
+      internalID: 387046848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test2_2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8140daae834c1954bb0d4abb79394303
+      internalID: 1001694568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1308d3a04573cc4580b5aefce07cc05
+      internalID: 865702153
       vertices: []
       indices: 
       edges: []
@@ -148,7 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      test2_2: 1001694568
+      test2_1: 387046848
       test2_0: 358896983
+      test2_3: 865702153
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
