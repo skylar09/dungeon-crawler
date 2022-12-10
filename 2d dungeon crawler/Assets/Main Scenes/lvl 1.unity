@@ -14233,6 +14233,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 974910012622184542, guid: 4bca3a98b6645d14db92543009819fbe, type: 3}
+      propertyPath: FadeIn
+      value: 
+      objectReference: {fileID: 3774179416480519042, guid: dc53b2c3b0480fc4cb4f43e2224dfa27, type: 3}
     - target: {fileID: 974910012622184543, guid: 4bca3a98b6645d14db92543009819fbe, type: 3}
       propertyPath: m_Name
       value: next level pillar

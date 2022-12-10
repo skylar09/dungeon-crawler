@@ -7,9 +7,13 @@ public class nextLvl : MonoBehaviour
 {
     //public Animator animator;
     public GameObject FadeOut;
+    public GameObject FadeIn;
     public GameObject glow;
     public GameObject text;
-    //public GameObject Camera;
+
+    void Awake(){
+        Destroy(Instantiate(FadeIn), 1f);
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,8 +42,9 @@ public class nextLvl : MonoBehaviour
     {
         FadeOut.SetActive(true);
         //animator.SetBool("fadeOut", true);
-
+        
         yield return new WaitForSecondsRealtime(1f);
+        GameObject.Find("smileMan").transform.position = new Vector2(0, 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
         FadeOut.SetActive(false);
     }
