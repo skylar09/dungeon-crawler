@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameStart : MonoBehaviour
 {
-    public GameObject dontDestroyonLoad;
+    public GameObject prefabDontDestroyonLoad;
+    public static GameObject dontDestroyonLoad;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,8 @@ public class GameStart : MonoBehaviour
         Physics2D.IgnoreLayerCollision(8, 10, true);
         Physics2D.IgnoreLayerCollision(9, 10, true);
         Physics2D.IgnoreLayerCollision(10, 10, true);
-        dontDestroyonLoad = Instantiate(dontDestroyonLoad);
+        
+        dontDestroyonLoad = Instantiate(prefabDontDestroyonLoad);
         DontDestroyOnLoad(dontDestroyonLoad);
     }
 }

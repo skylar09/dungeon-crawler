@@ -24,9 +24,7 @@ public class GameOver : MonoBehaviour
     //resets all the neccesary variables when the player dies
     public void Restart()
     {
-        foreach (GameObject obj in Resources.FindObjectsOfTypeAll(typeof(GameObject))){
-            Destroy(obj);
-        }
+        Destroy(GameStart.dontDestroyonLoad);
         Time.timeScale = 1;
         PlayerInfo.gold = 0;
         PlayerInfo.playerHealth = 3;
