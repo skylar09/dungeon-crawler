@@ -37,8 +37,10 @@ public class GameOver : MonoBehaviour
     public void MainMenu()
     {
         //DontDestroyOnLoad(Player);
+        
         pauseMenu.whichScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(0);
+        Destroy(GameStart.dontDestroyonLoad);
         Time.timeScale = 1;
         PlayerCollision.currentRoom = 0;
     }

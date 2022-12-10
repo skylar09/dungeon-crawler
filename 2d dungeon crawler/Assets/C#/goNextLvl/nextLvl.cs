@@ -42,6 +42,7 @@ public class nextLvl : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
         PlayerCollision.currentRoom = 0;
+        PlayerInfo.playerLocation = new Vector2(0, 0);
         FadeOut.SetActive(false);
     }
 }
