@@ -23,26 +23,6 @@ public class collision : MonoBehaviour
         this.transform.parent.gameObject.GetComponent<enemyMovement>().moveSpeed = moveSpeed;
     }
 
-     void Update()
-    {
-        //when the enemy is dead
-        if (health <= 0)
-        {
-            //gives the player gold
-            PlayerInfo.gold += deathGold;
-            PlayerInfo.ammo += 2;
-
-            itemDrop();
-
-            Destroy(this.transform.parent.gameObject);
-
-            //destroys (kills) the enemy
-            Destroy(gameObject);
-            //updates the counter for enemies alive in the room
-            SpawnEnemy.enemyCount--;
-        }
-    }
-
     void OnCollisionEnter2D (Collision2D collisionInfo)
     {
         //makes player take damage for hitting an enemy
@@ -108,6 +88,25 @@ public class collision : MonoBehaviour
         else 
         {
             health -= dmg - defense;
+        }
+
+        //when the enemy is dead
+        if (health <= 0)
+        {
+            //gives the player gold
+            PlayerInfo.gold += deathGold;
+            PlayerInfo.ammo += 2;
+
+            itemDrop();
+
+            //updates the counter for enemies alive in the room
+            SpawnEnemy.enemyCount--;
+            statTracker.enemiesKilled ++;
+
+            Destroy(this.transform.parent.gameObject);
+
+            //destroys (kills) the enemy
+            Destroy(gameObject);
         }
     }
 }

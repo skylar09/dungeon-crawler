@@ -3843,6 +3843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doors: []
+  spawners:
+  - {fileID: 1037161864}
   nextRoom: {fileID: 0}
 --- !u!4 &342865595
 Transform:
@@ -3890,6 +3892,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doors: []
+  spawners:
+  - {fileID: 1237737528}
   nextRoom: {fileID: 0}
 --- !u!4 &425121001
 Transform:
@@ -13675,6 +13679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doors: []
+  spawners:
+  - {fileID: 662876667}
   nextRoom: {fileID: 0}
 --- !u!4 &518629863
 Transform:
@@ -13692,6 +13698,11 @@ Transform:
   m_Father: {fileID: 498034887}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &662876667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7086820894281246336, guid: df9b0e4226bc87d4b8c6aedcb1cf59bc, type: 3}
+  m_PrefabInstance: {fileID: 1895615295}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &709885052
 GameObject:
   m_ObjectHideFlags: 0
@@ -13783,16 +13794,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doors: []
+  spawners:
+  - {fileID: 1247188793}
   nextRoom: {fileID: 0}
 --- !u!1 &857851827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7512919775689702294, guid: 229ec5b1d94f6174491475c25804aa18, type: 3}
   m_PrefabInstance: {fileID: 11413487}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &962184510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7086820894281246336, guid: df9b0e4226bc87d4b8c6aedcb1cf59bc, type: 3}
+  m_PrefabInstance: {fileID: 1693906405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &993111253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7064556156597641178, guid: df9b0e4226bc87d4b8c6aedcb1cf59bc, type: 3}
   m_PrefabInstance: {fileID: 1895615295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1037161864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7086820894281246336, guid: df9b0e4226bc87d4b8c6aedcb1cf59bc, type: 3}
+  m_PrefabInstance: {fileID: 327810866}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1082354043
 GameObject:
@@ -13824,6 +13847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doors: []
+  spawners:
+  - {fileID: 962184510}
   nextRoom: {fileID: 0}
 --- !u!4 &1082354045
 Transform:
@@ -13907,6 +13932,16 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7064556156597641178, guid: df9b0e4226bc87d4b8c6aedcb1cf59bc, type: 3}
   m_PrefabInstance: {fileID: 2058789863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1237737528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7086820894281246336, guid: df9b0e4226bc87d4b8c6aedcb1cf59bc, type: 3}
+  m_PrefabInstance: {fileID: 2058789863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1247188793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7086820894281246336, guid: df9b0e4226bc87d4b8c6aedcb1cf59bc, type: 3}
+  m_PrefabInstance: {fileID: 1157487678}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1330117209
 PrefabInstance:
@@ -13995,6 +14030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doors: []
+  spawners: []
   nextRoom: {fileID: 0}
 --- !u!4 &1412916594
 Transform:

@@ -5,6 +5,7 @@ using UnityEngine;
 public class doors : MonoBehaviour{
     //the list of doors for this room
     public List<GameObject> Doors = new List<GameObject>();
+    public List<GameObject> spawners = new List<GameObject>();
     public GameObject nextRoom;
 
     void Update(){
@@ -31,5 +32,10 @@ public class doors : MonoBehaviour{
         if (nextRoom != null)
             nextRoom.GetComponent<doors>().enabled = true;
         this.GetComponent<doors>().enabled = false;
+    }
+
+    public void destroySpawners(){
+        foreach(GameObject spawner in spawners)
+            Destroy(spawner);
     }
 }

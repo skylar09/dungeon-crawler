@@ -40,11 +40,15 @@ public class nextLvl : MonoBehaviour
     //fades the level out
     public IEnumerator fading()
     {
+        
         Instantiate(FadeOut);
+        Time.timeScale = 0;
         //animator.SetBool("fadeOut", true);
         
         yield return new WaitForSecondsRealtime(1f);
         GameObject.Find("smileMan").transform.position = new Vector2(0, 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+        Time.timeScale = 1;
+        statTracker.whichLevel ++;
     }
 }

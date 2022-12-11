@@ -27,6 +27,10 @@ public class GameOver : MonoBehaviour
         Destroy(GameStart.dontDestroyonLoad);
         resetStatics();
         SceneManager.LoadScene(1); 
+        statTracker.tries ++;
+        if (statTracker.whichLevel > statTracker.highestLevel)
+            statTracker.highestLevel = statTracker.whichLevel;
+        statTracker.whichLevel = 0;
     }
 
     //goes to main menu (see pauseMenu script for more comments)

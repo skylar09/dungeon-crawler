@@ -247,6 +247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 229ec5b1d94f6174491475c25804aa18, type: 3}
+--- !u!1 &145277758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7512919775689702294, guid: 229ec5b1d94f6174491475c25804aa18, type: 3}
+  m_PrefabInstance: {fileID: 145277757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &156099688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,7 +567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 2054932467}
   - {fileID: 1875488300}
   - {fileID: 1039293152}
@@ -680,7 +686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 171512144}
   - {fileID: 542095919}
   nextRoom: {fileID: 0}
@@ -954,7 +961,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 1155240314}
   - {fileID: 2388001}
   nextRoom: {fileID: 0}
@@ -1004,7 +1012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 184826636}
   - {fileID: 285604962}
   nextRoom: {fileID: 0}
@@ -1054,7 +1063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 504867706}
   - {fileID: 2023718567}
   nextRoom: {fileID: 0}
@@ -29659,7 +29669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 898469819}
   - {fileID: 2013027172}
   nextRoom: {fileID: 0}
@@ -29910,7 +29921,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 717167313}
   - {fileID: 156251361}
   nextRoom: {fileID: 0}
@@ -29959,6 +29971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doors: []
+  spawners: []
   nextRoom: {fileID: 0}
 --- !u!1001 &1330117209
 PrefabInstance:
@@ -30149,7 +30162,7 @@ MonoBehaviour:
   - {fileID: 569023473}
   - {fileID: 1909817055}
   - {fileID: 553780596}
-  spawnManager: {fileID: 0}
+  spawnManager: {fileID: 145277758}
 --- !u!1001 &1875488299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30264,7 +30277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 156099689}
   - {fileID: 709571698}
   - {fileID: 1701834373}
@@ -30484,7 +30498,7 @@ GameObject:
   - component: {fileID: 2125396755}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

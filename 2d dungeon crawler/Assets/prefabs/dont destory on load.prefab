@@ -7870,7 +7870,7 @@ MonoBehaviour:
   - {fileID: 754178765935426374, guid: d035df4055fbc3149bc4b4413e949f5f, type: 3}
   - {fileID: 1098219255336795604, guid: a591a0e5775dea04e964eaeb8aef3571, type: 3}
   - {fileID: 1098219255336795604, guid: 9633519a6569f554e8951905d80d845f, type: 3}
-  bla: 13
+  bla: 0
   yourWeapon: {fileID: 1941303432449093612, guid: 8c4cca2ec1b141641882aa7fd813a822, type: 3}
   player: {fileID: 2703100953212820677}
 --- !u!114 &2703100953418497518
@@ -7895,6 +7895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2703100953670345212}
+  - component: {fileID: 6796625215121532666}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -7920,6 +7921,18 @@ Transform:
   m_Father: {fileID: 8202584169480980729}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6796625215121532666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2703100953670345213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204d6586a4377d146b28dbd9e97ee1a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3288239092046722754
 GameObject:
   m_ObjectHideFlags: 0

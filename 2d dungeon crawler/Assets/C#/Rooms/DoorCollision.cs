@@ -7,7 +7,7 @@ public class DoorCollision : MonoBehaviour{
         if (collision.collider.tag == "Player"){
             transform.parent.GetComponent<doors>().closeDoors();
             transform.parent.parent.GetComponent<Rooms>().spawnManager.GetComponent<SpawnEnemy>().spawn(transform.parent.transform.position);
-            Destroy(this.gameObject);
+            transform.parent.GetComponent<doors>().destroySpawners();
         }
     }
 }

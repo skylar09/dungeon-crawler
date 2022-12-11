@@ -428,7 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 2054932467}
   - {fileID: 1875488300}
   - {fileID: 1039293152}
@@ -546,7 +547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 171512144}
   - {fileID: 542095919}
   nextRoom: {fileID: 0}
@@ -65015,7 +65017,7 @@ GameObject:
   - component: {fileID: 511781836}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75790,9 +75792,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 1155240314}
-  - {fileID: 0}
   nextRoom: {fileID: 0}
 --- !u!1 &569023473
 GameObject:
@@ -75840,7 +75842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 184826636}
   - {fileID: 285604962}
   nextRoom: {fileID: 0}
@@ -75890,7 +75893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 504867706}
   - {fileID: 2023718567}
   nextRoom: {fileID: 0}
@@ -76255,7 +76259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c197a144e37fe48b40f275e4f013d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors:
+  Doors: []
+  spawners:
   - {fileID: 717167313}
   - {fileID: 156251361}
   nextRoom: {fileID: 0}
@@ -76304,6 +76309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doors: []
+  spawners: []
   nextRoom: {fileID: 0}
 --- !u!1 &1356304559
 GameObject:
@@ -76406,12 +76412,10 @@ MonoBehaviour:
   rooms:
   - {fileID: 1316940466}
   - {fileID: 279481453}
-  - {fileID: 0}
   - {fileID: 1309731826}
-  - {fileID: 350833718}
   - {fileID: 628216905}
   - {fileID: 569023473}
-  - {fileID: 0}
+  - {fileID: 350833718}
   - {fileID: 553780596}
   spawnManager: {fileID: 0}
 --- !u!1001 &1875488299
