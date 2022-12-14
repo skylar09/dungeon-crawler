@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+//https://www.youtube.com/watch?v=9rZkiEyS66I --> link to the youtube video
 //namespace BarthaSzabolcs.Tutorial_SpriteFlash
 public class SimpleFlash : MonoBehaviour
 {

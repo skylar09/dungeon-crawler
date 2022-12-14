@@ -25,7 +25,7 @@ public class GameOver : MonoBehaviour
     public void Restart()
     {
         Destroy(GameStart.dontDestroyonLoad);
-        resetStatics();
+        resetStuff();
         SceneManager.LoadScene(1); 
         statTracker.tries ++;
         if (statTracker.whichLevel > statTracker.highestLevel)
@@ -42,13 +42,14 @@ public class GameOver : MonoBehaviour
         Destroy(GameStart.dontDestroyonLoad.gameObject);
         SceneManager.LoadScene(0);
         
-        resetStatics();
+        resetStuff();
     }
 
-    private void resetStatics(){
+    private void resetStuff(){
         Time.timeScale = 1;
         PlayerInfo.gold = 0;
         PlayerInfo.playerHealth = 3;
         SpawnEnemy.enemyCount = 0;
+        Weapons.canAttack = true;
     }
 }

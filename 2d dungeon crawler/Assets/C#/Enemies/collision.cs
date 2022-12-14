@@ -37,7 +37,7 @@ public class collision : MonoBehaviour
         if (collisionInfo.tag == "weapon"  && Weapons.canAttack == false)
         {
             loseHealth(PlayerInfo.playerDamage + Weapons.currentDmg);
-            collisionInfo.gameObject.GetComponent<SimpleFlash>().Flash();
+            this.GetComponent<SimpleFlash>().Flash();
         }
     }
 
