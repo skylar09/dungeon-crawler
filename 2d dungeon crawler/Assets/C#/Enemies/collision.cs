@@ -29,6 +29,7 @@ public class collision : MonoBehaviour
         if (collisionInfo.collider.tag == "Player")
         {
             damagePlayer();
+            collisionInfo.gameObject.GetComponent<SimpleFlash>().Flash();
         }
     }
     void OnTriggerEnter2D (Collider2D collisionInfo){
@@ -36,6 +37,7 @@ public class collision : MonoBehaviour
         if (collisionInfo.tag == "weapon"  && Weapons.canAttack == false)
         {
             loseHealth(PlayerInfo.playerDamage + Weapons.currentDmg);
+            collisionInfo.gameObject.GetComponent<SimpleFlash>().Flash();
         }
     }
 

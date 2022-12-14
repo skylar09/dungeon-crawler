@@ -11,7 +11,14 @@ public class knockback : MonoBehaviour
     {
         if (collisionInfo.tag == "weapon" && Weapons.canAttack == false)
         {
-            int thrust = collisionInfo.gameObject.GetComponent<weaponStats>().knockback;
+            //addThrust(collisionInfo);
+            Vector2 difference = this.transform.parent.position - collisionInfo.transform.position;
+            this.transform.parent.position = (Vector2) this.transform.parent.position + difference;
+        }
+    }
+
+    public void addThrust(Collider2D collisionInfo){
+        int thrust = collisionInfo.gameObject.GetComponent<weaponStats>().knockback;
             if (thrust > 0){
                 enemy = this.transform.parent.gameObject.GetComponent<Rigidbody2D>();
                 //makes it so the enemy can't move while taking knockback
@@ -24,7 +31,6 @@ public class knockback : MonoBehaviour
 
                 StartCoroutine(knockbackOccur());
             }
-        }
     }
 
     //after the knockback is over the enemy velocity resets and it can move again

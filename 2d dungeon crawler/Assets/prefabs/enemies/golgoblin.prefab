@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 5153847561018355687}
   - component: {fileID: 215650211355383030}
   - component: {fileID: 8488071219881691780}
+  - component: {fileID: 9105229925135981226}
   m_Layer: 7
   m_Name: golgoblin
   m_TagString: enemy
@@ -249,7 +250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8664703647189470630}
-  meleeAttack: 0
   distance: 6
 --- !u!114 &8488071219881691780
 MonoBehaviour:
@@ -264,5 +264,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8664703647189470630}
-  turnedRight: 0
-  turnedLeft: 1
+--- !u!114 &9105229925135981226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747772610732349435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d811d2bb27053a42a5dab5af590dd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 87791936c473a8a49880c2a773e97b17, type: 2}
+  duration: 0.25

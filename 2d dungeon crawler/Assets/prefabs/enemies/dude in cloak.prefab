@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1579672895928631461}
   - component: {fileID: 2092869385506542133}
   - component: {fileID: 2065373785653968751}
+  - component: {fileID: 5657182946892532050}
   m_Layer: 7
   m_Name: dude
   m_TagString: enemy
@@ -180,6 +181,20 @@ MonoBehaviour:
   distance: 8
   fireSpeed: 2
   projectile: {fileID: 4125215519083159423, guid: 34018e247512a684bb586a0e80a94859, type: 3}
+--- !u!114 &5657182946892532050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872687982220988784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d811d2bb27053a42a5dab5af590dd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 87791936c473a8a49880c2a773e97b17, type: 2}
+  duration: 0.25
 --- !u!1 &9139275342524300324
 GameObject:
   m_ObjectHideFlags: 0

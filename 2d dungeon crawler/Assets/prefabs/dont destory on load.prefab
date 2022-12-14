@@ -7566,6 +7566,7 @@ GameObject:
   - component: {fileID: 2703100953212820686}
   - component: {fileID: 2703100953212820680}
   - component: {fileID: 2703100953212820687}
+  - component: {fileID: 8255901757477676542}
   m_Layer: 6
   m_Name: smileMan
   m_TagString: Player
@@ -7807,6 +7808,20 @@ MonoBehaviour:
   critChance: {fileID: 1604131502446441235}
   moveSpeed: {fileID: 1604131503331015342}
   attackSpeed: {fileID: 1604131503049206914}
+--- !u!114 &8255901757477676542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2703100953212820732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d811d2bb27053a42a5dab5af590dd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 87791936c473a8a49880c2a773e97b17, type: 2}
+  duration: 0.25
 --- !u!1 &2703100953418497519
 GameObject:
   m_ObjectHideFlags: 0
@@ -7870,7 +7885,7 @@ MonoBehaviour:
   - {fileID: 754178765935426374, guid: d035df4055fbc3149bc4b4413e949f5f, type: 3}
   - {fileID: 1098219255336795604, guid: a591a0e5775dea04e964eaeb8aef3571, type: 3}
   - {fileID: 1098219255336795604, guid: 9633519a6569f554e8951905d80d845f, type: 3}
-  bla: 0
+  bla: 2
   yourWeapon: {fileID: 1941303432449093612, guid: 8c4cca2ec1b141641882aa7fd813a822, type: 3}
   player: {fileID: 2703100953212820677}
 --- !u!114 &2703100953418497518
