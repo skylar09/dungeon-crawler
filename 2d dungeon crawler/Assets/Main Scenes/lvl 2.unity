@@ -553,7 +553,7 @@ Transform:
   - {fileID: 1875488301}
   - {fileID: 1039293153}
   m_Father: {fileID: 1871185143}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &279481455
 MonoBehaviour:
@@ -672,7 +672,7 @@ Transform:
   - {fileID: 171512145}
   - {fileID: 542095920}
   m_Father: {fileID: 1871185143}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &350833720
 MonoBehaviour:
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 509589287}
   - component: {fileID: 509589288}
   m_Layer: 0
-  m_Name: background
+  m_Name: tilemap grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -788,6 +788,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 828357200}
+  - {fileID: 2125396752}
   m_Father: {fileID: 1871185143}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -798,51 +799,6 @@ Grid:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509589286}
-  m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
-  m_CellGap: {x: 0, y: 0, z: 0}
-  m_CellLayout: 0
-  m_CellSwizzle: 0
---- !u!1 &528313301
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 528313302}
-  - component: {fileID: 528313303}
-  m_Layer: 0
-  m_Name: walls
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &528313302
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528313301}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2125396752}
-  m_Father: {fileID: 1871185143}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!156049354 &528313303
-Grid:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528313301}
   m_Enabled: 1
   m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
@@ -947,7 +903,7 @@ Transform:
   - {fileID: 1155240315}
   - {fileID: 2388002}
   m_Father: {fileID: 1871185143}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &553780598
 MonoBehaviour:
@@ -998,7 +954,7 @@ Transform:
   - {fileID: 184826637}
   - {fileID: 285604963}
   m_Father: {fileID: 1871185143}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &569023475
 MonoBehaviour:
@@ -1049,7 +1005,7 @@ Transform:
   - {fileID: 504867707}
   - {fileID: 2023718568}
   m_Father: {fileID: 1871185143}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &628216907
 MonoBehaviour:
@@ -1214,7 +1170,7 @@ GameObject:
   - component: {fileID: 828357202}
   - component: {fileID: 828357201}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29655,7 +29611,7 @@ Transform:
   - {fileID: 898469820}
   - {fileID: 2013027173}
   m_Father: {fileID: 1871185143}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &995153108
 MonoBehaviour:
@@ -29907,7 +29863,7 @@ Transform:
   - {fileID: 156251362}
   - {fileID: 1184009621}
   m_Father: {fileID: 1871185143}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1309731828
 MonoBehaviour:
@@ -29956,7 +29912,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1871185143}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1316940468
 MonoBehaviour:
@@ -30127,7 +30083,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 509589287}
-  - {fileID: 528313302}
   - {fileID: 1316940467}
   - {fileID: 279481454}
   - {fileID: 995153107}
@@ -30263,7 +30218,7 @@ Transform:
   - {fileID: 709571699}
   - {fileID: 1701834374}
   m_Father: {fileID: 1871185143}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1909817057
 MonoBehaviour:
@@ -30497,7 +30452,7 @@ GameObject:
   - component: {fileID: 2125396753}
   - component: {fileID: 2125396755}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: walls
   m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30515,8 +30470,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 528313302}
-  m_RootOrder: 0
+  m_Father: {fileID: 509589287}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &2125396753
 TilemapRenderer:

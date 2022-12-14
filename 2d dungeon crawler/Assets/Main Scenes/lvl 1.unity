@@ -184,51 +184,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 229ec5b1d94f6174491475c25804aa18, type: 3}
---- !u!1 &52698150
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 52698152}
-  - component: {fileID: 52698151}
-  m_Layer: 0
-  m_Name: background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!156049354 &52698151
-Grid:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52698150}
-  m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
-  m_CellGap: {x: 0, y: 0, z: 0}
-  m_CellLayout: 0
-  m_CellSwizzle: 0
---- !u!4 &52698152
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52698150}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 468207620}
-  m_Father: {fileID: 498034887}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &74786792
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +197,7 @@ GameObject:
   - component: {fileID: 74786794}
   - component: {fileID: 74786796}
   m_Layer: 0
-  m_Name: tilemap
+  m_Name: walls
   m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +216,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 709885054}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &74786794
 TilemapRenderer:
@@ -3860,7 +3815,7 @@ Transform:
   m_Children:
   - {fileID: 130175725}
   m_Father: {fileID: 498034887}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &425120999
 GameObject:
@@ -3909,7 +3864,7 @@ Transform:
   m_Children:
   - {fileID: 1174063249}
   m_Father: {fileID: 498034887}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &468207619
 GameObject:
@@ -3923,7 +3878,7 @@ GameObject:
   - component: {fileID: 468207622}
   - component: {fileID: 468207621}
   m_Layer: 0
-  m_Name: tilemap
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3941,7 +3896,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 52698152}
+  m_Father: {fileID: 709885054}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &468207621
@@ -13619,7 +13574,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 709885054}
-  - {fileID: 52698152}
   - {fileID: 1412916594}
   - {fileID: 845908055}
   - {fileID: 342865595}
@@ -13696,7 +13650,7 @@ Transform:
   m_Children:
   - {fileID: 993111253}
   m_Father: {fileID: 498034887}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &662876667 stripped
 GameObject:
@@ -13714,7 +13668,7 @@ GameObject:
   - component: {fileID: 709885054}
   - component: {fileID: 709885053}
   m_Layer: 0
-  m_Name: walls
+  m_Name: tilemap grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13744,6 +13698,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 468207620}
   - {fileID: 74786793}
   m_Father: {fileID: 498034887}
   m_RootOrder: 0
@@ -13779,7 +13734,7 @@ Transform:
   m_Children:
   - {fileID: 1157487679}
   m_Father: {fileID: 498034887}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &845908056
 MonoBehaviour:
@@ -13864,7 +13819,7 @@ Transform:
   m_Children:
   - {fileID: 266683160}
   m_Father: {fileID: 498034887}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1157487678
 PrefabInstance:
@@ -14045,7 +14000,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 498034887}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1693906405
 PrefabInstance:
