@@ -237,6 +237,7 @@ MonoBehaviour:
   defense: 2
   deathGold: 15
   moveSpeed: 1.5
+  immunityTime: 0.5
 --- !u!114 &215650211355383030
 MonoBehaviour:
   m_ObjectHideFlags: 0

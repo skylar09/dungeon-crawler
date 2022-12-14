@@ -10,6 +10,8 @@ public class collision : MonoBehaviour
     public int defense;
     public int deathGold;
     public float moveSpeed;
+    public float immunityTime;
+    private bool canDamage = true;
 
     //updates the health of the enemy when first spawned based on current level
     void Awake()
@@ -31,15 +33,19 @@ public class collision : MonoBehaviour
             damagePlayer();
             collisionInfo.gameObject.GetComponent<SimpleFlash>().Flash();
             collisionInfo.gameObject.tag = "Untagged";
-            StartCoroutine(playerImmunity(collisionInfo.gameObject));
+            StartCoroutine(immunityFrames(collisionInfo.gameObject, PlayerInfo.immunityTime, "Player"));
         }
     }
-    void OnTriggerEnter2D (Collider2D collisionInfo){
+    void OnTriggerStay2D (Collider2D collisionInfo){
         //checks for the tag on the object it collides with
         if (collisionInfo.tag == "weapon"  && Weapons.canAttack == false)
         {
-            loseHealth(PlayerInfo.playerDamage + Weapons.currentDmg);
-            this.GetComponent<SimpleFlash>().Flash();
+            if (canDamage == true){
+                loseHealth(PlayerInfo.playerDamage + Weapons.currentDmg);
+                this.GetComponent<SimpleFlash>().Flash();
+                canDamage = false;
+                StartCoroutine(immunityFrames(immunityTime));
+            }
         }
     }
 
@@ -114,8 +120,12 @@ public class collision : MonoBehaviour
         }
     }
 
-    IEnumerator playerImmunity(GameObject player){
-        yield return new WaitForSecondsRealtime(PlayerInfo.immunityTime);
-        player.tag = "Player";
+    IEnumerator immunityFrames(GameObject objectHit, float immuneTime, string Tag){
+        yield return new WaitForSecondsRealtime(immuneTime);
+        objectHit.tag = Tag;
+    }
+    IEnumerator immunityFrames(float immuneTime){
+        yield return new WaitForSecondsRealtime(immuneTime);
+        canDamage = true;
     }
 }
