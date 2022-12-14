@@ -23,13 +23,15 @@ public class collision : MonoBehaviour
         this.transform.parent.gameObject.GetComponent<enemyMovement>().moveSpeed = moveSpeed;
     }
 
-    void OnCollisionEnter2D (Collision2D collisionInfo)
+    void OnCollisionStay2D (Collision2D collisionInfo)
     {
         //makes player take damage for hitting an enemy
         if (collisionInfo.collider.tag == "Player")
         {
             damagePlayer();
             collisionInfo.gameObject.GetComponent<SimpleFlash>().Flash();
+            collisionInfo.gameObject.tag = "Untagged";
+            StartCoroutine(playerImmunity(collisionInfo.gameObject));
         }
     }
     void OnTriggerEnter2D (Collider2D collisionInfo){
@@ -110,5 +112,10 @@ public class collision : MonoBehaviour
             //destroys (kills) the enemy
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator playerImmunity(GameObject player){
+        yield return new WaitForSecondsRealtime(PlayerInfo.immunityTime);
+        player.tag = "Player";
     }
 }

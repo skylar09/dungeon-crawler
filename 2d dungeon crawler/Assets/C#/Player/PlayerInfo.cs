@@ -13,6 +13,7 @@ public class PlayerInfo : MonoBehaviour
     public static int critChance = 0;
     public static int gold = 0;
     public static int ammo = 10;
+    public static float immunityTime = 1f;
     public static float swordSwingSpeed = 1;
     public static Vector3 playerLocation;
     public static string directionFacing = "left";
