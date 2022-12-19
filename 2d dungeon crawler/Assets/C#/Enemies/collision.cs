@@ -12,6 +12,7 @@ public class collision : MonoBehaviour
     public float moveSpeed;
     public float immunityTime;
     private bool canDamage = true;
+    public static ItemDropper ItemDropper;
 
     //updates the health of the enemy when first spawned based on current level
     void Awake()
@@ -75,18 +76,6 @@ public class collision : MonoBehaviour
         }
     }
 
-    //picks random number and decides if it should drop an item
-    public void itemDrop()
-    {
-        int shouldDrop = Random.Range(0, 10);
-
-        if (shouldDrop <= 100)
-        {
-            dropItem.drop = true;
-            dropItem.enemyLocation = this.GetComponent<Transform>().position;
-        }
-    }
-
     public void loseHealth(int dmg)
     {
         //checks if enemy has more defense than player damage then only takes 1 dmg otherwise takes more dmg
@@ -107,7 +96,7 @@ public class collision : MonoBehaviour
             PlayerInfo.gold += deathGold;
             PlayerInfo.ammo += 2;
 
-            itemDrop();
+            ItemDropper.itemDrop(this.transform.parent.position);
 
             //updates the counter for enemies alive in the room
             SpawnEnemy.enemyCount--;

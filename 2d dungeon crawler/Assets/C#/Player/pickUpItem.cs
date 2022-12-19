@@ -15,6 +15,12 @@ public class pickUpItem : MonoBehaviour
 
     public static GameObject closestWep;
 
+    private static List<GameObject> droppedItems = new List<GameObject>();
+
+    void Awake(){
+       // droppedItems.Add(this.GameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {
