@@ -23,36 +23,25 @@ public class Weapons : MonoBehaviour
     public GameObject yourWeapon;
     public Transform player;
 
+    void Awake(){
+        ItemDropper.Weapons = this;
+    }
+
     // creates the starting weapon
     void Start()
     {
         currentWeapon = bla;
         yourWeapon = Instantiate(prefabs[currentWeapon], player);
         currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
-
-        for (int i = 0; i < prefabs.Length - 1; i ++){
-            
-            dropItem.total += prefabs[i].gameObject.transform.GetChild(0).GetComponent<weaponStats>().dropChance;
-        }
     }
 
-    // checks if player has switched their weapon
-    void Update()
-    {
-        if (pickUpItem.changed == true)
-        {
-            changeWeapon();
-        }
-    }
-
-    //changes current weapon by destroying current weapon and then makinga new weapon
+    //changes current weapon by destroying current weapon and then making new weapon
     //updates the player damage based on new weapon
-    public void changeWeapon()
+    public void changeWeapon(GameObject wep)
     {
         Quaternion rotation = yourWeapon.transform.rotation;
         Destroy(yourWeapon);
-        yourWeapon = Instantiate(prefabs[currentWeapon], PlayerInfo.playerLocation, rotation, player);
-        pickUpItem.changed = false;
+        yourWeapon = Instantiate(wep, PlayerInfo.playerLocation, rotation, player);
         currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
     }
 }

@@ -26,8 +26,8 @@ public class InventoryItems : MonoBehaviour
         for (int i = 0; i < itemNums.Count; i++)
         {
             InventorySlots[i].GetComponent<Image>().enabled = true;
-            InventorySlots[i].sprite = this.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().sprite;
-            InventorySlots[i].color = this.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().color;
+            // InventorySlots[i].sprite = this.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().sprite;
+            // InventorySlots[i].color = this.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().color;
         }
     }
 
@@ -80,27 +80,26 @@ public class InventoryItems : MonoBehaviour
     {
         InventorySlots[totalItems].GetComponent<Image>().enabled = true;
         //changes the sprite of an inventory slot to an item at a certain spot in the items list
-        InventorySlots[totalItems].sprite = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
+       // InventorySlots[totalItems].sprite = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
         
         //changes the color of the inventory slot bc there are some items that are just color changed
-        InventorySlots[totalItems].color = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
+       // InventorySlots[totalItems].color = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
 
         //adds the number of that item in the items list to the itemNums list
         itemNums.Add(replaceItem);
         
         totalItems ++;
         newItem = false;
-        pickUpItem.buttonPressed = false;
     }
 
     //changes the sprite at a certain slot to the sprite of the current weapon
     public void changeCurrent()
     {
-        InventorySlots[inventoryLocation].sprite = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
+       // InventorySlots[inventoryLocation].sprite = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
         itemNums[inventoryLocation] = replaceItem;
 
         //changes the color of the inventory slot bc there are some items that are just color changed
-        InventorySlots[inventoryLocation].color = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
+      //  InventorySlots[inventoryLocation].color = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
         
         Weapons.canAttack = true;
         Weapons.swordSwung = false;

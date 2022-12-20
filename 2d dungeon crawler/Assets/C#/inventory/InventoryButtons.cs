@@ -14,7 +14,6 @@ public class InventoryButtons : MonoBehaviour{
             int weapon = Weapons.currentWeapon;
 
             Weapons.currentWeapon = InventoryItems.itemNums[locationNum];
-            pickUpItem.changed = true;
 
             InventoryItems.inventoryLocation = locationNum;
             InventoryItems.replaceItem = weapon;

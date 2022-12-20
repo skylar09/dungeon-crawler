@@ -7562,7 +7562,6 @@ GameObject:
   - component: {fileID: 2703100953212820672}
   - component: {fileID: 2703100953212820674}
   - component: {fileID: 2703100953212820675}
-  - component: {fileID: 2703100953212820685}
   - component: {fileID: 2703100953212820686}
   - component: {fileID: 2703100953212820680}
   - component: {fileID: 2703100953212820687}
@@ -7714,37 +7713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d68f19f3ef64649b9bed7c43abdbf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2703100953212820685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2703100953212820732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 794aafb99221aad45a49b26ada55c2ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapons: {fileID: 2703100953418497517}
-  Items:
-  - {fileID: 8103026422850841727, guid: 66d9ce5124d6a254d812174905cae526, type: 3}
-  - {fileID: 3593761439296400745, guid: e9df5f5816300c34c8569f35f6544109, type: 3}
-  - {fileID: 176378256186577800, guid: 8f2a8df31bcc91546b7ab3af9eeae362, type: 3}
-  - {fileID: 6217652708947698187, guid: 2e38cd99b0fcf054cb73435ed5679855, type: 3}
-  - {fileID: 192055224195661241, guid: c6ac929b4c56e7649959950c7c174cd8, type: 3}
-  - {fileID: 4425779756924448056, guid: 38ea69982b9c0234281c2d45f0437bea, type: 3}
-  - {fileID: 475868198297371527, guid: d73a9d6bb2896454d8cd8e119d024c14, type: 3}
-  - {fileID: 3425550657675448674, guid: f55271715d8292f43926ee6f32da41a7, type: 3}
-  - {fileID: 1374074800892765269, guid: 7005d38e18cfbfc45a71dd59623e5b0c, type: 3}
-  - {fileID: 2705176615347989843, guid: b93989e95dc401c43af1204a2ad9fb21, type: 3}
-  - {fileID: 8507070171164364275, guid: d4dcc9de01597ed49877ae876b897c16, type: 3}
-  - {fileID: 8931668441009308666, guid: 0a2c6c1d916792546af03836177e66b1, type: 3}
-  - {fileID: 8468582252771222836, guid: 9bd8b91e6c3892c40b42cb0fd31c9b5b, type: 3}
-  - {fileID: 3892023309081711814, guid: 469b2f5d924cd9b4aad958c05664921f, type: 3}
-  - {fileID: 6833974768570681345, guid: d3624b798e20d2441946edf5cbd3d05a, type: 3}
-  - {fileID: 8103026422850841727, guid: eb8843e47425e7e4086b2f98c44a4f99, type: 3}
-  - {fileID: 8103026422850841727, guid: 2d4ec4459fbe14e468d3ef4f3ddbe1a9, type: 3}
 --- !u!114 &2703100953212820686
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ItemDropper")]
-public class ItemDropper : ScriptableObject{
+public class ItemDropper : MonoBehaviour{
+    //droppable items
     [SerializeField]
     private List<GameObject> items = new List<GameObject>();
+    //game object that gets instantiated when weapon is dropped
     [SerializeField]
     private GameObject placeHolder;
-    
+
+    //list of all the weapons that have been dropped this level
     private List<GameObject> droppedItems = new List<GameObject>();
+
+    public static Weapons Weapons;
 
     private bool buttonPressed = false;
 
@@ -25,20 +29,16 @@ public class ItemDropper : ScriptableObject{
 
     void Update()
     {
-        if (Input.GetKeyDown("f") && buttonPressed == false)
+        if (SpawnEnemy.enemyCount == 0 && Input.GetKeyDown("f") && buttonPressed == false)
         {
-            //Vector2 location = this.transform.position;
-            //float dist = Vector2.Distance(location, PlayerInfo.playerLocation);
+            pickUpCurrent(closest());     
+            buttonPressed = true;          
+        }
 
-            //changes the current item with the item just dropped
-            //if (dist <= 2)
-            {
-                buttonPressed = true;
-                //closest(dist);     
-                //if (this.gameObject == closestWep){
-                    //pickUpCurrent();
-                //}                  
-            }
+        if (SpawnEnemy.enemyCount == 0 && Input.GetKeyDown("g") && buttonPressed == false)
+        {
+            addInventory(closest());
+            buttonPressed = true; 
         }
     }
 
@@ -66,15 +66,62 @@ public class ItemDropper : ScriptableObject{
                 else
                     chance -= items[i].gameObject.transform.GetChild(0).GetComponent<weaponStats>().dropChance;
             }
-        //creates item placeHolder then changes its sprite to match the item that was picked
-        GameObject spawnedWeapon = Instantiate(placeHolder, pos, Quaternion.identity);
-        spawnedWeapon.GetComponent<SpriteRenderer>().sprite = items[weaponNum].GetComponent<SpriteRenderer>().sprite;
-        spawnedWeapon.GetComponent<SpriteRenderer>().color = items[weaponNum].GetComponent<SpriteRenderer>().color;
+        GameObject spawnedWeapon = dropItem(weaponNum, pos);
 
         //makes sure the item cannot be dropped again
         total -= items[weaponNum].transform.GetChild(0).GetComponent<weaponStats>().dropChance;
         items.RemoveAt(weaponNum);
 
         droppedItems.Add(spawnedWeapon);
+    }
+
+    //gets the closest item on the ground
+    public int closest()
+    {          
+        int whichWep = 0;
+        float dist = Vector2.Distance(PlayerInfo.playerLocation, droppedItems[0].transform.position);
+        for (int i = 1; i < droppedItems.Count; i++){
+            float distChecker = Vector2.Distance(PlayerInfo.playerLocation, droppedItems[i].transform.position);
+            if (distChecker < dist){
+                dist = distChecker;
+                whichWep = i;
+            }
+        }
+        return whichWep;
+    }
+
+    //changes the current item with the item just dropped
+    public void pickUpCurrent(int wepNum)
+    {
+        Vector2 pos = droppedItems[wepNum].transform.position;
+        Weapons.changeWeapon(items[droppedItems[wepNum].GetComponent<ItemPlaceHolder>().wepLoc]);
+
+        Destroy(droppedItems[wepNum]);
+        droppedItems.RemoveAt(wepNum);
+
+        droppedItems.Add(dropItem(Weapons.currentWeapon, pos));
+
+        Weapons.canAttack = true;
+        Weapons.swordSwung = false;
+    }
+
+    //adds the closest item to your inventory
+    public void addInventory(int wepNum)
+    {
+        //InventoryItems.replaceItem = closestWep.GetComponent<pickUpItem>().num;
+        //Destroy(closestWep.gameObject);
+        
+        InventoryItems.newItem = true;
+
+        //changed = true;
+    }
+
+    private GameObject dropItem(int num, Vector2 pos){
+        //creates item placeHolder then changes its sprite to match the item that was picked
+        GameObject spawned = Instantiate(placeHolder, pos, Quaternion.identity);
+        spawned.GetComponent<SpriteRenderer>().sprite = items[num].transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite;
+        spawned.GetComponent<SpriteRenderer>().color = items[num].transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color;
+        spawned.GetComponent<ItemPlaceHolder>().wepLoc = num;
+        return spawned;
     }
 }
