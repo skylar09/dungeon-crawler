@@ -31,14 +31,14 @@ public class ItemDropper : MonoBehaviour{
     {
         if (SpawnEnemy.enemyCount == 0 && Input.GetKeyDown("f") && buttonPressed == false)
         {
-            pickUpCurrent(closest());     
-            buttonPressed = true;          
+            buttonPressed = true; 
+            pickUpCurrent(closest());              
         }
 
         if (SpawnEnemy.enemyCount == 0 && Input.GetKeyDown("g") && buttonPressed == false)
         {
-            addInventory(closest());
             buttonPressed = true; 
+            addInventory(closest());
         }
     }
 
@@ -66,11 +66,11 @@ public class ItemDropper : MonoBehaviour{
                 else
                     chance -= items[i].gameObject.transform.GetChild(0).GetComponent<weaponStats>().dropChance;
             }
-        GameObject spawnedWeapon = dropItem(weaponNum, pos);
+        GameObject spawnedWeapon = dropItem(weaponNum, items[weaponNum].transform.GetChild(0).gameObject, pos);
 
         //makes sure the item cannot be dropped again
-        total -= items[weaponNum].transform.GetChild(0).GetComponent<weaponStats>().dropChance;
-        items.RemoveAt(weaponNum);
+        //total -= items[weaponNum].transform.GetChild(0).GetComponent<weaponStats>().dropChance;
+        //items.RemoveAt(weaponNum);
 
         droppedItems.Add(spawnedWeapon);
     }
@@ -94,15 +94,18 @@ public class ItemDropper : MonoBehaviour{
     public void pickUpCurrent(int wepNum)
     {
         Vector2 pos = droppedItems[wepNum].transform.position;
+        Debug.Log(droppedItems[wepNum].GetComponent<ItemPlaceHolder>().wepLoc);
+        droppedItems.Add(dropItem(Weapons.currentWeapon, Weapons.prefabs[Weapons.currentWeapon].transform.GetChild(0).gameObject, pos));
         Weapons.changeWeapon(items[droppedItems[wepNum].GetComponent<ItemPlaceHolder>().wepLoc]);
 
         Destroy(droppedItems[wepNum]);
         droppedItems.RemoveAt(wepNum);
 
-        droppedItems.Add(dropItem(Weapons.currentWeapon, pos));
+        
 
         Weapons.canAttack = true;
         Weapons.swordSwung = false;
+        buttonPressed = false; 
     }
 
     //adds the closest item to your inventory
@@ -112,15 +115,16 @@ public class ItemDropper : MonoBehaviour{
         //Destroy(closestWep.gameObject);
         
         InventoryItems.newItem = true;
+        buttonPressed = false; 
 
         //changed = true;
     }
 
-    private GameObject dropItem(int num, Vector2 pos){
+    private GameObject dropItem(int num, GameObject wep, Vector2 pos){
         //creates item placeHolder then changes its sprite to match the item that was picked
         GameObject spawned = Instantiate(placeHolder, pos, Quaternion.identity);
-        spawned.GetComponent<SpriteRenderer>().sprite = items[num].transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite;
-        spawned.GetComponent<SpriteRenderer>().color = items[num].transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color;
+        spawned.GetComponent<SpriteRenderer>().sprite = wep.GetComponent<SpriteRenderer>().sprite;
+        spawned.GetComponent<SpriteRenderer>().color = wep.GetComponent<SpriteRenderer>().color;
         spawned.GetComponent<ItemPlaceHolder>().wepLoc = num;
         return spawned;
     }

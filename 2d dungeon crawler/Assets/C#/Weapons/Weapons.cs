@@ -43,5 +43,17 @@ public class Weapons : MonoBehaviour
         Destroy(yourWeapon);
         yourWeapon = Instantiate(wep, PlayerInfo.playerLocation, rotation, player);
         currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
+        currentWeapon = findWep(wep.name);
+    }
+
+    public int findWep(string name){
+        int x = 0;
+        for (int i = 0; i < prefabs.Length; i ++){
+            if (prefabs[i].name == name){
+                x = i;
+                break;
+            }
+        }
+        return x;
     }
 }
