@@ -21,17 +21,18 @@ public class Weapons : MonoBehaviour
 
     //the current weapon being used
     public GameObject yourWeapon;
-    public Transform player;
+    public GameObject player;
 
     void Awake(){
         ItemDropper.Weapons = this;
+        InventoryButtons.Weapons = this;
     }
 
     // creates the starting weapon
     void Start()
     {
         currentWeapon = bla;
-        yourWeapon = Instantiate(prefabs[currentWeapon], player);
+        yourWeapon = Instantiate(prefabs[currentWeapon], player.transform);
         currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
     }
 
@@ -41,7 +42,7 @@ public class Weapons : MonoBehaviour
     {
         Quaternion rotation = yourWeapon.transform.rotation;
         Destroy(yourWeapon);
-        yourWeapon = Instantiate(wep, PlayerInfo.playerLocation, rotation, player);
+        yourWeapon = Instantiate(wep, PlayerInfo.playerLocation, rotation, player.transform);
         currentDmg = yourWeapon.gameObject.transform.GetChild(0).GetComponent<weaponStats>().damage;
         currentWeapon = findWep(wep.name);
     }

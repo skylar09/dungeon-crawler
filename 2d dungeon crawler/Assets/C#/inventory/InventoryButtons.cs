@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryButtons : MonoBehaviour{
     //the number that this inventory slot is
     public int locationNum;
+    public static Weapons Weapons;
     //public GameObject info;
 
     //changes the item in the item slot with the one you are currently using
@@ -16,8 +17,9 @@ public class InventoryButtons : MonoBehaviour{
             Weapons.currentWeapon = InventoryItems.itemNums[locationNum];
 
             InventoryItems.inventoryLocation = locationNum;
-            InventoryItems.replaceItem = weapon;
-            InventoryItems.changeUIWeapon = true;
+            int wepNum = Weapons.player.GetComponent<InventoryItems>().changeCurrent(weapon,Weapons.prefabs[weapon].transform.GetChild(0).gameObject);
+            Debug.Log(Weapons.currentWeapon);
+            Weapons.changeWeapon(Weapons.prefabs[Weapons.currentWeapon]);
         }
     }
 

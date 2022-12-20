@@ -17,19 +17,7 @@ public class InventoryItems : MonoBehaviour
     public static bool newItem = false;
     public static int totalItems = 0;
 
-    public static int inventoryLocation, replaceItem;
-    public static bool changeUIWeapon = false;
-
-    //adds the inventory icons to the inventory when goes to new level
-    void Awake()
-    {
-        for (int i = 0; i < itemNums.Count; i++)
-        {
-            InventorySlots[i].GetComponent<Image>().enabled = true;
-            // InventorySlots[i].sprite = this.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().sprite;
-            // InventorySlots[i].color = this.GetComponent<dropItem>().Items[itemNums[i]].GetComponent<SpriteRenderer>().color;
-        }
-    }
+    public static int inventoryLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -63,27 +51,17 @@ public class InventoryItems : MonoBehaviour
             }
             
         }
-
-        if (newItem == true)
-        {
-            addItem();
-        }
-
-        if (changeUIWeapon == true)
-        {
-            changeCurrent();
-        }
     }
 
     //adds an item to the next free inventory slot
-    public void addItem()
+    public void addItem(GameObject item, int replaceItem)
     {
         InventorySlots[totalItems].GetComponent<Image>().enabled = true;
         //changes the sprite of an inventory slot to an item at a certain spot in the items list
-       // InventorySlots[totalItems].sprite = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
+        InventorySlots[totalItems].sprite = item.GetComponent<SpriteRenderer>().sprite;
         
         //changes the color of the inventory slot bc there are some items that are just color changed
-       // InventorySlots[totalItems].color = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
+        InventorySlots[totalItems].color = item.GetComponent<SpriteRenderer>().color;
 
         //adds the number of that item in the items list to the itemNums list
         itemNums.Add(replaceItem);
@@ -93,16 +71,18 @@ public class InventoryItems : MonoBehaviour
     }
 
     //changes the sprite at a certain slot to the sprite of the current weapon
-    public void changeCurrent()
+    public int changeCurrent(int num, GameObject item)
     {
-       // InventorySlots[inventoryLocation].sprite = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().sprite;
-        itemNums[inventoryLocation] = replaceItem;
+        InventorySlots[inventoryLocation].sprite = item.GetComponent<SpriteRenderer>().sprite;
+        int toReturn = itemNums[inventoryLocation];
+        itemNums[inventoryLocation] = num;
 
         //changes the color of the inventory slot bc there are some items that are just color changed
-      //  InventorySlots[inventoryLocation].color = this.GetComponent<dropItem>().Items[replaceItem].GetComponent<SpriteRenderer>().color;
+        InventorySlots[inventoryLocation].color = item.GetComponent<SpriteRenderer>().color;
         
         Weapons.canAttack = true;
         Weapons.swordSwung = false;
-        changeUIWeapon = false;
+
+        return toReturn;
     }
 }

@@ -94,8 +94,9 @@ public class ItemDropper : MonoBehaviour{
     public void pickUpCurrent(int wepNum)
     {
         Vector2 pos = droppedItems[wepNum].transform.position;
-        Debug.Log(droppedItems[wepNum].GetComponent<ItemPlaceHolder>().wepLoc);
+        //drops current weapon
         droppedItems.Add(dropItem(Weapons.currentWeapon, Weapons.prefabs[Weapons.currentWeapon].transform.GetChild(0).gameObject, pos));
+        //picks up ground weapon
         Weapons.changeWeapon(items[droppedItems[wepNum].GetComponent<ItemPlaceHolder>().wepLoc]);
 
         Destroy(droppedItems[wepNum]);
@@ -110,14 +111,14 @@ public class ItemDropper : MonoBehaviour{
 
     //adds the closest item to your inventory
     public void addInventory(int wepNum)
-    {
-        //InventoryItems.replaceItem = closestWep.GetComponent<pickUpItem>().num;
-        //Destroy(closestWep.gameObject);
-        
-        InventoryItems.newItem = true;
-        buttonPressed = false; 
+    {        
+        GameObject passWep = items[droppedItems[wepNum].GetComponent<ItemPlaceHolder>().wepLoc];
+        Weapons.player.GetComponent<InventoryItems>().addItem(passWep.transform.GetChild(0).gameObject, Weapons.findWep(passWep.name));
 
-        //changed = true;
+        Destroy(droppedItems[wepNum]);
+        droppedItems.RemoveAt(wepNum);
+
+        buttonPressed = false; 
     }
 
     private GameObject dropItem(int num, GameObject wep, Vector2 pos){
