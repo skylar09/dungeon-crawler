@@ -71,10 +71,9 @@ public class InventoryItems : MonoBehaviour
     }
 
     //changes the sprite at a certain slot to the sprite of the current weapon
-    public int changeCurrent(int num, GameObject item)
+    public void changeCurrent(int num, GameObject item)
     {
         InventorySlots[inventoryLocation].sprite = item.GetComponent<SpriteRenderer>().sprite;
-        int toReturn = itemNums[inventoryLocation];
         itemNums[inventoryLocation] = num;
 
         //changes the color of the inventory slot bc there are some items that are just color changed
@@ -83,6 +82,5 @@ public class InventoryItems : MonoBehaviour
         Weapons.canAttack = true;
         Weapons.swordSwung = false;
 
-        return toReturn;
     }
 }

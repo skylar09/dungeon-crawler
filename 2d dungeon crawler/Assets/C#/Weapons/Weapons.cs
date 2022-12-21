@@ -47,6 +47,7 @@ public class Weapons : MonoBehaviour
         currentWeapon = findWep(wep.name);
     }
 
+    //finds the location of a weapon in the prefabs array
     public int findWep(string name){
         int x = 0;
         for (int i = 0; i < prefabs.Length; i ++){

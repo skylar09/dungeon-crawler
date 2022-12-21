@@ -17,8 +17,10 @@ public class InventoryButtons : MonoBehaviour{
             Weapons.currentWeapon = InventoryItems.itemNums[locationNum];
 
             InventoryItems.inventoryLocation = locationNum;
-            int wepNum = Weapons.player.GetComponent<InventoryItems>().changeCurrent(weapon,Weapons.prefabs[weapon].transform.GetChild(0).gameObject);
-            Debug.Log(Weapons.currentWeapon);
+            //changes sprite of inventory slot
+            Weapons.player.GetComponent<InventoryItems>().changeCurrent(weapon,Weapons.prefabs[weapon].transform.GetChild(0).gameObject);
+
+            //changes the weapon the player is using to the one that was in the inventory slot
             Weapons.changeWeapon(Weapons.prefabs[Weapons.currentWeapon]);
         }
     }

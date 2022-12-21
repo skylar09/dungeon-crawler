@@ -92,21 +92,27 @@ public class collision : MonoBehaviour
         //when the enemy is dead
         if (health <= 0)
         {
-            //gives the player gold
-            PlayerInfo.gold += deathGold;
-            PlayerInfo.ammo += 2;
+            killThis();
+        }
+    }
 
+    private void killThis(){
+        //gives the player gold
+        PlayerInfo.gold += deathGold;
+        PlayerInfo.ammo += 2;
+
+        //updates the counter for enemies alive in the room
+        SpawnEnemy.enemyCount--;
+        statTracker.enemiesKilled ++;
+
+        //has chance to drop item when last enemy dies
+        if (SpawnEnemy.enemyCount == 0)
             ItemDropper.itemDrop(this.transform.parent.position);
 
-            //updates the counter for enemies alive in the room
-            SpawnEnemy.enemyCount--;
-            statTracker.enemiesKilled ++;
+        Destroy(this.transform.parent.gameObject);
 
-            Destroy(this.transform.parent.gameObject);
-
-            //destroys (kills) the enemy
-            Destroy(gameObject);
-        }
+        //destroys (kills) the enemy
+        Destroy(gameObject);
     }
 
     IEnumerator immunityFrames(GameObject objectHit, float immuneTime, string Tag){

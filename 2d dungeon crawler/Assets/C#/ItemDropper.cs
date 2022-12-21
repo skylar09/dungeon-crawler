@@ -75,7 +75,7 @@ public class ItemDropper : MonoBehaviour{
         droppedItems.Add(spawnedWeapon);
     }
 
-    //gets the closest item on the ground
+    //gets the closest item to the player on the ground
     public int closest()
     {          
         int whichWep = 0;
@@ -121,9 +121,11 @@ public class ItemDropper : MonoBehaviour{
         buttonPressed = false; 
     }
 
+    //creates a weapon on the ground
     private GameObject dropItem(int num, GameObject wep, Vector2 pos){
-        //creates item placeHolder then changes its sprite to match the item that was picked
+        //creates item placeHolder
         GameObject spawned = Instantiate(placeHolder, pos, Quaternion.identity);
+        //changes placeholder sprite to match the item that was "dropped"
         spawned.GetComponent<SpriteRenderer>().sprite = wep.GetComponent<SpriteRenderer>().sprite;
         spawned.GetComponent<SpriteRenderer>().color = wep.GetComponent<SpriteRenderer>().color;
         spawned.GetComponent<ItemPlaceHolder>().wepLoc = num;
