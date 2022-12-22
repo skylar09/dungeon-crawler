@@ -33,8 +33,7 @@ public class collision : MonoBehaviour
         {
             damagePlayer();
             collisionInfo.gameObject.GetComponent<SimpleFlash>().Flash();
-            collisionInfo.gameObject.tag = "Untagged";
-            StartCoroutine(immunityFrames(collisionInfo.gameObject, PlayerInfo.immunityTime, "Player"));
+            collisionInfo.gameObject.GetComponent<invulnerability>().playerImmunityFrames();            
         }
     }
     void OnTriggerStay2D (Collider2D collisionInfo){
@@ -115,10 +114,6 @@ public class collision : MonoBehaviour
         Destroy(gameObject);
     }
 
-    IEnumerator immunityFrames(GameObject objectHit, float immuneTime, string Tag){
-        yield return new WaitForSecondsRealtime(immuneTime);
-        objectHit.tag = Tag;
-    }
     IEnumerator immunityFrames(float immuneTime){
         yield return new WaitForSecondsRealtime(immuneTime);
         canDamage = true;

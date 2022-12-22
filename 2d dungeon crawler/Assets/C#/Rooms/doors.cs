@@ -7,13 +7,10 @@ public class doors : MonoBehaviour{
     public List<GameObject> Doors = new List<GameObject>();
     //the list of spawners for this room
     public List<GameObject> spawners = new List<GameObject>();
-    //a pointer to the next room 
-    public GameObject nextRoom;
 
     void Update(){
         if (SpawnEnemy.enemyCount == 0){
             openDoors();
-            NextRoom();
         }
     }
 
@@ -22,6 +19,8 @@ public class doors : MonoBehaviour{
         foreach(GameObject door in Doors){
             //door.GetComponent<Animator>().SetTrigger("open");
         }
+        //turns this door script off
+        this.GetComponent<doors>().enabled = false;
     }
 
     //closes all the doors in this room
@@ -29,13 +28,7 @@ public class doors : MonoBehaviour{
         foreach(GameObject door in Doors){
             //door.GetComponent<Animator>().SetTrigger("close");
         }
-    }
-
-    //enables the door script on the next room and disables it on this room
-    private void NextRoom(){
-        if (nextRoom != null)
-            nextRoom.GetComponent<doors>().enabled = true;
-        this.GetComponent<doors>().enabled = false;
+        Debug.Log("a");
     }
 
     //destroys all of the enemy spawners in this room

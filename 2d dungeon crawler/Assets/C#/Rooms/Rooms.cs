@@ -13,11 +13,4 @@ public class Rooms : MonoBehaviour{
         spawnManager = GameObject.Find("spawnManager");
     }
 
-    void Start(){
-        //assigns nextRoom variable to the next room in the list
-        //the last room's variable is not assigned and is null
-        for (int i = 0; i < rooms.Count - 1; i ++){
-            rooms[i].GetComponent<doors>().nextRoom = rooms[i + 1];
-        }
-    }
 }

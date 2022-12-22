@@ -9,6 +9,8 @@ public class DoorCollision : MonoBehaviour{
             transform.parent.GetComponent<doors>().closeDoors();
             //spawns enemies in this room
             transform.parent.parent.GetComponent<Rooms>().spawnManager.GetComponent<SpawnEnemy>().spawn(transform.parent.transform.position);
+            //turns the doors script of the room on
+            transform.parent.gameObject.GetComponent<doors>().enabled = true;
             //destroys all the enemy spawners in this room
             transform.parent.GetComponent<doors>().destroySpawners();
         }
