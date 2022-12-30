@@ -3800,7 +3800,6 @@ MonoBehaviour:
   Doors: []
   spawners:
   - {fileID: 1037161864}
-  nextRoom: {fileID: 0}
 --- !u!4 &342865595
 Transform:
   m_ObjectHideFlags: 0
@@ -3849,7 +3848,6 @@ MonoBehaviour:
   Doors: []
   spawners:
   - {fileID: 1237737528}
-  nextRoom: {fileID: 0}
 --- !u!4 &425121001
 Transform:
   m_ObjectHideFlags: 0
@@ -13635,7 +13633,6 @@ MonoBehaviour:
   Doors: []
   spawners:
   - {fileID: 662876667}
-  nextRoom: {fileID: 0}
 --- !u!4 &518629863
 Transform:
   m_ObjectHideFlags: 0
@@ -13751,7 +13748,6 @@ MonoBehaviour:
   Doors: []
   spawners:
   - {fileID: 1247188793}
-  nextRoom: {fileID: 0}
 --- !u!1 &857851827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7512919775689702294, guid: 229ec5b1d94f6174491475c25804aa18, type: 3}
@@ -13804,7 +13800,6 @@ MonoBehaviour:
   Doors: []
   spawners:
   - {fileID: 962184510}
-  nextRoom: {fileID: 0}
 --- !u!4 &1082354045
 Transform:
   m_ObjectHideFlags: 0
@@ -13986,7 +13981,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Doors: []
   spawners: []
-  nextRoom: {fileID: 0}
 --- !u!4 &1412916594
 Transform:
   m_ObjectHideFlags: 0

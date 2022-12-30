@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     //used in player movement
     Vector2 movement;
 
+    public Animator Animator;
+
     // Update is called once per frame
     void Update()
     {
@@ -17,24 +19,31 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         //checks for key press of d or right arrow key
-       /* if (Input.GetKey ("d") || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey ("d") || Input.GetKey(KeyCode.RightArrow))
         {
-            if (PlayerInfo.directionFacing != "right")
-            {
+            Animator.SetBool("move", true);
+            if (PlayerInfo.directionFacing != "right"){
                 PlayerInfo.directionFacing = "right";
-                turn();
+            turn(0);
             }
         }
-
         //checks for key press of a or left arrow key
-        if (Input.GetKey ("a") || Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey ("a") || Input.GetKey(KeyCode.LeftArrow))
         {
-            if (PlayerInfo.directionFacing != "left")
-            {
+            Animator.SetBool("move", true);
+            if (PlayerInfo.directionFacing != "left"){
                 PlayerInfo.directionFacing = "left";
-                turn();
+                turn(180);
             }
-        }*/
+        }
+        else if (Input.GetKey ("w") || Input.GetKey(KeyCode.UpArrow)){
+            Animator.SetBool("move", true);
+        }
+        else if (Input.GetKey ("s") || Input.GetKey(KeyCode.DownArrow)){
+            Animator.SetBool("move", true);
+        }
+        else
+            Animator.SetBool("move", false);
     }
 
     // FixedUpdate is called once per set amount of frames
@@ -42,5 +51,9 @@ public class PlayerMovement : MonoBehaviour
     {
         //moves player with wasd or arrow keys
         rb.MovePosition(rb.position + movement * PlayerInfo.movementSpeed * Time.fixedDeltaTime);
+    }
+
+    private void turn(float angle){
+        transform.rotation = Quaternion.Euler(0, angle, 0);
     }
 }
